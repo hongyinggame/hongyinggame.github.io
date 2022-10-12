@@ -5,12 +5,12 @@
 // .cb-slideshow li:nth-child(5) span { background-image: url('../../images/one.jpg');}
 // .cb-slideshow li:nth-child(6) span { background-image: url('../../images/one.jpg');}
 
-.cb-slideshow li:nth-child(1) span { background-image: url('D:/Hexo/themes/shana/picture/one.jpg');}
-.cb-slideshow li:nth-child(2) span { background-image: url('D:/Hexo/themes/shana/picture/one.jpg');}
-.cb-slideshow li:nth-child(3) span { background-image: url('D:/Hexo/themes/shana/picture/one.jpg');}
-.cb-slideshow li:nth-child(4) span { background-image: url('D:/Hexo/themes/shana/picture/one.jpg');}
-.cb-slideshow li:nth-child(5) span { background-image: url('D:/Hexo/themes/shana/picture/one.jpg');}
-.cb-slideshow li:nth-child(6) span { background-image: url('D:/Hexo/themes/shana/picture/one.jpg');}
+.cb-slideshow li:nth-child(1) span { background-image: url('../../images/one.jpg');}
+.cb-slideshow li:nth-child(2) span { background-image: url('../../images/one.jpg');}
+.cb-slideshow li:nth-child(3) span { background-image: url('../../images/one.jpg');}
+.cb-slideshow li:nth-child(4) span { background-image: url('../../images/one.jpg');}
+.cb-slideshow li:nth-child(5) span { background-image: url('../../images/one.jpg');}
+.cb-slideshow li:nth-child(6) span { background-image: url('../../images/one.jpg');}
 
 .hidden-xs{
 
