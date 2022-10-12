@@ -1,9 +1,9 @@
  //.cb-slideshow li:nth-child(1) span { background-image: url('../../../../../public/images/one.jpg');}
  //.cb-slideshow li:nth-child(2) span { background-image: url('../../../../../public/images/three.jpg');}
- //.cb-slideshow li:nth-child(3) span { background-image: url('../../../../../public/images/four.jpeg');}
- //.cb-slideshow li:nth-child(4) span { background-image: url('../../../../../public/images/three.png');}
+ //.cb-slideshow li:nth-child(3) span { background-image: url('../../../../../public/images/one.jpg');}
+ //.cb-slideshow li:nth-child(4) span { background-image: url('../../../../../public/images/one.jpg');}
  //.cb-slideshow li:nth-child(5) span { background-image: url('../../../../../public/images/one.jpg');}
- //.hidden-xs li:nth-child(6) span { background-image: url('../../../../../public/images/six.jpg');}
+ //.hidden-xs li:nth-child(6) span { background-image: url('../../../../../public/images/one.jpg');}
 
 .cb-slideshow li:nth-child(1) span { background-image: url('../..//images/three.jpg');}
 .cb-slideshow li:nth-child(2) span { background-image: url('../../../../../public/images/six.png');}
