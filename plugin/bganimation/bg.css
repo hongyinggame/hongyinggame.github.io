@@ -6,9 +6,9 @@
  //.hidden-xs li:nth-child(6) span { background-image: url('../../../../../public/images/six.jpg');}
 
 .cb-slideshow li:nth-child(1) span { background-image: url('../../../../../public/images/five.jpg');}
-.cb-slideshow li:nth-child(2) span { background-image: url('../../images/two.jpg');}
-.cb-slideshow li:nth-child(3) span { background-image: url('../../images/one.jpg');}
-.cb-slideshow li:nth-child(4) span { background-image: url('../../images/one.jpg');}
+.cb-slideshow li:nth-child(2) span { background-image: url('../../../../../public/images/six.png');}
+.cb-slideshow li:nth-child(3) span { background-image: url('../../../../../public/images/four.jpeg');}
+.cb-slideshow li:nth-child(4) span { background-image: url('../../../../../public/images/three.png');}
 .cb-slideshow li:nth-child(5) span { background-image: url('../../images/one.jpg');}
 .cb-slideshow li:nth-child(6) span { background-image: url('../../images/one.jpg');}
 
