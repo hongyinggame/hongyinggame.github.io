@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>My New Post</title>
+      <link href="/2022/10/12/My-New-Post/"/>
+      <url>/2022/10/12/My-New-Post/</url>
+      
+        <content type="html"><![CDATA[<h3 id="第一节"><a href="#第一节" class="headerlink" title="第一节"></a>第一节</h3><p>开始我的博客</p><h3 id="第二节"><a href="#第二节" class="headerlink" title="第二节"></a>第二节</h3><p>你好世界</p><h3 id="第三节"><a href="#第三节" class="headerlink" title="第三节"></a>第三节</h3><p>完美收工</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 测试用 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2022/10/12/hello-world/"/>
       <url>/2022/10/12/hello-world/</url>
