@@ -17,7 +17,7 @@
 <meta property="og:image" content="https://hongyinggame.github.io/images/I.png">
 <meta property="og:image" content="https://hongyinggame.github.io/images/classical.png">
 <meta property="article:published_time" content="2022-10-30T11:00:48.000Z">
-<meta property="article:modified_time" content="2022-11-02T01:25:36.248Z">
+<meta property="article:modified_time" content="2022-11-03T06:43:42.514Z">
 <meta property="article:author" content="hongying">
 <meta property="article:tag" content="量子图像">
 <meta property="article:tag" content="FRQI">
@@ -58,9 +58,9 @@
     <h2 class="author">hongying</h2>
     <h3 class="description">菜鸟</h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>3</strong><br>文章</div></a>
+      <a href="/archives"><div><strong>5</strong><br>文章</div></a>
       <a href="/categories"><div><strong>0</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>7</strong><br>标签</div></a>
+      <a href="/tags"><div><strong>8</strong><br>标签</div></a>
     </div>
     <ul class="blog-link">
      
@@ -159,10 +159,10 @@
 </ul>
 </blockquote>
 <blockquote>
-<p>&amp;emsp;&amp;emsp;通过使用Hadamard和可控旋转操作表示了FRQI的制备过程，而且根据多项式准备定理，全部的简单操作数量是量子比特数量的多项式倍。根据人类视觉无法分别的颜色，量子图像压缩算法通过对组中可控旋转的可控旋转部分进行积分，减少了简单操作数量。图像处理操作基于酉变换分为仅处理颜色、某些位置的颜色和颜色位置的组合。通过仿真实验证明了FRQI在存储检索量子图像、图像压缩的优势，同时也利用傅里叶变换实现了用于量子计算机上的二进制图像中的线检测。</p>
+<p>通过使用Hadamard和可控旋转操作表示了FRQI的制备过程，而且根据多项式准备定理，全部的简单操作数量是量子比特数量的多项式倍。根据人类视觉无法分别的颜色，量子图像压缩算法通过对组中可控旋转的可控旋转部分进行积分，减少了简单操作数量。图像处理操作基于酉变换分为仅处理颜色、某些位置的颜色和颜色位置的组合。通过仿真实验证明了FRQI在存储检索量子图像、图像压缩的优势，同时也利用傅里叶变换实现了用于量子计算机上的二进制图像中的线检测。</p>
 </blockquote>
 <blockquote>
-<p>&amp;emsp;&amp;emsp;结果表明FRQI可以作为量子图像的表示处理量子图像，它改变了整个量子图像处理的流程，量子图像压缩算法提供了减少表示量子图像的主要资源，并且可以更好地拓展量子图像压缩算法。这三种处理操作指出了在量子图像上设计和应用其他操作的模式。</p>
+<p>结果表明FRQI可以作为量子图像的表示处理量子图像，它改变了整个量子图像处理的流程，量子图像压缩算法提供了减少表示量子图像的主要资源，并且可以更好地拓展量子图像压缩算法。这三种处理操作指出了在量子图像上设计和应用其他操作的模式。</p>
 </blockquote>
 <h4 id="本节涉及知识-1"><a href="#本节涉及知识-1" class="headerlink" title="本节涉及知识"></a>本节涉及知识</h4><blockquote>
 <ul>
@@ -180,19 +180,20 @@
 </blockquote>
 <h4 id="量子图像的灵活表示及其多项式表达式"><a href="#量子图像的灵活表示及其多项式表达式" class="headerlink" title="量子图像的灵活表示及其多项式表达式"></a>量子图像的灵活表示及其多项式表达式</h4><p>&lt;!–&gt;本节为论文核心部分，理解较难，因此这节采用的是边读边写形式，并根据理解来写，记住，这是个人理解，可能有不对的地方，而不是像前两节，通过整体阅读完之后，进行总结性概括。所用图片一般是论文图像截图&lt;–&gt;</p>
 <blockquote>
-<p>&amp;emsp;&amp;emsp;首先，本研究提出的图像表示是受传统计算机中的像素表示的启发，该表示方法是可以捕获颜色与对应的位置信息。并将其整合到了量子态的表达式中，其表达式如下图所示:<br><img src="/images/representation.png" alt="FRQI表达式"><br>如图所示，该表达式由两部分组成，这两部分分别表示像素和像素位置，两者通过张量积建立连接，其中张量积左边编码颜色信息，右边表示颜色对应位置。同时通过如下所示的公式可以知道||I||&#x3D;1，即该量子态是归一化的状态。<br><img src="/images/I.png" alt="量子态I的模"><br>该量子态的颜色位置被编码成了计算基态，即不是通过|0&gt;与|1&gt;进行叠加表示，而是本身就是相当于这两个态的基态。因此，颜色几何外观的表示，也影响该图像的量子表示。对于颜色几何外观表示我的理解是颜色位置的编码信息，下文给出了经典计算机的一般表示即一行一行基于块的表示，如下图所示。<br><img src="/images/classical.png" alt="经典表示"></p>
+<p>首先，本研究提出的图像表示是受传统计算机中的像素表示的启发，该表示方法是可以捕获颜色与对应的位置信息。并将其整合到了量子态的表达式中，其表达式如下图所示:<br><img src="/images/representation.png" alt="FRQI表达式"><br>如图所示，该表达式由两部分组成，这两部分分别表示像素和像素位置，两者通过张量积建立连接，其中张量积左边编码颜色信息，右边表示颜色对应位置。同时通过如下所示的公式可以知道||I||&#x3D;1，即该量子态是归一化的状态。<br><img src="/images/I.png" alt="量子态I的模"><br>该量子态的颜色位置被编码成了计算基态，即不是通过|0&gt;与|1&gt;进行叠加表示，而是本身就是相当于这两个态的基态。因此，颜色几何外观的表示，也影响该图像的量子表示。对于颜色几何外观表示我的理解是颜色位置的编码信息，下文给出了经典计算机的一般表示即一行一行基于块的表示，如下图所示。<br><img src="/images/classical.png" alt="经典表示"><br>在量子计算机中，计算机通常是加载已经准备好的量子态，因此，如何将初始态转化为量子态变得重要，在本研究中，所有使用的变换都是由酉矩阵表示的酉变换，这里所说的酉矩阵是指该矩阵的共轭转置或伴随矩阵和它的逆矩阵相同。</p>
 </blockquote>
 <h4 id="本节涉及的知识"><a href="#本节涉及的知识" class="headerlink" title="本节涉及的知识"></a>本节涉及的知识</h4><ul>
 <li>张量积</li>
 <li>量子态的模</li>
-<li></li>
+<li>酉矩阵&#x2F;酉变换</li>
+<li>Hermitian共轭：共轭转置</li>
 </ul>
 <h4 id="学习的问题"><a href="#学习的问题" class="headerlink" title="学习的问题"></a>学习的问题</h4><ul>
 <li><p>量子图像是Ref中量子比特的二维矩阵？<br>通过查找解决，是存储量子比特的二维矩阵。</p>
 </li>
 <li><p>多项式准备定理</p>
 </li>
-<li><p>表达式中颜色表示公式为什么可以表示颜色<br>首先，理解一切复数都可以使用rexp(i)，对于cos</p>
+<li><p>表达式中颜色表示公式为什么可以表示颜色<br>以下为我的理解<br>首先是对于cosθ|0&gt;+sinθ|1&gt;对应半径为1的圆，对其进行定义其对应的RGB区域是可以做到构建色素值的。</p>
 </li>
 </ul>
 <h4 id="注释-1"><a href="#注释-1" class="headerlink" title="注释"></a>注释</h4><h3 id="学习英语生词"><a href="#学习英语生词" class="headerlink" title="学习英语生词"></a>学习英语生词</h3><p> polynomial adj. 多项式，多词的；<br>              n. 多项式。</p>
@@ -223,11 +224,17 @@
 <p> notation n. 注释，记号；注释，评注。</p>
 <p> respectively adv. 分别地，各自地。</p>
 <p> geometric n. 几何图形，几何；adj. 几何的，几何图形的。</p>
+<p> conjugate v. 结合，组合；adj. 共轭的。</p>
+<p> explicitly adv. 明确地，明白地。</p>
+<p> in the sense of 在某种意义上。</p>
+<p> composed adj.镇静的;v.组成，合成。</p>
+<p> proof n. 证明，验证，校验；v. 证明，验证。</p>
+<p> denote v. 表示、演示。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2022/10/30/frqi/" data-id="cl9yym5zk0003igh8e2l26e9s" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2022/10/30/frqi/" data-id="clag41i1x000534h8d1lx1uca" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/FRQI/" rel="tag">FRQI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%9B%BE%E5%83%8F%E5%8E%8B%E7%BC%A9/" rel="tag">图像压缩</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%9B%BE%E5%83%8F%E8%A1%A8%E7%A4%BA/" rel="tag">图像表示</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%87%8F%E5%AD%90%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/" rel="tag">量子傅里叶变换</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%87%8F%E5%AD%90%E5%9B%BE%E5%83%8F/" rel="tag">量子图像</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%87%8F%E5%AD%90%E8%AE%A1%E7%AE%97%E6%9C%BA/" rel="tag">量子计算机</a></li></ul>
@@ -237,6 +244,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2022/11/10/thesis/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          thesis
+        
+      </div>
+    </a>
   
   
     <a href="/2022/10/12/My-New-Post/" id="article-nav-older" class="article-nav-link-wrap">
@@ -290,9 +306,9 @@
     <h2 class="author">hongying</h2>
     <h3 class="description">菜鸟</h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>3</strong><br>文章</div></a>
+      <a href="/archives"><div><strong>5</strong><br>文章</div></a>
       <a href="/categories"><div><strong>0</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>7</strong><br>标签</div></a>
+      <a href="/tags"><div><strong>8</strong><br>标签</div></a>
     </div>
 
 
