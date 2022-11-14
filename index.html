@@ -45,9 +45,9 @@
     <h2 class="author">hongying</h2>
     <h3 class="description">菜鸟</h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>5</strong><br>文章</div></a>
+      <a href="/archives"><div><strong>6</strong><br>文章</div></a>
       <a href="/categories"><div><strong>0</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>8</strong><br>标签</div></a>
+      <a href="/tags"><div><strong>9</strong><br>标签</div></a>
     </div>
     <ul class="blog-link">
      
@@ -72,6 +72,68 @@
 </div>
 
         <section id="main">
+  
+    <article id="post-markdown1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/11/14/markdown1/" class="article-date">
+  <time class="post-time" datetime="2022-11-14T07:04:25.000Z" itemprop="datePublished">
+    <span class="post-month">11月</span><br/>
+    <span class="post-day">14</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/11/14/markdown1/">markdown1</a>
+    </h1>
+  
+
+        <div>
+          
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="问题emsp出现了无法渲染的情况"><a class="markdownIt-Anchor" href="#问题emsp出现了无法渲染的情况"></a> 问题：&amp;emsp出现了无法渲染的情况</h4>
+<p>首先，观察你的渲染插件hexo-render有无问题，查询插件代码：
+</p><pre><code>npm ls ----列出所有插件
+</code></pre>
+<p>没有插件时，使用如下命令进行下载：注：这里用hexo-renderer-markdown-it-plus作为例子，其他渲染器只需将插件名修改即可，同时看看有没有将以前的渲染器删除代码如下。<br>
+npm un hexo-renderer-marked --save 卸载以前的渲染器<br>
+npm i hexo-renderer-markdown-it-plus --save 安装现有的渲染器</p>
+<p></p>
+        
+          <p class="article-more-link">
+            <a href="/2022/11/14/markdown1/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hongyinggame.github.io/2022/11/14/markdown1/" data-id="claggac9b000blsh8hpor49h8" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/" rel="tag">markdown</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" rel="tag">学习记录</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
   
     <article id="post-Transformer" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -105,30 +167,26 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="特征金子塔网络"><a href="#特征金子塔网络" class="headerlink" title="特征金子塔网络"></a>特征金子塔网络</h4><h5 id="多尺度目标检测"><a href="#多尺度目标检测" class="headerlink" title="多尺度目标检测"></a>多尺度目标检测</h5><p>   多尺度目标检测简单说检测目标的尺度不同有大有小。</p>
-<p>   检测物体大小不一的影响？<br>       首先，浅层所提取的信息中几何信息好，但是语义信息差，视野小，因此更适合定位；深层所提取的信息中语义信息好，几何信息差，视野大，适合分类。<br>    但是，随着加深深度会出现语义信息提取下降现象，因为随着周遭环境的稀释，虽然视野变大，但是视野中的信息量减少，提取下降。</p>
-<p>   如图为大小物体下的目标检测，可以看出大小目标的变化是一样的，但是，图像的大小不一样，即小目标更快到顶峰，而大目标却更晚到顶峰，因此，会出出现鱼</p>
-<p>   和熊掌不可兼得的情况，如图，神经网络的深度应定为25层，还是50层，亦或是37层呢？定25层则对小目标的检测效果好而大目标检测能力差；定50层则反之；</p>
-<p>   定37层则两类目标的检测能力较为均衡但都不在最好的检测状态。而这就是“多尺度”目标检测问题的根源所在。</p>
-<p><img src="/images/%E5%A4%A7%E7%9B%AE%E6%A0%87%E5%B0%8F%E7%9B%AE%E6%A0%87%E7%9A%84%E4%B8%8D%E5%90%8C%E4%B9%8B%E5%A4%84.webp" alt="大小目标的检测曲线"><br>    解决方法<br>       1.图像金子塔<br>          由不同分辨率组成的图像从大到小叠加在一起，这种就叫做图像金字塔。缺点：计算量比较大。</p>
-<pre><code>   2.图像特征金字塔
-     选取其中的部分作为预测，对其它的尺寸预测不准确
-    
-   3. FPN
-   该网络的思想是分别进行上采样与下采样，将各尺寸进行特征融合然后分别对其进行预测.因此主要分为自下而上的下采样过程、自上而下的上采样过程以及两者的横向连接。如下图所示
-
-![FPN神经网络](/images/FPN.jpg)
-
-
-
-
-
-
-
-自己的想法：
-    为什么鲁棒性会差？
-       人识别人时一般是从什么地方识别，我认为一是人的身高体重等形状特征，然后是人的脸与穿着，所以是不是可以进行图像分割进行识别匹配，但是图像分割又是基于图像检测。
-</code></pre>
+        <h3 id="参考连接"><a class="markdownIt-Anchor" href="#参考连接"></a> 参考连接</h3>
+<p><a target="_blank" href="https://zhuanlan.zhihu.com/p/113443895">https://zhuanlan.zhihu.com/p/113443895 cnn中位置与尺度的问题</a><br>
+<a href="https://zhuanlan.zhihu.com/p/36278093" target="_blank">https://zhuanlan.zhihu.com/p/36278093 padding的作用于意义</a><br>
+<a href="https://blog.csdn.net/JMU_Ma/article/details/90033969" target="_blank">https://blog.csdn.net/JMU_Ma/article/details/90033969 U-net讲解</a><br>
+<a href="https://www.zhihu.com/question/268331470" target="_blank">https://www.zhihu.com/question/268331470 U-net中的镜像操作的理解</a><br>
+<a href="https://zhuanlan.zhihu.com/p/126504785" target="_blank">https://zhuanlan.zhihu.com/p/126504785 SiamRPN++笔记：padding究竟影响了什么？</a></p>
+<h5 id="多尺度目标检测"><a class="markdownIt-Anchor" href="#多尺度目标检测"></a> 多尺度目标检测</h5>
+<p>多尺度目标检测简单说检测目标的尺度不同有大有小。</p>
+<p>检测物体大小不一的影响？<br>
+ 首先，浅层所提取的信息中几何信息好，但是语义信息差，视野小，因此更适合定位；深层所提取的信息中语义信息好，几何信息差，视野大，适合分类。<br>
+但是，随着加深深度会出现语义信息提取下降现象，因为随着周遭环境的稀释，虽然视野变大，但是视野中的信息量减少，提取下降。</p>
+<p>如图为大小物体下的目标检测，可以看出大小目标的变化是一样的，但是，图像的大小不一样，即小目标更快到顶峰，而大目标却更晚到顶峰，因此，会出出现鱼<br>
+和熊掌不可兼得的情况，如图，神经网络的深度应定为25层，还是50层，亦或是37层呢？定25层则对小目标的检测效果好而大目标检测能力差；定50层则反之；<br>
+定37层则两类目标的检测能力较为均衡但都不在最好的检测状态。而这就是“多尺度”目标检测问题的根源所在。</p>
+<p><img src="/images/%E5%A4%A7%E7%9B%AE%E6%A0%87%E5%B0%8F%E7%9B%AE%E6%A0%87%E7%9A%84%E4%B8%8D%E5%90%8C%E4%B9%8B%E5%A4%84.webp" alt="大小目标的检测曲线"><br>
+解决方法</p>
+<ol>
+<li>图像金子塔</li>
+</ol>
+<p>由不同分辨率组成的图像从大到小叠加在一起，这种就叫做图像金字塔。缺点：计算量比较大。</p>
         
           <p class="article-more-link">
             <a href="/2022/11/13/Transformer/#more">Read More</a>
@@ -137,7 +195,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2022/11/13/Transformer/" data-id="clag4bevv0006hch8aey89tx4" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2022/11/13/Transformer/" data-id="claggac980006lsh878b1507b" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" rel="tag">学习记录</a></li></ul>
@@ -183,7 +241,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="假人脸检测与伪目标检测"><a href="#假人脸检测与伪目标检测" class="headerlink" title="假人脸检测与伪目标检测"></a>假人脸检测与伪目标检测</h2><h4 id="假人脸识别"><a href="#假人脸识别" class="headerlink" title="假人脸识别"></a>假人脸识别</h4><p>Multi-attentional Deepfake Detection</p>
+        <h2 id="假人脸检测与伪目标检测"><a class="markdownIt-Anchor" href="#假人脸检测与伪目标检测"></a> 假人脸检测与伪目标检测</h2>
+<h4 id="假人脸识别"><a class="markdownIt-Anchor" href="#假人脸识别"></a> 假人脸识别</h4>
+<p>Multi-attentional Deepfake Detection</p>
 <ol>
 <li>multiple spatial attention heads 多空间注意力头 促使网络注意到不同部分</li>
 <li>textural feature enhancement block 纹理信息增强模块</li>
@@ -198,7 +258,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2022/11/10/thesis/" data-id="clag4bevw0007hch84o3j4cce" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2022/11/10/thesis/" data-id="claggac9a000alsh8ae83aptr" class="article-share-link">分享</a>
       
       
     </footer>
@@ -242,7 +302,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="格言"><a href="#格言" class="headerlink" title="格言"></a>格言</h5><blockquote>
+        <h5 id="格言"><a class="markdownIt-Anchor" href="#格言"></a> 格言</h5>
+<blockquote>
 <ul>
 <li>站在巨人肩膀上。</li>
 <li>细节决定成败。</li>
@@ -253,19 +314,23 @@
 <li>不要过于在乎别人对你的眼光。</li>
 </ul>
 </blockquote>
-<h3 id="学习时间记录"><a href="#学习时间记录" class="headerlink" title="学习时间记录"></a>学习时间记录</h3><ul>
+<h3 id="学习时间记录"><a class="markdownIt-Anchor" href="#学习时间记录"></a> 学习时间记录</h3>
+<ul>
 <li>2022.10.30 星期日晚上  学习了Abstract，introduction</li>
 <li>2022.10.31 星期一下午</li>
 </ul>
-<h3 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h3><blockquote>
-<p>&amp;emsp;&amp;emsp;通过阅读了解到，本文章提出了一个灵活的量子图像表示模型，其操作是通过一个多项式将原始状态转化为FRQI状态，这个状态<br>可以同时捕获像素位置与像素值。在FRQI下提出了算法进行量子图像处理操作，比如量子图像压缩。随后作者进行了仿真模拟实验，包括存储、检索图像以及通过应用量子傅里叶变换作为处理操作来检测二进制图像中的线条。 其中图像压缩比在二进制图像上是68.75~90.63%，而对于经典的lena图像是6.67%到90.63%。</p>
+<h3 id="abstract"><a class="markdownIt-Anchor" href="#abstract"></a> Abstract</h3>
+<blockquote>
+<p>  通过阅读了解到，本文章提出了一个灵活的量子图像表示模型，其操作是通过一个多项式将原始状态转化为FRQI状态，这个状态<br>
+可以同时捕获像素位置与像素值。在FRQI下提出了算法进行量子图像处理操作，比如量子图像压缩。随后作者进行了仿真模拟实验，包括存储、检索图像以及通过应用量子傅里叶变换作为处理操作来检测二进制图像中的线条。 其中图像压缩比在二进制图像上是68.75~90.63%，而对于经典的lena图像是6.67%到90.63%。</p>
 </blockquote>
-<h4 id="本节涉及知识"><a href="#本节涉及知识" class="headerlink" title="本节涉及知识"></a>本节涉及知识</h4><blockquote>
+<h4 id="本节涉及知识"><a class="markdownIt-Anchor" href="#本节涉及知识"></a> 本节涉及知识</h4>
+<blockquote>
 <ul>
 <li>量子傅里叶变换</li>
 </ul>
 </blockquote>
-<h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4>
+<h4 id="注释"><a class="markdownIt-Anchor" href="#注释"></a> 注释</h4>
         
           <p class="article-more-link">
             <a href="/2022/10/30/frqi/#more">Read More</a>
@@ -274,7 +339,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2022/10/30/frqi/" data-id="clag4bevx000ahch8atn48em8" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2022/10/30/frqi/" data-id="claggac970005lsh8dw284m4u" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/FRQI/" rel="tag">FRQI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%9B%BE%E5%83%8F%E5%8E%8B%E7%BC%A9/" rel="tag">图像压缩</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%9B%BE%E5%83%8F%E8%A1%A8%E7%A4%BA/" rel="tag">图像表示</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%87%8F%E5%AD%90%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/" rel="tag">量子傅里叶变换</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%87%8F%E5%AD%90%E5%9B%BE%E5%83%8F/" rel="tag">量子图像</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%87%8F%E5%AD%90%E8%AE%A1%E7%AE%97%E6%9C%BA/" rel="tag">量子计算机</a></li></ul>
@@ -320,9 +385,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="第一节"><a href="#第一节" class="headerlink" title="第一节"></a>第一节</h3><p>开始我的博客</p>
-<h3 id="第二节"><a href="#第二节" class="headerlink" title="第二节"></a>第二节</h3><p>你好世界</p>
-<h3 id="第三节"><a href="#第三节" class="headerlink" title="第三节"></a>第三节</h3><p>完美收工</p>
+        <h3 id="第一节"><a class="markdownIt-Anchor" href="#第一节"></a> 第一节</h3>
+<p>开始我的博客</p>
+<h3 id="第二节"><a class="markdownIt-Anchor" href="#第二节"></a> 第二节</h3>
+<p>你好世界</p>
+<h3 id="第三节"><a class="markdownIt-Anchor" href="#第三节"></a> 第三节</h3>
+<p>完美收工</p>
 
         
           <p class="article-more-link">
@@ -332,7 +400,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2022/10/12/My-New-Post/" data-id="clag4bevo0001hch83y8e8hhd" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2022/10/12/My-New-Post/" data-id="claggac910001lsh875h38rlh" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B5%8B%E8%AF%95%E7%94%A8/" rel="tag">测试用</a></li></ul>
@@ -379,13 +447,14 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
+<h2 id="quick-start"><a class="markdownIt-Anchor" href="#quick-start"></a> Quick Start</h2>
+<h3 id="create-a-new-post"><a class="markdownIt-Anchor" href="#create-a-new-post"></a> Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
+<h3 id="run-server"><a class="markdownIt-Anchor" href="#run-server"></a> Run server</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3>
+<h3 id="generate-static-files"><a class="markdownIt-Anchor" href="#generate-static-files"></a> Generate static files</h3>
         
           <p class="article-more-link">
             <a href="/2022/10/12/hello-world/#more">Read More</a>
@@ -394,7 +463,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2022/10/12/hello-world/" data-id="clag4bevu0005hch8aavf68fr" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2022/10/12/hello-world/" data-id="claggac990007lsh8ananfgg0" class="article-share-link">分享</a>
       
       
     </footer>
@@ -446,9 +515,9 @@
     <h2 class="author">hongying</h2>
     <h3 class="description">菜鸟</h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>5</strong><br>文章</div></a>
+      <a href="/archives"><div><strong>6</strong><br>文章</div></a>
       <a href="/categories"><div><strong>0</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>8</strong><br>标签</div></a>
+      <a href="/tags"><div><strong>9</strong><br>标签</div></a>
     </div>
 
 
