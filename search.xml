@@ -4,19 +4,25 @@
   
     
     <entry>
-      <title>markdown1</title>
+      <title>markdown学习记录(一)</title>
       <link href="/2022/11/14/markdown1/"/>
       <url>/2022/11/14/markdown1/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="问题emsp出现了无法渲染的情况"><a class="markdownIt-Anchor" href="#问题emsp出现了无法渲染的情况"></a> 问题：&amp;emsp出现了无法渲染的情况</h4><p>首先，观察你的渲染插件hexo-render有无问题，查询插件代码：<pre><code>npm ls ----列出所有插件</code></pre><p>没有插件时，使用如下命令进行下载：注：这里用hexo-renderer-markdown-it-plus作为例子，其他渲染器只需将插件名修改即可，同时看看有没有将以前的渲染器删除代码如下。<br />npm un hexo-renderer-marked --save 卸载以前的渲染器<br />npm i hexo-renderer-markdown-it-plus --save 安装现有的渲染器</p></p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="参考连接"><a class="markdownIt-Anchor" href="#参考连接"></a> 参考连接</h3><p><a href="https://www.imooc.com/wiki/markdownlesson/markdowncodeblock.html" target="_blank">Markdown教程-代码块</a></p><h4 id="问题emsp出现了无法渲染的情况"><a class="markdownIt-Anchor" href="#问题emsp出现了无法渲染的情况"></a> 问题：&amp;emsp出现了无法渲染的情况</h4><p>&emsp;首先，观察你的渲染插件hexo-render有无问题，查询插件代码：<pre><code>npm ls ----列出所有插件</code></pre><p>没有插件时，使用如下命令进行下载：注：这里用hexo-renderer-markdown-it-plus作为例子，其他渲染器只需将插件名修改即可，同时看看有没有将以前的渲染器删除代码如下。</p><pre><code>npm un hexo-renderer-marked --save 卸载以前的渲染器npm i hexo-renderer-markdown-it-plus --save 安装现有的渲染器</code></pre></p><h4 id="问题代码块的定义"><a class="markdownIt-Anchor" href="#问题代码块的定义"></a> 问题：代码块的定义</h4><p>首先，由于个人的习惯，写东西总是用空格来间隔，因此会出现所写东西高亮显示，查阅知道了该主题有代码块高亮显示，而代码块的定义有通过四个空格定义的规则，因此误打误撞定义成代码块了，借此机会整理下代码块定义的几个方法，同时提醒自己以后不能通过空格来进行间隔了。</p><p style="color:red;">代码块两种定义方法：</p><ul>    <li>四个空格定义代码块</li>    <li>三个连续的反引号分别作为代码块的开始与结束</li></ul><p style="color:red;">代码块的注意事项：<ul>    <li>当使用 4 个空格声明代码块时，转换后的代码文本会自动删除掉缩进的距离，也就是会从行首自动删掉 4 个空格，以保持格式；</li>    <li>当使用 4 个空格声明代码块时，代码块的结束声明在后面首个缩进不足 4 个空格的行；</li>    <li>常规的 Markdown 语义，比如「星号 *」在代码块中的转义作用失效;</li></ul></p>]]></content>
       
+      
+      <categories>
+          
+          <category> 博客撰写基础 </category>
+          
+      </categories>
       
       
         <tags>
             
-            <tag> 学习记录 </tag>
-            
             <tag> markdown </tag>
+            
+            <tag> 学习记录 </tag>
             
         </tags>
       
@@ -31,6 +37,12 @@
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="参考连接"><a class="markdownIt-Anchor" href="#参考连接"></a> 参考连接</h3><p><a target="_blank" href ="https://zhuanlan.zhihu.com/p/113443895">https://zhuanlan.zhihu.com/p/113443895 cnn中位置与尺度的问题</a><br /><a href="https://zhuanlan.zhihu.com/p/36278093" target="_blank">https://zhuanlan.zhihu.com/p/36278093 padding的作用于意义</a><br /><a href="https://blog.csdn.net/JMU_Ma/article/details/90033969" target="_blank">https://blog.csdn.net/JMU_Ma/article/details/90033969 U-net讲解</a><br /><a href="https://www.zhihu.com/question/268331470" target="_blank">https://www.zhihu.com/question/268331470 U-net中的镜像操作的理解</a><br /><a href ="https://zhuanlan.zhihu.com/p/126504785" target="_blank">https://zhuanlan.zhihu.com/p/126504785 SiamRPN++笔记：padding究竟影响了什么？</a></p><h5 id="多尺度目标检测"><a class="markdownIt-Anchor" href="#多尺度目标检测"></a> 多尺度目标检测</h5><p>多尺度目标检测简单说检测目标的尺度不同有大有小。</p><p>检测物体大小不一的影响？<br /> 首先，浅层所提取的信息中几何信息好，但是语义信息差，视野小，因此更适合定位；深层所提取的信息中语义信息好，几何信息差，视野大，适合分类。<br />但是，随着加深深度会出现语义信息提取下降现象，因为随着周遭环境的稀释，虽然视野变大，但是视野中的信息量减少，提取下降。</p><p>如图为大小物体下的目标检测，可以看出大小目标的变化是一样的，但是，图像的大小不一样，即小目标更快到顶峰，而大目标却更晚到顶峰，因此，会出出现鱼<br />和熊掌不可兼得的情况，如图，神经网络的深度应定为25层，还是50层，亦或是37层呢？定25层则对小目标的检测效果好而大目标检测能力差；定50层则反之；<br />定37层则两类目标的检测能力较为均衡但都不在最好的检测状态。而这就是“多尺度”目标检测问题的根源所在。</p><p><img src="/images/%E5%A4%A7%E7%9B%AE%E6%A0%87%E5%B0%8F%E7%9B%AE%E6%A0%87%E7%9A%84%E4%B8%8D%E5%90%8C%E4%B9%8B%E5%A4%84.webp" alt="大小目标的检测曲线" /><br />解决方法</p><ol><li>图像金子塔</li></ol><p>由不同分辨率组成的图像从大到小叠加在一起，这种就叫做图像金字塔。缺点：计算量比较大。</p><ol start="2"><li>图像特征金字塔</li></ol><p>选取其中的部分作为预测，对其它的尺寸预测不准确</p><ol start="3"><li><p  style="color:red">FPN</p></li></ol><p>该网络的思想是分别进行上采样与下采样，将各尺寸进行特征融合然后分别对其进行预测.因此主要分为自下而上的下采样过程、自上而下的上采样过程以及两者的横<br />向连接。如下图所示</p><p><img src="/images/FPN.jpg" alt="FPN神经网络" /></p><h3 style="color:red">U-net网络</h3>&emsp;&emsp;首先，全卷积神经网络与卷积神经网络不同在于前者将后者最后的全连接层换为了卷积层，从而可以输入任意尺寸的图片，输出也是任意图片，因此该网络是端到端的网络，端到端的网络理解为特征提取的输出不在作为输入，而是通过该模型进行学习提取特征，即输入就是原始数据。<p>  U-net神经网络和FPN神经网络类似，也是使用上采样与下采样结合的方式，其亮眼操作为：1.镜像操作，目的是保证输出尺寸与输入尺寸一致，一般使用padding，同时为了不产生噪音一般使用零填充。</p><p>拓展研究：<br />  &lt;&gt;padding作用与意义</p><p>自己的想法：<br />为什么鲁棒性会差？<br />人识别人时一般是从什么地方识别，我认为一是人的身高体重等形状特征，然后是人的脸与穿着，所以是不是可以进行图像分割进行识别匹配，但是图像分割又是基于图像检测。</p>]]></content>
       
+      
+      <categories>
+          
+          <category> 机器视觉 </category>
+          
+      </categories>
       
       
         <tags>
@@ -51,6 +63,18 @@
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="假人脸检测与伪目标检测"><a class="markdownIt-Anchor" href="#假人脸检测与伪目标检测"></a> 假人脸检测与伪目标检测</h2><h4 id="假人脸识别"><a class="markdownIt-Anchor" href="#假人脸识别"></a> 假人脸识别</h4><p>Multi-attentional Deepfake Detection</p><ol><li>multiple spatial attention heads 多空间注意力头 促使网络注意到不同部分</li><li>textural feature enhancement block 纹理信息增强模块</li><li>由 attention maps 指导，聚合低层次的纹理特征和高层次的语义特征</li></ol>]]></content>
       
       
+      <categories>
+          
+          <category> 待做项目 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 未完成 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -63,6 +87,12 @@
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h5 id="格言"><a class="markdownIt-Anchor" href="#格言"></a> 格言</h5><blockquote><ul><li>站在巨人肩膀上。</li><li>细节决定成败。</li><li>感恩、知足、包容、珍惜。</li><li>努力、更加努力。</li><li>Together we stand, divided we fall。</li><li>挖掘自己的可能性、发现别人的可能性。</li><li>不要过于在乎别人对你的眼光。</li></ul></blockquote><h3 id="学习时间记录"><a class="markdownIt-Anchor" href="#学习时间记录"></a> 学习时间记录</h3><ul><li>2022.10.30 星期日晚上  学习了Abstract，introduction</li><li>2022.10.31 星期一下午</li></ul><h3 id="abstract"><a class="markdownIt-Anchor" href="#abstract"></a> Abstract</h3><blockquote><p>  通过阅读了解到，本文章提出了一个灵活的量子图像表示模型，其操作是通过一个多项式将原始状态转化为FRQI状态，这个状态<br />可以同时捕获像素位置与像素值。在FRQI下提出了算法进行量子图像处理操作，比如量子图像压缩。随后作者进行了仿真模拟实验，包括存储、检索图像以及通过应用量子傅里叶变换作为处理操作来检测二进制图像中的线条。 其中图像压缩比在二进制图像上是68.75~90.63%，而对于经典的lena图像是6.67%到90.63%。</p></blockquote><h4 id="本节涉及知识"><a class="markdownIt-Anchor" href="#本节涉及知识"></a> 本节涉及知识</h4><blockquote><ul><li>量子傅里叶变换</li></ul></blockquote><h4 id="注释"><a class="markdownIt-Anchor" href="#注释"></a> 注释</h4><blockquote><ul><li>lena图像：是经典图像。如下图所示:<br /><img src="/images/lena.png" alt="lena图像" /></li></ul></blockquote><h3 id="introduction"><a class="markdownIt-Anchor" href="#introduction"></a> Introduction</h3><blockquote><p>  通过阅读了解到， 首先是从shor算法与Grover算法已经表明了量子计算机比经典计算机具有一定的优势，同时由于通过开发量子计算可以克服经典计算的无效工作，量子计算已经出现在计算机科学的多个领域中，例如信息理论、密码学、图像处理等。尤其在经典计算机上的图像视觉信息的分析与处理上已经被广泛研究。但是量子图像处于幼年期，因此面临着基础性困难，首先，是什么事量子图像以及如何表示量子图像在量子计算机上，其次，我们怎样制备和处理量子图像在量子计算机上。</p></blockquote><blockquote><p>  接下来是对过去研究的阐述，过去有多个量子图像模型，例如Qubit Lattice、Real Ket等，同时也有多个与图像处理有关的量子变换提出，例如量子傅里叶变换、量子离散余弦变换、量子小波变换等，这些变换都比经典更具有优势。此外，有些境地啊图像处理不能在量子图像上应用，例如与卷积有关的操作，因为量子计算的操作必须是酉变换即可逆变换。然而，量子图像的制备的复杂度与量子图像的应用还没有被研究。</p></blockquote><blockquote><p>  在本研究中，提出了FRQI模型，捕获图像颜色和对应位置的信息为归一化量子态，之后，又研究了在FRQI下的计算和图像处理方面，如下所示：</p><ul><li>制备FRQI的复杂度(简单操作的数目)。</li><li>提出了减少简单操作的数目的算法，应用在FRQI的制备或量子图像压缩。</li><li>在FRQI上三种可逆图像处理。</li></ul></blockquote><blockquote><p>通过使用Hadamard和可控旋转操作表示了FRQI的制备过程，而且根据多项式准备定理，全部的简单操作数量是量子比特数量的多项式倍。根据人类视觉无法分别的颜色，量子图像压缩算法通过对组中可控旋转的可控旋转部分进行积分，减少了简单操作数量。图像处理操作基于酉变换分为仅处理颜色、某些位置的颜色和颜色位置的组合。通过仿真实验证明了FRQI在存储检索量子图像、图像压缩的优势，同时也利用傅里叶变换实现了用于量子计算机上的二进制图像中的线检测。</p></blockquote><blockquote><p>结果表明FRQI可以作为量子图像的表示处理量子图像，它改变了整个量子图像处理的流程，量子图像压缩算法提供了减少表示量子图像的主要资源，并且可以更好地拓展量子图像压缩算法。这三种处理操作指出了在量子图像上设计和应用其他操作的模式。</p></blockquote><h4 id="本节涉及知识-2"><a class="markdownIt-Anchor" href="#本节涉及知识-2"></a> 本节涉及知识</h4><blockquote><ul><li>Shor多项式时间算法</li><li>Grover数据库查找算法</li><li>Qubit Lattice 量子图像模型</li><li>Real Ket 量子图像模型</li><li>量子傅里叶变换</li><li>量子小波变换</li><li>量子离散余弦变换</li><li>Hadamard和可控旋转变换</li><li>多项式准备定理</li><li>酉变换</li></ul></blockquote><h4 id="量子图像的灵活表示及其多项式表达式"><a class="markdownIt-Anchor" href="#量子图像的灵活表示及其多项式表达式"></a> 量子图像的灵活表示及其多项式表达式</h4><!-->本节为论文核心部分，理解较难，因此这节采用的是边读边写形式，并根据理解来写，记住，这是个人理解，可能有不对的地方，而不是像前两节，通过整体阅读完之后，进行总结性概括。所用图片一般是论文图像截图<--><blockquote><p>首先，本研究提出的图像表示是受传统计算机中的像素表示的启发，该表示方法是可以捕获颜色与对应的位置信息。并将其整合到了量子态的表达式中，其表达式如下图所示:<br /><img src="/images/representation.png" alt="FRQI表达式" /><br />如图所示，该表达式由两部分组成，这两部分分别表示像素和像素位置，两者通过张量积建立连接，其中张量积左边编码颜色信息，右边表示颜色对应位置。同时通过如下所示的公式可以知道||I||=1，即该量子态是归一化的状态。<br /><img src="/images/I.png" alt="量子态I的模" /><br />该量子态的颜色位置被编码成了计算基态，即不是通过|0&gt;与|1&gt;进行叠加表示，而是本身就是相当于这两个态的基态。因此，颜色几何外观的表示，也影响该图像的量子表示。对于颜色几何外观表示我的理解是颜色位置的编码信息，下文给出了经典计算机的一般表示即一行一行基于块的表示，如下图所示。<br /><img src="/images/classical.png" alt="经典表示" /><br />在量子计算机中，计算机通常是加载已经准备好的量子态，因此，如何将初始态转化为量子态变得重要，在本研究中，所有使用的变换都是由酉矩阵表示的酉变换，这里所说的酉矩阵是指该矩阵的共轭转置或伴随矩阵和它的逆矩阵相同。</p></blockquote><h4 id="本节涉及的知识"><a class="markdownIt-Anchor" href="#本节涉及的知识"></a> 本节涉及的知识</h4><ul><li>张量积</li><li>量子态的模</li><li>酉矩阵/酉变换</li><li>Hermitian共轭：共轭转置</li></ul><h4 id="学习的问题"><a class="markdownIt-Anchor" href="#学习的问题"></a> 学习的问题</h4><ul><li><p>量子图像是Ref中量子比特的二维矩阵？<br />通过查找解决，是存储量子比特的二维矩阵。</p></li><li><p>多项式准备定理</p></li><li><p>表达式中颜色表示公式为什么可以表示颜色<br />以下为我的理解<br />首先是对于cosθ|0&gt;+sinθ|1&gt;对应半径为1的圆，对其进行定义其对应的RGB区域是可以做到构建色素值的。</p></li></ul><h4 id="注释-2"><a class="markdownIt-Anchor" href="#注释-2"></a> 注释</h4><h3 id="学习英语生词"><a class="markdownIt-Anchor" href="#学习英语生词"></a> 学习英语生词</h3><p>polynomial adj. 多项式，多词的；<br />n. 多项式。</p><p>nomalized  adj. 标准化的；正规化的；规格化的<br />v. 使规范化，使归一化。</p><p>capture      v. 捕获，俘获；夺取，占领；吸引，引起。</p><p>corresponding  adj. 相应的，相当的；</p><p>simulation  n. 仿真，模拟。</p><p>retrieve  v. 检索；取回；回复</p><p>digit  n. 数字；手指，脚趾。</p><p>factor v. 将…分解成因子；n. 因子，因素。</p><p>essential adj.基本的，必要的。</p><p>cryptography n. 密码学，密码使用法。</p><p>inefficient adj 无效率的，效率低的。</p><p>exploit v.利用，开发，开拓。</p><p>infancy n. 婴儿，幼年期。</p><p>To start with 一开始。</p><p>discrete adj. 分散的，离散的。</p><p>cosine n. 余弦</p><p>convolution n. 卷积，回旋，盘旋。</p><p>correlation n. 相关，相互关系。</p><p>invertible adj. 可逆的，倒转的。</p><p>rotation n. 旋转，循环。</p><p>distinguishable adj. 难以分辨的，无法识别的。</p><p>integrate v. 整合，积分。</p><p>unitary adj. 单一的，统一的。</p><p>pixel n. 像素。</p><p>conventional adj. 传统的，惯例的，常见的。</p><p>notation n. 注释，记号；注释，评注。</p><p>respectively adv. 分别地，各自地。</p><p>geometric n. 几何图形，几何；adj. 几何的，几何图形的。</p><p>conjugate v. 结合，组合；adj. 共轭的。</p><p>explicitly adv. 明确地，明白地。</p><p>in the sense of 在某种意义上。</p><p>composed adj.镇静的;v.组成，合成。</p><p>proof n. 证明，验证，校验；v. 证明，验证。</p><p>denote v. 表示、演示。</p>]]></content>
       
+      
+      <categories>
+          
+          <category> 量子相关 </category>
+          
+      </categories>
       
       
         <tags>
@@ -93,6 +123,12 @@
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="第一节"><a class="markdownIt-Anchor" href="#第一节"></a> 第一节</h3><p>开始我的博客</p><h3 id="第二节"><a class="markdownIt-Anchor" href="#第二节"></a> 第二节</h3><p>你好世界</p><h3 id="第三节"><a class="markdownIt-Anchor" href="#第三节"></a> 第三节</h3><p>完美收工</p>]]></content>
       
       
+      <categories>
+          
+          <category> 测试 </category>
+          
+      </categories>
+      
       
         <tags>
             
@@ -111,6 +147,12 @@
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="quick-start"><a class="markdownIt-Anchor" href="#quick-start"></a> Quick Start</h2><h3 id="create-a-new-post"><a class="markdownIt-Anchor" href="#create-a-new-post"></a> Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="run-server"><a class="markdownIt-Anchor" href="#run-server"></a> Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="generate-static-files"><a class="markdownIt-Anchor" href="#generate-static-files"></a> Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="deploy-to-remote-sites"><a class="markdownIt-Anchor" href="#deploy-to-remote-sites"></a> Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
       
+      
+      <categories>
+          
+          <category> 测试 </category>
+          
+      </categories>
       
       
     </entry>
