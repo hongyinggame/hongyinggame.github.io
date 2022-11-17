@@ -4,6 +4,81 @@
   
     
     <entry>
+      <title>officecrack</title>
+      <link href="/2022/11/17/officecrack/"/>
+      <url>/2022/11/17/officecrack/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="office版本查询"><a class="markdownIt-Anchor" href="#office版本查询"></a> office版本查询</h4><h4>控制面板查询</h4><p>首先，进入控制面板版界面，选择程序和功能。</p><p>![控制面板图片]{/images/officecrack/one.png}</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 软件破解 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> office破解 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>如何选题（《科学研究与论文写作》）</title>
+      <link href="/2022/11/17/selectsearch1/"/>
+      <url>/2022/11/17/selectsearch1/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 style="color:red">注；以下是对确定大方向而不知道小方向来说</h3><h4 id="了解该领域的知识"><a class="markdownIt-Anchor" href="#了解该领域的知识"></a> 了解该领域的知识</h4><h5 id="选题-研究-总结"><a class="markdownIt-Anchor" href="#选题-研究-总结"></a> 选题-研究-总结</h5><p>  首先，你应该知道选题是初步的，在你随着研究与总结中，你会不时的修改甚至推翻你的开始选题，随后选题将关乎你的接下来的研究与总结，好的选题是的你的研究成功了一半，研究与总结更是密不可分，研究了才有总结，总结了才知道研究了啥，然后才能对接下来的研究有个充分把握，这三者是一个整体，三者相互作用。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 论文指导 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 论文研究指导 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>git1</title>
+      <link href="/2022/11/14/git1/"/>
+      <url>/2022/11/14/git1/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="git-push-报错fatal-unable-to-access-httpsgithubcomhongyinggameshanawebgit-failed-to-connect-to-githubcom-port-443-after-21108-ms-timed-out"><a class="markdownIt-Anchor" href="#git-push-报错fatal-unable-to-access-httpsgithubcomhongyinggameshanawebgit-failed-to-connect-to-githubcom-port-443-after-21108-ms-timed-out"></a> git push 报错：fatal: unable to access ‘<a href="https://github.com/hongyinggame/shanaweb.git/">https://github.com/hongyinggame/shanaweb.git/</a>’: Failed to connect to <a href="http://github.com">github.com</a> port 443 after 21108 ms: Timed out</h4><p>解决方法：取消代理<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global --unset http.proxy</span><br><span class="line"></span><br><span class="line">git config --global --unset https.proxy</span><br></pre></td></tr></table></figure></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> git项目提交 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>markdown学习记录(一)</title>
       <link href="/2022/11/14/markdown1/"/>
       <url>/2022/11/14/markdown1/</url>
@@ -35,7 +110,7 @@
       <link href="/2022/11/13/Transformer/"/>
       <url>/2022/11/13/Transformer/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="参考连接"><a class="markdownIt-Anchor" href="#参考连接"></a> 参考连接</h3><p><a target="_blank" href ="https://zhuanlan.zhihu.com/p/113443895">https://zhuanlan.zhihu.com/p/113443895 cnn中位置与尺度的问题</a><br /><a href="https://zhuanlan.zhihu.com/p/36278093" target="_blank">https://zhuanlan.zhihu.com/p/36278093 padding的作用于意义</a><br /><a href="https://blog.csdn.net/JMU_Ma/article/details/90033969" target="_blank">https://blog.csdn.net/JMU_Ma/article/details/90033969 U-net讲解</a><br /><a href="https://www.zhihu.com/question/268331470" target="_blank">https://www.zhihu.com/question/268331470 U-net中的镜像操作的理解</a><br /><a href ="https://zhuanlan.zhihu.com/p/126504785" target="_blank">https://zhuanlan.zhihu.com/p/126504785 SiamRPN++笔记：padding究竟影响了什么？</a></p><h5 id="多尺度目标检测"><a class="markdownIt-Anchor" href="#多尺度目标检测"></a> 多尺度目标检测</h5><p>多尺度目标检测简单说检测目标的尺度不同有大有小。</p><p>检测物体大小不一的影响？<br /> 首先，浅层所提取的信息中几何信息好，但是语义信息差，视野小，因此更适合定位；深层所提取的信息中语义信息好，几何信息差，视野大，适合分类。<br />但是，随着加深深度会出现语义信息提取下降现象，因为随着周遭环境的稀释，虽然视野变大，但是视野中的信息量减少，提取下降。</p><p>如图为大小物体下的目标检测，可以看出大小目标的变化是一样的，但是，图像的大小不一样，即小目标更快到顶峰，而大目标却更晚到顶峰，因此，会出出现鱼<br />和熊掌不可兼得的情况，如图，神经网络的深度应定为25层，还是50层，亦或是37层呢？定25层则对小目标的检测效果好而大目标检测能力差；定50层则反之；<br />定37层则两类目标的检测能力较为均衡但都不在最好的检测状态。而这就是“多尺度”目标检测问题的根源所在。</p><p><img src="/images/%E5%A4%A7%E7%9B%AE%E6%A0%87%E5%B0%8F%E7%9B%AE%E6%A0%87%E7%9A%84%E4%B8%8D%E5%90%8C%E4%B9%8B%E5%A4%84.webp" alt="大小目标的检测曲线" /><br />解决方法</p><ol><li>图像金子塔</li></ol><p>由不同分辨率组成的图像从大到小叠加在一起，这种就叫做图像金字塔。缺点：计算量比较大。</p><ol start="2"><li>图像特征金字塔</li></ol><p>选取其中的部分作为预测，对其它的尺寸预测不准确</p><ol start="3"><li><p  style="color:red">FPN</p></li></ol><p>该网络的思想是分别进行上采样与下采样，将各尺寸进行特征融合然后分别对其进行预测.因此主要分为自下而上的下采样过程、自上而下的上采样过程以及两者的横<br />向连接。如下图所示</p><p><img src="/images/FPN.jpg" alt="FPN神经网络" /></p><h3 style="color:red">U-net网络</h3>&emsp;&emsp;首先，全卷积神经网络与卷积神经网络不同在于前者将后者最后的全连接层换为了卷积层，从而可以输入任意尺寸的图片，输出也是任意图片，因此该网络是端到端的网络，端到端的网络理解为特征提取的输出不在作为输入，而是通过该模型进行学习提取特征，即输入就是原始数据。<p>  U-net神经网络和FPN神经网络类似，也是使用上采样与下采样结合的方式，其亮眼操作为：1.镜像操作，目的是保证输出尺寸与输入尺寸一致，一般使用padding，同时为了不产生噪音一般使用零填充。</p><p>拓展研究：<br />  &lt;&gt;padding作用与意义</p><p>自己的想法：<br />为什么鲁棒性会差？<br />人识别人时一般是从什么地方识别，我认为一是人的身高体重等形状特征，然后是人的脸与穿着，所以是不是可以进行图像分割进行识别匹配，但是图像分割又是基于图像检测。</p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="参考连接"><a class="markdownIt-Anchor" href="#参考连接"></a> 参考连接</h3><p><a target="_blank" href ="https://zhuanlan.zhihu.com/p/113443895">cnn中位置与尺度的问题</a><br /><a href="https://zhuanlan.zhihu.com/p/36278093" target="_blank">padding的作用于意义</a><br /><a href="https://blog.csdn.net/JMU_Ma/article/details/90033969" target="_blank">U-net讲解</a><br /><a href="https://www.zhihu.com/question/268331470" target="_blank">U-net中的镜像操作的理解</a><br /><a href ="https://zhuanlan.zhihu.com/p/126504785" target="_blank">SiamRPN++笔记：padding究竟影响了什么？</a><br /><a href="https://blog.csdn.net/qq_38405680/article/details/82748623" target="_blank">浅谈采样定理</a></p><h5 id="多尺度目标检测"><a class="markdownIt-Anchor" href="#多尺度目标检测"></a> 多尺度目标检测</h5><p>多尺度目标检测简单说检测目标的尺度不同有大有小。</p><p>检测物体大小不一的影响？<br /> 首先，浅层所提取的信息中几何信息好，但是语义信息差，视野小，因此更适合定位；深层所提取的信息中语义信息好，几何信息差，视野大，适合分类。<br />但是，随着加深深度会出现语义信息提取下降现象，因为随着周遭环境的稀释，虽然视野变大，但是视野中的信息量减少，提取下降。</p><p>如图为大小物体下的目标检测，可以看出大小目标的变化是一样的，但是，图像的大小不一样，即小目标更快到顶峰，而大目标却更晚到顶峰，因此，会出出现鱼<br />和熊掌不可兼得的情况，如图，神经网络的深度应定为25层，还是50层，亦或是37层呢？定25层则对小目标的检测效果好而大目标检测能力差；定50层则反之；<br />定37层则两类目标的检测能力较为均衡但都不在最好的检测状态。而这就是“多尺度”目标检测问题的根源所在。</p><p><img src="/images/%E5%A4%A7%E7%9B%AE%E6%A0%87%E5%B0%8F%E7%9B%AE%E6%A0%87%E7%9A%84%E4%B8%8D%E5%90%8C%E4%B9%8B%E5%A4%84.webp" alt="大小目标的检测曲线" /><br />解决方法</p><ol><li>图像金子塔</li></ol><p>由不同分辨率组成的图像从大到小叠加在一起，这种就叫做图像金字塔。缺点：对多个尺寸的图片进行操作，计算量比较大。</p><ol start="2"><li>图像特征金字塔</li></ol><p>通过卷积提取不同尺寸的特征，然后选取其中的部分尺寸对应特征作为预测，对其它的尺寸预测不准确。</p><ol start="3"><li><p  style="color:red">FPN</p></li></ol><p>该网络的思想是分别进行上采样与下采样，将各尺寸进行特征融合然后分别对其进行预测.因此主要分为自下而上的下采样过程、自上而下的上采样过程以及两者的横<br />向连接。如下图所示</p><p><img src="/images/FPN.jpg" alt="FPN神经网络" /></p><h3 style="color:red">U-net网络</h3>&emsp;&emsp;首先，全卷积神经网络与卷积神经网络不同在于前者将后者最后的全连接层换为了卷积层，从而可以输入任意尺寸的图片，输出也是任意图片，因此该网络是端到端的网络，端到端的网络理解为特征提取的输出不在作为输入，而是通过该模型进行学习提取特征，即输入就是原始数据。<p>  U-net神经网络和FPN神经网络类似，也是使用上采样与下采样结合的方式，其亮眼操作为：1.镜像操作，目的是保证输出尺寸与输入尺寸一致，一般使用padding，同时为了不产生噪音一般使用零填充。</p><p style="color:red">拓展研究：</p><h4>padding操作有何作用与影响</h4>padding传统使用是因为随着卷积操作图像尺寸变小,进而网络无法加深，通过padding操作保持图像尺寸，并能够使深层网络获得更多的信息,提高了感受野，但是padding操作在siamRPN网络中表明了其能够影响平移不变性,通过使用零填充会显示出强烈的位置信息，因此出现了平移等变性。<p style="color:red">等变性：简单说就是输出随着变化而变化。即Transform(F(x)) = F(Transform(x))<br>不变性：简单说就是输出随着变化却不发生变化。即F(x) = F(Transform(x))///</p><p>自己的想法：<br />为什么鲁棒性会差？<br />人识别人时一般是从什么地方识别，我认为一是人的身高体重等形状特征，然后是人的脸与穿着，所以是不是可以进行图像分割进行识别匹配，但是图像分割又是基于图像检测。</p><p>频闪效应：<br />其产生原因是因为人的视网膜所呈的像不会立马消失，同时当物体快速移动时会出现移动后的像与移动前的像重叠，此现象成为频闪效应。</p><p>图像高频信息与低频信息</p><p>高频信息：图像的数值变化剧烈的地方，一般是图像的边缘或噪声，同时图像的细节处也就是属于灰度值急剧变化的区域，正是因为灰度值的急剧变化，才会出现细节。</p><p>低频信息：图像像素值变化缓慢的地方，此信息包含的图像的大部分信息</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">对于一副图像来说，除去高频就是低频了，也就是边缘以内的内容为低频，而边缘内的内容就是图像的大部分信息，即图像的大致概貌和轮廓，是图像的近似信息.</span><br></pre></td></tr></table></figure><p style="color:red">采样什么时候出现了混叠？<br>采样频率<br>时域采样<br>频域采样<br>局部连接<br>共享权值<br></p>1.人工智能2.随机行走3.动过]]></content>
       
       
       <categories>

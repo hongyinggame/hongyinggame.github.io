@@ -5,17 +5,17 @@
   
   <title>Swin Transformer(二) | Tag Plugins</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="参考连接 https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;113443895 cnn中位置与尺度的问题 https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;36278093 padding的作用于意义 https:&#x2F;&#x2F;blog.csdn.net&#x2F;JMU_Ma&#x2F;article&#x2F;details&#x2F;90033969 U-net讲解 https:&#x2F;&#x2F;www.zhihu.com&#x2F;questi">
+  <meta name="description" content="参考连接 cnn中位置与尺度的问题 padding的作用于意义 U-net讲解 U-net中的镜像操作的理解 SiamRPN++笔记：padding究竟影响了什么？ 浅谈采样定理  多尺度目标检测 多尺度目标检测简单说检测目标的尺度不同有大有小。 检测物体大小不一的影响？  首先，浅层所提取的信息中几何信息好，但是语义信息差，视野小，因此更适合定位；深层所提取的信息中语义信息好，几何信息差，视野">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Swin Transformer(二)">
 <meta property="og:url" content="https://hongyinggame.github.io/2022/11/13/Transformer/index.html">
 <meta property="og:site_name" content="Tag Plugins">
-<meta property="og:description" content="参考连接 https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;113443895 cnn中位置与尺度的问题 https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;36278093 padding的作用于意义 https:&#x2F;&#x2F;blog.csdn.net&#x2F;JMU_Ma&#x2F;article&#x2F;details&#x2F;90033969 U-net讲解 https:&#x2F;&#x2F;www.zhihu.com&#x2F;questi">
+<meta property="og:description" content="参考连接 cnn中位置与尺度的问题 padding的作用于意义 U-net讲解 U-net中的镜像操作的理解 SiamRPN++笔记：padding究竟影响了什么？ 浅谈采样定理  多尺度目标检测 多尺度目标检测简单说检测目标的尺度不同有大有小。 检测物体大小不一的影响？  首先，浅层所提取的信息中几何信息好，但是语义信息差，视野小，因此更适合定位；深层所提取的信息中语义信息好，几何信息差，视野">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://hongyinggame.github.io/images/%E5%A4%A7%E7%9B%AE%E6%A0%87%E5%B0%8F%E7%9B%AE%E6%A0%87%E7%9A%84%E4%B8%8D%E5%90%8C%E4%B9%8B%E5%A4%84.webp">
 <meta property="og:image" content="https://hongyinggame.github.io/images/FPN.jpg">
 <meta property="article:published_time" content="2022-11-13T03:01:19.000Z">
-<meta property="article:modified_time" content="2022-11-14T07:40:28.305Z">
+<meta property="article:modified_time" content="2022-11-15T13:34:54.345Z">
 <meta property="article:author" content="hongying">
 <meta property="article:tag" content="学习记录">
 <meta name="twitter:card" content="summary">
@@ -51,9 +51,9 @@
     <h2 class="author">hongying</h2>
     <h3 class="description">菜鸟</h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>6</strong><br>文章</div></a>
-      <a href="/categories"><div><strong>5</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>10</strong><br>标签</div></a>
+      <a href="/archives"><div><strong>9</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>8</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>13</strong><br>标签</div></a>
     </div>
     <ul class="blog-link">
      
@@ -114,11 +114,12 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="参考连接"><a class="markdownIt-Anchor" href="#参考连接"></a> 参考连接</h3>
-<p><a target="_blank" href ="https://zhuanlan.zhihu.com/p/113443895">https://zhuanlan.zhihu.com/p/113443895 cnn中位置与尺度的问题</a><br />
-<a href="https://zhuanlan.zhihu.com/p/36278093" target="_blank">https://zhuanlan.zhihu.com/p/36278093 padding的作用于意义</a><br />
-<a href="https://blog.csdn.net/JMU_Ma/article/details/90033969" target="_blank">https://blog.csdn.net/JMU_Ma/article/details/90033969 U-net讲解</a><br />
-<a href="https://www.zhihu.com/question/268331470" target="_blank">https://www.zhihu.com/question/268331470 U-net中的镜像操作的理解</a><br />
-<a href ="https://zhuanlan.zhihu.com/p/126504785" target="_blank">https://zhuanlan.zhihu.com/p/126504785 SiamRPN++笔记：padding究竟影响了什么？</a></p>
+<p><a target="_blank" href ="https://zhuanlan.zhihu.com/p/113443895">cnn中位置与尺度的问题</a><br />
+<a href="https://zhuanlan.zhihu.com/p/36278093" target="_blank">padding的作用于意义</a><br />
+<a href="https://blog.csdn.net/JMU_Ma/article/details/90033969" target="_blank">U-net讲解</a><br />
+<a href="https://www.zhihu.com/question/268331470" target="_blank">U-net中的镜像操作的理解</a><br />
+<a href ="https://zhuanlan.zhihu.com/p/126504785" target="_blank">SiamRPN++笔记：padding究竟影响了什么？</a><br />
+<a href="https://blog.csdn.net/qq_38405680/article/details/82748623" target="_blank">浅谈采样定理</a></p>
 <h5 id="多尺度目标检测"><a class="markdownIt-Anchor" href="#多尺度目标检测"></a> 多尺度目标检测</h5>
 <p>多尺度目标检测简单说检测目标的尺度不同有大有小。</p>
 <p>检测物体大小不一的影响？<br />
@@ -132,11 +133,11 @@
 <ol>
 <li>图像金子塔</li>
 </ol>
-<p>由不同分辨率组成的图像从大到小叠加在一起，这种就叫做图像金字塔。缺点：计算量比较大。</p>
+<p>由不同分辨率组成的图像从大到小叠加在一起，这种就叫做图像金字塔。缺点：对多个尺寸的图片进行操作，计算量比较大。</p>
 <ol start="2">
 <li>图像特征金字塔</li>
 </ol>
-<p>选取其中的部分作为预测，对其它的尺寸预测不准确</p>
+<p>通过卷积提取不同尺寸的特征，然后选取其中的部分尺寸对应特征作为预测，对其它的尺寸预测不准确。</p>
 <ol start="3">
 <li>
 <p  style="color:red">FPN</p>
@@ -148,16 +149,38 @@
 <h3 style="color:red">U-net网络</h3>
 &emsp;&emsp;首先，全卷积神经网络与卷积神经网络不同在于前者将后者最后的全连接层换为了卷积层，从而可以输入任意尺寸的图片，输出也是任意图片，因此该网络是端到端的网络，端到端的网络理解为特征提取的输出不在作为输入，而是通过该模型进行学习提取特征，即输入就是原始数据。
 <p>  U-net神经网络和FPN神经网络类似，也是使用上采样与下采样结合的方式，其亮眼操作为：1.镜像操作，目的是保证输出尺寸与输入尺寸一致，一般使用padding，同时为了不产生噪音一般使用零填充。</p>
-<p>拓展研究：<br />
-  &lt;&gt;padding作用与意义</p>
+<p style="color:red">拓展研究：</p>
+<h4>padding操作有何作用与影响</h4>
+padding传统使用是因为随着卷积操作图像尺寸变小,进而网络无法加深，通过padding操作保持图像尺寸，并能够使深层网络获得更多的信息,提高了感受野，但是padding操作在siamRPN网络中表明了其能够影响平移不变性,通过使用零填充会显示出强烈的位置信息，因此出现了平移等变性。
+<p style="color:red">
+等变性：简单说就是输出随着变化而变化。即Transform(F(x)) = F(Transform(x))<br>
+不变性：简单说就是输出随着变化却不发生变化。即F(x) = F(Transform(x))///
+</p>
 <p>自己的想法：<br />
 为什么鲁棒性会差？<br />
 人识别人时一般是从什么地方识别，我认为一是人的身高体重等形状特征，然后是人的脸与穿着，所以是不是可以进行图像分割进行识别匹配，但是图像分割又是基于图像检测。</p>
+<p>频闪效应：<br />
+其产生原因是因为人的视网膜所呈的像不会立马消失，同时当物体快速移动时会出现移动后的像与移动前的像重叠，此现象成为频闪效应。</p>
+<p>图像高频信息与低频信息</p>
+<p>高频信息：图像的数值变化剧烈的地方，一般是图像的边缘或噪声，同时图像的细节处也就是属于灰度值急剧变化的区域，正是因为灰度值的急剧变化，才会出现细节。</p>
+<p>低频信息：图像像素值变化缓慢的地方，此信息包含的图像的大部分信息</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">对于一副图像来说，除去高频就是低频了，也就是边缘以内的内容为低频，而边缘内的内容就是图像的大部分信息，即图像的大致概貌和轮廓，是图像的近似信息.</span><br></pre></td></tr></table></figure>
+<p style="color:red">
+采样什么时候出现了混叠？<br>
+采样频率<br>
+时域采样<br>
+频域采样<br>
+局部连接<br>
+共享权值<br>
+</p>
+1.人工智能
+2.随机行走
+3.动过
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2022/11/13/Transformer/" data-id="clagist190007c0h8e28j1yuu" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2022/11/13/Transformer/" data-id="clakqlklu0006kkh873i3bd0h" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" rel="tag">学习记录</a></li></ul>
@@ -229,9 +252,9 @@
     <h2 class="author">hongying</h2>
     <h3 class="description">菜鸟</h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>6</strong><br>文章</div></a>
-      <a href="/categories"><div><strong>5</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>10</strong><br>标签</div></a>
+      <a href="/archives"><div><strong>9</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>8</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>13</strong><br>标签</div></a>
     </div>
 
 
