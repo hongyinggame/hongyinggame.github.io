@@ -4,6 +4,38 @@
   
     
     <entry>
+      <title>win11装ubuntu双系统</title>
+      <link href="/2022/12/04/ubuntu1/"/>
+      <url>/2022/12/04/ubuntu1/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>IDEA设置全局变量</title>
+      <link href="/2022/12/04/idea1/"/>
+      <url>/2022/12/04/idea1/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="idea中的坑"><a class="markdownIt-Anchor" href="#idea中的坑"></a> IDEA中的坑</h4><h3 id="解决在ideamaven配置中出现使用setting设置只能作用于该项目的问题"><a class="markdownIt-Anchor" href="#解决在ideamaven配置中出现使用setting设置只能作用于该项目的问题"></a> 解决在IDEAmaven配置中，出现使用setting设置只能作用于该项目的问题</h3><p> 本人使用的是<span style="color:red">IDEA2022.3版本</span>,在进行maven配置时，通过setting进行配置maven，出现了该配置只能作用于该项目，不能迁移到另一个项目中。</p><h2 id="解决"><a class="markdownIt-Anchor" href="#解决"></a> 解决</h2><p> 新版IDEA的全局设置放到了初始化界面中，如果你已经进入项目可以通过如下图所示操作退出项目，然后就会进入初始化界面。<br /><img src="%5Cimages%5Cprojectexit.png" alt="项目退出" /></p><p> 进入初始化界面后，找到全局配置，如下图：<br /><img src="%5Cimages%5Callsetting.png" alt="全局配置" /></p><p> 最后就是进行全局配置了，但是你以为这就完了吗？<br /><img src="/images/heshui.gif" alt="" /><br /><img src="/images/paobu.gif" alt="" /></p><p> 好了休息完了，接下来是将勾选自动编译到项目中，如果这个不勾选，还是出现无法应用的情况，操作如下图：<br /><img src="/images/bianyi.png" alt="自动编译项目" /></p><p> ok!现在全局配置生效了，你终于不用每次都配置了。<br /><img src="%5Cimages%5Chaoyun.jpg" alt="" /></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> IDEA </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>esxi1</title>
       <link href="/2022/11/20/esxi1/"/>
       <url>/2022/11/20/esxi1/</url>

@@ -3,17 +3,27 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Category: 机器视觉 | Tag Plugins</title>
+  <title>IDEA设置全局变量 | Tag Plugins</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="菜鸟">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Tag Plugins">
-<meta property="og:url" content="https://hongyinggame.github.io/categories/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/index.html">
+  <meta name="description" content="IDEA中的坑  解决在IDEAmaven配置中，出现使用setting设置只能作用于该项目的问题  本人使用的是IDEA2022.3版本,在进行maven配置时，通过setting进行配置maven，出现了该配置只能作用于该项目，不能迁移到另一个项目中。  解决  新版IDEA的全局设置放到了初始化界面中，如果你已经进入项目可以通过如下图所示操作退出项目，然后就会进入初始化界面。   进入初始">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IDEA设置全局变量">
+<meta property="og:url" content="https://hongyinggame.github.io/2022/12/04/idea1/index.html">
 <meta property="og:site_name" content="Tag Plugins">
-<meta property="og:description" content="菜鸟">
+<meta property="og:description" content="IDEA中的坑  解决在IDEAmaven配置中，出现使用setting设置只能作用于该项目的问题  本人使用的是IDEA2022.3版本,在进行maven配置时，通过setting进行配置maven，出现了该配置只能作用于该项目，不能迁移到另一个项目中。  解决  新版IDEA的全局设置放到了初始化界面中，如果你已经进入项目可以通过如下图所示操作退出项目，然后就会进入初始化界面。   进入初始">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hongyinggame.github.io/2022/12/04/idea1/%5Cimages%5Cprojectexit.png">
+<meta property="og:image" content="https://hongyinggame.github.io/2022/12/04/idea1/%5Cimages%5Callsetting.png">
+<meta property="og:image" content="https://hongyinggame.github.io/images/heshui.gif">
+<meta property="og:image" content="https://hongyinggame.github.io/images/paobu.gif">
+<meta property="og:image" content="https://hongyinggame.github.io/images/bianyi.png">
+<meta property="og:image" content="https://hongyinggame.github.io/2022/12/04/idea1/%5Cimages%5Chaoyun.jpg">
+<meta property="article:published_time" content="2022-12-04T07:24:42.000Z">
+<meta property="article:modified_time" content="2022-12-04T08:04:32.360Z">
 <meta property="article:author" content="hongying">
+<meta property="article:tag" content="IDEA">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hongyinggame.github.io/2022/12/04/idea1/%5Cimages%5Cprojectexit.png">
   
     <link rel="alternate" href="/atom.xml" title="Tag Plugins" type="application/atom+xml">
   
@@ -71,42 +81,88 @@
   </div>
 </div>
 
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap animated rubberBand">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/11/13/Transformer/" class="archive-article-date">
-  <time class="post-time" datetime="2022-11-13T03:01:19.000Z" itemprop="datePublished">
-    <span class="post-month">11月</span><br/>
-    <span class="post-day">13</span>
+        <section id="main"><article id="post-idea1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/12/04/idea1/" class="article-date">
+  <time class="post-time" datetime="2022-12-04T07:24:42.000Z" itemprop="datePublished">
+    <span class="post-month">12月</span><br/>
+    <span class="post-day">04</span>
   </time>
 </a>
-      
+   
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/11/13/Transformer/">Swin Transformer(二)</a>
+    <h1 class="article-title" itemprop="name">
+      IDEA设置全局变量
     </h1>
   
 
-    </header>
+        <div>
+          
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="idea中的坑"><a class="markdownIt-Anchor" href="#idea中的坑"></a> IDEA中的坑</h4>
+<h3 id="解决在ideamaven配置中出现使用setting设置只能作用于该项目的问题"><a class="markdownIt-Anchor" href="#解决在ideamaven配置中出现使用setting设置只能作用于该项目的问题"></a> 解决在IDEAmaven配置中，出现使用setting设置只能作用于该项目的问题</h3>
+<p> 本人使用的是<span style="color:red">IDEA2022.3版本</span>,在进行maven配置时，通过setting进行配置maven，出现了该配置只能作用于该项目，不能迁移到另一个项目中。</p>
+<h2 id="解决"><a class="markdownIt-Anchor" href="#解决"></a> 解决</h2>
+<p> 新版IDEA的全局设置放到了初始化界面中，如果你已经进入项目可以通过如下图所示操作退出项目，然后就会进入初始化界面。<br />
+<img src="%5Cimages%5Cprojectexit.png" alt="项目退出" /></p>
+<p> 进入初始化界面后，找到全局配置，如下图：<br />
+<img src="%5Cimages%5Callsetting.png" alt="全局配置" /></p>
+<p> 最后就是进行全局配置了，但是你以为这就完了吗？<br />
+<img src="/images/heshui.gif" alt="" /><br />
+<img src="/images/paobu.gif" alt="" /></p>
+<p> 好了休息完了，接下来是将勾选自动编译到项目中，如果这个不勾选，还是出现无法应用的情况，操作如下图：<br />
+<img src="/images/bianyi.png" alt="自动编译项目" /></p>
+<p> ok!现在全局配置生效了，你终于不用每次都配置了。<br />
+<img src="%5Cimages%5Chaoyun.jpg" alt="" /></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hongyinggame.github.io/2022/12/04/idea1/" data-id="clb95bg9n000i9oh8596mb7cr" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IDEA/" rel="tag">IDEA</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2022/12/04/ubuntu1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          win11装ubuntu双系统
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2022/11/20/esxi1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">esxi1</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
 
 
 </section>
