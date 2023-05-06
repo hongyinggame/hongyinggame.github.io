@@ -130,7 +130,7 @@
     
     
     <entry>
-      <title>A flexible and visually meaningful multi-image compression, encryption and hiding scheme based on 2D compressive sensing 阅读</title>
+      <title>《A flexible and visually meaningful multi-image compression, encryption and hiding scheme based on 2D compressive sensing》论文阅读</title>
       <link href="/2023/04/15/encryption1/"/>
       <url>/2023/04/15/encryption1/</url>
       
@@ -206,24 +206,11 @@
     
     
     <entry>
-      <title>esxi1</title>
-      <link href="/2022/11/20/esxi1/"/>
-      <url>/2022/11/20/esxi1/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>记录</title>
       <link href="/2022/11/20/gamification1/"/>
       <url>/2022/11/20/gamification1/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="压缩"><a class="markdownIt-Anchor" href="#压缩"></a> 压缩</h4><ul><li>传统先采样后压缩方法</li><li>基于压缩感知的压缩，将采样与压缩合并，压缩感知的测量数量比奈奎斯特理论少很多</li></ul><h4 id="introduction"><a class="markdownIt-Anchor" href="#introduction"></a> Introduction</h4><p>第二段：目前提出的压缩感知进行压缩的方法存在当采样率低的情况下的重构时间长与重构效果差的情况，借助神经网络的强大学习与计算能力可以有效地将重构图像进行改进，但是目前神经网络没有考虑块之间的相关性，使得重构图像产生了块伪重影噪声，这些方法都是基于理想条件下的压缩，对于现实中出现的传输波动与噪声现象，没有考虑进去。</p><h4 id="感性趣的论文"><a class="markdownIt-Anchor" href="#感性趣的论文"></a> 感性趣的论文</h4><p>[28]</p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="压缩"><a class="markdownIt-Anchor" href="#压缩"></a> 压缩</h4><ul><li>传统先采样后压缩方法</li><li>基于压缩感知的压缩，将采样与压缩合并，压缩感知的测量数量比奈奎斯特理论少很多</li></ul><h4 id="introduction"><a class="markdownIt-Anchor" href="#introduction"></a> Introduction</h4><p>第二段：目前提出的压缩感知进行压缩的方法存在当采样率低的情况下的重构时间长与重构效果差的情况，借助神经网络的强大学习与计算能力可以有效地将重构图像进行改进，但是目前神经网络没有考虑块之间的相关性，使得重构图像产生了块伪重影噪声，这些方法都是基于理想条件下的压缩，对于现实中出现的传输波动与噪声现象，没有考虑进去。</p><p>第三段、第四段：提出目前的基于压缩感知的加密方法，同时，分析出该方法存在的问题。<br />第五段：提出了作者的方法。</p>]]></content>
       
       
       
@@ -357,31 +344,6 @@
         <tags>
             
             <tag> 学习记录 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>thesis</title>
-      <link href="/2022/11/10/thesis/"/>
-      <url>/2022/11/10/thesis/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="假人脸检测与伪目标检测"><a class="markdownIt-Anchor" href="#假人脸检测与伪目标检测"></a> 假人脸检测与伪目标检测</h2><h4 id="假人脸识别"><a class="markdownIt-Anchor" href="#假人脸识别"></a> 假人脸识别</h4><p>Multi-attentional Deepfake Detection</p><ol><li>multiple spatial attention heads 多空间注意力头 促使网络注意到不同部分</li><li>textural feature enhancement block 纹理信息增强模块</li><li>由 attention maps 指导，聚合低层次的纹理特征和高层次的语义特征</li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> 待做项目 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 未完成 </tag>
             
         </tags>
       
