@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>学术报告记录 | HongyingBlog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="李念桥------量子编程基础   量子编程有趣性   量子的编程 IBM quantum experience 使得量子编程变得更容易了。   量子计算机的编程是需要进行评价的。   多个比特的逻辑门操作转化为了两个量子比特的逻辑门操作，如何分解是一个贡献。   终于了解到了量子比特的布洛赫球面的表示含义，以及为什么是0-pi而不是0-pi,因为一个量子比特是有两个状态的，而球体的直径表示的整">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学术报告记录">
+<meta property="og:url" content="https://hongyinggame.github.io/2023/05/13/baogao1/index.html">
+<meta property="og:site_name" content="HongyingBlog">
+<meta property="og:description" content="李念桥------量子编程基础   量子编程有趣性   量子的编程 IBM quantum experience 使得量子编程变得更容易了。   量子计算机的编程是需要进行评价的。   多个比特的逻辑门操作转化为了两个量子比特的逻辑门操作，如何分解是一个贡献。   终于了解到了量子比特的布洛赫球面的表示含义，以及为什么是0-pi而不是0-pi,因为一个量子比特是有两个状态的，而球体的直径表示的整">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-05-13T02:32:45.000Z">
+<meta property="article:modified_time" content="2023-05-13T08:25:25.275Z">
+<meta property="article:author" content="hongying">
+<meta property="article:tag" content="学术报告">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="HongyingBlog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/tag.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/plugin/bganimation/bg.css">
+
+  
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" rel="stylesheet" type="text/css">
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <div class="outer">
+        <div class="widget-wrap mobile-header">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <img class="avatar" src="/images/one.jpg">
+    <h2 class="author">hongying</h2>
+    <h3 class="description">娜厨</h3>
+    <div class="count-box">
+      <a href="/archives"><div><strong>26</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>9</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>28</strong><br>标签</div></a>
+    </div>
+    <ul class="blog-link">
+     
+          <a href="/" title="Home">
+            <li>主页</li>
+          </a>
+        
+          <a href="/archives" title="Archives">
+            <li>归档</li>
+          </a>
+        
+          <a href="/categories" title="Categories">
+            <li>分类</li>
+          </a>
+        
+          <a href="/tags" title="Tags">
+            <li>标签</li>
+          </a>
+        
+    </ul>
+  </div>
+</div>
+
+        <section id="main"><article id="post-baogao1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2023/05/13/baogao1/" class="article-date">
+  <time class="post-time" datetime="2023-05-13T02:32:45.000Z" itemprop="datePublished">
+    <span class="post-month">5月</span><br/>
+    <span class="post-day">13</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      学术报告记录
+    </h1>
+  
+
+        <div>
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%AD%A6%E6%9C%AF/">学术</a>
+  </div>
+
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="李念桥-量子编程基础-量子编程有趣性"><a class="markdownIt-Anchor" href="#李念桥-量子编程基础-量子编程有趣性"></a> 李念桥------量子编程基础   量子编程有趣性</h4>
+<p>  量子的编程 IBM quantum experience 使得量子编程变得更容易了。</p>
+<p>  量子计算机的编程是需要进行评价的。</p>
+<p>  多个比特的逻辑门操作转化为了两个量子比特的逻辑门操作，如何分解是一个贡献。</p>
+<p>  终于了解到了量子比特的布洛赫球面的表示含义，以及为什么是0-pi而不是0-pi,因为一个量子比特是有两个状态的，而球体的直径表示的整个比特，而关于远点对称的两个半径表示的就是量子比特的两个状态。</p>
+<p>  通过李念桥学长提供的量子机器人游戏行动编程，发现了量子编程或许可以和经典编程组合从而进行游戏的编程。</p>
+<p>  量子算法的提出出现了停滞。</p>
+<h4 id="梁文-量子随机游走-复杂网络"><a class="markdownIt-Anchor" href="#梁文-量子随机游走-复杂网络"></a> 梁文---------量子随机游走 复杂网络</h4>
+<p>  一个封闭空间可能有多种状态，即为叠加态，但是当你进行测量时就会对其进行破坏，然后多种状态就会塌缩为一种状态。</p>
+<p>  网络图结构的反推，通过结果反推原因的方法，从逻辑上来说是可行的，但是呢，对于算法实现上来说，这个可能就不是容易了，甚至得需要神经网络的使用了，那么黑匣子就可能会被使用。</p>
+<p>  简化量子行走模型，可以进行对现实/经典事物进行量子简化。</p>
+<p>  不同的硬币算符作用是不同的，同时其概率分布是不同的，如何选择是你更好就看你选择那个方式去行动。</p>
+<p>  大脑网络图与蛋白质网络图由于其特殊的结构，很多网络边预测效果不是特别好。</p>
+<p>  会不会这个世界就是多个状态，而我们因为一直在观测，所以我就就只能观测其中的一个特征，因此是不是他们都存在在一个统一的多动态事物，同时平行时空是不是也是具有量子性，平行时空具有多个状态，而我们通过选择使其塌缩，从而处于某个状态，那么这样说的话我们就无法到达另一个时空，因为我们和另一个平行世界是相通的，要想到达就必须重构这个时空使其处于曾经的叠加态中，这样的话才能通过观测或选择进入另一个时空。也就是说未来是无限可能的叠加态，但是我们总得前行，而这么做就会破坏平衡，然后从而处于某一种可能中。</p>
+<p>  一个事物可能存在不只是一个状态，应该是两个状态共存的，而我们可能只能观察到其中的一个状态，如果要想观察另一个状态，需要对其进行重构与观测，这次的观测也可能不是同一种方法了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hongyinggame.github.io/2023/05/13/baogao1/" data-id="clhouiu4u0003ikf525f0e52f" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E6%9C%AF%E6%8A%A5%E5%91%8A/" rel="tag">学术报告</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/05/15/zhentan1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          侦探小说记录
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/05/12/shenghuo1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">生活记录</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <h1 class="blog-title">HongyingBlog</h1>
+    <h2 class="blog-subtitle"></h2>
+    <ul class="blog-link">
+     
+          <a href="/" title="Home">
+            <li>主页</li>
+          </a>
+        
+          <a href="/archives" title="Archives">
+            <li>归档</li>
+          </a>
+        
+          <a href="/categories" title="Categories">
+            <li>分类</li>
+          </a>
+        
+          <a href="/tags" title="Tags">
+            <li>标签</li>
+          </a>
+        
+    </ul>
+  </div>
+</div>
+
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <img class="avatar" src="/images/one.jpg">
+    <h2 class="author">hongying</h2>
+    <h3 class="description">娜厨</h3>
+    <div class="count-box">
+      <a href="/archives"><div><strong>26</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>9</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>28</strong><br>标签</div></a>
+    </div>
+
+
+
+    <div class="social-link">
+      
+        <a class="hvr-bounce-in" href="https://github.com/hongyinggame" target="_blank" title="Github">
+          Github
+        </a>
+      
+    </div>
+
+    <div class="friend-link">
+      <h2>友情链接</h2>
+      
+        <a class="hvr-bounce-in" href="http://blog.shanamaid.top/" target="_blank" title="ShanaMaid">
+          ShanaMaid
+        </a>
+      
+    </div>
+  </div>
+</div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy;2022 - 2023 hongying<br>
+      由<a href="http://hexo.io/" target="_blank">Hexo</a>强力驱动 | 
+      主题-<a target="_blank" rel="noopener" href="https://github.com/ShanaMaid/hexo-theme-shana">Shana</a>
+      
+    </div>
+    
+  </div>
+</footer>
+    </div>
+    
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="//apps.bdimg.com/libs/wow/0.1.6/wow.min.js"></script>
+<script>
+new WOW().init();
+</script>   
+
+
+  
+<link rel="stylesheet" href="/plugin/fancybox/jquery.fancybox.css">
+
+  
+<script src="/plugin/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+  
+<link rel="stylesheet" href="/plugin/galmenu/GalMenu.css">
+
+  
+<script src="/plugin/galmenu/GalMenu.js"></script>
+
+  <div class="GalMenu GalDropDown">
+      <div class="circle" id="gal">
+        <div class="ring">
+          
+            <a href="/" title="" class="menuItem">首页</a>
+          
+            <a href="/tags" title="" class="menuItem">标签</a>
+          
+            <a href="/categories" title="" class="menuItem">分类</a>
+          
+            <a href="/archives" title="" class="menuItem">归档</a>
+          
+            <a target="_blank" rel="noopener" href="https://github.com/hongyinggame" title="" class="menuItem">github</a>
+          
+            <a href="/web/shana.html" title="" class="menuItem">祝福</a>
+          
+        </div>
+        
+          <audio id="audio" src="#"></audio>
+        
+      </div> 
+</div>
+<div id="overlay" style="opacity: 1; cursor: pointer;"></div>
+  <script type="text/javascript">var items = document.querySelectorAll('.menuItem');
+    for (var i = 0,
+    l = items.length; i < l; i++) {
+      items[i].style.left = (50 - 35 * Math.cos( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
+      items[i].style.top = (50 + 35 * Math.sin( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%"
+    }</script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('body').GalMenu({
+      'menu': 'GalDropDown'
+    })
+  });
+</script>
+
+  <section class="hidden-xs"> 
+  <ul class="cb-slideshow"> 
+    <li><span>苟利</span></li> 
+    <li><span>国家</span></li> 
+    <li><span>生死以</span></li> 
+    <li><span>岂能</span></li> 
+    <li><span>祸福</span></li> 
+    <li><span>趋避之</span></li> 
+  </ul>
+</section>
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
