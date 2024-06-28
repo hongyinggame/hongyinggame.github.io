@@ -836,6 +836,12 @@ body,
 body {
   overflow-x: hidden;
 }
+h2 {
+  color: #e71d36;
+  font-size: 2em;
+  letter-spacing: -1px;
+  line-height: 1.2em;
+}
 .wow {
   visibility: hidden;
 }

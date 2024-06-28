@@ -134,10 +134,7 @@
 
     $container.removeClass('mobile-nav-on');
   });
-})(jQuery);
-<script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
-fetch('https://v1.hitokoto.cn')
+    fetch('https://v1.hitokoto.cn')
     .then(function (res){
       return res.json();
     })
@@ -148,4 +145,6 @@ fetch('https://v1.hitokoto.cn')
     .catch(function (err) {
       console.error(err);
     });
+
+})(jQuery);
 
