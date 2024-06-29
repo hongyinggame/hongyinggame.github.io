@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>git_master</title>
+      <link href="/2024/06/29/git-master/"/>
+      <url>/2024/06/29/git-master/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  本文章主要是记录一下程序自动开启管理员运行模式的配置方法，有些文件位于C盘具有访问权限，如果不是管理员就无法访问，而每次都是先以管理员进入bash程序，然后cd进入该路径，他费劲了，于是直接配置bash直接进入管理员，直接在该文件夹下bash即可。<br />  开启权限很简单，首先，找到该exe程序，然后右键属性，找到兼容性标签页，然后点击更改所有用户设置，最后将以管理员身份运行打勾即可，此方法对其它程序页都适用。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Git </category>
+          
+          <category> bash管理员配置 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>配置双博客（配置访问两个github）</title>
       <link href="/2024/06/28/twogithub/"/>
       <url>/2024/06/28/twogithub/</url>
