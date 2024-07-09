@@ -8,7 +8,7 @@
       <link href="/2024/07/08/SQL1/"/>
       <url>/2024/07/08/SQL1/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  SQL使用;作为结束标志，SQL不区分大小写，但是一般关键字大写是为了更容易阅读，SQL查询结果没特殊说明，不进行排序，SQL对空格不进行处理，所以可以写在一行，也可写在多行。<br />  <code>SELECT DISTINCT 列名 FROM 表名; DISTINCT 用于查询不同字段，消除重复字段。</code><br />  <code>SELECT TOP 5 列名 FROM 表名; TOP 用于指定前几行记录;</code><br />  <code>MYSQL使用如下 SELECT 列名 FROM 表名 LIMIT 5 OFFSET 5; LIMIT关键词用于指定输出几行，OFFSET 用于指定开始行号，可简化为LIMIT 5,5; 但是第一个是OFFSET值，第二个为LIMIT值</code><br />  <code>python  import sys if __name__ == &quot;__main__&quot;:     sys.stdout.write(&quot;Hello World&quot;)</code></p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  SQL使用;作为结束标志，SQL不区分大小写，但是一般关键字大写是为了更容易阅读，SQL查询结果没特殊说明，不进行排序，SQL对空格不进行处理，所以可以写在一行，也可写在多行。<br />  <code>SELECT DISTINCT 列名 FROM 表名; DISTINCT 用于查询不同字段，消除重复字段。</code><br />  <code>SELECT TOP 5 列名 FROM 表名; TOP 用于指定前几行记录;</code><br />  <code>MYSQL使用如下 SELECT 列名 FROM 表名 LIMIT 5 OFFSET 5; LIMIT关键词用于指定输出几行，OFFSET 用于指定开始行号，可简化为LIMIT 5,5; 但是第一个是OFFSET值，第二个为LIMIT值</code><br />  <code>python  import sys if __name__ == &quot;__main__&quot;:     sys.stdout.write(&quot;Hello World&quot;)</code></p><pre class=" language-language-css"><code class="language-language-css">p &#123; color: red &#125;</code></pre>]]></content>
       
       
       <categories>
