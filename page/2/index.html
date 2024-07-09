@@ -2,39 +2,35 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <%
-  var title = page.title;
-
-  if (is_archive()){
-    title = __('archive_a');
-
-    if (is_month()){
-      title += ': ' + page.year + '/' + page.month;
-    } else if (is_year()){
-      title += ': ' + page.year;
-    }
-  } else if (is_category()){
-    title = __('category') + ': ' + page.category;
-  } else if (is_tag()){
-    title = __('tag') + ': ' + page.tag;
-  }
-  %>
-  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+  
+  <title>HongyingBlog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
-  <% if (theme.rss){ %>
-    <link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
-  <% } %>
-  <% if (theme.favicon){ %>
-    <link rel="icon" href="<%- theme.favicon %>">
-  <% } %>
-  <% if (config.highlight.enable){ %>
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  <% } %>
-  <%- css('css/style') %>
-  <%- css('plugin/bganimation/bg') %>
-  <%- partial('google-analytics') %>
+  <meta name="description" content="娜厨">
+<meta property="og:type" content="website">
+<meta property="og:title" content="HongyingBlog">
+<meta property="og:url" content="https://hongyinggame.github.io/page/2/index.html">
+<meta property="og:site_name" content="HongyingBlog">
+<meta property="og:description" content="娜厨">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="hongying">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="HongyingBlog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/tag.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/plugin/bganimation/bg.css">
+
+  
+
   <link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/js/prism/prism.css">
 <meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="/css/prism-twilight.css" type="text/css"></head>
 
 <body>
@@ -124,7 +120,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2023/05/30/jilu11/" data-id="clye3oamt001to0pb41twesax" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2023/05/30/jilu11/" data-id="clye3sei5001yaopb1hr9dnb2" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%80%9D%E8%80%83/" rel="tag">思考</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%B0%E5%BD%95/" rel="tag">记录</a></li></ul>
@@ -186,7 +182,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2023/05/30/xiana1/" data-id="clye3oan3003uo0pbeha67bsc" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2023/05/30/xiana1/" data-id="clye3seig003uaopbewcydxnq" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A4%8F%E5%A8%9C/" rel="tag">夏娜</a></li></ul>
@@ -253,7 +249,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2023/05/29/shenhuaniao/" data-id="clye3oamz0035o0pbeaezfb4t" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2023/05/29/shenhuaniao/" data-id="clye3seib0033aopb87lcgqfb" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9D%82%E8%B0%88/" rel="tag">杂谈</a></li></ul>
@@ -315,7 +311,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2023/05/29/jilu10/" data-id="clye3oams001no0pbf74l59mi" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2023/05/29/jilu10/" data-id="clye3sei4001saopbg885fb2c" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%80%9D%E8%80%83/" rel="tag">思考</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%B0%E5%BD%95/" rel="tag">记录</a></li></ul>
@@ -377,7 +373,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2023/05/26/zhentan2/" data-id="clye3oanc006co0pbcj8k5etm" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2023/05/26/zhentan2/" data-id="clye3seio006caopb2ood3i40" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BE%A6%E6%8E%A2/" rel="tag">侦探</a></li></ul>
@@ -439,7 +435,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2023/05/25/jilu9/" data-id="clye3oamv0026o0pbgu5s07r2" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2023/05/25/jilu9/" data-id="clye3sei5001zaopbai5jbtv9" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%80%9D%E8%80%83/" rel="tag">思考</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%B0%E5%BD%95/" rel="tag">记录</a></li></ul>
@@ -501,7 +497,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2023/05/25/GL1/" data-id="clye3oamg0007o0pbdmq5f9te" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2023/05/25/GL1/" data-id="clye3sehq0007aopb1zcj2pvy" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GL/" rel="tag">GL</a></li></ul>
@@ -568,7 +564,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2023/05/25/gongzuo1/" data-id="clye3oamp001ao0pb4p276d7c" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2023/05/25/gongzuo1/" data-id="clye3sei1001eaopbfcmm1ifg" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BB%8F%E9%AA%8C/" rel="tag">经验</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%B0%E5%BD%95/" rel="tag">记录</a></li></ul>
@@ -630,7 +626,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2023/05/21/jilu8/" data-id="clye3oamt001yo0pbds956185" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2023/05/21/jilu8/" data-id="clye3sei7002baopbf200awtl" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%80%9D%E8%80%83/" rel="tag">思考</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%B0%E5%BD%95/" rel="tag">记录</a></li></ul>
@@ -692,7 +688,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2023/05/17/jilu7/" data-id="clye3oamu0021o0pbbri56w45" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2023/05/17/jilu7/" data-id="clye3sei70027aopb8s5yck0h" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%80%9D%E8%80%83/" rel="tag">思考</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%B0%E5%BD%95/" rel="tag">记录</a></li></ul>
