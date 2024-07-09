@@ -2,35 +2,39 @@
 <html>
 <head>
   <meta charset="utf-8">
-  
-  <title>HongyingBlog</title>
+  <%
+  var title = page.title;
+
+  if (is_archive()){
+    title = __('archive_a');
+
+    if (is_month()){
+      title += ': ' + page.year + '/' + page.month;
+    } else if (is_year()){
+      title += ': ' + page.year;
+    }
+  } else if (is_category()){
+    title = __('category') + ': ' + page.category;
+  } else if (is_tag()){
+    title = __('tag') + ': ' + page.tag;
+  }
+  %>
+  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="娜厨">
-<meta property="og:type" content="website">
-<meta property="og:title" content="HongyingBlog">
-<meta property="og:url" content="https://hongyinggame.github.io/index.html">
-<meta property="og:site_name" content="HongyingBlog">
-<meta property="og:description" content="娜厨">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="hongying">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="HongyingBlog" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/images/tag.png">
-  
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
-<link rel="stylesheet" href="/plugin/bganimation/bg.css">
-
-  
-
+  <%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
+  <% if (theme.rss){ %>
+    <link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
+  <% } %>
+  <% if (theme.favicon){ %>
+    <link rel="icon" href="<%- theme.favicon %>">
+  <% } %>
+  <% if (config.highlight.enable){ %>
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <% } %>
+  <%- css('css/style') %>
+  <%- css('plugin/bganimation/bg') %>
+  <%- partial('google-analytics') %>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/js/prism/prism.css">
 <meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="/css/prism-twilight.css" type="text/css"></head>
 
 <body>
@@ -125,7 +129,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/07/08/SQL1/" data-id="clye3dk6w000nlwpb4e559jck" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2024/07/08/SQL1/" data-id="clye3oamh000bo0pb05y15p2u" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SQL/" rel="tag">SQL</a></li></ul>
@@ -189,7 +193,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/06/29/git-master/" data-id="clye3dk710017lwpb3r4l9t93" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2024/06/29/git-master/" data-id="clye3oamo0017o0pbeyi60q7o" class="article-share-link">分享</a>
       
       
     </footer>
@@ -250,7 +254,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/06/28/twogithub/" data-id="clye3dk7e003plwpb6s0h0dyn" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2024/06/28/twogithub/" data-id="clye3oan2003qo0pbca9t9sc0" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
@@ -314,7 +318,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/06/27/java-UI-font-1/" data-id="clye3dk73001olwpb0aend7au" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2024/06/27/java-UI-font-1/" data-id="clye3oamr001lo0pb4wjl4g2i" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UI/" rel="tag">UI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/" rel="tag">java</a></li></ul>
@@ -386,7 +390,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/06/27/hello-world/" data-id="clye3dk72001hlwpbgm4a3btj" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2024/06/27/hello-world/" data-id="clye3oamq001eo0pb0sa85m0q" class="article-share-link">分享</a>
       
       
     </footer>
@@ -445,7 +449,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/02/15/di24/" data-id="clye3dk6w000plwpbdxc9hgi9" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2024/02/15/di24/" data-id="clye3oaml000qo0pbas3x41pn" class="article-share-link">分享</a>
       
       
     </footer>
@@ -514,7 +518,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/02/15/24-2-15/" data-id="clye3dk6q0005lwpba5klda3v" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2024/02/15/24-2-15/" data-id="clye3oamd0003o0pbf681dncf" class="article-share-link">分享</a>
       
       
     </footer>
@@ -572,7 +576,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/02/04/24-2/" data-id="clye3dk6m0001lwpba5dabbty" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2024/02/04/24-2/" data-id="clye3oamf0006o0pbcsiaggni" class="article-share-link">分享</a>
       
       
     </footer>
@@ -632,7 +636,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2023/06/01/jilu11-1/" data-id="clye3dk74001ulwpbg0lh3uev" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2023/06/01/jilu11-1/" data-id="clye3oams001ro0pb23vph2it" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%80%9D%E8%80%83/" rel="tag">思考</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%B0%E5%BD%95/" rel="tag">记录</a></li></ul>
@@ -694,7 +698,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2023/05/31/mubiao/" data-id="clye3dk78002ilwpbclhcepmp" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2023/05/31/mubiao/" data-id="clye3oamy002so0pb1jws1tf7" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%80%9D%E8%80%83/" rel="tag">思考</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%B0%E5%BD%95/" rel="tag">记录</a></li></ul>
