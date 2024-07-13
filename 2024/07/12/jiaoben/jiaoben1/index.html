@@ -3,16 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: SQL | HongyingBlog</title>
+  <title>脚本延时变量 | HongyingBlog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="娜厨">
-<meta property="og:type" content="website">
-<meta property="og:title" content="HongyingBlog">
-<meta property="og:url" content="https://hongyinggame.github.io/tags/SQL/index.html">
+  <meta name="description" content="在进行编写脚本时，发现了延时变量与非延时变量，记录一下。一般if语句被认为是一行命令，而if中往往有几行命令，此时命令可以被认为是并行的，但是如果使用了延时扩展，就如同被认为不同命令，相继执行。 setlocal enabledelayedexpansion ::开启延时扩展 set a &#x3D; 2 if %a% &#x3D;;&#x3D;2 (::括号前要有空格      set a&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="脚本延时变量">
+<meta property="og:url" content="https://hongyinggame.github.io/2024/07/12/jiaoben/jiaoben1/index.html">
 <meta property="og:site_name" content="HongyingBlog">
-<meta property="og:description" content="娜厨">
+<meta property="og:description" content="在进行编写脚本时，发现了延时变量与非延时变量，记录一下。一般if语句被认为是一行命令，而if中往往有几行命令，此时命令可以被认为是并行的，但是如果使用了延时扩展，就如同被认为不同命令，相继执行。 setlocal enabledelayedexpansion ::开启延时扩展 set a &#x3D; 2 if %a% &#x3D;;&#x3D;2 (::括号前要有空格      set a&amp;">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-07-12T09:27:21.000Z">
+<meta property="article:modified_time" content="2024-07-13T02:16:02.113Z">
 <meta property="article:author" content="hongying">
+<meta property="article:tag" content="脚本">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="HongyingBlog" type="application/atom+xml">
@@ -44,9 +47,9 @@
     <h2 class="author">hongying</h2>
     <h3 class="description">娜厨</h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>46</strong><br>文章</div></a>
-      <a href="/categories"><div><strong>20</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>37</strong><br>标签</div></a>
+      <a href="/archives"><div><strong>51</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>21</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>40</strong><br>标签</div></a>
     </div>
     <ul class="blog-link">
      
@@ -70,42 +73,93 @@
   </div>
 </div>
 
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap animated rubberBand">
-        <div class="archive-year-wrap">
-          <a href="/archives/2024" class="archive-year">2024</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/07/08/SQL1/" class="archive-article-date">
-  <time class="post-time" datetime="2024-07-08T07:37:38.000Z" itemprop="datePublished">
+        <section id="main"><article id="post-jiaoben/jiaoben1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/07/12/jiaoben/jiaoben1/" class="article-date">
+  <time class="post-time" datetime="2024-07-12T09:27:21.000Z" itemprop="datePublished">
     <span class="post-month">7月</span><br/>
-    <span class="post-day">08</span>
+    <span class="post-day">12</span>
   </time>
 </a>
-      
+   
+  </div>
+  <div class="article-inner">
+    
+
+
+
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/07/08/SQL1/">SQL1</a>
+    <h1 class="article-title" itemprop="name">
+      脚本延时变量
     </h1>
   
 
-    </header>
+        <div>
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%84%9A%E6%9C%AC/">脚本</a>
   </div>
+
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>  在进行编写脚本时，发现了延时变量与非延时变量，记录一下。一般if语句被认为是一行命令，而if中往往有几行命令，此时命令可以被认为是并行的，但是如果使用了延时扩展，就如同被认为不同命令，相继执行。</p>
+<pre class="line-numbers language-none"><code class="language-none">setlocal enabledelayedexpansion ::开启延时扩展
+set a &#x3D; 2
+if %a% &#x3D;;&#x3D;2 (::括号前要有空格
+
+    set a&#x3D;3
+    echo !a!::当使用!!才会变成延时变量
+    echo %a%
+    ::此时!a!输出3，而%a%输出2。
+
+)
+pause<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hongyinggame.github.io/2024/07/12/jiaoben/jiaoben1/" data-id="clyjioybg0003cspbdyjph2sc" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%84%9A%E6%9C%AC/" rel="tag">脚本</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2024/07/13/hexojilu/hexojilu1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          Hexo在post文件夹中子文件夹中创建文档
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2024/07/09/hexo2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">Hexo代码块问题</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
+
 
 </section>
         
@@ -146,9 +200,9 @@
     <h2 class="author">hongying</h2>
     <h3 class="description">娜厨</h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>46</strong><br>文章</div></a>
-      <a href="/categories"><div><strong>20</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>37</strong><br>标签</div></a>
+      <a href="/archives"><div><strong>51</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>21</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>40</strong><br>标签</div></a>
     </div>
 
 
