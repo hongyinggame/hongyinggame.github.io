@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>类型</title>
+      <link href="/2024/07/18/mysql/table1/"/>
+      <url>/2024/07/18/mysql/table1/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  Varchar与char区别：</p><pre class="line-numbers language-none"><code class="language-none">Varchar 是可变长，需要字节存储长度，不大于255，需要1字节，特殊的如果表格使用ROW_FORMAT&#x3D;FIXED，则变为固定长度。一般不能直接设定最大值，虽然在mysql中看是变长，但是对于内存来说是直接开辟全部长度，以避免放不下情况，会浪费资源，同时Varchar在更新时，也会出现页内存储不够的情况，MylSAM会将行拆成不同的片段存储，InnoDB则需要分裂页来使行可以放进页内，允许最大长度为65535个字节，同时列共享（相加）。char 是固定长度，不够部分用空格补充，允许最大长度为255个字符，<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>  AUTO_INCREMENT 自增，所修饰字段具备如下特性：</p><pre class="line-numbers language-none"><code class="language-none">1、字段不能为null，即设定NOT NULL;2、字段必须有唯一索引，即不允许有重复值，UNIQUE标识为唯一索引，不允许重复，但是可以为空，主键索引，通过设置主键自动创建，其不允许重复同时不允许为空，所以一般该字段设定为主键或者是唯一不为空字段;3、字段类型必须为整型;4、字段达到最大值时，失效；<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>  主键创建可以在字段声明时利用PRIMARY KEY设定，也可以在字段最后加入PRIMARY KEY(‘字段1’，‘字段2’)，我认为应该使用后者，当然如果只设定一个字段为主键可以使用前者，但是后者舍得主键与字段分开，便于阅读，同时便于确定主键。<font color="Red">主键只能指定一个，但是可以包括多个字段。</font></p><pre class="line-numbers language-none"><code class="language-none">1、CREATE TABLE table_1(    &#39;id&#39; int NOT NULL PRIMARY KEY AUTO_INCREMENT,    &#39;name&#39; varchar(10) NOT NULL)ENGINE&#x3D;InnoDB AUTO_INCREMENT&#x3D;7 DEAFAULT CHARSET&#x3D;utf8;2、CREATE TABLE table_2(    &#39;id&#39; int NOT NULL ATUO_INCREMENT,    &#39;name&#39; varchar(10) NOT NULL,    PRIMARY KEY(&#39;id&#39;))ENGINE&#x3D;InnoDB AUTO_INCREMENT&#x3D;7 DEAFALT CHARSET&#x3D;utf8;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>  唯一键UNIQUE KEY，设定与PRIMARY KEY差不多，一个是声明字段时加UNIQUE，另一个在最后使用UNIQUE KEY ‘标识名称’ (‘字段名1’,‘字段名2’…)，也可以在修改表命令中使用ALTER TABLE &lt;数据表名&gt; ADD CONSTRAINT &lt;唯一约束名&gt; UNIQUE&lt;列名&gt;，也可ALTER TABLE ‘表名’ ADD unique(‘字段名’)，或者create unique index ‘名称’ on ‘表名’ (‘字段名’)，删除表使用ALTER TABLE &lt;数据表名&gt; DROP INDEX &lt;唯一约束名&gt;；</p><pre class="line-numbers language-none"><code class="language-none">1、创建UNIQUE KEYa. CREATE TABLE table_1(    &#39;id&#39; int NOT NULL PRIMARY KEY AUTO_INCREMENT,    &#39;name&#39; varchar(10) NOT NULL,    &#39;id_card&#39; char(13) NOT NULL UNIQUE,)ENGINE&#x3D;InnoDB AUTO_INCREMENT&#x3D;7 DEAFAULT CHARSET&#x3D;utf8;b. CREATE TABLE table_1(    &#39;id&#39; int NOT NULL PRIMARY KEY AUTO_INCREMENT,    &#39;name&#39; varchar(10) NOT NULL,    &#39;id_card&#39; char(13) NOT NULL,    UNIQUE KEY &#39;id_unique&#39; (&#39;id_card&#39;))ENGINE&#x3D;InnoDB AUTO_INCREMENT&#x3D;7 DEAFAULT CHARSET&#x3D;utf8;c. <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hexo在post文件夹中子文件夹中创建文档</title>
       <link href="/2024/07/13/hexojilu/hexojilu1/"/>
       <url>/2024/07/13/hexojilu/hexojilu1/</url>
