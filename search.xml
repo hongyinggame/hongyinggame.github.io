@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>删除表</title>
+      <link href="/2024/07/23/mysql/shanchu1/"/>
+      <url>/2024/07/23/mysql/shanchu1/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  删除表有三种方式：</p><pre class="line-numbers language-none"><code class="language-none"><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>sql注入</title>
       <link href="/2024/07/23/mysql/sqlzhuru/"/>
       <url>/2024/07/23/mysql/sqlzhuru/</url>

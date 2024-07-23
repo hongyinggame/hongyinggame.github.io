@@ -2,39 +2,48 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <%
-  var title = page.title;
-
-  if (is_archive()){
-    title = __('archive_a');
-
-    if (is_month()){
-      title += ': ' + page.year + '/' + page.month;
-    } else if (is_year()){
-      title += ': ' + page.year;
-    }
-  } else if (is_category()){
-    title = __('category') + ': ' + page.category;
-  } else if (is_tag()){
-    title = __('tag') + ': ' + page.tag;
-  }
-  %>
-  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+  
+  <title>FRQI模型《A flexible representation of quantum images for polynomial preparation, image compression,and processing operations 》论文阅读笔记 | HongyingBlog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
-  <% if (theme.rss){ %>
-    <link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
-  <% } %>
-  <% if (theme.favicon){ %>
-    <link rel="icon" href="<%- theme.favicon %>">
-  <% } %>
-  <% if (config.highlight.enable){ %>
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  <% } %>
-  <%- css('css/style') %>
-  <%- css('plugin/bganimation/bg') %>
-  <%- partial('google-analytics') %>
+  <meta name="description" content="格言   站在巨人肩膀上。 细节决定成败。 感恩、知足、包容、珍惜。 努力、更加努力。 Together we stand, divided we fall。 挖掘自己的可能性、发现别人的可能性。 不要过于在乎别人对你的眼光。    学习时间记录  2022.10.30 星期日晚上  学习了Abstract，introduction 2022.10.31 星期一下午   Abstract">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FRQI模型《A flexible representation of quantum images for polynomial preparation, image compression,and processing operations 》论文阅读笔记">
+<meta property="og:url" content="https://hongyinggame.github.io/2022/10/30/frqi/index.html">
+<meta property="og:site_name" content="HongyingBlog">
+<meta property="og:description" content="格言   站在巨人肩膀上。 细节决定成败。 感恩、知足、包容、珍惜。 努力、更加努力。 Together we stand, divided we fall。 挖掘自己的可能性、发现别人的可能性。 不要过于在乎别人对你的眼光。    学习时间记录  2022.10.30 星期日晚上  学习了Abstract，introduction 2022.10.31 星期一下午   Abstract">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hongyinggame.github.io/images/lena.png">
+<meta property="og:image" content="https://hongyinggame.github.io/images/representation.png">
+<meta property="og:image" content="https://hongyinggame.github.io/images/I.png">
+<meta property="og:image" content="https://hongyinggame.github.io/images/classical.png">
+<meta property="article:published_time" content="2022-10-30T11:00:48.000Z">
+<meta property="article:modified_time" content="2023-05-06T06:29:20.432Z">
+<meta property="article:author" content="hongying">
+<meta property="article:tag" content="量子图像">
+<meta property="article:tag" content="FRQI">
+<meta property="article:tag" content="图像压缩">
+<meta property="article:tag" content="图像表示">
+<meta property="article:tag" content="量子计算机">
+<meta property="article:tag" content="量子傅里叶变换">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hongyinggame.github.io/images/lena.png">
+  
+    <link rel="alternate" href="/atom.xml" title="HongyingBlog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/tag.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/plugin/bganimation/bg.css">
+
+  
+
   <link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/js/prism/prism.css">
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
@@ -48,7 +57,7 @@
     <h2 class="author">hongying</h2>
     <h3 class="description">娜厨</h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>54</strong><br>文章</div></a>
+      <a href="/archives"><div><strong>55</strong><br>文章</div></a>
       <a href="/categories"><div><strong>21</strong><br>分类</div></a>
       <a href="/tags"><div><strong>40</strong><br>标签</div></a>
     </div>
@@ -331,7 +340,7 @@ v. 使规范化，使归一化。</p>
     <h2 class="author">hongying</h2>
     <h3 class="description">娜厨</h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>54</strong><br>文章</div></a>
+      <a href="/archives"><div><strong>55</strong><br>文章</div></a>
       <a href="/categories"><div><strong>21</strong><br>分类</div></a>
       <a href="/tags"><div><strong>40</strong><br>标签</div></a>
     </div>
