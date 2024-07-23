@@ -2,41 +2,39 @@
 <html>
 <head>
   <meta charset="utf-8">
-  
-  <title>寄生虫电影观后感 | HongyingBlog</title>
+  <%
+  var title = page.title;
+
+  if (is_archive()){
+    title = __('archive_a');
+
+    if (is_month()){
+      title += ': ' + page.year + '/' + page.month;
+    } else if (is_year()){
+      title += ': ' + page.year;
+    }
+  } else if (is_category()){
+    title = __('category') + ': ' + page.category;
+  } else if (is_tag()){
+    title = __('tag') + ': ' + page.tag;
+  }
+  %>
+  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="此为本人感悟如有错误万分抱歉   昨天看了《寄生虫》电影，通过观看，内心有一点想法，因此记录一下（主要是好久不写了，心血来潮来进行撰写一下，顺带看看我的夏娜）。   寄生虫分为生活上的寄生虫与精神上的寄生虫，生活上的寄生虫和我们认知的寄生虫类似，此类寄生虫寄生于宿主，安于现状，不思进取，永远生活于黑暗当中，事事依赖别人，在自身感到舒适的生活圈不作为，通过别人来养活自己。另一类是精神上的寄生虫，此">
-<meta property="og:type" content="article">
-<meta property="og:title" content="寄生虫电影观后感">
-<meta property="og:url" content="https://hongyinggame.github.io/2023/04/14/parasites/index.html">
-<meta property="og:site_name" content="HongyingBlog">
-<meta property="og:description" content="此为本人感悟如有错误万分抱歉   昨天看了《寄生虫》电影，通过观看，内心有一点想法，因此记录一下（主要是好久不写了，心血来潮来进行撰写一下，顺带看看我的夏娜）。   寄生虫分为生活上的寄生虫与精神上的寄生虫，生活上的寄生虫和我们认知的寄生虫类似，此类寄生虫寄生于宿主，安于现状，不思进取，永远生活于黑暗当中，事事依赖别人，在自身感到舒适的生活圈不作为，通过别人来养活自己。另一类是精神上的寄生虫，此">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://hongyinggame.github.io/images/842808.jpg">
-<meta property="article:published_time" content="2023-04-14T01:10:46.000Z">
-<meta property="article:modified_time" content="2023-05-06T06:28:09.958Z">
-<meta property="article:author" content="hongying">
-<meta property="article:tag" content="观后感">
-<meta property="article:tag" content="寄生虫电影">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://hongyinggame.github.io/images/842808.jpg">
-  
-    <link rel="alternate" href="/atom.xml" title="HongyingBlog" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/images/tag.png">
-  
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
-<link rel="stylesheet" href="/plugin/bganimation/bg.css">
-
-  
-
+  <%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
+  <% if (theme.rss){ %>
+    <link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
+  <% } %>
+  <% if (theme.favicon){ %>
+    <link rel="icon" href="<%- theme.favicon %>">
+  <% } %>
+  <% if (config.highlight.enable){ %>
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <% } %>
+  <%- css('css/style') %>
+  <%- css('plugin/bganimation/bg') %>
+  <%- partial('google-analytics') %>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/js/prism/prism.css">
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
@@ -50,7 +48,7 @@
     <h2 class="author">hongying</h2>
     <h3 class="description">娜厨</h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>52</strong><br>文章</div></a>
+      <a href="/archives"><div><strong>54</strong><br>文章</div></a>
       <a href="/categories"><div><strong>21</strong><br>分类</div></a>
       <a href="/tags"><div><strong>40</strong><br>标签</div></a>
     </div>
@@ -198,7 +196,7 @@
     <h2 class="author">hongying</h2>
     <h3 class="description">娜厨</h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>52</strong><br>文章</div></a>
+      <a href="/archives"><div><strong>54</strong><br>文章</div></a>
       <a href="/categories"><div><strong>21</strong><br>分类</div></a>
       <a href="/tags"><div><strong>40</strong><br>标签</div></a>
     </div>

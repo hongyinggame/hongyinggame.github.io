@@ -2,35 +2,39 @@
 <html>
 <head>
   <meta charset="utf-8">
-  
-  <title>HongyingBlog</title>
+  <%
+  var title = page.title;
+
+  if (is_archive()){
+    title = __('archive_a');
+
+    if (is_month()){
+      title += ': ' + page.year + '/' + page.month;
+    } else if (is_year()){
+      title += ': ' + page.year;
+    }
+  } else if (is_category()){
+    title = __('category') + ': ' + page.category;
+  } else if (is_tag()){
+    title = __('tag') + ': ' + page.tag;
+  }
+  %>
+  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="娜厨">
-<meta property="og:type" content="website">
-<meta property="og:title" content="HongyingBlog">
-<meta property="og:url" content="https://hongyinggame.github.io/page/2/index.html">
-<meta property="og:site_name" content="HongyingBlog">
-<meta property="og:description" content="娜厨">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="hongying">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="HongyingBlog" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/images/tag.png">
-  
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
-<link rel="stylesheet" href="/plugin/bganimation/bg.css">
-
-  
-
+  <%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
+  <% if (theme.rss){ %>
+    <link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
+  <% } %>
+  <% if (theme.favicon){ %>
+    <link rel="icon" href="<%- theme.favicon %>">
+  <% } %>
+  <% if (config.highlight.enable){ %>
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <% } %>
+  <%- css('css/style') %>
+  <%- css('plugin/bganimation/bg') %>
+  <%- partial('google-analytics') %>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/js/prism/prism.css">
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
@@ -44,7 +48,7 @@
     <h2 class="author">hongying</h2>
     <h3 class="description">娜厨</h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>52</strong><br>文章</div></a>
+      <a href="/archives"><div><strong>54</strong><br>文章</div></a>
       <a href="/categories"><div><strong>21</strong><br>分类</div></a>
       <a href="/tags"><div><strong>40</strong><br>标签</div></a>
     </div>
@@ -71,6 +75,133 @@
 </div>
 
         <section id="main">
+  
+    <article id="post-twogithub" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/06/28/twogithub/" class="article-date">
+  <time class="post-time" datetime="2024-06-28T08:33:12.000Z" itemprop="datePublished">
+    <span class="post-month">6月</span><br/>
+    <span class="post-day">28</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+
+
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/06/28/twogithub/">配置双博客（配置访问两个github）</a>
+    </h1>
+  
+
+        <div>
+          
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>  因为我有了两个博客，而一个博客如果使用github.io域名，那么一个博客只能对应一个github号，所以我创建了两个github号，所以需要配置一个电脑使用两个github。<br>
+  首先，配置两个github号我们需要明白根本操作其实是配置两个密钥，目前我们无法使用两个github，根本原因是我们只生成了一个密钥，且电脑只识别id_rsa密钥。<br>
+  理解上述原因后，我们就很好的明白如何解决问题了，首先生成不同的两个密钥，只需命名不同即可，然后添加对应的github账号中，随后将其添加SSH agent中，使电脑识别两个密钥，然后就是在.ssh里建立一个config文件（无后缀，可以先创建txt文件，然后删除后缀即可），为其设置不同的host别名，说白了就是用于隐藏域名的指代词，不同别名代表不同的配置，其中，最主要的是配置两个不同别名使用的密钥，随后，我们需要将全局配置删除，然后，我们就可以通过ssh -T git@自己配置的第一个Host别名，来测试是否成功，如果成功，那么我们就成功关联两个github了，每次就可以git@别名来区分操作。<br>
+  上面做完后，接下来就是hexo关联github了，这个简单，就是配置hexo的config文件，将deploy中的repository属性配置对应的别名就行了，最后就是因为全局配置没有了，所以我们需要将每个的hexo中的.deploy_git中.git中的config配置[user]选项，告诉hexo我是谁，其中含有email属性与name属性，写对应github的就行。<br>
+  经过以上操作我们就完成了一个电脑使用两个博客了。这里具体操作没有展示，因为网上都有介绍，这里主要说一下原理与操作流程，主要是便于我以后忘记时，快速明白其中原理，并明白到底要怎么做。</p>
+
+        
+          <p class="article-more-link">
+            <a href="/2024/06/28/twogithub/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hongyinggame.github.io/2024/06/28/twogithub/" data-id="clye4l6t3003mu0pb9ifz20in" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+    <article id="post-java-UI-font-1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/06/27/java-UI-font-1/" class="article-date">
+  <time class="post-time" datetime="2024-06-27T02:22:26.000Z" itemprop="datePublished">
+    <span class="post-month">6月</span><br/>
+    <span class="post-day">27</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+
+
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/06/27/java-UI-font-1/">java_UI_font_1</a>
+    </h1>
+  
+
+        <div>
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/java/">java</a>,<a class="article-category-link" href="/categories/java/UI/">UI</a>
+  </div>
+
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>  在进行JAVA贪吃蛇时，发现UI窗口中文字体乱码情况，起初以为是JAVA编码原因，经过查找资料得知，罪魁祸首是Windows系统本身是GBK，而非utf-8,只有Beta版可以设置，具体可以通过系统设置的时间与语言模块查看，具体原因为：我们java是UTF-8编码，但是窗口是基于windows的，windows解析展示时乱码导致，所以我们添加一个jvm参数，具体内容为-Dfile.encoding=gbk。<br>
+<img src="/images/java/UI/fig1.png" alt="配置位置"></p>
+
+        
+          <p class="article-more-link">
+            <a href="/2024/06/27/java-UI-font-1/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hongyinggame.github.io/2024/06/27/java-UI-font-1/" data-id="clye4l6st001lu0pbdb522ufm" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UI/" rel="tag">UI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/" rel="tag">java</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
   
     <article id="post-hello-world" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -574,135 +705,6 @@
 
 
   
-    <article id="post-shenhuaniao" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2023/05/29/shenhuaniao/" class="article-date">
-  <time class="post-time" datetime="2023-05-29T01:44:39.000Z" itemprop="datePublished">
-    <span class="post-month">5月</span><br/>
-    <span class="post-day">29</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-
-
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/05/29/shenhuaniao/">神话记录</a>
-    </h1>
-  
-
-        <div>
-          
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a>
-  </div>
-
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>  凤凰和浴火重生联系在一起，其原因是郭沫若的一篇诗《凤凰涅槃》中所说，后代便逐渐认为凤凰会涅槃重生，实际上古代没有人写凤凰涅槃，而涅槃的是西方的不死鸟行为，郭沫若先生将其和凤凰结合，从而产生这个名词。<br>
-  在汉族的神话传说中，鸿鹄则是白色的凤凰。凤凰共有五类，分别是赤者凤、黄者鵷鶵(yuān chú)、青者鸾、紫者鸑鷟（yuè zhuó)、白者鸿鹄。<br>
-  朱雀、凤凰以及不死鸟这三者完全不同。<br>
-  麟为百兽之长，风为百禽之长，龙为百鳞之长，龟为百介之长。<br>
-  麒麟中麒为雄性，麟为雌性，凤凰中凤为雄性，凰为雌性。</p>
-
-        
-          <p class="article-more-link">
-            <a href="/2023/05/29/shenhuaniao/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2023/05/29/shenhuaniao/" data-id="clye4l6t10033u0pbgtr7d42o" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9D%82%E8%B0%88/" rel="tag">杂谈</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
-    <article id="post-jilu10" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2023/05/29/jilu10/" class="article-date">
-  <time class="post-time" datetime="2023-05-29T01:19:07.000Z" itemprop="datePublished">
-    <span class="post-month">5月</span><br/>
-    <span class="post-day">29</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-
-
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/05/29/jilu10/">随笔记录十</a>
-    </h1>
-  
-
-        <div>
-          
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E9%9A%8F%E7%AC%94%E8%AE%B0%E5%BD%95/">随笔记录</a>
-  </div>
-
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        Here's something encrypted, password is required to continue reading.
-        
-          <p class="article-more-link">
-            <a href="/2023/05/29/jilu10/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2023/05/29/jilu10/" data-id="clye4l6sv001su0pb1fku3rzy" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%80%9D%E8%80%83/" rel="tag">思考</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%B0%E5%BD%95/" rel="tag">记录</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -747,7 +749,7 @@
     <h2 class="author">hongying</h2>
     <h3 class="description">娜厨</h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>52</strong><br>文章</div></a>
+      <a href="/archives"><div><strong>54</strong><br>文章</div></a>
       <a href="/categories"><div><strong>21</strong><br>分类</div></a>
       <a href="/tags"><div><strong>40</strong><br>标签</div></a>
     </div>

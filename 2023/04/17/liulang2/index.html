@@ -2,41 +2,39 @@
 <html>
 <head>
   <meta charset="utf-8">
-  
-  <title>流浪地球2随笔记录自己的感想 | HongyingBlog</title>
+  <%
+  var title = page.title;
+
+  if (is_archive()){
+    title = __('archive_a');
+
+    if (is_month()){
+      title += ': ' + page.year + '/' + page.month;
+    } else if (is_year()){
+      title += ': ' + page.year;
+    }
+  } else if (is_category()){
+    title = __('category') + ': ' + page.category;
+  } else if (is_tag()){
+    title = __('tag') + ': ' + page.tag;
+  }
+  %>
+  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本文是对自己昨天观看流浪地球2的随笔记录的自己的感想，这是简单写写，并不会介绍电影的细节，主要是记录一下自己的生活，有错误勿喷，看看乐就行。   	相信人类的未来，相信后代会做的比我们这一代更好，因此，我们所要做的是做好我们这一代，然后传承下去，一言以蔽之就是这个世界是我们的，也是“你们”的，但是最终会是你们的，这何尝不是对人类未来后代的信任。 	如果人的意识像操作系统那样可以随便移植的话，在保">
-<meta property="og:type" content="article">
-<meta property="og:title" content="流浪地球2随笔记录自己的感想">
-<meta property="og:url" content="https://hongyinggame.github.io/2023/04/17/liulang2/index.html">
-<meta property="og:site_name" content="HongyingBlog">
-<meta property="og:description" content="本文是对自己昨天观看流浪地球2的随笔记录的自己的感想，这是简单写写，并不会介绍电影的细节，主要是记录一下自己的生活，有错误勿喷，看看乐就行。   	相信人类的未来，相信后代会做的比我们这一代更好，因此，我们所要做的是做好我们这一代，然后传承下去，一言以蔽之就是这个世界是我们的，也是“你们”的，但是最终会是你们的，这何尝不是对人类未来后代的信任。 	如果人的意识像操作系统那样可以随便移植的话，在保">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://hongyinggame.github.io/images/liulang2/1.jpg">
-<meta property="article:published_time" content="2023-04-17T07:04:49.000Z">
-<meta property="article:modified_time" content="2023-05-06T06:27:36.356Z">
-<meta property="article:author" content="hongying">
-<meta property="article:tag" content="观后感">
-<meta property="article:tag" content="随笔">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://hongyinggame.github.io/images/liulang2/1.jpg">
-  
-    <link rel="alternate" href="/atom.xml" title="HongyingBlog" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/images/tag.png">
-  
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
-<link rel="stylesheet" href="/plugin/bganimation/bg.css">
-
-  
-
+  <%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
+  <% if (theme.rss){ %>
+    <link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
+  <% } %>
+  <% if (theme.favicon){ %>
+    <link rel="icon" href="<%- theme.favicon %>">
+  <% } %>
+  <% if (config.highlight.enable){ %>
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <% } %>
+  <%- css('css/style') %>
+  <%- css('plugin/bganimation/bg') %>
+  <%- partial('google-analytics') %>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/js/prism/prism.css">
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
@@ -50,7 +48,7 @@
     <h2 class="author">hongying</h2>
     <h3 class="description">娜厨</h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>52</strong><br>文章</div></a>
+      <a href="/archives"><div><strong>54</strong><br>文章</div></a>
       <a href="/categories"><div><strong>21</strong><br>分类</div></a>
       <a href="/tags"><div><strong>40</strong><br>标签</div></a>
     </div>
@@ -204,7 +202,7 @@
     <h2 class="author">hongying</h2>
     <h3 class="description">娜厨</h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>52</strong><br>文章</div></a>
+      <a href="/archives"><div><strong>54</strong><br>文章</div></a>
       <a href="/categories"><div><strong>21</strong><br>分类</div></a>
       <a href="/tags"><div><strong>40</strong><br>标签</div></a>
     </div>

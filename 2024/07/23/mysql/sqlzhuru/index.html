@@ -74,12 +74,12 @@
   </div>
 </div>
 
-        <section id="main"><article id="page-" class="wow slideInRight article article-type-page" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-mysql/sqlzhuru" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/web/shana.html" class="article-date">
-  <time class="post-time" datetime="2024-06-27T01:47:37.604Z" itemprop="datePublished">
-    <span class="post-month">6月</span><br/>
-    <span class="post-day">27</span>
+    <a href="/2024/07/23/mysql/sqlzhuru/" class="article-date">
+  <time class="post-time" datetime="2024-07-23T01:51:46.000Z" itemprop="datePublished">
+    <span class="post-month">7月</span><br/>
+    <span class="post-day">23</span>
   </time>
 </a>
    
@@ -90,169 +90,80 @@
 
 
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      sql注入
+    </h1>
+  
+
+        <div>
+          
+          
+              
+
+          
+        </div>
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>love_xl</title>
-<link href="favicon.ico" rel="shortcut icon" />
-<style>
-body{
-  overflow: hidden;
-  margin: 0;
-}
-h1{
-  position: fixed;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  transform:translateY(-50%);
-  font-family: 'Love Ya Like A Sister', cursive;
-  font-size: 40px;
-  color: #c70012;
-  padding: 0 20px;
-}
-h1 span{
-    font-size:40px;
-}
-</style>
+        <p>  sql注入是常见的攻击形式，通过注入sql语句，导致程序的安全以及数据库安全。<br />
+  sql注入一般见效于拼接sql语句中，通过破坏输入规则，插入期望的sql语句，以此达到所要达到的目的。<br />
+  两个例子：</p>
+<pre class="line-numbers language-none"><code class="language-none">1.查找sql注入，一般用于登录界面。
+拼接sql语句：
+    String sql &#x3D; &quot;SELECT * FROM student where username &#x3D;&#39;&quot;+username+&quot;&#39; AND password &#x3D; &#39;&quot;+password+&quot;&#39;;&quot; 
+&#x2F;&#x2F;AND 运行优先级高于 OR
+注入sql语句：
+    username &#x3D; &quot;123&quot;;
+    password &#x3D; &quot;&#39;or &#39;1&#39;&#x3D;&#39;1&quot;;
+SQL最终语句: 
+    SELECT * FROM student where username &#x3D;&#39;123&#39; AND password &#x3D; &#39;&#39; or &#39;1&#39;&#x3D;&#39;1&#39;;
+因而可以将所有数据查出，造成登录成功。
+2.在查询操作中插入删除操作。
+拼接sql语句：
+    String sql &#x3D; &quot;SELECT * FROM student where username &#x3D;&#39;&quot;+username+&quot;&#39; AND password &#x3D; &#39;&quot;+password+&quot;&#39;;&quot; 
 
-</head>
-<body>
-<h1 id="h1"></h1>
-<canvas></canvas> 
+注入sql语句：
+    username &#x3D; &quot;123&quot;;
+    password &#x3D; &quot;&#39;; DELETE FROM student where &#39;1&#39;&#x3D;&#39;1&quot;
+SQL最终语句：
+    SELECT * FROM student where username &#x3D;&#39;123&#39; AND password &#x3D;&#39;&#39;; DELETE FROM student where &#39;1&#39;&#x3D;&#39;1&#39;;
+&lt;font color&#x3D;Red&gt;注：该操作是批处理操作，但是java 中mysql执行方法execute不支持此操作。&lt;&#x2F;font&gt;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>  因此为了避免sql注入，我们需要使用参数化sql语句，即预编译好的sql语句，除此之外做好用户输入数据的验证与过滤操作，以及最小化用户权限。<font color =Red>即使是参数化sql语句，我们也要避免拼接sql语句，否则依旧会有被sql注入的可能。</font><br />
+  这里主要是学习参数化sql语句，其他的会在后面项目中学习。<br />
+  参数化sql语句就是使用占位符？代替部分参数，通过prepareStatement(String sql)，创建一个preparedStatement，随后使用不带参数的execute/executeUpdate/executeQuery命令执行操作，不过在这之前通过preparedStatement对象的setInt与setString方法对？占位参数赋值，其中第一个参数为int型，表示第几个占位符，后面则为要赋的值。下面展示一个例子：</p>
+<pre class="line-numbers language-none"><code class="language-none">Connection conn &#x3D; DriverManager.getConnection(url,username,password);
+String sql &#x3D; &quot;INSERT INTO student(name,id_card) VALUES(?,?);&quot;;
+PreparedStatement pstm &#x3D; conn.prepareStatemnet(sql);
+pstm.setString(1,&quot;1234&quot;);
+pstm.setString(2,&quot;1234&quot;);
+pstm.executeUpdate();
+&lt;font color &#x3D; Red&gt;ResultSetMetaData rsmd &#x3D; rs.getMetaData();int columnCount &#x3D; rsmd.getColumnCount();这个可以获取字段数目，当我们忘记原本的数据库字段数时使用。&lt;&#x2F;font&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<script>
-var canvas = document.querySelector("canvas"),
-  ctx = canvas.getContext("2d");
-
-var ww,wh;
-
-function onResize(){
-  ww = canvas.width = window.innerWidth;
-  wh = canvas.height = window.innerHeight;
-}
-
-ctx.strokeStyle = "red";
-ctx.shadowBlur = 10;
-ctx.shadowColor = "hsla(0, 100%, 60%,0.5)";
-
-var precision = 100;
-var hearts = [];
-var mouseMoved = false;
-function onMove(e){
-  mouseMoved = true;
-  if(e.type === "touchmove"){
-    hearts.push(new Heart(e.touches[0].clientX, e.touches[0].clientY));
-    hearts.push(new Heart(e.touches[0].clientX, e.touches[0].clientY));
-  }
-  else{
-    hearts.push(new Heart(e.clientX, e.clientY));
-    hearts.push(new Heart(e.clientX, e.clientY));
-  }
-}
-
-var Heart = function(x,y){
-  this.x = x || Math.random()*ww;
-  this.y = y || Math.random()*wh;
-  this.size = Math.random()*2 + 1;
-  this.shadowBlur = Math.random() * 10;
-  this.speedX = (Math.random()+0.2-0.6) * 8;
-  this.speedY = (Math.random()+0.2-0.6) * 8;
-  this.speedSize = Math.random()*0.05 + 0.01;
-  this.opacity = 1;
-  this.vertices = [];
-  for (var i = 0; i < precision; i++) {
-    var step = (i / precision - 0.5) * (Math.PI * 2);
-    var vector = {
-      x : (15 * Math.pow(Math.sin(step), 3)),
-      y : -(13 * Math.cos(step) - 5 * Math.cos(2 * step) - 2 * Math.cos(3 * step) - Math.cos(4 * step)) 
-    }
-    this.vertices.push(vector);
-  }
-}
-
-Heart.prototype.draw = function(){
-  this.size -= this.speedSize;
-  this.x += this.speedX;
-  this.y += this.speedY;
-  ctx.save();
-  ctx.translate(-1000,this.y);
-  ctx.scale(this.size, this.size);
-  ctx.beginPath();
-  for (var i = 0; i < precision; i++) {
-    var vector = this.vertices[i];
-    ctx.lineTo(vector.x, vector.y);
-  }
-  ctx.globalAlpha = this.size;
-  ctx.shadowBlur = Math.round((3 - this.size) * 10);
-  ctx.shadowColor = "hsla(0, 100%, 60%,0.5)";
-  ctx.shadowOffsetX = this.x + 1000;
-  ctx.globalCompositeOperation = "screen"
-  ctx.closePath();
-  ctx.fill()
-  ctx.restore();
-};
-
-
-function render(a){
-  requestAnimationFrame(render);
-
-  hearts.push(new Heart())
-  ctx.clearRect(0,0,ww,wh);
-  for (var i = 0; i < hearts.length; i++) {
-    hearts[i].draw();
-    if(hearts[i].size <= 0){
-      hearts.splice(i,1);
-      i--;
-    }
-  }
-}
-
-
-onResize();
-window.addEventListener("mousemove", onMove);
-window.addEventListener("touchmove", onMove);
-window.addEventListener("resize", onResize);
-requestAnimationFrame(render);
-
-window.onload=function starttime(){
-        time(h1,'2015/12/1');                           // 在一起的时间
-        ptimer = setTimeout(starttime,1000);            // 添加计时器
-}
-
-    function time(obj,futimg){
-        var nowtime = new Date().getTime();             // 现在时间转换为时间戳
-        var futruetime =  new Date(futimg).getTime();   // 未来时间转换为时间戳
-        var msec = nowtime-futruetime;                  // 毫秒 未来时间-现在时间
-        var time = (msec/1000);                         // 毫秒/1000
-        var day = parseInt(time/86400);                 // 天  24*60*60*1000 
-        var hour = parseInt(time/3600)-24*day;          // 小时 60*60 总小时数-过去的小时数=现在的小时数 
-        var minute = parseInt(time%3600/60);            // 分 -(day*24) 以60秒为一整份 取余 剩下秒数 秒数/60 就是分钟数
-        var second = parseInt(time%60);                 // 以60秒为一整份 取余 剩下秒数
-//              console.log(hour+":"+minute+":"+second)
-//              alert(hour)
-        obj.innerHTML="夏娜愿您的火焰永远明亮闪耀，没有一丝阴霾。 "
-
-        return true;
-    }
-</script>
-
-</body>
-</html>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/web/shana.html" data-id="clye4l6sh0005u0pbdz1ufykf" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2024/07/23/mysql/sqlzhuru/" data-id="clyy5douq0001rkpba4cbelma" class="article-share-link">分享</a>
       
       
     </footer>
   </div>
   
     
+<nav id="article-nav">
+  
+  
+    <a href="/2024/07/23/mysql/charu1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">插入数据</div>
+    </a>
+  
+</nav>
+
   
 </article>
 
