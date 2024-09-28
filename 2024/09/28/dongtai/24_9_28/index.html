@@ -2,39 +2,37 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <%
-  var title = page.title;
-
-  if (is_archive()){
-    title = __('archive_a');
-
-    if (is_month()){
-      title += ': ' + page.year + '/' + page.month;
-    } else if (is_year()){
-      title += ': ' + page.year;
-    }
-  } else if (is_category()){
-    title = __('category') + ': ' + page.category;
-  } else if (is_tag()){
-    title = __('tag') + ': ' + page.tag;
-  }
-  %>
-  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+  
+  <title>注解 | HongyingBlog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
-  <% if (theme.rss){ %>
-    <link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
-  <% } %>
-  <% if (theme.favicon){ %>
-    <link rel="icon" href="<%- theme.favicon %>">
-  <% } %>
-  <% if (config.highlight.enable){ %>
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  <% } %>
-  <%- css('css/style') %>
-  <%- css('plugin/bganimation/bg') %>
-  <%- partial('google-analytics') %>
+  <meta name="description" content="注解 注解为特殊标记，用于告诉程序如何执行  自定义注解 public @interface a&amp;#123;     public String name() default 默认值;&#x2F;&#x2F;将方法作为属性。     String value();&#x2F;&#x2F;特殊属性,即默认属性，即如果就只有一个value属性,则使用注解时无需指定value，默认赋值给value,注：此时的只有一个value属性，不仅代表">
+<meta property="og:type" content="article">
+<meta property="og:title" content="注解">
+<meta property="og:url" content="https://hongyinggame.github.io/2024/09/28/dongtai/24_9_28/index.html">
+<meta property="og:site_name" content="HongyingBlog">
+<meta property="og:description" content="注解 注解为特殊标记，用于告诉程序如何执行  自定义注解 public @interface a&amp;#123;     public String name() default 默认值;&#x2F;&#x2F;将方法作为属性。     String value();&#x2F;&#x2F;特殊属性,即默认属性，即如果就只有一个value属性,则使用注解时无需指定value，默认赋值给value,注：此时的只有一个value属性，不仅代表">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-09-28T02:38:46.000Z">
+<meta property="article:modified_time" content="2024-09-28T08:11:26.990Z">
+<meta property="article:author" content="hongying">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="HongyingBlog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/tag.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/plugin/bganimation/bg.css">
+
+  
+
   <link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/js/prism/prism.css">
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
@@ -251,18 +249,13 @@
         
       </div>
       <footer id="footer">
-<script src="/js/prism/prism.js" async></script>
-  <% if (theme.sidebar === 'bottom'){ %>
-    <%- partial('_partial/sidebar') %>
-  <% } %>
+  
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy;<%= date(new Date(), 'YYYY') - 1 %> - <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br>
+      &copy;2023 - 2024 hongying<br>
       由<a href="http://hexo.io/" target="_blank">Hexo</a>强力驱动 | 
       主题-<a target="_blank" rel="noopener" href="https://github.com/ShanaMaid/hexo-theme-shana">Shana</a>
-      <% if (theme.CNZZ){ %>
-        |<script src="http://s11.cnzz.com/z_stat.php?id=<%= theme.CNZZ %>&web_id=<%= theme.CNZZ %>" language="JavaScript"></script>
-      <% } %>
+      
       <br/> <br/>
         <div>
 <script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
@@ -272,6 +265,7 @@
     </div>
     
   </div>
+  <script src="/js/prism/prism.js" async></script>
 </footer>
 
     </div>
