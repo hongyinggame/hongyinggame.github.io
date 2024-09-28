@@ -2,35 +2,39 @@
 <html>
 <head>
   <meta charset="utf-8">
-  
-  <title>HongyingBlog</title>
+  <%
+  var title = page.title;
+
+  if (is_archive()){
+    title = __('archive_a');
+
+    if (is_month()){
+      title += ': ' + page.year + '/' + page.month;
+    } else if (is_year()){
+      title += ': ' + page.year;
+    }
+  } else if (is_category()){
+    title = __('category') + ': ' + page.category;
+  } else if (is_tag()){
+    title = __('tag') + ': ' + page.tag;
+  }
+  %>
+  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="娜厨">
-<meta property="og:type" content="website">
-<meta property="og:title" content="HongyingBlog">
-<meta property="og:url" content="https://hongyinggame.github.io/index.html">
-<meta property="og:site_name" content="HongyingBlog">
-<meta property="og:description" content="娜厨">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="hongying">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="HongyingBlog" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/images/tag.png">
-  
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
-<link rel="stylesheet" href="/plugin/bganimation/bg.css">
-
-  
-
+  <%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
+  <% if (theme.rss){ %>
+    <link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
+  <% } %>
+  <% if (theme.favicon){ %>
+    <link rel="icon" href="<%- theme.favicon %>">
+  <% } %>
+  <% if (config.highlight.enable){ %>
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <% } %>
+  <%- css('css/style') %>
+  <%- css('plugin/bganimation/bg') %>
+  <%- partial('google-analytics') %>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/js/prism/prism.css">
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
@@ -44,7 +48,7 @@
     <h2 class="author">hongying</h2>
     <h3 class="description">娜厨</h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>58</strong><br>文章</div></a>
+      <a href="/archives"><div><strong>61</strong><br>文章</div></a>
       <a href="/categories"><div><strong>21</strong><br>分类</div></a>
       <a href="/tags"><div><strong>40</strong><br>标签</div></a>
     </div>
@@ -71,6 +75,232 @@
 </div>
 
         <section id="main">
+  
+    <article id="post-dongtai/zhujie2" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/09/28/dongtai/zhujie2/" class="article-date">
+  <time class="post-time" datetime="2024-09-28T08:11:54.000Z" itemprop="datePublished">
+    <span class="post-month">9月</span><br/>
+    <span class="post-day">28</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+
+
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/09/28/dongtai/zhujie2/">注解二</a>
+    </h1>
+  
+
+        <div>
+          
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="注解的解析"><a class="markdownIt-Anchor" href="#注解的解析"></a> 注解的解析</h2>
+<h4 id="注解的解析-2"><a class="markdownIt-Anchor" href="#注解的解析-2"></a> 注解的解析</h4>
+<ul>
+<li>需要解析那个对象的注解就加载那个对象，例如：解析类则获取Class对象（反射）；</li>
+<li>常用方法：
+<ul>
+<li>isAnnotationPresent(Class&lt;?&gt; class);是否存在该注解；</li>
+<li>getDeclaredAnnotation(Class&lt;?&gt; class); 获取注解对象（需要强转）；</li>
+<li>getDeclaredAnnotations();获取所有注解构成的数组；</li>
+<li>注解对象.属性（方法）获取属性值。</li>
+</ul>
+</li>
+</ul>
+
+        
+          <p class="article-more-link">
+            <a href="/2024/09/28/dongtai/zhujie2/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hongyinggame.github.io/2024/09/28/dongtai/zhujie2/" data-id="cm1lvjf8m00009gpb0fcwh7ij" class="article-share-link">分享</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+    <article id="post-dongtai/24_9_28" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/09/28/dongtai/24_9_28/" class="article-date">
+  <time class="post-time" datetime="2024-09-28T02:38:46.000Z" itemprop="datePublished">
+    <span class="post-month">9月</span><br/>
+    <span class="post-day">28</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+
+
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/09/28/dongtai/24_9_28/">注解</a>
+    </h1>
+  
+
+        <div>
+          
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="注解"><a class="markdownIt-Anchor" href="#注解"></a> 注解</h2>
+<p>注解为特殊标记，用于告诉程序如何执行</p>
+<h4 id="自定义注解"><a class="markdownIt-Anchor" href="#自定义注解"></a> 自定义注解</h4>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token annotation punctuation">@interface</span> a<span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">name</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">default</span> 默认值<span class="token punctuation">;</span><span class="token comment">//将方法作为属性。</span>
+    <span class="token class-name">String</span> <span class="token function">value</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//特殊属性,即默认属性，即如果就只有一个value属性,则使用注解时无需指定value，默认赋值给value,注：此时的只有一个value属性，不仅代表注解只有一个value，如果注解有多个属性，但是多个属性都有默认值的话，则value属性也是可以不用写（value有默认值也是可以）。</span>
+        
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="元注解"><a class="markdownIt-Anchor" href="#元注解"></a> 元注解</h4>
+<p>注解注解的注解😏,第一个注解为动词，后面两个为名词。</p>
+<ul>
+<li>@Retention() 声明注解作用时机，即保留周期
+<ul>
+<li>RetentionPolicy枚举类
+<ul>
+<li>SOURCE 只作用源码阶段，字节码文件中不存在。</li>
+<li>CLASS（默认值）存在于源码与class文件中，但是运行时消失。</li>
+<li>RUNTIME 一直到运行时都存在。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>@Target() 声明注解作用位置
+<ul>
+<li>ElementType 枚举类
+<ul>
+<li>TYPE 类，接口</li>
+<li>FIELD, 成员变量</li>
+<li>METHOD, 成员方法</li>
+<li>PARAMETER, 方法参数</li>
+<li>CONSTRUCTOR, 构造器</li>
+<li>LOCAL_VARIABLE ，局部变量</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        
+          <p class="article-more-link">
+            <a href="/2024/09/28/dongtai/24_9_28/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hongyinggame.github.io/2024/09/28/dongtai/24_9_28/" data-id="cm1ljp8kn00002spb0zefb14u" class="article-share-link">分享</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+    <article id="post-java/try1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/07/29/java/try1/" class="article-date">
+  <time class="post-time" datetime="2024-07-29T08:39:02.000Z" itemprop="datePublished">
+    <span class="post-month">7月</span><br/>
+    <span class="post-day">29</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+
+
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/07/29/java/try1/">post</a>
+    </h1>
+  
+
+        <div>
+          
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>  学习java mysql的关闭资源方法中，学习到try catch with resource 方法，这个方法需要要求所释放资源类实现了AutoCloseable接口，代码介绍如下：</p>
+<pre class="line-numbers language-none"><code class="language-none">try(将需要关闭的资源语句写在这里)&#123;
+
+    ......
+&#125;catch(错误)&#123;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>  这个方法被常用取代try-catch finally，除了写作简洁外，还有一个就是它避免了错误覆盖，通过addSuppressed()方法将抑制的错误信息存储下来，后面通过getSuppressed()输出。<br>
+参考博客地址：<a target="_blank" rel="noopener" href="https://javabetter.cn/exception/try-with-resources.html">深入理解 Java 中的 try with resources</a></p>
+
+        
+          <p class="article-more-link">
+            <a href="/2024/07/29/java/try1/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hongyinggame.github.io/2024/07/29/java/try1/" data-id="clz6r3pt300005spbdmqj6pua" class="article-share-link">分享</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
   
     <article id="post-java/java1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -634,219 +864,10 @@ ALTER TABLE table_1 DROP INDEX &#39;indexID&#39;;
 
 
   
-    <article id="post-hexojilu/hexojilu1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2024/07/13/hexojilu/hexojilu1/" class="article-date">
-  <time class="post-time" datetime="2024-07-13T02:14:10.000Z" itemprop="datePublished">
-    <span class="post-month">7月</span><br/>
-    <span class="post-day">13</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-
-
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/07/13/hexojilu/hexojilu1/">Hexo在post文件夹中子文件夹中创建文档</a>
-    </h1>
-  
-
-        <div>
-          
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>  随着hexo创建博客增多，我发现如果都是hexo new 文件时，所有文件都会出现在_post文件夹中，然后就无法很好地整理与查找文件了，因此需要通过子文件夹来进行分类，所以需要在创建时就将其分文件夹创建。</p>
-<pre class="line-numbers language-none"><code class="language-none">hexo new [post] -p 子文件夹&#x2F;文件名 &quot;文件题目&quot;
-[]是说创建什么模式，一般有post、draft、page模式，当使用post是会在&#x2F;source&#x2F;_post文件夹下创建，而draft则是在source&#x2F;_draft文件夹下创建，page则是在source下创建。
-附：
-Usage: hexo new [layout] &lt;title&gt;
-
-Description:
-Create a new post.
-
-Arguments:
-  layout  Post layout. Use post, page, draft or whatever you want.
-  title   Post title. Wrap it with quotations to escape.
-
-Options:
-  -p, --path     Post path. Customize the path of the post.
-  -r, --replace  Replace the current post if existed.
-  -s, --slug     Post slug. Customize the URL of the post.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-        
-          <p class="article-more-link">
-            <a href="/2024/07/13/hexojilu/hexojilu1/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/07/13/hexojilu/hexojilu1/" data-id="clyjioyb70000cspbd7uo51iv" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo%E8%AE%B0%E5%BD%95/" rel="tag">Hexo记录</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
-    <article id="post-jiaoben/jiaoben1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2024/07/12/jiaoben/jiaoben1/" class="article-date">
-  <time class="post-time" datetime="2024-07-12T09:27:21.000Z" itemprop="datePublished">
-    <span class="post-month">7月</span><br/>
-    <span class="post-day">12</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-
-
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/07/12/jiaoben/jiaoben1/">脚本延时变量</a>
-    </h1>
-  
-
-        <div>
-          
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%84%9A%E6%9C%AC/">脚本</a>
-  </div>
-
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>  在进行编写脚本时，发现了延时变量与非延时变量，记录一下。一般if语句被认为是一行命令，而if中往往有几行命令，此时命令可以被认为是并行的，但是如果使用了延时扩展，就如同被认为不同命令，相继执行。</p>
-<pre class="line-numbers language-none"><code class="language-none">setlocal enabledelayedexpansion ::开启延时扩展
-set a &#x3D; 2
-if %a% &#x3D;;&#x3D;2 (::括号前要有空格
-
-    set a&#x3D;3
-    echo !a!::当使用!!才会变成延时变量
-    echo %a%
-    ::此时!a!输出3，而%a%输出2。
-
-)
-pause<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-        
-          <p class="article-more-link">
-            <a href="/2024/07/12/jiaoben/jiaoben1/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/07/12/jiaoben/jiaoben1/" data-id="clyjioybg0003cspbdyjph2sc" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%84%9A%E6%9C%AC/" rel="tag">脚本</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
-    <article id="post-hexo2" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2024/07/09/hexo2/" class="article-date">
-  <time class="post-time" datetime="2024-07-09T08:42:28.000Z" itemprop="datePublished">
-    <span class="post-month">7月</span><br/>
-    <span class="post-day">09</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-
-
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/07/09/hexo2/">Hexo代码块问题</a>
-    </h1>
-  
-
-        <div>
-          
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>  这次问题是配置代码块高亮问题：1.可以使用prism插件；2.可以使用hexo现在自带的prismjs，具体如何配置搜索便有。<br>
-  我要提醒我自己的是markdown可以使用```来进行代码标识，但是记住一定要间隔一行，否则容易不识别，这个是一个大问题，也是我一直不成功的原因，现在终于知道了。</p>
-
-        
-          <p class="article-more-link">
-            <a href="/2024/07/09/hexo2/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/07/09/hexo2/" data-id="clye63s8800003opb6xuv59ca" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
 
 
   <nav id="page-nav">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">next &gt;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/">next &gt;</a>
   </nav>
 </section>
         
@@ -887,7 +908,7 @@ pause<span aria-hidden="true" class="line-numbers-rows"><span></span><span></spa
     <h2 class="author">hongying</h2>
     <h3 class="description">娜厨</h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>58</strong><br>文章</div></a>
+      <a href="/archives"><div><strong>61</strong><br>文章</div></a>
       <a href="/categories"><div><strong>21</strong><br>分类</div></a>
       <a href="/tags"><div><strong>40</strong><br>标签</div></a>
     </div>

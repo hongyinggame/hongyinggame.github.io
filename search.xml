@@ -4,6 +4,45 @@
   
     
     <entry>
+      <title>注解二</title>
+      <link href="/2024/09/28/dongtai/zhujie2/"/>
+      <url>/2024/09/28/dongtai/zhujie2/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="注解的解析"><a class="markdownIt-Anchor" href="#注解的解析"></a> 注解的解析</h2><h4 id="注解的解析-2"><a class="markdownIt-Anchor" href="#注解的解析-2"></a> 注解的解析</h4><ul><li>需要解析那个对象的注解就加载那个对象，例如：解析类则获取Class对象（反射）；</li><li>常用方法：<ul><li>isAnnotationPresent(Class&lt;?&gt; class);是否存在该注解；</li><li>getDeclaredAnnotation(Class&lt;?&gt; class); 获取注解对象（需要强转）；</li><li>getDeclaredAnnotations();获取所有注解构成的数组；</li><li>注解对象.属性（方法）获取属性值。</li></ul></li></ul>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>注解</title>
+      <link href="/2024/09/28/dongtai/24_9_28/"/>
+      <url>/2024/09/28/dongtai/24_9_28/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="注解"><a class="markdownIt-Anchor" href="#注解"></a> 注解</h2><p>注解为特殊标记，用于告诉程序如何执行</p><h4 id="自定义注解"><a class="markdownIt-Anchor" href="#自定义注解"></a> 自定义注解</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token annotation punctuation">@interface</span> a<span class="token punctuation">&#123;</span>    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">name</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">default</span> 默认值<span class="token punctuation">;</span><span class="token comment">//将方法作为属性。</span>    <span class="token class-name">String</span> <span class="token function">value</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//特殊属性,即默认属性，即如果就只有一个value属性,则使用注解时无需指定value，默认赋值给value,注：此时的只有一个value属性，不仅代表注解只有一个value，如果注解有多个属性，但是多个属性都有默认值的话，则value属性也是可以不用写（value有默认值也是可以）。</span>        <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="元注解"><a class="markdownIt-Anchor" href="#元注解"></a> 元注解</h4><p>注解注解的注解😏,第一个注解为动词，后面两个为名词。</p><ul><li>@Retention() 声明注解作用时机，即保留周期<ul><li>RetentionPolicy枚举类<ul><li>SOURCE 只作用源码阶段，字节码文件中不存在。</li><li>CLASS（默认值）存在于源码与class文件中，但是运行时消失。</li><li>RUNTIME 一直到运行时都存在。</li></ul></li></ul></li><li>@Target() 声明注解作用位置<ul><li>ElementType 枚举类<ul><li>TYPE 类，接口</li><li>FIELD, 成员变量</li><li>METHOD, 成员方法</li><li>PARAMETER, 方法参数</li><li>CONSTRUCTOR, 构造器</li><li>LOCAL_VARIABLE ，局部变量</li></ul></li></ul></li></ul>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>post</title>
+      <link href="/2024/07/29/java/try1/"/>
+      <url>/2024/07/29/java/try1/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  学习java mysql的关闭资源方法中，学习到try catch with resource 方法，这个方法需要要求所释放资源类实现了AutoCloseable接口，代码介绍如下：</p><pre class="line-numbers language-none"><code class="language-none">try(将需要关闭的资源语句写在这里)&#123;    ......&#125;catch(错误)&#123;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>  这个方法被常用取代try-catch finally，除了写作简洁外，还有一个就是它避免了错误覆盖，通过addSuppressed()方法将抑制的错误信息存储下来，后面通过getSuppressed()输出。<br />参考博客地址：<a href = 'https://javabetter.cn/exception/try-with-resources.html'>深入理解 Java 中的 try with resources</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>java 反射</title>
       <link href="/2024/07/29/java/java1/"/>
       <url>/2024/07/29/java/java1/</url>
