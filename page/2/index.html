@@ -44,7 +44,7 @@
     <h2 class="author">hongying</h2>
     <h3 class="description">娜厨</h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>61</strong><br>文章</div></a>
+      <a href="/archives"><div><strong>62</strong><br>文章</div></a>
       <a href="/categories"><div><strong>21</strong><br>分类</div></a>
       <a href="/tags"><div><strong>40</strong><br>标签</div></a>
     </div>
@@ -71,6 +71,103 @@
 </div>
 
         <section id="main">
+  
+    <article id="post-mysql/table1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/07/18/mysql/table1/" class="article-date">
+  <time class="post-time" datetime="2024-07-18T08:22:08.000Z" itemprop="datePublished">
+    <span class="post-month">7月</span><br/>
+    <span class="post-day">18</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+
+
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/07/18/mysql/table1/">类型</a>
+    </h1>
+  
+
+        <div>
+          
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>  Varchar与char区别：</p>
+<pre class="line-numbers language-none"><code class="language-none">Varchar 是可变长，需要字节存储长度，不大于255，需要1字节，特殊的如果表格使用ROW_FORMAT&#x3D;FIXED，则变为固定长度。一般不能直接设定最大值，虽然在mysql中看是变长，但是对于内存来说是直接开辟全部长度，以避免放不下情况，会浪费资源，同时Varchar在更新时，也会出现页内存储不够的情况，MylSAM会将行拆成不同的片段存储，InnoDB则需要分裂页来使行可以放进页内，允许最大长度为65535个字节，同时列共享（相加）。
+char 是固定长度，不够部分用空格补充，允许最大长度为255个字符，<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>  AUTO_INCREMENT 自增，所修饰字段具备如下特性：</p>
+<pre class="line-numbers language-none"><code class="language-none">1、字段不能为null，即设定NOT NULL;
+2、字段必须有唯一索引，即不允许有重复值，UNIQUE标识为唯一索引，不允许重复，但是可以为空，主键索引，通过设置主键自动创建，其不允许重复同时不允许为空，所以一般该字段设定为主键或者是唯一不为空字段;
+3、字段类型必须为整型;
+4、字段达到最大值时，失效；<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>  主键创建可以在字段声明时利用PRIMARY KEY设定，也可以在字段最后加入PRIMARY KEY(‘字段1’，‘字段2’)，我认为应该使用后者，当然如果只设定一个字段为主键可以使用前者，但是后者舍得主键与字段分开，便于阅读，同时便于确定主键。<font color="Red">主键只能指定一个，但是可以包括多个字段。</font></p>
+<pre class="line-numbers language-none"><code class="language-none">1、CREATE TABLE table_1(
+    &#39;id&#39; int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    &#39;name&#39; varchar(10) NOT NULL
+)ENGINE&#x3D;InnoDB AUTO_INCREMENT&#x3D;7 DEAFAULT CHARSET&#x3D;utf8;
+2、CREATE TABLE table_2(
+    &#39;id&#39; int NOT NULL ATUO_INCREMENT,
+    &#39;name&#39; varchar(10) NOT NULL,
+    PRIMARY KEY(&#39;id&#39;)
+)ENGINE&#x3D;InnoDB AUTO_INCREMENT&#x3D;7 DEAFALT CHARSET&#x3D;utf8;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>  唯一键UNIQUE KEY，设定与PRIMARY KEY差不多，一个是声明字段时加UNIQUE，另一个在最后使用UNIQUE KEY ‘标识名称’ (‘字段名1’,‘字段名2’…)，也可以在修改表命令中使用ALTER TABLE &lt;数据表名&gt; ADD CONSTRAINT &lt;唯一约束名&gt; UNIQUE&lt;列名&gt;，也可ALTER TABLE ‘表名’ ADD unique(‘字段名’)，或者create unique index ‘名称’ on ‘表名’ (‘字段名’)，删除表使用ALTER TABLE &lt;数据表名&gt; DROP INDEX &lt;唯一约束名&gt;；</p>
+<pre class="line-numbers language-none"><code class="language-none">1、创建UNIQUE KEY
+a. CREATE TABLE table_1(
+    &#39;id&#39; int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    &#39;name&#39; varchar(10) NOT NULL,
+    &#39;id_card&#39; char(13) NOT NULL UNIQUE,
+)ENGINE&#x3D;InnoDB AUTO_INCREMENT&#x3D;7 DEAFAULT CHARSET&#x3D;utf8;
+b. CREATE TABLE table_1(
+    &#39;id&#39; int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    &#39;name&#39; varchar(10) NOT NULL,
+    &#39;id_card&#39; char(13) NOT NULL,
+    UNIQUE KEY &#39;id_unique&#39; (&#39;id_card&#39;)
+)ENGINE&#x3D;InnoDB AUTO_INCREMENT&#x3D;7 DEAFAULT CHARSET&#x3D;utf8;
+c. CREATE TABLE table_1(
+    &#39;id&#39; int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    &#39;name&#39; varchar(10) NOT NULL,
+    &#39;id_card&#39; char(13) NOT NULL
+)ENGINE&#x3D;InnoDB AUTO_INCREMENT&#x3D;7 DEAFAULT CHARSET&#x3D;utf8;
+   ALTER TABLE table_1 ADD CONSTRAINT &#39;indexID&#39; UNIQUE &#39;id_card&#39;;
+   或者 CREATE UNIQUE INDEX &#39;indexID&#39; on &#39;table_1&#39; (&#39;id_card&#39;);
+3、删除唯一索引
+ALTER TABLE table_1 DROP INDEX &#39;indexID&#39;;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+        
+          <p class="article-more-link">
+            <a href="/2024/07/18/mysql/table1/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hongyinggame.github.io/2024/07/18/mysql/table1/" data-id="clysbcoyb00003cpb23sff7qc" class="article-share-link">分享</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
   
     <article id="post-hexojilu/hexojilu1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -662,74 +759,6 @@ shift+ctrl：按住shift不动，然后按ctrl，这个就是我们常见的直�
 
 
   
-    <article id="post-hello-world" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2024/06/27/hello-world/" class="article-date">
-  <time class="post-time" datetime="2024-06-27T01:12:51.316Z" itemprop="datePublished">
-    <span class="post-month">6月</span><br/>
-    <span class="post-day">27</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-
-
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/06/27/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div>
-          
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%B5%8B%E8%AF%95/">测试</a>
-  </div>
-
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="quick-start"><a class="markdownIt-Anchor" href="#quick-start"></a> Quick Start</h2>
-<h3 id="create-a-new-post"><a class="markdownIt-Anchor" href="#create-a-new-post"></a> Create a new post</h3>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="run-server"><a class="markdownIt-Anchor" href="#run-server"></a> Run server</h3>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="generate-static-files"><a class="markdownIt-Anchor" href="#generate-static-files"></a> Generate static files</h3>
-        
-          <p class="article-more-link">
-            <a href="/2024/06/27/hello-world/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/06/27/hello-world/" data-id="clye4l6ss001hu0pb1ve8aemd" class="article-share-link">分享</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -774,7 +803,7 @@ shift+ctrl：按住shift不动，然后按ctrl，这个就是我们常见的直�
     <h2 class="author">hongying</h2>
     <h3 class="description">娜厨</h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>61</strong><br>文章</div></a>
+      <a href="/archives"><div><strong>62</strong><br>文章</div></a>
       <a href="/categories"><div><strong>21</strong><br>分类</div></a>
       <a href="/tags"><div><strong>40</strong><br>标签</div></a>
     </div>
@@ -805,18 +834,13 @@ shift+ctrl：按住shift不动，然后按ctrl，这个就是我们常见的直�
         
       </div>
       <footer id="footer">
-<script src="/js/prism/prism.js" async></script>
-  <% if (theme.sidebar === 'bottom'){ %>
-    <%- partial('_partial/sidebar') %>
-  <% } %>
+  
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy;<%= date(new Date(), 'YYYY') - 1 %> - <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br>
+      &copy;2023 - 2024 hongying<br>
       由<a href="http://hexo.io/" target="_blank">Hexo</a>强力驱动 | 
       主题-<a target="_blank" rel="noopener" href="https://github.com/ShanaMaid/hexo-theme-shana">Shana</a>
-      <% if (theme.CNZZ){ %>
-        |<script src="http://s11.cnzz.com/z_stat.php?id=<%= theme.CNZZ %>&web_id=<%= theme.CNZZ %>" language="JavaScript"></script>
-      <% } %>
+      
       <br/> <br/>
         <div>
 <script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
@@ -826,6 +850,7 @@ shift+ctrl：按住shift不动，然后按ctrl，这个就是我们常见的直�
     </div>
     
   </div>
+  <script src="/js/prism/prism.js" async></script>
 </footer>
 
     </div>
