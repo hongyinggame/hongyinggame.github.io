@@ -2,39 +2,39 @@
 <html>
 <head>
   <meta charset="utf-8">
-  
-  <title>压缩感知 | HongyingBlog</title>
+  <%
+  var title = page.title;
+
+  if (is_archive()){
+    title = __('archive_a');
+
+    if (is_month()){
+      title += ': ' + page.year + '/' + page.month;
+    } else if (is_year()){
+      title += ': ' + page.year;
+    }
+  } else if (is_category()){
+    title = __('category') + ': ' + page.category;
+  } else if (is_tag()){
+    title = __('tag') + ': ' + page.tag;
+  }
+  %>
+  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="压缩  传统先采样后压缩方法 基于压缩感知的压缩，将采样与压缩合并，压缩感知的测量数量比奈奎斯特理论少很多   Introduction 第二段：目前提出的压缩感知进行压缩的方法存在当采样率低的情况下的重构时间长与重构效果差的情况，借助神经网络的强大学习与计算能力可以有效地将重构图像进行改进，但是目前神经网络没有考虑块之间的相关性，使得重构图像产生了块伪重影噪声，这些方法都是基于理想条件下的压缩">
-<meta property="og:type" content="article">
-<meta property="og:title" content="压缩感知">
-<meta property="og:url" content="https://hongyinggame.github.io/2022/11/20/gamification1/index.html">
-<meta property="og:site_name" content="HongyingBlog">
-<meta property="og:description" content="压缩  传统先采样后压缩方法 基于压缩感知的压缩，将采样与压缩合并，压缩感知的测量数量比奈奎斯特理论少很多   Introduction 第二段：目前提出的压缩感知进行压缩的方法存在当采样率低的情况下的重构时间长与重构效果差的情况，借助神经网络的强大学习与计算能力可以有效地将重构图像进行改进，但是目前神经网络没有考虑块之间的相关性，使得重构图像产生了块伪重影噪声，这些方法都是基于理想条件下的压缩">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-11-20T10:28:10.000Z">
-<meta property="article:modified_time" content="2023-05-06T06:27:06.716Z">
-<meta property="article:author" content="hongying">
-<meta property="article:tag" content="压缩感知">
-<meta property="article:tag" content="加密">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="HongyingBlog" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/images/tag.png">
-  
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
-<link rel="stylesheet" href="/plugin/bganimation/bg.css">
-
-  
-
+  <%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
+  <% if (theme.rss){ %>
+    <link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
+  <% } %>
+  <% if (theme.favicon){ %>
+    <link rel="icon" href="<%- theme.favicon %>">
+  <% } %>
+  <% if (config.highlight.enable){ %>
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <% } %>
+  <%- css('css/style') %>
+  <%- css('plugin/bganimation/bg') %>
+  <%- partial('google-analytics') %>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/js/prism/prism.css">
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
