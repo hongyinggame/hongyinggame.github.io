@@ -2,39 +2,38 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <%
-  var title = page.title;
-
-  if (is_archive()){
-    title = __('archive_a');
-
-    if (is_month()){
-      title += ': ' + page.year + '/' + page.month;
-    } else if (is_year()){
-      title += ': ' + page.year;
-    }
-  } else if (is_category()){
-    title = __('category') + ': ' + page.category;
-  } else if (is_tag()){
-    title = __('tag') + ': ' + page.tag;
-  }
-  %>
-  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+  
+  <title>脚本延时变量 | HongyingBlog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
-  <% if (theme.rss){ %>
-    <link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
-  <% } %>
-  <% if (theme.favicon){ %>
-    <link rel="icon" href="<%- theme.favicon %>">
-  <% } %>
-  <% if (config.highlight.enable){ %>
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  <% } %>
-  <%- css('css/style') %>
-  <%- css('plugin/bganimation/bg') %>
-  <%- partial('google-analytics') %>
+  <meta name="description" content="在进行编写脚本时，发现了延时变量与非延时变量，记录一下。一般if语句被认为是一行命令，而if中往往有几行命令，此时命令可以被认为是并行的，但是如果使用了延时扩展，就如同被认为不同命令，相继执行。 setlocal enabledelayedexpansion ::开启延时扩展 set a &#x3D; 2 if %a% &#x3D;;&#x3D;2 (::括号前要有空格      set a&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="脚本延时变量">
+<meta property="og:url" content="https://hongyinggame.github.io/2024/07/12/jiaoben/jiaoben1/index.html">
+<meta property="og:site_name" content="HongyingBlog">
+<meta property="og:description" content="在进行编写脚本时，发现了延时变量与非延时变量，记录一下。一般if语句被认为是一行命令，而if中往往有几行命令，此时命令可以被认为是并行的，但是如果使用了延时扩展，就如同被认为不同命令，相继执行。 setlocal enabledelayedexpansion ::开启延时扩展 set a &#x3D; 2 if %a% &#x3D;;&#x3D;2 (::括号前要有空格      set a&amp;">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-07-12T09:27:21.000Z">
+<meta property="article:modified_time" content="2024-07-13T02:16:02.113Z">
+<meta property="article:author" content="hongying">
+<meta property="article:tag" content="脚本">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="HongyingBlog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/tag.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/plugin/bganimation/bg.css">
+
+  
+
   <link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/js/prism/prism.css">
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
@@ -254,8 +253,8 @@ pause<span aria-hidden="true" class="line-numbers-rows"><span></span><span></spa
     </div>
     
 
-<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="//apps.bdimg.com/libs/wow/0.1.6/wow.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/wow.min.js"></script>
 <script>
 new WOW().init();
 </script>   

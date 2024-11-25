@@ -2,39 +2,41 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <%
-  var title = page.title;
-
-  if (is_archive()){
-    title = __('archive_a');
-
-    if (is_month()){
-      title += ': ' + page.year + '/' + page.month;
-    } else if (is_year()){
-      title += ': ' + page.year;
-    }
-  } else if (is_category()){
-    title = __('category') + ': ' + page.category;
-  } else if (is_tag()){
-    title = __('tag') + ': ' + page.tag;
-  }
-  %>
-  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+  
+  <title>officecrack | HongyingBlog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
-  <% if (theme.rss){ %>
-    <link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
-  <% } %>
-  <% if (theme.favicon){ %>
-    <link rel="icon" href="<%- theme.favicon %>">
-  <% } %>
-  <% if (config.highlight.enable){ %>
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  <% } %>
-  <%- css('css/style') %>
-  <%- css('plugin/bganimation/bg') %>
-  <%- partial('google-analytics') %>
+  <meta name="description" content="参考连接microsoft破解  office版本查询 控制面板查询 首先，进入控制面板版界面，选择程序和功能。  搜索microsoft office就能看到版本号了   OK，祭出大杀器了 office Tool Plus 下载网站">
+<meta property="og:type" content="article">
+<meta property="og:title" content="officecrack">
+<meta property="og:url" content="https://hongyinggame.github.io/2022/11/17/officecrack/index.html">
+<meta property="og:site_name" content="HongyingBlog">
+<meta property="og:description" content="参考连接microsoft破解  office版本查询 控制面板查询 首先，进入控制面板版界面，选择程序和功能。  搜索microsoft office就能看到版本号了   OK，祭出大杀器了 office Tool Plus 下载网站">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hongyinggame.github.io/images/officecrack/one.png">
+<meta property="og:image" content="https://hongyinggame.github.io/images/officecrack/two.png">
+<meta property="article:published_time" content="2022-11-17T06:47:37.000Z">
+<meta property="article:modified_time" content="2022-11-17T07:59:53.142Z">
+<meta property="article:author" content="hongying">
+<meta property="article:tag" content="office破解">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hongyinggame.github.io/images/officecrack/one.png">
+  
+    <link rel="alternate" href="/atom.xml" title="HongyingBlog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/tag.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/plugin/bganimation/bg.css">
+
+  
+
   <link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/js/prism/prism.css">
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
@@ -252,8 +254,8 @@
     </div>
     
 
-<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="//apps.bdimg.com/libs/wow/0.1.6/wow.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/wow.min.js"></script>
 <script>
 new WOW().init();
 </script>   
