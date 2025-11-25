@@ -21,8 +21,6 @@
     <link rel="icon" href="/images/tag.png">
   
   
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
   
 <link rel="stylesheet" href="/css/style.css">
 
@@ -32,6 +30,7 @@
   
 
   <link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/js/prism/prism.css">
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
@@ -41,13 +40,13 @@
         <div class="widget-wrap mobile-header">
   <h3 class="widget-title"></h3>
   <div class="widget">
-    <img class="avatar" src="/images/avt.jpg">
+    <img class="avatar" src="/images/one.jpg">
     <h2 class="author">hongying</h2>
     <h3 class="description">娜厨</h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>42</strong><br>文章</div></a>
-      <a href="/categories"><div><strong>13</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>32</strong><br>标签</div></a>
+      <a href="/archives"><div><strong>80</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>21</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>41</strong><br>标签</div></a>
     </div>
     <ul class="blog-link">
      
@@ -73,11 +72,572 @@
 
         <section id="main">
   
-    <article id="post-encryption1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-SQL2ml" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2023/04/15/encryption1/" class="article-date">
-  <time class="post-time" datetime="2023-04-15T01:46:23.000Z" itemprop="datePublished">
-    <span class="post-month">4月</span><br/>
+    <a href="/2024/07/09/SQL2ml/" class="article-date">
+  <time class="post-time" datetime="2024-07-09T08:30:15.000Z" itemprop="datePublished">
+    <span class="post-month">7月</span><br/>
+    <span class="post-day">09</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+
+
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/07/09/SQL2ml/">Mysql配置相关命令</a>
+    </h1>
+  
+
+        <div>
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/SQL/">SQL</a>,<a class="article-category-link" href="/categories/SQL/%E6%98%93%E5%BF%98%E5%91%BD%E4%BB%A4/">易忘命令</a>
+  </div>
+
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre class="line-numbers language-none"><code class="language-none">mysqld --console 用于查看mysql服务日志，是mysqld 不是mysql。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+        
+          <p class="article-more-link">
+            <a href="/2024/07/09/SQL2ml/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hongyinggame.github.io/2024/07/09/SQL2ml/" data-id="clye5u4170000okpb47ws9bbh" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mysql/" rel="tag">Mysql</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+    <article id="post-SQL1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/07/08/SQL1/" class="article-date">
+  <time class="post-time" datetime="2024-07-08T07:37:38.000Z" itemprop="datePublished">
+    <span class="post-month">7月</span><br/>
+    <span class="post-day">08</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+
+
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/07/08/SQL1/">SQL1</a>
+    </h1>
+  
+
+        <div>
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/SQL/">SQL</a>,<a class="article-category-link" href="/categories/SQL/%E6%98%93%E5%BF%98%E5%91%BD%E4%BB%A4/">易忘命令</a>
+  </div>
+
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>  SQL使用;作为结束标志，SQL不区分大小写，但是一般关键字大写是为了更容易阅读，SQL查询结果没特殊说明，不进行排序，SQL对空格不进行处理，所以可以写在一行，也可写在多行。</p>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT DISTINCT 列名 FROM 表名; DISTINCT 用于查询不同字段，消除重复字段。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT TOP 5 列名 FROM 表名; TOP 用于指定前几行记录;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">MYSQL使用如下 SELECT 列名 FROM 表名 LIMIT 5 OFFSET 5; LIMIT关键词用于指定输出几行，OFFSET 用于指定开始行号，可简化为LIMIT 5,5; 但是第一个是OFFSET值，第二个为LIMIT值<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+        
+          <p class="article-more-link">
+            <a href="/2024/07/08/SQL1/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hongyinggame.github.io/2024/07/08/SQL1/" data-id="clye4l6sj000bu0pb6ctmemfs" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mysql/" rel="tag">Mysql</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+    <article id="post-shici/zaji1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/07/08/shici/zaji1/" class="article-date">
+  <time class="post-time" datetime="2024-07-08T01:27:15.000Z" itemprop="datePublished">
+    <span class="post-month">7月</span><br/>
+    <span class="post-day">08</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+
+
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/07/08/shici/zaji1/">《晨雨》</a>
+    </h1>
+  
+
+        <div>
+          
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <center>《晨行急雨》</center>
+<center>红荧</center>
+<center>狂雨闹家归，连鼓爆珠声。</center>
+<center>洼水上尘鞋，乱手拖裤草。</center>
+
+        
+          <p class="article-more-link">
+            <a href="/2024/07/08/shici/zaji1/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hongyinggame.github.io/2024/07/08/shici/zaji1/" data-id="cm3wourgk000j7wpb7ks24iy1" class="article-share-link">分享</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+    <article id="post-shici/zaji2" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/07/08/shici/zaji2/" class="article-date">
+  <time class="post-time" datetime="2024-07-08T01:27:15.000Z" itemprop="datePublished">
+    <span class="post-month">7月</span><br/>
+    <span class="post-day">08</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+
+
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/07/08/shici/zaji2/">动态</a>
+    </h1>
+  
+
+        <div>
+          
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>  红心弦，金丝线，鹊作桥，星相见;披金缕，戴金梭，携汝游，观四宿；意相如，情相似，愿你我，共此时；待明朝，盼今日，勾指约，君莫忘。</p>
+
+        
+          <p class="article-more-link">
+            <a href="/2024/07/08/shici/zaji2/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hongyinggame.github.io/2024/07/08/shici/zaji2/" data-id="cm3wourgl000l7wpb3oifgzm7" class="article-share-link">分享</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+    <article id="post-shici/zaji3" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/07/08/shici/zaji3/" class="article-date">
+  <time class="post-time" datetime="2024-07-08T01:27:15.000Z" itemprop="datePublished">
+    <span class="post-month">7月</span><br/>
+    <span class="post-day">08</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+
+
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/07/08/shici/zaji3/">动态</a>
+    </h1>
+  
+
+        <div>
+          
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>  如果我们都屈服了，都选择逃避，确实偏安一隅，但是对于我们国家民族来说，这和毁灭有什么区别吗？获得了生存，但丧失了主权，丧失了自己的根。<br>
+  为什么世界有英雄存在，不就是因为他们做了我们所没有做的，其实很多时候我们都是选择逃避，只有少数人选择面对，逃避解决不了根本问题，该面对的，应该勇敢面对，纵使最后可能是失败，甚至死亡，英雄大部分不都是烈士吗？</p>
+
+        
+          <p class="article-more-link">
+            <a href="/2024/07/08/shici/zaji3/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hongyinggame.github.io/2024/07/08/shici/zaji3/" data-id="cm3wourgl000m7wpb76ys2vu3" class="article-share-link">分享</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+    <article id="post-git-master" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/06/29/git-master/" class="article-date">
+  <time class="post-time" datetime="2024-06-29T06:36:38.000Z" itemprop="datePublished">
+    <span class="post-month">6月</span><br/>
+    <span class="post-day">29</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+
+
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/06/29/git-master/">git_master</a>
+    </h1>
+  
+
+        <div>
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Git/">Git</a>,<a class="article-category-link" href="/categories/Git/bash%E7%AE%A1%E7%90%86%E5%91%98%E9%85%8D%E7%BD%AE/">bash管理员配置</a>
+  </div>
+
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>  本文章主要是记录一下程序自动开启管理员运行模式的配置方法，有些文件位于C盘具有访问权限，如果不是管理员就无法访问，而每次都是先以管理员进入bash程序，然后cd进入该路径，他费劲了，于是直接配置bash直接进入管理员，直接在该文件夹下bash即可。<br>
+  开启权限很简单，首先，找到该exe程序，然后右键属性，找到兼容性标签页，然后点击更改所有用户设置，最后将以管理员身份运行打勾即可，此方法对其它程序页都适用。</p>
+
+        
+          <p class="article-more-link">
+            <a href="/2024/06/29/git-master/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hongyinggame.github.io/2024/06/29/git-master/" data-id="clye4l6sq0017u0pbdqqa5o2b" class="article-share-link">分享</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+    <article id="post-twogithub" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/06/28/twogithub/" class="article-date">
+  <time class="post-time" datetime="2024-06-28T08:33:12.000Z" itemprop="datePublished">
+    <span class="post-month">6月</span><br/>
+    <span class="post-day">28</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+
+
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/06/28/twogithub/">配置双博客（配置访问两个github）</a>
+    </h1>
+  
+
+        <div>
+          
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>  因为我有了两个博客，而一个博客如果使用github.io域名，那么一个博客只能对应一个github号，所以我创建了两个github号，所以需要配置一个电脑使用两个github。<br>
+  首先，配置两个github号我们需要明白根本操作其实是配置两个密钥，目前我们无法使用两个github，根本原因是我们只生成了一个密钥，且电脑只识别id_rsa密钥。<br>
+  理解上述原因后，我们就很好的明白如何解决问题了，首先生成不同的两个密钥，只需命名不同即可，然后添加对应的github账号中，随后将其添加SSH agent中，使电脑识别两个密钥，然后就是在.ssh里建立一个config文件（无后缀，可以先创建txt文件，然后删除后缀即可），为其设置不同的host别名，说白了就是用于隐藏域名的指代词，不同别名代表不同的配置，其中，最主要的是配置两个不同别名使用的密钥，随后，我们需要将全局配置删除，然后，我们就可以通过ssh -T git@自己配置的第一个Host别名，来测试是否成功，如果成功，那么我们就成功关联两个github了，每次就可以git@别名来区分操作。<br>
+  上面做完后，接下来就是hexo关联github了，这个简单，就是配置hexo的config文件，将deploy中的repository属性配置对应的别名就行了，最后就是因为全局配置没有了，所以我们需要将每个的hexo中的.deploy_git中.git中的config配置[user]选项，告诉hexo我是谁，其中含有email属性与name属性，写对应github的就行。<br>
+  经过以上操作我们就完成了一个电脑使用两个博客了。这里具体操作没有展示，因为网上都有介绍，这里主要说一下原理与操作流程，主要是便于我以后忘记时，快速明白其中原理，并明白到底要怎么做。</p>
+
+        
+          <p class="article-more-link">
+            <a href="/2024/06/28/twogithub/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hongyinggame.github.io/2024/06/28/twogithub/" data-id="clye4l6t3003mu0pb9ifz20in" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+    <article id="post-java-UI-font-1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/06/27/java-UI-font-1/" class="article-date">
+  <time class="post-time" datetime="2024-06-27T02:22:26.000Z" itemprop="datePublished">
+    <span class="post-month">6月</span><br/>
+    <span class="post-day">27</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+
+
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/06/27/java-UI-font-1/">java_UI_font_1</a>
+    </h1>
+  
+
+        <div>
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/java/">java</a>,<a class="article-category-link" href="/categories/java/UI/">UI</a>
+  </div>
+
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>  在进行JAVA贪吃蛇时，发现UI窗口中文字体乱码情况，起初以为是JAVA编码原因，经过查找资料得知，罪魁祸首是Windows系统本身是GBK，而非utf-8,只有Beta版可以设置，具体可以通过系统设置的时间与语言模块查看，具体原因为：我们java是UTF-8编码，但是窗口是基于windows的，windows解析展示时乱码导致，所以我们添加一个jvm参数，具体内容为-Dfile.encoding=gbk。<br>
+<img src="/images/java/UI/fig1.png" alt="配置位置"></p>
+
+        
+          <p class="article-more-link">
+            <a href="/2024/06/27/java-UI-font-1/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hongyinggame.github.io/2024/06/27/java-UI-font-1/" data-id="clye4l6st001lu0pbdb522ufm" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UI/" rel="tag">UI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/" rel="tag">java</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+    <article id="post-hello-world" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/06/27/hello-world/" class="article-date">
+  <time class="post-time" datetime="2024-06-27T01:12:51.316Z" itemprop="datePublished">
+    <span class="post-month">6月</span><br/>
+    <span class="post-day">27</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+
+
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/06/27/hello-world/">Hello World</a>
+    </h1>
+  
+
+        <div>
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%B5%8B%E8%AF%95/">测试</a>
+  </div>
+
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="quick-start"><a class="markdownIt-Anchor" href="#quick-start"></a> Quick Start</h2>
+<h3 id="create-a-new-post"><a class="markdownIt-Anchor" href="#create-a-new-post"></a> Create a new post</h3>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="run-server"><a class="markdownIt-Anchor" href="#run-server"></a> Run server</h3>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="generate-static-files"><a class="markdownIt-Anchor" href="#generate-static-files"></a> Generate static files</h3>
+        
+          <p class="article-more-link">
+            <a href="/2024/06/27/hello-world/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hongyinggame.github.io/2024/06/27/hello-world/" data-id="clye4l6ss001hu0pb1ve8aemd" class="article-share-link">分享</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+    <article id="post-di24" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/02/15/di24/" class="article-date">
+  <time class="post-time" datetime="2024-02-15T15:26:58.000Z" itemprop="datePublished">
+    <span class="post-month">2月</span><br/>
     <span class="post-day">15</span>
   </time>
 </a>
@@ -93,16 +653,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2023/04/15/encryption1/">《A flexible and visually meaningful multi-image compression, encryption and hiding scheme based on 2D compressive sensing》论文阅读</a>
+      <a class="article-title" href="/2024/02/15/di24/">动态</a>
     </h1>
   
 
         <div>
           
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">学习记录</a>
-  </div>
-
           
               
 
@@ -112,710 +668,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="该文章是对论文的总结并不是对其的详解我这是用于说明论文的部分东西便于我的复习回顾不是面向别人的"><a class="markdownIt-Anchor" href="#该文章是对论文的总结并不是对其的详解我这是用于说明论文的部分东西便于我的复习回顾不是面向别人的"></a> 该文章是对论文的总结，并不是对其的详解，我这是用于说明论文的部分东西，便于我的复习回顾，不是面向别人的。</h4>
-<h3 id="动机"><a class="markdownIt-Anchor" href="#动机"></a> 动机</h3>
-<p>   本文发现很多论文中的视觉图像加密为单图像加密，灵活性比较低，然而，更多时候人们更多的想在不增加加密图像的前提下级加密更多的明文图像，然后是对于解密后的图像与明文图像的损失达到最少，并且加密后的图像对于宿主图像的相似度处于一个较低水平。</p>
-<h3 id="贡献"><a class="markdownIt-Anchor" href="#贡献"></a> 贡献</h3>
-<p>   本文的贡献如下</p>
-<ul>
-	<li>提出了多图像的加密的结构，通过不增加加密图像的数量的前提下，来进行加密多个明文图像。</li>
-	<li>非线性灰度值转化操作改善加密的安全性，首先是该操作避免了图像的统计信息的泄露，同时由于其非线性的转化，能够更好的抵抗选择明文攻击。</li>
-</ul>
-<h3 id="相关理论"><a class="markdownIt-Anchor" href="#相关理论"></a> 相关理论</h3>
-<p><span color="red">此部分需要自行查资料</span></p>
-<ul>
-	<li>一维压缩感知1DCS</li>
-	<li>二维压缩感知2DCS</li>
-</ul>
+        <p>  我们要在战略上蔑视对手，在战术上要重视对手，也就是说我们在做事时，要有自信，要坚信没有什么事难倒我们，但是当我们去做时，要小心严谨地去做。<br>
+  我们要眼界打开，见识很重要，这会改变人的思维与行为，而我需要去拓宽我的思维与改善我的行为。<br>
+  本质思维一定要有，独立思维，自我思考。</p>
+
         
           <p class="article-more-link">
-            <a href="/2023/04/15/encryption1/#more">Read More</a>
+            <a href="/2024/02/15/di24/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2023/04/15/encryption1/" data-id="cls790sq7000mj8uz7p5p5q7e" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2024/02/15/di24/" data-id="clye4l6sn000qu0pbawxbdqeu" class="article-share-link">分享</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%9B%BE%E5%83%8F%E5%8A%A0%E5%AF%86/" rel="tag">图像加密</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A4%9A%E5%9B%BE%E5%83%8F/" rel="tag">多图像</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%A7%86%E8%A7%89%E5%8A%A0%E5%AF%86/" rel="tag">视觉加密</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
-    <article id="post-parasites" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2023/04/14/parasites/" class="article-date">
-  <time class="post-time" datetime="2023-04-14T01:10:46.000Z" itemprop="datePublished">
-    <span class="post-month">4月</span><br/>
-    <span class="post-day">14</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-
-
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/04/14/parasites/">寄生虫电影观后感</a>
-    </h1>
-  
-
-        <div>
-          
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E9%9A%8F%E7%AC%94%E8%AE%B0%E5%BD%95/">随笔记录</a>
-  </div>
-
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="center此为本人感悟如有错误万分抱歉center"><a class="markdownIt-Anchor" href="#center此为本人感悟如有错误万分抱歉center"></a> <center>此为本人感悟如有错误万分抱歉</center></h4>
-<p>  昨天看了《寄生虫》电影，通过观看，内心有一点想法，因此记录一下（主要是好久不写了，心血来潮来进行撰写一下，顺带看看我的夏娜）。</p>
-<p>  <span>寄生虫分为生活上的寄生虫与精神上的寄生虫，生活上的寄生虫和我们认知的寄生虫类似，此类寄生虫寄生于宿主，安于现状，不思进取，永远生活于黑暗当中，事事依赖别人，在自身感到舒适的生活圈不作为，通过别人来养活自己。另一类是精神上的寄生虫，此类寄生虫很难发现，一般生活上的寄生现象来源于精神上的寄生，此类精神上的寄生一部分是由于失败造成的，为了逃避失败造成的现实与满足内心的自尊心，通过寄生于精神上的慰藉,生活于美好的幻想中，借由生活上的寄生不断地加深；另一方面是内心的自卑与羞耻心造成的精神上的寄生，此类寄生是通过寻求精神上的成长与过度在乎荣誉，以此掩盖自身的自卑心。</span></p>
-<p>  <span>现实中不能存在生活上的寄生与精神上的寄生，这就需要随时清醒地认识自己，自立自强地生活，切忌依赖别人，当遇到失败时不能逃避，要勇敢面对，汲取教训然后前进，在此基础上更重要的是不能活在幻想中，精神上的成长很重要，但要分清逃避与需求，不能把逃避化为精神上需求，以此自我慰藉与满足，这样的话容易活在幻想与自我满足中而生活上不作为。</span></p>
-<p>  <span>要养成界限意识，分清生活上与精神上的界限，不能跨过这些界限，这会是你付出代价，界限意识能让你适度而非过度，任何毒性都是在程度超过界限而产生的</span></p>
-<p>  现在重点来了，夏娜登场。<br>
-<img src="/images/842808.jpg" alt="我爱夏娜"></p>
-
-        
-          <p class="article-more-link">
-            <a href="/2023/04/14/parasites/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2023/04/14/parasites/" data-id="cls790sqs002cj8uz23kq8jdd" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AF%84%E7%94%9F%E8%99%AB%E7%94%B5%E5%BD%B1/" rel="tag">寄生虫电影</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%A7%82%E5%90%8E%E6%84%9F/" rel="tag">观后感</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
-    <article id="post-idea1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/12/04/idea1/" class="article-date">
-  <time class="post-time" datetime="2022-12-04T07:24:42.000Z" itemprop="datePublished">
-    <span class="post-month">12月</span><br/>
-    <span class="post-day">04</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-
-
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/12/04/idea1/">IDEA全局配置</a>
-    </h1>
-  
-
-        <div>
-          
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/">技术记录</a>
-  </div>
-
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="idea中的坑"><a class="markdownIt-Anchor" href="#idea中的坑"></a> IDEA中的坑</h4>
-<h3 id="解决在ideamaven配置中出现使用setting设置只能作用于该项目的问题"><a class="markdownIt-Anchor" href="#解决在ideamaven配置中出现使用setting设置只能作用于该项目的问题"></a> 解决在IDEAmaven配置中，出现使用setting设置只能作用于该项目的问题</h3>
-<p> 本人使用的是<span style="color:red">IDEA2022.3版本</span>,在进行maven配置时，通过setting进行配置maven，出现了该配置只能作用于该项目，不能迁移到另一个项目中。</p>
-<h2 id="解决"><a class="markdownIt-Anchor" href="#解决"></a> 解决</h2>
-<p> 新版IDEA的全局设置放到了初始化界面中，如果你已经进入项目可以通过如下图所示操作退出项目，然后就会进入初始化界面。<br>
-<img src="/images/projectexit.png" alt="项目退出"></p>
-<p> 进入初始化界面后，找到全局配置，如下图：<br>
-<img src="/images/allsetting.png" alt="全局配置"></p>
-<p> 最后就是进行全局配置了，但是你以为这就完了吗？<br>
-<img src="/images/heshui.gif" alt><br>
-<img src="/images/paobu.gif" alt></p>
-<p> 好了休息完了，接下来是将勾选自动编译到项目中，如果这个不勾选，还是出现无法应用的情况，操作如下图：<br>
-<img src="/images/bianyi.png" alt="自动编译项目"></p>
-<p> ok!现在全局配置生效了，你终于不用每次都配置了。<br>
-<img src="/images/haoyun.jpg" alt></p>
-        
-          <p class="article-more-link">
-            <a href="/2022/12/04/idea1/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2022/12/04/idea1/" data-id="cls790sqh0019j8uz4ug94364" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IDEA/" rel="tag">IDEA</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
-    <article id="post-gamification1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/11/20/gamification1/" class="article-date">
-  <time class="post-time" datetime="2022-11-20T10:28:10.000Z" itemprop="datePublished">
-    <span class="post-month">11月</span><br/>
-    <span class="post-day">20</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-
-
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/11/20/gamification1/">压缩感知</a>
-    </h1>
-  
-
-        <div>
-          
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">学习记录</a>
-  </div>
-
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="压缩"><a class="markdownIt-Anchor" href="#压缩"></a> 压缩</h4>
-<ul>
-<li>传统先采样后压缩方法</li>
-<li>基于压缩感知的压缩，将采样与压缩合并，压缩感知的测量数量比奈奎斯特理论少很多</li>
-</ul>
-<h4 id="introduction"><a class="markdownIt-Anchor" href="#introduction"></a> Introduction</h4>
-<p>第二段：目前提出的压缩感知进行压缩的方法存在当采样率低的情况下的重构时间长与重构效果差的情况，借助神经网络的强大学习与计算能力可以有效地将重构图像进行改进，但是目前神经网络没有考虑块之间的相关性，使得重构图像产生了块伪重影噪声，这些方法都是基于理想条件下的压缩，对于现实中出现的传输波动与噪声现象，没有考虑进去。</p>
-<p>第三段、第四段：提出目前的基于压缩感知的加密方法，同时，分析出该方法存在的问题。<br>
-第五段：提出了作者的方法。</p>
-
-        
-          <p class="article-more-link">
-            <a href="/2022/11/20/gamification1/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2022/11/20/gamification1/" data-id="cls790sqb000xj8uz5tpk0xgm" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8A%A0%E5%AF%86/" rel="tag">加密</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8E%8B%E7%BC%A9%E6%84%9F%E7%9F%A5/" rel="tag">压缩感知</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
-    <article id="post-officecrack" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/11/17/officecrack/" class="article-date">
-  <time class="post-time" datetime="2022-11-17T06:47:37.000Z" itemprop="datePublished">
-    <span class="post-month">11月</span><br/>
-    <span class="post-day">17</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-
-
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/11/17/officecrack/">officecrack</a>
-    </h1>
-  
-
-        <div>
-          
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%BD%AF%E4%BB%B6%E7%A0%B4%E8%A7%A3/">软件破解</a>
-  </div>
-
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p style="color:red;font-size:20px;">参考连接<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/386361555">microsoft破解</a></p>
-<h4 id="office版本查询"><a class="markdownIt-Anchor" href="#office版本查询"></a> office版本查询</h4>
-<h4>控制面板查询</h4>
-<p style="color:red;font-size:20px;">首先，进入控制面板版界面，选择程序和功能。</p>
-<p><img src="/images/officecrack/one.png" alt="控制面板图片"></p>
-<p style="color:red;font-size:20px;">搜索microsoft office就能看到版本号了</p>
-<p><img src="/images/officecrack/two.png" alt="office版本号"></p>
-<h4 id="ok祭出大杀器了-office-tool-plus"><a class="markdownIt-Anchor" href="#ok祭出大杀器了-office-tool-plus"></a> OK，祭出大杀器了 office Tool Plus</h4>
-<p><a target="_blank" rel="noopener" href="https://otp.landian.vip/zh-cn/" style="font-size:20px">下载网站</a></p>
-        
-          <p class="article-more-link">
-            <a href="/2022/11/17/officecrack/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2022/11/17/officecrack/" data-id="cls790sqr0028j8uz99pl7j18" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/office%E7%A0%B4%E8%A7%A3/" rel="tag">office破解</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
-    <article id="post-selectsearch1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/11/17/selectsearch1/" class="article-date">
-  <time class="post-time" datetime="2022-11-17T02:17:04.000Z" itemprop="datePublished">
-    <span class="post-month">11月</span><br/>
-    <span class="post-day">17</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-
-
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/11/17/selectsearch1/">如何选题（《科学研究与论文写作》）</a>
-    </h1>
-  
-
-        <div>
-          
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%AE%BA%E6%96%87%E6%8C%87%E5%AF%BC/">论文指导</a>
-  </div>
-
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 style="color:red">注；以下是对确定大方向而不知道小方向来说，并且是我通过阅读选题部分，然后根据自己的理解进行总结，有不对的地方敬请指正，QQ:1412159107</h3>
-<h4 id="了解该领域的知识"><a class="markdownIt-Anchor" href="#了解该领域的知识"></a> 了解该领域的知识</h4>
-<h5 id="选题-研究-总结"><a class="markdownIt-Anchor" href="#选题-研究-总结"></a> 选题-研究-总结</h5>
-<p>  首先，你应该知道选题是初步的，在你随着研究与总结中，你会不时的修改甚至推翻你的开始选题，随后选题将关乎你的接下来的研究与总结，好的选题是的你的研究成功了一半，研究与总结更是密不可分，研究了才有总结，总结了才知道研究了啥，然后才能对接下来的研究有个充分把握，这三者是一个整体，三者相互作用。关系如图所示。<br>
-<img src="/images/selectsearch/relationship.png" alt="选题-研究-总结"></p>
-<h5 id="文献查找与知识库构建"><a class="markdownIt-Anchor" href="#文献查找与知识库构建"></a> 文献查找与知识库构建</h5>
-<p> 当你确定了研究领域之后，你需要去查找领域的跟踪研究，这就需要你进行构造检索式，以下为构造检索式的步骤。</p>
-<ul>
-    <li>同义词构造</li>
-    <p>首先，找到该领域的关键词，根据关键词构造其同义词与相近词，此操作可以使用知网的<a target="_blank" rel="noopener" href="https://dict.cnki.net/index">学术翻译助手</a>,同时，对于每次找的关键词与同一词建立一个文档记录他们的来源，这样可以进行分析我们为什么少了以及少了那些内容。</p>
-    <li>检索式构造</li>
-    <p>接下来，将关键词及其同义词进行检索式构造，此构造需要and、or、not等逻辑词连接，同时也需要模糊匹配*来进行大范围匹配，随后就是要随着阅读与研究深入进一步调整检索式。</p>
-    <li>知识库建立</li>
-    <p>知识库的建立需要选择合适的工具，推荐EndNote,其软件推荐该博主提供的方法:<a href="https://zhuanlan.zhihu.com/p/379687034" target="_blank">EndNote X9正版分享</a>。同时记住知识库的建立是需要不断完善与调整，对文献导入进行详细记录并且检查其合理性，同时对于未导入的文献进行导入，如：所读文献的参考文献。</p>
-    <li>新增文献收录</li>
-    <p>有时需要将每天新增相关检索范式的文献进行收录，可以通过订阅，将新增文献发送到邮箱里。</p>
-</ul>
-<h4 id="文献阅读"><a class="markdownIt-Anchor" href="#文献阅读"></a> 文献阅读</h4>
-<p> 当你知识库构建完成，那么就是开始阅读文献的时候了，以下为阅读文献要做到的几个方面：</p>
-        
-          <p class="article-more-link">
-            <a href="/2022/11/17/selectsearch1/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2022/11/17/selectsearch1/" data-id="cls790sqt002gj8uzhs7dc9bp" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%BA%E6%96%87%E7%A0%94%E7%A9%B6%E6%8C%87%E5%AF%BC/" rel="tag">论文研究指导</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
-    <article id="post-git1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/11/14/git1/" class="article-date">
-  <time class="post-time" datetime="2022-11-14T12:45:34.000Z" itemprop="datePublished">
-    <span class="post-month">11月</span><br/>
-    <span class="post-day">14</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-
-
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/11/14/git1/">git1</a>
-    </h1>
-  
-
-        <div>
-          
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/">技术记录</a>
-  </div>
-
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="git-push-报错fatal-unable-to-access-httpsgithubcomhongyinggameshanawebgit-failed-to-connect-to-githubcom-port-443-after-21108-ms-timed-out"><a class="markdownIt-Anchor" href="#git-push-报错fatal-unable-to-access-httpsgithubcomhongyinggameshanawebgit-failed-to-connect-to-githubcom-port-443-after-21108-ms-timed-out"></a> git push 报错：fatal: unable to access ‘<a target="_blank" rel="noopener" href="https://github.com/hongyinggame/shanaweb.git/">https://github.com/hongyinggame/shanaweb.git/</a>’: Failed to connect to <a target="_blank" rel="noopener" href="http://github.com">github.com</a> port 443 after 21108 ms: Timed out</h4>
-<p>解决方法：取消代理
-</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global --unset http.proxy</span><br><span class="line"></span><br><span class="line">git config --global --unset https.proxy</span><br></pre></td></tr></table></figure>
-<p></p>
-        
-          <p class="article-more-link">
-            <a href="/2022/11/14/git1/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2022/11/14/git1/" data-id="cls790sqc0010j8uz3yq5adr6" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git%E9%A1%B9%E7%9B%AE%E6%8F%90%E4%BA%A4/" rel="tag">git项目提交</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
-    <article id="post-markdown1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/11/14/markdown1/" class="article-date">
-  <time class="post-time" datetime="2022-11-14T07:04:25.000Z" itemprop="datePublished">
-    <span class="post-month">11月</span><br/>
-    <span class="post-day">14</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-
-
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/11/14/markdown1/">markdown学习记录(一)</a>
-    </h1>
-  
-
-        <div>
-          
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/">技术记录</a>
-  </div>
-
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="参考连接"><a class="markdownIt-Anchor" href="#参考连接"></a> 参考连接</h3>
-<p><a href="https://www.imooc.com/wiki/markdownlesson/markdowncodeblock.html" target="_blank">Markdown教程-代码块</a></p>
-<h4 id="问题emsp出现了无法渲染的情况"><a class="markdownIt-Anchor" href="#问题emsp出现了无法渲染的情况"></a> 问题：&amp;emsp出现了无法渲染的情况</h4>
-<p>&emsp;首先，观察你的渲染插件hexo-render有无问题，查询插件代码：
-</p><pre><code>npm ls ----列出所有插件
-</code></pre>
-<p>没有插件时，使用如下命令进行下载：注：这里用hexo-renderer-markdown-it-plus作为例子，其他渲染器只需将插件名修改即可，同时看看有没有将以前的渲染器删除代码如下。</p>
-<pre><code>npm un hexo-renderer-marked --save 卸载以前的渲染器
-npm i hexo-renderer-markdown-it-plus --save 安装现有的渲染器
-</code></pre>
-<p></p>
-<h4 id="问题代码块的定义"><a class="markdownIt-Anchor" href="#问题代码块的定义"></a> 问题：代码块的定义</h4>
-        
-          <p class="article-more-link">
-            <a href="/2022/11/14/markdown1/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2022/11/14/markdown1/" data-id="cls790sqq0020j8uz2brfhcfk" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/" rel="tag">markdown</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
-    <article id="post-Transformer" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/11/13/Transformer/" class="article-date">
-  <time class="post-time" datetime="2022-11-13T03:01:19.000Z" itemprop="datePublished">
-    <span class="post-month">11月</span><br/>
-    <span class="post-day">13</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-
-
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/11/13/Transformer/">Swin Transformer(二)</a>
-    </h1>
-  
-
-        <div>
-          
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">学习记录</a>
-  </div>
-
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="参考连接"><a class="markdownIt-Anchor" href="#参考连接"></a> 参考连接</h3>
-<p><a target="_blank" href="https://zhuanlan.zhihu.com/p/113443895">cnn中位置与尺度的问题</a><br>
-<a href="https://zhuanlan.zhihu.com/p/36278093" target="_blank">padding的作用于意义</a><br>
-<a href="https://blog.csdn.net/JMU_Ma/article/details/90033969" target="_blank">U-net讲解</a><br>
-<a href="https://www.zhihu.com/question/268331470" target="_blank">U-net中的镜像操作的理解</a><br>
-<a href="https://zhuanlan.zhihu.com/p/126504785" target="_blank">SiamRPN++笔记：padding究竟影响了什么？</a><br>
-<a href="https://blog.csdn.net/qq_38405680/article/details/82748623" target="_blank">浅谈采样定理</a></p>
-<h5 id="多尺度目标检测"><a class="markdownIt-Anchor" href="#多尺度目标检测"></a> 多尺度目标检测</h5>
-<p>多尺度目标检测简单说检测目标的尺度不同有大有小。</p>
-<p>检测物体大小不一的影响？<br>
- 首先，浅层所提取的信息中几何信息好，但是语义信息差，视野小，因此更适合定位；深层所提取的信息中语义信息好，几何信息差，视野大，适合分类。<br>
-但是，随着加深深度会出现语义信息提取下降现象，因为随着周遭环境的稀释，虽然视野变大，但是视野中的信息量减少，提取下降。</p>
-<p>如图为大小物体下的目标检测，可以看出大小目标的变化是一样的，但是，图像的大小不一样，即小目标更快到顶峰，而大目标却更晚到顶峰，因此，会出出现鱼<br>
-和熊掌不可兼得的情况，如图，神经网络的深度应定为25层，还是50层，亦或是37层呢？定25层则对小目标的检测效果好而大目标检测能力差；定50层则反之；<br>
-定37层则两类目标的检测能力较为均衡但都不在最好的检测状态。而这就是“多尺度”目标检测问题的根源所在。</p>
-<p><img src="/images/%E5%A4%A7%E7%9B%AE%E6%A0%87%E5%B0%8F%E7%9B%AE%E6%A0%87%E7%9A%84%E4%B8%8D%E5%90%8C%E4%B9%8B%E5%A4%84.webp" alt="大小目标的检测曲线"><br>
-解决方法</p>
-<ol>
-<li>图像金子塔</li>
-</ol>
-<p>由不同分辨率组成的图像从大到小叠加在一起，这种就叫做图像金字塔。缺点：对多个尺寸的图片进行操作，计算量比较大。</p>
-        
-          <p class="article-more-link">
-            <a href="/2022/11/13/Transformer/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2022/11/13/Transformer/" data-id="cls790sq3000bj8uzbswabwf7" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/" rel="tag">机器视觉</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
-    <article id="post-frqi" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/10/30/frqi/" class="article-date">
-  <time class="post-time" datetime="2022-10-30T11:00:48.000Z" itemprop="datePublished">
-    <span class="post-month">10月</span><br/>
-    <span class="post-day">30</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-
-
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/10/30/frqi/">FRQI模型《A flexible representation of quantum images for polynomial preparation, image compression,and processing operations 》论文阅读笔记</a>
-    </h1>
-  
-
-        <div>
-          
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">学习记录</a>
-  </div>
-
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="格言"><a class="markdownIt-Anchor" href="#格言"></a> 格言</h5>
-<blockquote>
-<ul>
-<li>站在巨人肩膀上。</li>
-<li>细节决定成败。</li>
-<li>感恩、知足、包容、珍惜。</li>
-<li>努力、更加努力。</li>
-<li>Together we stand, divided we fall。</li>
-<li>挖掘自己的可能性、发现别人的可能性。</li>
-<li>不要过于在乎别人对你的眼光。</li>
-</ul>
-</blockquote>
-<h3 id="学习时间记录"><a class="markdownIt-Anchor" href="#学习时间记录"></a> 学习时间记录</h3>
-<ul>
-<li>2022.10.30 星期日晚上  学习了Abstract，introduction</li>
-<li>2022.10.31 星期一下午</li>
-</ul>
-<h3 id="abstract"><a class="markdownIt-Anchor" href="#abstract"></a> Abstract</h3>
-<blockquote>
-<p>  通过阅读了解到，本文章提出了一个灵活的量子图像表示模型，其操作是通过一个多项式将原始状态转化为FRQI状态，这个状态<br>
-可以同时捕获像素位置与像素值。在FRQI下提出了算法进行量子图像处理操作，比如量子图像压缩。随后作者进行了仿真模拟实验，包括存储、检索图像以及通过应用量子傅里叶变换作为处理操作来检测二进制图像中的线条。 其中图像压缩比在二进制图像上是68.75~90.63%，而对于经典的lena图像是6.67%到90.63%。</p>
-</blockquote>
-<h4 id="本节涉及知识"><a class="markdownIt-Anchor" href="#本节涉及知识"></a> 本节涉及知识</h4>
-<blockquote>
-<ul>
-<li>量子傅里叶变换</li>
-</ul>
-</blockquote>
-<h4 id="注释"><a class="markdownIt-Anchor" href="#注释"></a> 注释</h4>
-        
-          <p class="article-more-link">
-            <a href="/2022/10/30/frqi/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2022/10/30/frqi/" data-id="cls790sqa000uj8uz92fp71nu" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/FRQI/" rel="tag">FRQI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%9B%BE%E5%83%8F%E5%8E%8B%E7%BC%A9/" rel="tag">图像压缩</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%9B%BE%E5%83%8F%E8%A1%A8%E7%A4%BA/" rel="tag">图像表示</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%87%8F%E5%AD%90%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/" rel="tag">量子傅里叶变换</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%87%8F%E5%AD%90%E5%9B%BE%E5%83%8F/" rel="tag">量子图像</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%87%8F%E5%AD%90%E8%AE%A1%E7%AE%97%E6%9C%BA/" rel="tag">量子计算机</a></li></ul>
-
     </footer>
   </div>
   
@@ -828,7 +695,7 @@ npm i hexo-renderer-markdown-it-plus --save 安装现有的渲染器
 
 
   <nav id="page-nav">
-    <a class="extend prev" rel="prev" href="/page/3/">&lt; pre</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/">next &gt;</a>
+    <a class="extend prev" rel="prev" href="/page/3/">&lt; pre</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/5/">next &gt;</a>
   </nav>
 </section>
         
@@ -865,13 +732,13 @@ npm i hexo-renderer-markdown-it-plus --save 安装现有的渲染器
     <div class="widget-wrap">
   <h3 class="widget-title"></h3>
   <div class="widget">
-    <img class="avatar" src="/images/avt.jpg">
+    <img class="avatar" src="/images/one.jpg">
     <h2 class="author">hongying</h2>
     <h3 class="description">娜厨</h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>42</strong><br>文章</div></a>
-      <a href="/categories"><div><strong>13</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>32</strong><br>标签</div></a>
+      <a href="/archives"><div><strong>80</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>21</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>41</strong><br>标签</div></a>
     </div>
 
 
@@ -887,7 +754,7 @@ npm i hexo-renderer-markdown-it-plus --save 安装现有的渲染器
     <div class="friend-link">
       <h2>友情链接</h2>
       
-        <a class="hvr-bounce-in" href="https://shanamaid.github.io/" target="_blank" title="ShanaMaid">
+        <a class="hvr-bounce-in" href="http://blog.shanamaid.top/" target="_blank" title="ShanaMaid">
           ShanaMaid
         </a>
       
@@ -907,15 +774,23 @@ npm i hexo-renderer-markdown-it-plus --save 安装现有的渲染器
       由<a href="http://hexo.io/" target="_blank">Hexo</a>强力驱动 | 
       主题-<a target="_blank" rel="noopener" href="https://github.com/ShanaMaid/hexo-theme-shana">Shana</a>
       
+      <br/> <br/>
+        <div>
+<script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
+         <h2 id="hitokoto">加载中...</h2>
+         </div> 
     </div>
     
   </div>
+  <script src="/js/prism/prism.js" async></script>
 </footer>
+
     </div>
     
 
-<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="//apps.bdimg.com/libs/wow/0.1.6/wow.min.js"></script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/wow.min.js"></script>
 <script>
 new WOW().init();
 </script>   

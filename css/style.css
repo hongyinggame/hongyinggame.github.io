@@ -836,11 +836,18 @@ body,
 body {
   overflow-x: hidden;
 }
+h2 {
+  color: #e71d36;
+  font-size: 1.7em;
+  letter-spacing: -1px;
+  line-height: 1.2em;
+}
 .wow {
   visibility: hidden;
 }
 body {
-  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em;
   -webkit-text-size-adjust: 100%;
   cursor: url("images/icon.png"), default;
 }

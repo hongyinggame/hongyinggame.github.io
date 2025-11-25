@@ -4,6 +4,651 @@
   
     
     <entry>
+      <title>《五句·六人游》</title>
+      <link href="/2024/11/25/shici/24_11_25/"/>
+      <url>/2024/11/25/shici/24_11_25/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><center>《五句·六人游》</center><center>红熒</center><center>少来独居常疑，共游北春方知。</center><center>思来情长孤舟，嬉闹共议极星。</center><center>初起追光共鸣，后归携带桔辉。</center><center>心愿彼此熠熠，再聚各地雪梅。</center>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 诗词 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>《无题》</title>
+      <link href="/2024/11/12/shici/wuti2/"/>
+      <url>/2024/11/12/shici/wuti2/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  马踏云月升，急驰杂空铃。人仰银光血，难觅明日天。<br />  马踏霞云悬月升。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 诗词 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>《汉水》</title>
+      <link href="/2024/11/05/shici/hanshui/"/>
+      <url>/2024/11/05/shici/hanshui/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><center>《汉水》</center><center>红熒</center><center>万古长夜奔流逝，涛涛浪水竞自行。</center><center>男儿径须闹将去，莫使龙颜覆水流。</center><center>季祖成事犹暮年，少华何惧蹉跎行。</center><center>湖海形汇万水源，银尘簇拥星汉明。</center>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 诗词 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>《待曦归》</title>
+      <link href="/2024/10/15/shici/xurigui/"/>
+      <url>/2024/10/15/shici/xurigui/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><center>《待曦归》</center><center>红熒</center><center>划笔行嘶泪如雨，身似草芥荒野生。</center><center>举望弯月春秋故，待日晨曦再相拥。</center>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 诗词 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>《露世》</title>
+      <link href="/2024/10/10/shici/zipao/"/>
+      <url>/2024/10/10/shici/zipao/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><center>《露世》</center><center>红熒</center><center>雏羽非自卫，固封永不成。</center><center>虽己安此世，与世从此隔。</center><center>自古获梦鳞，需予它物行。</center><center>然习立世艺，抛我踊跃空。</center><p>  你如果不想让自己伤害，可以将自己封闭，但是这样你就永远不会成长，更不会有更大的提高，你的自我保护只会让你与这个世界永远割裂，然后逐渐被别人淘汰而已，自古就有获得一个东西需要用另一个东西交换的道理，那么对于你想学习的东西，你必须能够或者勇敢将自己抛出去，让自己展露在社会与压力中，去主动面对，你才能主动去学习，去创造，你才能真正地去锻炼，才能超越自己。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 诗词 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Spring mvc配置消息转换器</title>
+      <link href="/2024/09/30/java/springmvc2/"/>
+      <url>/2024/09/30/java/springmvc2/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="配置消息转换器"><a class="markdownIt-Anchor" href="#配置消息转换器"></a> 配置消息转换器</h2><h4 id="配置fastjson转换器"><a class="markdownIt-Anchor" href="#配置fastjson转换器"></a> 配置FastJson转换器</h4><ul><li><p>选择一个配置文件类实现WebMvcConfigurer</p></li><li><p>重写configureMessageConverters方法注册添加消息转换器，需要配置UTF-8格式。</p><pre class="line-numbers language-java" data-language="java"><code class="language-java"> <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">configureMessageConverters</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">HttpMessageConverter</span><span class="token punctuation">&lt;</span><span class="token operator">?</span><span class="token punctuation">></span><span class="token punctuation">></span></span> converters<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>        <span class="token class-name">FastJsonHttpMessageConverter</span> converter <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FastJsonHttpMessageConverter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//        FastJsonConfig fastJsonConfig = new FastJsonConfig();</span>        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">MediaType</span><span class="token punctuation">></span></span> fastMediaTypes <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        fastMediaTypes<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token class-name">MediaType</span><span class="token punctuation">.</span><span class="token constant">APPLICATION_JSON_UTF8</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        converter<span class="token punctuation">.</span><span class="token function">setSupportedMediaTypes</span><span class="token punctuation">(</span>fastMediaTypes<span class="token punctuation">)</span><span class="token punctuation">;</span>        converters<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>converter<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span>    <span class="token annotation punctuation">@Autowired</span>    <span class="token keyword">public</span> <span class="token class-name">SpringMvcConfig</span><span class="token punctuation">(</span><span class="token class-name">UserController</span> u<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>    <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li></ul><h4 id="钩子方法"><a class="markdownIt-Anchor" href="#钩子方法"></a> 钩子方法</h4><p>父类定义一个模版方法，即方法中没有内容，但是有参数，子类重写方法，此时使用多态赋值父类，父类调用钩子方法，通过方法参数就能钓到子类运行后的值，本质就是地址里的值改变了，地址其实没有变，钩子里有个小参数诱饵但是经过执行后，钓到了大的鱼，即将其附上了其他值。对于spirng中就是容器实例化的自动注入，实现多态，然后钩子调用。</p><ul><li>父类，但是方法上加了@Bean 此时如果IOC容器中有子类实例，则会多态自动注入到this中， 通过System.out.println(this);以及通过一个Controller类自动注入实现类，然后输出地址，你会发现其实是一个地址，也就是此时this其实就是其容器里注册后子类实例，然后spirng启动后会扫描执行该方法，此时容器是没有该类实例，只有实现类实例。</li></ul><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span>  <span class="token keyword">class</span> <span class="token class-name">Student</span> <span class="token punctuation">&#123;</span>    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>    <span class="token keyword">private</span> <span class="token keyword">int</span> age<span class="token punctuation">;</span>    <span class="token annotation punctuation">@Bean</span>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">beanTest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span>ss <span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">hook</span><span class="token punctuation">(</span>ss<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment">//ss相对于鱼饵</span>        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment">//此时ss变成了大鱼，因为里面有东西了。</span>        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"勾中了"</span><span class="token operator">+</span>ss<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span><span class="token comment">//钩子方法</span>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">hook</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> s<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span>    <span class="token comment">//有参构造</span>    <span class="token keyword">public</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token keyword">int</span> age<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>        <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span>    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>        <span class="token keyword">return</span> name<span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setName</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li><p>子类，类上加了Componet注解，告诉容器要创建实例，然后重写了钩子方法，同时s加上了1。</p><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Component</span><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyTest</span> <span class="token keyword">extends</span> <span class="token class-name">Student</span> <span class="token punctuation">&#123;</span>    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>    <span class="token keyword">private</span> <span class="token keyword">int</span> age<span class="token punctuation">;</span>    <span class="token keyword">public</span> <span class="token class-name">MyTest</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>        <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token string">"123"</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span><span class="token string">"ssss"</span><span class="token punctuation">;</span>        <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span><span class="token number">30</span><span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span>    <span class="token annotation punctuation">@Override</span>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">hook</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> s<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>        s<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"重写了"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>输出结果</p><p><img src="https://cdn.jsdelivr.net/gh/hongjinlv/img_repo/hongying/202409301549550.png" alt="image-20240930154947457" /></p><p>而此时的自动注入的输出为：（具体代码不放了，应该都会）</p><p><img src="https://cdn.jsdelivr.net/gh/hongjinlv/img_repo/hongying/202409301550229.png" alt="image-20240930155027186" /></p><p>可以发现实现了钩子功能，钓上了1。这就是钩子方法，其实原理就是多态然后方法内值改了，不过记住前提地址不能变，否则达不到效果，因为spring的注解+IOC容器原理，所以我们会理解不了。</p></li></ul><h4 id="enablewebmvc注解"><a class="markdownIt-Anchor" href="#enablewebmvc注解"></a> @EnableWebMvc注解</h4><ol><li><p>进入发现@Import 了DelegatingWebMvcConfiguration 类 。</p></li><li><p>进入 发现 有个@Autowired 修饰的方法setConfigurers()方法，同时 WebMvcConfigureComposite类实例  --addWebMvcConfigurers（）–&gt; 所有继承WebMvcConfigurer的类（方法上使用@Autowired注解，参数自动注入）</p></li><li><p>进入WebMvcConfigureComposite类：List<WebMvcConfigurer> delegates  将所有所有继承WebMvcConfigurer的类添加。</p></li><li><p>在看DelegatingWebMvcConfiguration 类继承了WebMvcConfigurationSupport 这个类中有个@Bean注解的方法如下</p><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Bean</span><span class="token keyword">public</span> <span class="token class-name">RequestMappingHandlerAdapter</span> <span class="token function">requestMappingHandlerAdapter</span><span class="token punctuation">(</span><span class="token annotation punctuation">@Qualifier</span><span class="token punctuation">(</span><span class="token string">"mvcContentNegotiationManager"</span><span class="token punctuation">)</span> <span class="token class-name">ContentNegotiationManager</span> contentNegotiationManager<span class="token punctuation">,</span> <span class="token annotation punctuation">@Qualifier</span><span class="token punctuation">(</span><span class="token string">"mvcConversionService"</span><span class="token punctuation">)</span> <span class="token class-name">FormattingConversionService</span> conversionService<span class="token punctuation">,</span> <span class="token annotation punctuation">@Qualifier</span><span class="token punctuation">(</span><span class="token string">"mvcValidator"</span><span class="token punctuation">)</span> <span class="token class-name">Validator</span> validator<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>    <span class="token class-name">RequestMappingHandlerAdapter</span> adapter <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">createRequestMappingHandlerAdapter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    adapter<span class="token punctuation">.</span><span class="token function">setContentNegotiationManager</span><span class="token punctuation">(</span>contentNegotiationManager<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">//重点关注的函数</span>    adapter<span class="token punctuation">.</span><span class="token function">setMessageConverters</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getMessageConverters</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        adapter<span class="token punctuation">.</span><span class="token function">setWebBindingInitializer</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getConfigurableWebBindingInitializer</span><span class="token punctuation">(</span>conversionService<span class="token punctuation">,</span> validator<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    adapter<span class="token punctuation">.</span><span class="token function">setCustomArgumentResolvers</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getArgumentResolvers</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    adapter<span class="token punctuation">.</span><span class="token function">setCustomReturnValueHandlers</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getReturnValueHandlers</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token keyword">if</span> <span class="token punctuation">(</span>jackson2Present<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>        adapter<span class="token punctuation">.</span><span class="token function">setRequestBodyAdvice</span><span class="token punctuation">(</span><span class="token class-name">Collections</span><span class="token punctuation">.</span><span class="token function">singletonList</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">JsonViewRequestBodyAdvice</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        adapter<span class="token punctuation">.</span><span class="token function">setResponseBodyAdvice</span><span class="token punctuation">(</span><span class="token class-name">Collections</span><span class="token punctuation">.</span><span class="token function">singletonList</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">JsonViewResponseBodyAdvice</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span>    <span class="token class-name">AsyncSupportConfigurer</span> configurer <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getAsyncSupportConfigurer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token keyword">if</span> <span class="token punctuation">(</span>configurer<span class="token punctuation">.</span><span class="token function">getTaskExecutor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>        adapter<span class="token punctuation">.</span><span class="token function">setTaskExecutor</span><span class="token punctuation">(</span>configurer<span class="token punctuation">.</span><span class="token function">getTaskExecutor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span>    <span class="token keyword">if</span> <span class="token punctuation">(</span>configurer<span class="token punctuation">.</span><span class="token function">getTimeout</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>        adapter<span class="token punctuation">.</span><span class="token function">setAsyncRequestTimeout</span><span class="token punctuation">(</span>configurer<span class="token punctuation">.</span><span class="token function">getTimeout</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span>    adapter<span class="token punctuation">.</span><span class="token function">setCallableInterceptors</span><span class="token punctuation">(</span>configurer<span class="token punctuation">.</span><span class="token function">getCallableInterceptors</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    adapter<span class="token punctuation">.</span><span class="token function">setDeferredResultInterceptors</span><span class="token punctuation">(</span>configurer<span class="token punctuation">.</span><span class="token function">getDeferredResultInterceptors</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token keyword">return</span> adapter<span class="token punctuation">;</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li></ol><p>​上面标记的函数为关键函数，进入this.getMessageConverters()函数中看。</p><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">protected</span> <span class="token keyword">final</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">HttpMessageConverter</span><span class="token punctuation">&lt;</span><span class="token operator">?</span><span class="token punctuation">></span><span class="token punctuation">></span></span> <span class="token function">getMessageConverters</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>messageConverters <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>        <span class="token keyword">this</span><span class="token punctuation">.</span>messageConverters <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">configureMessageConverters</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>messageConverters<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>messageConverters<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>            <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">addDefaultHttpMessageConverters</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>messageConverters<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token punctuation">&#125;</span>        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">extendMessageConverters</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>messageConverters<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span>    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>messageConverters<span class="token punctuation">;</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>​发现this.configureMessageConverters(this.messageConverters);为钩子方法，其实这个就是消息转换器，肯定重点关注，然后ctrl+alt+左键进入子类DelegatingWebMvcConfiguration ，没错就是它，然后进去函数看。</p><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">configureMessageConverters</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">HttpMessageConverter</span><span class="token punctuation">&lt;</span><span class="token operator">?</span><span class="token punctuation">></span><span class="token punctuation">></span></span> converters<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>    <span class="token keyword">this</span><span class="token punctuation">.</span>configurers<span class="token punctuation">.</span><span class="token function">configureMessageConverters</span><span class="token punctuation">(</span>converters<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>这…，你发现这不就是有调用了WebMvcConfigureComposite实例去添加消息转换器，之前是把所有继承WebMvcConfigurer的类添加添加进去，现在是去调用configureMessageConverters把所有继承WebMvcConfigurer的类实例的configureMessageConverters调用…</p><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">configureMessageConverters</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">HttpMessageConverter</span><span class="token punctuation">&lt;</span><span class="token operator">?</span><span class="token punctuation">></span><span class="token punctuation">></span></span> converters<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>    <span class="token class-name">Iterator</span> var2 <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>delegates<span class="token punctuation">.</span><span class="token function">iterator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token keyword">while</span><span class="token punctuation">(</span>var2<span class="token punctuation">.</span><span class="token function">hasNext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>        <span class="token class-name">WebMvcConfigurer</span> delegate <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">WebMvcConfigurer</span><span class="token punctuation">)</span>var2<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        delegate<span class="token punctuation">.</span><span class="token function">configureMessageConverters</span><span class="token punctuation">(</span>converters<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ol start="5"><li>经过上述步骤终于将我们的方法调用了，从而加入了我们自定义的FastJson消息转换器。</li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>注解二</title>
+      <link href="/2024/09/28/dongtai/zhujie2/"/>
+      <url>/2024/09/28/dongtai/zhujie2/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="注解的解析"><a class="markdownIt-Anchor" href="#注解的解析"></a> 注解的解析</h2><h4 id="注解的解析-2"><a class="markdownIt-Anchor" href="#注解的解析-2"></a> 注解的解析</h4><ul><li>需要解析那个对象的注解就加载那个对象，例如：解析类则获取Class对象（反射）；</li><li>常用方法：<ul><li>isAnnotationPresent(Class&lt;?&gt; class);是否存在该注解；</li><li>getDeclaredAnnotation(Class&lt;?&gt; class); 获取注解对象（需要强转）；</li><li>getDeclaredAnnotations();获取所有注解构成的数组；</li><li>注解对象.属性（方法）获取属性值。</li></ul></li></ul>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>注解</title>
+      <link href="/2024/09/28/dongtai/24_9_28/"/>
+      <url>/2024/09/28/dongtai/24_9_28/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="注解"><a class="markdownIt-Anchor" href="#注解"></a> 注解</h2><p>注解为特殊标记，用于告诉程序如何执行</p><h4 id="自定义注解"><a class="markdownIt-Anchor" href="#自定义注解"></a> 自定义注解</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token annotation punctuation">@interface</span> a<span class="token punctuation">&#123;</span>    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">name</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">default</span> 默认值<span class="token punctuation">;</span><span class="token comment">//将方法作为属性。</span>    <span class="token class-name">String</span> <span class="token function">value</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//特殊属性,即默认属性，即如果就只有一个value属性,则使用注解时无需指定value，默认赋值给value,注：此时的只有一个value属性，不仅代表注解只有一个value，如果注解有多个属性，但是多个属性都有默认值的话，则value属性也是可以不用写（value有默认值也是可以）。</span>        <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="元注解"><a class="markdownIt-Anchor" href="#元注解"></a> 元注解</h4><p>注解注解的注解😏,第一个注解为动词，后面两个为名词。</p><ul><li>@Retention() 声明注解作用时机，即保留周期<ul><li>RetentionPolicy枚举类<ul><li>SOURCE 只作用源码阶段，字节码文件中不存在。</li><li>CLASS（默认值）存在于源码与class文件中，但是运行时消失。</li><li>RUNTIME 一直到运行时都存在。</li></ul></li></ul></li><li>@Target() 声明注解作用位置<ul><li>ElementType 枚举类<ul><li>TYPE 类，接口</li><li>FIELD, 成员变量</li><li>METHOD, 成员方法</li><li>PARAMETER, 方法参数</li><li>CONSTRUCTOR, 构造器</li><li>LOCAL_VARIABLE ，局部变量</li></ul></li></ul></li></ul>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>《霞云行》</title>
+      <link href="/2024/08/30/shici/gushi8/"/>
+      <url>/2024/08/30/shici/gushi8/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><center>《霞云行》</center><center>红熒</center><center>日西从云隐，羞掩半目行。</center><center>荷云落凡梯，浮游晚月归。</center>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 诗词 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>《金思》</title>
+      <link href="/2024/08/05/shici/gushi7/"/>
+      <url>/2024/08/05/shici/gushi7/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><center>《金思》</center><center>红熒</center><center>秋叶牵思半金缕，玉露泛朱杏落黄。</center><center>残风引线穿针云，寒天绵波梭舟藏。</center>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>丝线情</title>
+      <link href="/2024/07/30/shici/gushi6/"/>
+      <url>/2024/07/30/shici/gushi6/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  红丝剪不断，金线系万千。烬心凝血弦，情深化柔绵。<br />  连星理不乱，丝线四象穿。星云汇金缕，引线刺心弦。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>post</title>
+      <link href="/2024/07/29/java/try1/"/>
+      <url>/2024/07/29/java/try1/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  学习java mysql的关闭资源方法中，学习到try catch with resource 方法，这个方法需要要求所释放资源类实现了AutoCloseable接口，代码介绍如下：</p><pre class="line-numbers language-none"><code class="language-none">try(将需要关闭的资源语句写在这里)&#123;    ......&#125;catch(错误)&#123;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>  这个方法被常用取代try-catch finally，除了写作简洁外，还有一个就是它避免了错误覆盖，通过addSuppressed()方法将抑制的错误信息存储下来，后面通过getSuppressed()输出。<br />参考博客地址：<a href = 'https://javabetter.cn/exception/try-with-resources.html'>深入理解 Java 中的 try with resources</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>java 反射</title>
+      <link href="/2024/07/29/java/java1/"/>
+      <url>/2024/07/29/java/java1/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  反射看了这么多，可以简单认为是用于动态变化类的内容，避免写死，通过配置文件，来进行修改，可以这么说，如果使用new那么如果更新需要重写代码，但是如果用反射，则可以用配置文件就可以更新，无须修改代码与重新运行编译。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>事务</title>
+      <link href="/2024/07/24/mysql/shiwu1/"/>
+      <url>/2024/07/24/mysql/shiwu1/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  事务是数据库管理系统执行过程中的一个逻辑单位，由有限个数据库操作序列组成。<br />  事务四个特性：</p><pre class="line-numbers language-none"><code class="language-none">1.原子性(Atomicity):事务作为一个整体被执行，包含其中的全部数据操作，要么全部执行，要么全部不执行，即回滚到执行前状态。2.一致性(Consistency):事务应确保数据库状态从一个一致状态转变为另一个一致状态。一致状态是数据库中的数据应与数据库的定义一致，换句话说就是满足完整性约束。3.隔离性(Isolation):多个事务并发执行时，一个事务的执行不影响其他事务执行，换句话说，每个事务只有自己执行的效果，没含带其他事务，具有独立性，最后，不同事务先后提交并执行后，最终呈现出来的效果是串行的。3.持久性(Durability):已被提交的事务对数据库的修改应该是永久改变的。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>  隔离性最简单的实现方式就是各个事务都串行执行了，如果前面的事务还没有执行完毕，后面的事务就都等待。但是这样的实现方式很明显并发效率不高，并不适合在实际环境中使用。为了解决上述问题，实现不同程度的并发控制，SQL的标准制定者提出了不同的隔离级别：未提交读、提交读、可重复读、序列化读。</p><pre class="line-numbers language-none"><code class="language-none">1. 未提交读(READ UNCOMMITTED)    最低级的的隔离级别，可以读取未提交事务的数据。2. 提交读(READ COMMITTED)    一个事务只能看见已经提交的事务所做的改变，大多数数据库系统的默认隔离级别（但不是MYSQL默认的）。3. 可重复读（REPEATABLE READ）    事务A在读到一条数据之后，此时事务B对该数据进行了修改并提交，那么事务A再读该数据，读到的还是原来的内容，可以说上了一个修改锁。4. 可串行化(SERIALIZABLE)    最高级别隔离，强制事务串行执行，时间消耗大，导致超市现象和锁竞争，一般不用该级别，而是采用乐观锁与悲观锁。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>  较低的隔离级别能够提高效率，但是却会导致很多问题，常见的4个问题如下：</p><pre class="line-numbers language-none"><code class="language-none">1.脏读    脏读发生于未提交读级别，事务A读取事务B的修改的数据，但是事务B提交前回滚，即撤回操作，此时事务A读取的数据为无用数据，出现了脏读，脏读就是读取脏的数据(垃圾数据)。2. 不可重复读问题(对于列说)    不可重复读问题是说事务两次读取的数据不一致，发生于并发事务中，事务A第一次读取数据，随后，事务B修改数据的某一列，此时提交后，数据修改，此时事务A又再次读取数据，此时读取数据的某一列不一致，从而产生不可重复读问题。3. 幻读问题(对于行说)    幻读问题是说事务第一次读的数据与第二次读的数据数量不一致，从而产生幻觉的问题，事务A第一次读取数据，此时事务B增加或删减了一行数据后，此时事务A再次读取数据时产生了两者不一致的幻觉。4. 丢失更新问题    丢失更新问题是说事务A的更新被事务B的修改覆盖，从而丢失了更新，丢失问题分为两种，第一种为回滚丢失更新，在事务A执行更新时，事务B执行更新并提交，但是事务A最后回滚撤销，进而回滚到事务开始状态，此时事务B的更新也会被覆盖，第二种为提交覆盖数据更新，事务A的提交修改了期间事务B的更新的数据，从而导致了事务B更新消失，因为丢失更新1比较严重，所以数据库本身不允许这一类丢失更新的发生。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>  对于不同隔离等级会出现的问题汇总如下：</p><table><thead><tr><th>隔离级别</th><th>脏读</th><th>不可重复读</th><th>幻读</th><th>丢失更新1</th><th>丢失更新2</th></tr></thead><tbody><tr><td>未提交读</td><td>发生</td><td>发生</td><td>发生</td><td>不发生</td><td>发生</td></tr><tr><td>提交读</td><td>不发生</td><td>发生</td><td>发生</td><td>不发生</td><td>发生</td></tr><tr><td>可重复读</td><td>不发生</td><td>不发生</td><td>发生</td><td>不发生</td><td>不发生</td></tr><tr><td>可串行化</td><td>不发生</td><td>不发生</td><td>不发生</td><td>不发生</td><td>不发生</td></tr></tbody></table><p>  前面说了乐观锁与悲观锁，但是这里要强调乐观锁与悲观锁是思想，不是具体实现，那些具体锁可以根据思想划分为乐观锁或悲观锁。乐观锁又叫乐观并发控制(OCC)，悲观锁又叫悲观并发控制(PCC)。<br />  乐观锁是认为外界对数据的操作一般是不会发生冲突的，因此在操作过程不会进行加锁，而是当提交的时候才会进行检测加锁，数据库的乐观锁，并不是利用数据库本身的锁去实现的，可能是利用某种实现逻辑去实现做到乐观锁的思想。<br />  悲观锁是认为外界对数据的操作默认是会发生冲突的，所以在数据操作的整个过程都会处于加锁状态，保证同一时间只有一个线程可以访问到数据，通常利用数据库本身提供的锁机制去实现。<br />  乐观锁使用逻辑进行上锁，一般基于CAS思想进行设计，CAS思想是通过对比旧期望值a(在操作前进行读取，并进行赋值)与需要进行最终修改时读取值b进行比较，如果一致，则表明在此期间没有人进行修改，可以进行操作，而如果不一致，说明在此期间已经有人进行了修改，不执行更新，基于此思想数据库有两种方式：</p><pre class="line-numbers language-none"><code class="language-none">1.基于数据版本的实现    每一行另加一个版本VERSION字段，当用户修改时，版本会自动加1，通过比较版本是否一致，来执行是否更新，不更新时会返回冲突信息，让用户决定下一个动作。2.基于时间戳的实现    与数据版本类似，只不过替换成时间，通过比较时间来判断。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>无题</title>
+      <link href="/2024/07/23/shici/gushi5/"/>
+      <url>/2024/07/23/shici/gushi5/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  天上星，光如故，地上人，难长明；天无情，天长存，人有情，难长留。<br />  天星四象华光旧，地人万代久难明。天道冷情长青存，人世喜乐不长留。灰云尽染靛青布，半生雨露半若晴；浮生微醒乐逍遥，万气归源吟我心。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>《傍雨》</title>
+      <link href="/2024/07/23/shici/gushi4/"/>
+      <url>/2024/07/23/shici/gushi4/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><center>《傍雨》</center><center>红熒</center><center>乌云漫青天，黑白道两边。</center><center>左边半生雨，右寻犹婉晴/右寻婉若晴。</center>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>代码块</title>
+      <link href="/2024/07/23/markdown/daima1/"/>
+      <url>/2024/07/23/markdown/daima1/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  我在写markdown时，发现代码块有三种表示方法：</p><pre class="line-numbers language-none"><code class="language-none">1.用于段落中有几句代码，不需要建立块，直接用&#96;&#96;进行标识。2.常用标识：使用三个&#96;&#96;&#96;开头，最后使用&#96;&#96;&#96;结束，可以指定哪种语言。3.在代码之前另起一行，输入四个空格作为代码段标识。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>删除表</title>
+      <link href="/2024/07/23/mysql/shanchu1/"/>
+      <url>/2024/07/23/mysql/shanchu1/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  删除表有三种方式：</p><pre class="line-numbers language-none"><code class="language-none">1.删除表    DROP TABLE 表名;2.删除表数据，而不是删除表结构，不能使用where指定具体内容。    TRUNCATE TABLE 表名;3.删除表数据，可与where搭配使用，删除指定内容。    DELETE FROM 表名 WHERE 或者DELETE FROM 表名。不同点：    1.DROP 与 TRUNCATE 为数据库定义语言DDL，执行后自动提交，DELETE为数据库操作语言。    2.truncate和delete 只删除数据不删除表结构，truncate 删除后将重建索引（新插入数据后id从0开始记起），而 delete不会删除索引 （新插入的数据将在删除数据的索引后继续增加），drop语句将删除表的结构包括依赖的约束，触发器，索引等；    3.drop和truncate删除时不记录MySQL日志，不能回滚，delete删除会记录MySQL日志，可以回滚；    4.返回值：delete 操作后返回删除的记录数，而 truncate 返回的是0或者-1（成功则返回0，失败返回-1）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>sql注入</title>
+      <link href="/2024/07/23/mysql/sqlzhuru/"/>
+      <url>/2024/07/23/mysql/sqlzhuru/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  sql注入是常见的攻击形式，通过注入sql语句，导致程序的安全以及数据库安全。<br />  sql注入一般见效于拼接sql语句中，通过破坏输入规则，插入期望的sql语句，以此达到所要达到的目的。<br />  两个例子：</p><pre class="line-numbers language-none"><code class="language-none">1.查找sql注入，一般用于登录界面。拼接sql语句：    String sql &#x3D; &quot;SELECT * FROM student where username &#x3D;&#39;&quot;+username+&quot;&#39; AND password &#x3D; &#39;&quot;+password+&quot;&#39;;&quot; &#x2F;&#x2F;AND 运行优先级高于 OR注入sql语句：    username &#x3D; &quot;123&quot;;    password &#x3D; &quot;&#39;or &#39;1&#39;&#x3D;&#39;1&quot;;SQL最终语句:     SELECT * FROM student where username &#x3D;&#39;123&#39; AND password &#x3D; &#39;&#39; or &#39;1&#39;&#x3D;&#39;1&#39;;因而可以将所有数据查出，造成登录成功。2.在查询操作中插入删除操作。拼接sql语句：    String sql &#x3D; &quot;SELECT * FROM student where username &#x3D;&#39;&quot;+username+&quot;&#39; AND password &#x3D; &#39;&quot;+password+&quot;&#39;;&quot; 注入sql语句：    username &#x3D; &quot;123&quot;;    password &#x3D; &quot;&#39;; DELETE FROM student where &#39;1&#39;&#x3D;&#39;1&quot;SQL最终语句：    SELECT * FROM student where username &#x3D;&#39;123&#39; AND password &#x3D;&#39;&#39;; DELETE FROM student where &#39;1&#39;&#x3D;&#39;1&#39;;注：该操作是批处理操作，但是java 中mysql执行方法execute不支持此操作。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>  因此为了避免sql注入，我们需要使用参数化sql语句，即预编译好的sql语句，除此之外做好用户输入数据的验证与过滤操作，以及最小化用户权限。<font color =Red>即使是参数化sql语句，我们也要避免拼接sql语句，否则依旧会有被sql注入的可能。</font><br />  这里主要是学习参数化sql语句，其他的会在后面项目中学习。<br />  参数化sql语句就是使用占位符？代替部分参数，通过prepareStatement(String sql)，创建一个preparedStatement，随后使用不带参数的execute/executeUpdate/executeQuery命令执行操作，不过在这之前通过preparedStatement对象的setInt与setString方法对？占位参数赋值，其中第一个参数为int型，表示第几个占位符，后面则为要赋的值。下面展示一个例子：</p><pre class="line-numbers language-none"><code class="language-none">Connection conn &#x3D; DriverManager.getConnection(url,username,password);String sql &#x3D; &quot;INSERT INTO student(name,id_card) VALUES(?,?);&quot;;PreparedStatement pstm &#x3D; conn.prepareStatemnet(sql);pstm.setString(1,&quot;1234&quot;);pstm.setString(2,&quot;1234&quot;);pstm.executeUpdate();ResultSetMetaData rsmd &#x3D; rs.getMetaData();int columnCount &#x3D; rsmd.getColumnCount();这个可以获取字段数目，当我们忘记原本的数据库字段数时使用。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>插入数据</title>
+      <link href="/2024/07/23/mysql/charu1/"/>
+      <url>/2024/07/23/mysql/charu1/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  插入单行数据命令：</p><pre class="line-numbers language-none"><code class="language-none">INSERT INTO 表名(字段名1,字段名2...) VALUES(值1,值2...);<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>  插入多行数据命令：</p><pre class="line-numbers language-none"><code class="language-none">INSERT INTO 表名(字段名1,字段名2...) VALUES(a1,a2...),(b1,b2...),...;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>诗决</title>
+      <link href="/2024/07/22/shici/shigan1/"/>
+      <url>/2024/07/22/shici/shigan1/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  写诗，一分靠文学素养，二分需细心观察，三分是否真心实意，剩余四分则是丰富想象力。所以一个好的诗词作者，需要拥有强大的想象力，目有极而心无极，观狭隘之一隅，表无限之宇宙。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>《晚雨》</title>
+      <link href="/2024/07/22/shici/gushi3/"/>
+      <url>/2024/07/22/shici/gushi3/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><center>《晚雨》</center><center>红熒</center><center>劲风吹草折，云雾覆霞天。</center><center>光闪催龙声，豆雨直窗落。</center><center>云过天渐晴，净窗悬珠帘。</center><center>霁雨星云落，明迹淡蛇痕。</center>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>《落墨浮心》</title>
+      <link href="/2024/07/22/shici/gushi2/"/>
+      <url>/2024/07/22/shici/gushi2/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><center>《落笔浮心》</center><center>红熒</center><center>凌笔刺墨染，遍看春长在。</center><center>词画冷无情，只堪浮心意/浮表心中意。</center>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>《月儿圆》</title>
+      <link href="/2024/07/19/shici/erge1/"/>
+      <url>/2024/07/19/shici/erge1/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><center>《月儿圆》</center><center>红熒</center>&emsp;&emsp;月儿圆，月儿圆，古往人，今何在；今何在，在何方，涛涛江水无处寻;无处寻，寻何处，寻那满天繁花尘。&emsp;&emsp;星无踪，踪无影，人生何时是归期，期何许，许何求，春秋覆水何如旧。少家离，老大回，日月换天情如故。&emsp;&emsp;在何时，在何地，家如故，亲如旧，多珍惜，多珍重，霜华染尽温心存，温心存，存于心，愿你洗却满身尘。&emsp;&emsp;纵身粉，纵骨碎，吟初音，鸣心乐，看霞升，看云去，乐逍遥，做浮梦。&emsp;&emsp;悠悠华夏浮生梦，醉眼轻看霞云升，身粉骨碎吟初音，千百锤凿鸣心乐。]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>《碧浴行》</title>
+      <link href="/2024/07/19/shici/gushi1/"/>
+      <url>/2024/07/19/shici/gushi1/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><center>《碧浴行》</center><center>红熒</center><center>碧浴银珠敷玉体，云雾仙境落池天。</center><center>飞花直下水弦鸣，尘舟拂水身轻燕。</center><center>冰汽润鼻泣如泪，水露凝心雪霜烟。</center><center>洗却尘染春昔梦，悦看羞体散千金。</center>&emsp;&emsp;心懔懔以怀霜，志眇眇而临云。——晋· 陆机《文赋》]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>类型</title>
+      <link href="/2024/07/18/mysql/table1/"/>
+      <url>/2024/07/18/mysql/table1/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  Varchar与char区别：</p><pre class="line-numbers language-none"><code class="language-none">Varchar 是可变长，需要字节存储长度，不大于255，需要1字节，特殊的如果表格使用ROW_FORMAT&#x3D;FIXED，则变为固定长度。一般不能直接设定最大值，虽然在mysql中看是变长，但是对于内存来说是直接开辟全部长度，以避免放不下情况，会浪费资源，同时Varchar在更新时，也会出现页内存储不够的情况，MylSAM会将行拆成不同的片段存储，InnoDB则需要分裂页来使行可以放进页内，允许最大长度为65535个字节，同时列共享（相加）。char 是固定长度，不够部分用空格补充，允许最大长度为255个字符，<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>  AUTO_INCREMENT 自增，所修饰字段具备如下特性：</p><pre class="line-numbers language-none"><code class="language-none">1、字段不能为null，即设定NOT NULL;2、字段必须有唯一索引，即不允许有重复值，UNIQUE标识为唯一索引，不允许重复，但是可以为空，主键索引，通过设置主键自动创建，其不允许重复同时不允许为空，所以一般该字段设定为主键或者是唯一不为空字段;3、字段类型必须为整型;4、字段达到最大值时，失效；<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>  主键创建可以在字段声明时利用PRIMARY KEY设定，也可以在字段最后加入PRIMARY KEY(‘字段1’，‘字段2’)，我认为应该使用后者，当然如果只设定一个字段为主键可以使用前者，但是后者舍得主键与字段分开，便于阅读，同时便于确定主键。<font color="Red">主键只能指定一个，但是可以包括多个字段。</font></p><pre class="line-numbers language-none"><code class="language-none">1、CREATE TABLE table_1(    &#39;id&#39; int NOT NULL PRIMARY KEY AUTO_INCREMENT,    &#39;name&#39; varchar(10) NOT NULL)ENGINE&#x3D;InnoDB AUTO_INCREMENT&#x3D;7 DEAFAULT CHARSET&#x3D;utf8;2、CREATE TABLE table_2(    &#39;id&#39; int NOT NULL ATUO_INCREMENT,    &#39;name&#39; varchar(10) NOT NULL,    PRIMARY KEY(&#39;id&#39;))ENGINE&#x3D;InnoDB AUTO_INCREMENT&#x3D;7 DEAFALT CHARSET&#x3D;utf8;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>  唯一键UNIQUE KEY，设定与PRIMARY KEY差不多，一个是声明字段时加UNIQUE，另一个在最后使用UNIQUE KEY ‘标识名称’ (‘字段名1’,‘字段名2’…)，也可以在修改表命令中使用ALTER TABLE &lt;数据表名&gt; ADD CONSTRAINT &lt;唯一约束名&gt; UNIQUE&lt;列名&gt;，也可ALTER TABLE ‘表名’ ADD unique(‘字段名’)，或者create unique index ‘名称’ on ‘表名’ (‘字段名’)，删除表使用ALTER TABLE &lt;数据表名&gt; DROP INDEX &lt;唯一约束名&gt;；</p><pre class="line-numbers language-none"><code class="language-none">1、创建UNIQUE KEYa. CREATE TABLE table_1(    &#39;id&#39; int NOT NULL PRIMARY KEY AUTO_INCREMENT,    &#39;name&#39; varchar(10) NOT NULL,    &#39;id_card&#39; char(13) NOT NULL UNIQUE,)ENGINE&#x3D;InnoDB AUTO_INCREMENT&#x3D;7 DEAFAULT CHARSET&#x3D;utf8;b. CREATE TABLE table_1(    &#39;id&#39; int NOT NULL PRIMARY KEY AUTO_INCREMENT,    &#39;name&#39; varchar(10) NOT NULL,    &#39;id_card&#39; char(13) NOT NULL,    UNIQUE KEY &#39;id_unique&#39; (&#39;id_card&#39;))ENGINE&#x3D;InnoDB AUTO_INCREMENT&#x3D;7 DEAFAULT CHARSET&#x3D;utf8;c. CREATE TABLE table_1(    &#39;id&#39; int NOT NULL PRIMARY KEY AUTO_INCREMENT,    &#39;name&#39; varchar(10) NOT NULL,    &#39;id_card&#39; char(13) NOT NULL)ENGINE&#x3D;InnoDB AUTO_INCREMENT&#x3D;7 DEAFAULT CHARSET&#x3D;utf8;   ALTER TABLE table_1 ADD CONSTRAINT &#39;indexID&#39; UNIQUE &#39;id_card&#39;;   或者 CREATE UNIQUE INDEX &#39;indexID&#39; on &#39;table_1&#39; (&#39;id_card&#39;);3、删除唯一索引ALTER TABLE table_1 DROP INDEX &#39;indexID&#39;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hexo在post文件夹中子文件夹中创建文档</title>
+      <link href="/2024/07/13/hexojilu/hexojilu1/"/>
+      <url>/2024/07/13/hexojilu/hexojilu1/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  随着hexo创建博客增多，我发现如果都是hexo new 文件时，所有文件都会出现在_post文件夹中，然后就无法很好地整理与查找文件了，因此需要通过子文件夹来进行分类，所以需要在创建时就将其分文件夹创建。</p><pre class="line-numbers language-none"><code class="language-none">hexo new [post] -p 子文件夹&#x2F;文件名 &quot;文件题目&quot;[]是说创建什么模式，一般有post、draft、page模式，当使用post是会在&#x2F;source&#x2F;_post文件夹下创建，而draft则是在source&#x2F;_draft文件夹下创建，page则是在source下创建。附：Usage: hexo new [layout] &lt;title&gt;Description:Create a new post.Arguments:  layout  Post layout. Use post, page, draft or whatever you want.  title   Post title. Wrap it with quotations to escape.Options:  -p, --path     Post path. Customize the path of the post.  -r, --replace  Replace the current post if existed.  -s, --slug     Post slug. Customize the URL of the post.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Hexo记录 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>脚本延时变量</title>
+      <link href="/2024/07/12/jiaoben/jiaoben1/"/>
+      <url>/2024/07/12/jiaoben/jiaoben1/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  在进行编写脚本时，发现了延时变量与非延时变量，记录一下。一般if语句被认为是一行命令，而if中往往有几行命令，此时命令可以被认为是并行的，但是如果使用了延时扩展，就如同被认为不同命令，相继执行。</p><pre class="line-numbers language-none"><code class="language-none">setlocal enabledelayedexpansion ::开启延时扩展set a &#x3D; 2if %a% &#x3D;;&#x3D;2 (::括号前要有空格    set a&#x3D;3    echo !a!::当使用!!才会变成延时变量    echo %a%    ::此时!a!输出3，而%a%输出2。)pause<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 脚本 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 脚本 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hexo代码块问题</title>
+      <link href="/2024/07/09/hexo2/"/>
+      <url>/2024/07/09/hexo2/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  这次问题是配置代码块高亮问题：1.可以使用prism插件；2.可以使用hexo现在自带的prismjs，具体如何配置搜索便有。<br />  我要提醒我自己的是markdown可以使用```来进行代码标识，但是记住一定要间隔一行，否则容易不识别，这个是一个大问题，也是我一直不成功的原因，现在终于知道了。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>其他命令-生活中意识到的操作</title>
+      <link href="/2024/07/09/qitaml/"/>
+      <url>/2024/07/09/qitaml/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="语言切换命令"><a class="markdownIt-Anchor" href="#语言切换命令"></a> 语言切换命令</h2><p>  在进行vim编辑时，我发现同时用ctrl+shift不能很流畅切换，有时没有反应，然后就发现，其实不需要同时按，我们可以通过利用先后顺序达到不同效果；</p><pre class="line-numbers language-none"><code class="language-none">ctrl+shift：按住ctrl不动，然后按shift， 这个就是会弹出语言选择框，shift用于切换选择。shift+ctrl：按住shift不动，然后按ctrl，这个就是我们常见的直接切换，不会弹出窗口。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 其他命令 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Mysql配置相关命令</title>
+      <link href="/2024/07/09/SQL2ml/"/>
+      <url>/2024/07/09/SQL2ml/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><pre class="line-numbers language-none"><code class="language-none">mysqld --console 用于查看mysql服务日志，是mysqld 不是mysql。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> SQL </category>
+          
+          <category> 易忘命令 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Mysql </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>SQL1</title>
+      <link href="/2024/07/08/SQL1/"/>
+      <url>/2024/07/08/SQL1/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  SQL使用;作为结束标志，SQL不区分大小写，但是一般关键字大写是为了更容易阅读，SQL查询结果没特殊说明，不进行排序，SQL对空格不进行处理，所以可以写在一行，也可写在多行。</p><pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT DISTINCT 列名 FROM 表名; DISTINCT 用于查询不同字段，消除重复字段。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT TOP 5 列名 FROM 表名; TOP 用于指定前几行记录;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">MYSQL使用如下 SELECT 列名 FROM 表名 LIMIT 5 OFFSET 5; LIMIT关键词用于指定输出几行，OFFSET 用于指定开始行号，可简化为LIMIT 5,5; 但是第一个是OFFSET值，第二个为LIMIT值<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> SQL </category>
+          
+          <category> 易忘命令 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Mysql </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>《晨雨》</title>
+      <link href="/2024/07/08/shici/zaji1/"/>
+      <url>/2024/07/08/shici/zaji1/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><center>《晨行急雨》</center><center>红荧</center><center>狂雨闹家归，连鼓爆珠声。</center><center>洼水上尘鞋，乱手拖裤草。</center>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>动态</title>
+      <link href="/2024/07/08/shici/zaji2/"/>
+      <url>/2024/07/08/shici/zaji2/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  红心弦，金丝线，鹊作桥，星相见;披金缕，戴金梭，携汝游，观四宿；意相如，情相似，愿你我，共此时；待明朝，盼今日，勾指约，君莫忘。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>动态</title>
+      <link href="/2024/07/08/shici/zaji3/"/>
+      <url>/2024/07/08/shici/zaji3/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  如果我们都屈服了，都选择逃避，确实偏安一隅，但是对于我们国家民族来说，这和毁灭有什么区别吗？获得了生存，但丧失了主权，丧失了自己的根。<br />  为什么世界有英雄存在，不就是因为他们做了我们所没有做的，其实很多时候我们都是选择逃避，只有少数人选择面对，逃避解决不了根本问题，该面对的，应该勇敢面对，纵使最后可能是失败，甚至死亡，英雄大部分不都是烈士吗？</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>git_master</title>
+      <link href="/2024/06/29/git-master/"/>
+      <url>/2024/06/29/git-master/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  本文章主要是记录一下程序自动开启管理员运行模式的配置方法，有些文件位于C盘具有访问权限，如果不是管理员就无法访问，而每次都是先以管理员进入bash程序，然后cd进入该路径，他费劲了，于是直接配置bash直接进入管理员，直接在该文件夹下bash即可。<br />  开启权限很简单，首先，找到该exe程序，然后右键属性，找到兼容性标签页，然后点击更改所有用户设置，最后将以管理员身份运行打勾即可，此方法对其它程序页都适用。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Git </category>
+          
+          <category> bash管理员配置 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>配置双博客（配置访问两个github）</title>
+      <link href="/2024/06/28/twogithub/"/>
+      <url>/2024/06/28/twogithub/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  因为我有了两个博客，而一个博客如果使用github.io域名，那么一个博客只能对应一个github号，所以我创建了两个github号，所以需要配置一个电脑使用两个github。<br />  首先，配置两个github号我们需要明白根本操作其实是配置两个密钥，目前我们无法使用两个github，根本原因是我们只生成了一个密钥，且电脑只识别id_rsa密钥。<br />  理解上述原因后，我们就很好的明白如何解决问题了，首先生成不同的两个密钥，只需命名不同即可，然后添加对应的github账号中，随后将其添加SSH agent中，使电脑识别两个密钥，然后就是在.ssh里建立一个config文件（无后缀，可以先创建txt文件，然后删除后缀即可），为其设置不同的host别名，说白了就是用于隐藏域名的指代词，不同别名代表不同的配置，其中，最主要的是配置两个不同别名使用的密钥，随后，我们需要将全局配置删除，然后，我们就可以通过ssh -T git@自己配置的第一个Host别名，来测试是否成功，如果成功，那么我们就成功关联两个github了，每次就可以git@别名来区分操作。<br />  上面做完后，接下来就是hexo关联github了，这个简单，就是配置hexo的config文件，将deploy中的repository属性配置对应的别名就行了，最后就是因为全局配置没有了，所以我们需要将每个的hexo中的.deploy_git中.git中的config配置[user]选项，告诉hexo我是谁，其中含有email属性与name属性，写对应github的就行。<br />  经过以上操作我们就完成了一个电脑使用两个博客了。这里具体操作没有展示，因为网上都有介绍，这里主要说一下原理与操作流程，主要是便于我以后忘记时，快速明白其中原理，并明白到底要怎么做。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> github </tag>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>java_UI_font_1</title>
+      <link href="/2024/06/27/java-UI-font-1/"/>
+      <url>/2024/06/27/java-UI-font-1/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  在进行JAVA贪吃蛇时，发现UI窗口中文字体乱码情况，起初以为是JAVA编码原因，经过查找资料得知，罪魁祸首是Windows系统本身是GBK，而非utf-8,只有Beta版可以设置，具体可以通过系统设置的时间与语言模块查看，具体原因为：我们java是UTF-8编码，但是窗口是基于windows的，windows解析展示时乱码导致，所以我们添加一个jvm参数，具体内容为-Dfile.encoding=gbk。<br /><img src="/images/java/UI/fig1.png" alt="配置位置" /></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+          <category> UI </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+            <tag> UI </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2024/06/27/hello-world/"/>
+      <url>/2024/06/27/hello-world/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="quick-start"><a class="markdownIt-Anchor" href="#quick-start"></a> Quick Start</h2><h3 id="create-a-new-post"><a class="markdownIt-Anchor" href="#create-a-new-post"></a> Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="run-server"><a class="markdownIt-Anchor" href="#run-server"></a> Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="generate-static-files"><a class="markdownIt-Anchor" href="#generate-static-files"></a> Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="deploy-to-remote-sites"><a class="markdownIt-Anchor" href="#deploy-to-remote-sites"></a> Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 测试 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>动态</title>
       <link href="/2024/02/15/di24/"/>
       <url>/2024/02/15/di24/</url>
@@ -21,7 +666,7 @@
       <link href="/2024/02/15/24-2-15/"/>
       <url>/2024/02/15/24-2-15/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  记录一下印象深刻的语句，以便后面整理。<br />  注意力专注，往前看，眼里只有前方。<br />  克服恐惧的方法要么勇敢面对，要么选择逃避。<br />  努力有回报，但是表现机会只有那么几次，努力是为了当机会来临的时候，能够抓住机会。<br />  无论什么职业都是有荣耀在的，我们不能忘了曾经的荣耀。<br />  生存是最现实的问题，规则没有绝对的公平，社会永远都是相对公平，我们能做的就是尽可能地利用这个规则。<br />  其实我们每次竞争说不垫底就行，不需要挣第一，我就是这样的，但是我知道了其实是我的恐惧使然，当我们害怕这件事情往往会通过相反面去安慰自己，但是其实自己心里知道我是渴望的，但是害怕给自己压力，害怕承担这个结果，所以给了自己最容易承担的目标。<br />  有时后我们真的是缺少必死或者最后一次的决心，缺少拼命的干劲。<br />  生存真的是现实的问题，但是我想说我们不能丧失我们的生命的活力，要学会在生存中生活，为自己所爱，不能被生活完全束缚。<br />  不能因为一个错误，就去否定别人与自己。<br />  生活总会透露着无奈，但是我们必须拼命去活着，自信可改变未来，即使只剩下残留的躯壳。<br />  没有什么人的人生是完美的，不完美甚至稀烂的人生是常态，我们应该坦然面对，然后坚毅地向前看，我们只有不断前行，才能创造更多的可能。</p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  记录一下印象深刻的语句，以便后面整理。<br />  注意力专注，往前看，眼里只有前方。<br />  克服恐惧的方法要么勇敢面对，要么选择逃避。<br />  努力有回报，但是表现机会只有那么几次，努力是为了当机会来临的时候，能够抓住机会。<br />  无论什么职业都是有荣耀在的，我们不能忘了曾经的荣耀。<br />  生存是最现实的问题，规则没有绝对的公平，社会永远都是相对公平，我们能做的就是尽可能地利用这个规则。<br />  其实我们每次竞争说不垫底就行，不需要挣第一，我就是这样的，但是我知道了其实是我的恐惧使然，当我们害怕这件事情往往会通过相反面去安慰自己，但是其实自己心里知道我是渴望的，但是害怕给自己压力，害怕承担这个结果，所以给了自己最容易承担的目标。<br />  有时后我们真的是缺少必死或者最后一次的决心，缺少拼命的干劲。<br />  生存真的是现实的问题，但是我想说我们不能丧失我们的生命的活力，要学会在生存中生活，为自己所爱，不能被生活完全束缚。<br />  不能因为一个错误，就去否定别人与自己。<br />  生活总会透露着无奈，但是我们必须拼命去活着，自信可改变未来，即使只剩下残留的躯壳。<br />  没有什么人的人生是完美的，不完美甚至稀烂的人生是常态，我们应该坦然面对，然后坚毅地向前看，我们只有不断前行，才能创造更多的可能。<br /> </p>]]></content>
       
       
       
@@ -34,7 +679,7 @@
       <link href="/2024/02/04/24-2/"/>
       <url>/2024/02/04/24-2/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  因为我的重装了系统，导致鼠标右击不出git bash here 选项，通过查找了解到，注册表的内容没有了，所以需要到制定路径添加即可，所以我记录一下。</p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>  因为我的重装了系统，导致鼠标右击不出git bash here 选项，通过查找了解到，注册表的内容没有了，所以需要到制定路径添加即可，所以我记录一下。<br />  </p>]]></content>
       
       
       
@@ -236,6 +881,8 @@
       <categories>
           
           <category> 随笔记录 </category>
+          
+          <category> 游戏人生 </category>
           
       </categories>
       
@@ -908,7 +1555,7 @@
       <link href="/2022/11/14/git1/"/>
       <url>/2022/11/14/git1/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="git-push-报错fatal-unable-to-access-httpsgithubcomhongyinggameshanawebgit-failed-to-connect-to-githubcom-port-443-after-21108-ms-timed-out"><a class="markdownIt-Anchor" href="#git-push-报错fatal-unable-to-access-httpsgithubcomhongyinggameshanawebgit-failed-to-connect-to-githubcom-port-443-after-21108-ms-timed-out"></a> git push 报错：fatal: unable to access ‘<a href="https://github.com/hongyinggame/shanaweb.git/">https://github.com/hongyinggame/shanaweb.git/</a>’: Failed to connect to <a href="http://github.com">github.com</a> port 443 after 21108 ms: Timed out</h4><p>解决方法：取消代理<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global --unset http.proxy</span><br><span class="line"></span><br><span class="line">git config --global --unset https.proxy</span><br></pre></td></tr></table></figure></p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="git-push-报错fatal-unable-to-access-httpsgithubcomhongyinggameshanawebgit-failed-to-connect-to-githubcom-port-443-after-21108-ms-timed-out"><a class="markdownIt-Anchor" href="#git-push-报错fatal-unable-to-access-httpsgithubcomhongyinggameshanawebgit-failed-to-connect-to-githubcom-port-443-after-21108-ms-timed-out"></a> git push 报错：fatal: unable to access ‘<a href="https://github.com/hongyinggame/shanaweb.git/">https://github.com/hongyinggame/shanaweb.git/</a>’: Failed to connect to <a href="http://github.com">github.com</a> port 443 after 21108 ms: Timed out</h4><p>解决方法：取消代理<pre class="line-numbers language-none"><code class="language-none">git config --global --unset http.proxygit config --global --unset https.proxy<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></p>]]></content>
       
       
       <categories>
@@ -958,7 +1605,7 @@
       <link href="/2022/11/13/Transformer/"/>
       <url>/2022/11/13/Transformer/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="参考连接"><a class="markdownIt-Anchor" href="#参考连接"></a> 参考连接</h3><p><a target="_blank" href ="https://zhuanlan.zhihu.com/p/113443895">cnn中位置与尺度的问题</a><br /><a href="https://zhuanlan.zhihu.com/p/36278093" target="_blank">padding的作用于意义</a><br /><a href="https://blog.csdn.net/JMU_Ma/article/details/90033969" target="_blank">U-net讲解</a><br /><a href="https://www.zhihu.com/question/268331470" target="_blank">U-net中的镜像操作的理解</a><br /><a href ="https://zhuanlan.zhihu.com/p/126504785" target="_blank">SiamRPN++笔记：padding究竟影响了什么？</a><br /><a href="https://blog.csdn.net/qq_38405680/article/details/82748623" target="_blank">浅谈采样定理</a></p><h5 id="多尺度目标检测"><a class="markdownIt-Anchor" href="#多尺度目标检测"></a> 多尺度目标检测</h5><p>多尺度目标检测简单说检测目标的尺度不同有大有小。</p><p>检测物体大小不一的影响？<br /> 首先，浅层所提取的信息中几何信息好，但是语义信息差，视野小，因此更适合定位；深层所提取的信息中语义信息好，几何信息差，视野大，适合分类。<br />但是，随着加深深度会出现语义信息提取下降现象，因为随着周遭环境的稀释，虽然视野变大，但是视野中的信息量减少，提取下降。</p><p>如图为大小物体下的目标检测，可以看出大小目标的变化是一样的，但是，图像的大小不一样，即小目标更快到顶峰，而大目标却更晚到顶峰，因此，会出出现鱼<br />和熊掌不可兼得的情况，如图，神经网络的深度应定为25层，还是50层，亦或是37层呢？定25层则对小目标的检测效果好而大目标检测能力差；定50层则反之；<br />定37层则两类目标的检测能力较为均衡但都不在最好的检测状态。而这就是“多尺度”目标检测问题的根源所在。</p><p><img src="/images/%E5%A4%A7%E7%9B%AE%E6%A0%87%E5%B0%8F%E7%9B%AE%E6%A0%87%E7%9A%84%E4%B8%8D%E5%90%8C%E4%B9%8B%E5%A4%84.webp" alt="大小目标的检测曲线" /><br />解决方法</p><ol><li>图像金子塔</li></ol><p>由不同分辨率组成的图像从大到小叠加在一起，这种就叫做图像金字塔。缺点：对多个尺寸的图片进行操作，计算量比较大。</p><ol start="2"><li>图像特征金字塔</li></ol><p>通过卷积提取不同尺寸的特征，然后选取其中的部分尺寸对应特征作为预测，对其它的尺寸预测不准确。</p><ol start="3"><li><p  style="color:red">FPN</p></li></ol><p>该网络的思想是分别进行上采样与下采样，将各尺寸进行特征融合然后分别对其进行预测.因此主要分为自下而上的下采样过程、自上而下的上采样过程以及两者的横<br />向连接。如下图所示</p><p><img src="/images/FPN.jpg" alt="FPN神经网络" /></p><h3 style="color:red">U-net网络</h3>&emsp;&emsp;首先，全卷积神经网络与卷积神经网络不同在于前者将后者最后的全连接层换为了卷积层，从而可以输入任意尺寸的图片，输出也是任意图片，因此该网络是端到端的网络，端到端的网络理解为特征提取的输出不在作为输入，而是通过该模型进行学习提取特征，即输入就是原始数据。<p>  U-net神经网络和FPN神经网络类似，也是使用上采样与下采样结合的方式，其亮眼操作为：1.镜像操作，目的是保证输出尺寸与输入尺寸一致，一般使用padding，同时为了不产生噪音一般使用零填充。</p><p style="color:red">拓展研究：</p><h4>padding操作有何作用与影响</h4>padding传统使用是因为随着卷积操作图像尺寸变小,进而网络无法加深，通过padding操作保持图像尺寸，并能够使深层网络获得更多的信息,提高了感受野，但是padding操作在siamRPN网络中表明了其能够影响平移不变性,通过使用零填充会显示出强烈的位置信息，因此出现了平移等变性。<p style="color:red">等变性：简单说就是输出随着变化而变化。即Transform(F(x)) = F(Transform(x))<br>不变性：简单说就是输出随着变化却不发生变化。即F(x) = F(Transform(x))///</p><p>自己的想法：<br />为什么鲁棒性会差？<br />人识别人时一般是从什么地方识别，我认为一是人的身高体重等形状特征，然后是人的脸与穿着，所以是不是可以进行图像分割进行识别匹配，但是图像分割又是基于图像检测。</p><p>频闪效应：<br />其产生原因是因为人的视网膜所呈的像不会立马消失，同时当物体快速移动时会出现移动后的像与移动前的像重叠，此现象成为频闪效应。</p><p>图像高频信息与低频信息</p><p>高频信息：图像的数值变化剧烈的地方，一般是图像的边缘或噪声，同时图像的细节处也就是属于灰度值急剧变化的区域，正是因为灰度值的急剧变化，才会出现细节。</p><p>低频信息：图像像素值变化缓慢的地方，此信息包含的图像的大部分信息</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">对于一副图像来说，除去高频就是低频了，也就是边缘以内的内容为低频，而边缘内的内容就是图像的大部分信息，即图像的大致概貌和轮廓，是图像的近似信息.</span><br></pre></td></tr></table></figure><p style="color:red">采样什么时候出现了混叠？<br>采样频率<br>时域采样<br>频域采样<br>局部连接<br>共享权值<br></p>1.人工智能2.随机行走3.动过]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="参考连接"><a class="markdownIt-Anchor" href="#参考连接"></a> 参考连接</h3><p><a target="_blank" href ="https://zhuanlan.zhihu.com/p/113443895">cnn中位置与尺度的问题</a><br /><a href="https://zhuanlan.zhihu.com/p/36278093" target="_blank">padding的作用于意义</a><br /><a href="https://blog.csdn.net/JMU_Ma/article/details/90033969" target="_blank">U-net讲解</a><br /><a href="https://www.zhihu.com/question/268331470" target="_blank">U-net中的镜像操作的理解</a><br /><a href ="https://zhuanlan.zhihu.com/p/126504785" target="_blank">SiamRPN++笔记：padding究竟影响了什么？</a><br /><a href="https://blog.csdn.net/qq_38405680/article/details/82748623" target="_blank">浅谈采样定理</a></p><h5 id="多尺度目标检测"><a class="markdownIt-Anchor" href="#多尺度目标检测"></a> 多尺度目标检测</h5><p>多尺度目标检测简单说检测目标的尺度不同有大有小。</p><p>检测物体大小不一的影响？<br /> 首先，浅层所提取的信息中几何信息好，但是语义信息差，视野小，因此更适合定位；深层所提取的信息中语义信息好，几何信息差，视野大，适合分类。<br />但是，随着加深深度会出现语义信息提取下降现象，因为随着周遭环境的稀释，虽然视野变大，但是视野中的信息量减少，提取下降。</p><p>如图为大小物体下的目标检测，可以看出大小目标的变化是一样的，但是，图像的大小不一样，即小目标更快到顶峰，而大目标却更晚到顶峰，因此，会出出现鱼<br />和熊掌不可兼得的情况，如图，神经网络的深度应定为25层，还是50层，亦或是37层呢？定25层则对小目标的检测效果好而大目标检测能力差；定50层则反之；<br />定37层则两类目标的检测能力较为均衡但都不在最好的检测状态。而这就是“多尺度”目标检测问题的根源所在。</p><p><img src="/images/%E5%A4%A7%E7%9B%AE%E6%A0%87%E5%B0%8F%E7%9B%AE%E6%A0%87%E7%9A%84%E4%B8%8D%E5%90%8C%E4%B9%8B%E5%A4%84.webp" alt="大小目标的检测曲线" /><br />解决方法</p><ol><li>图像金子塔</li></ol><p>由不同分辨率组成的图像从大到小叠加在一起，这种就叫做图像金字塔。缺点：对多个尺寸的图片进行操作，计算量比较大。</p><ol start="2"><li>图像特征金字塔</li></ol><p>通过卷积提取不同尺寸的特征，然后选取其中的部分尺寸对应特征作为预测，对其它的尺寸预测不准确。</p><ol start="3"><li><p  style="color:red">FPN</p></li></ol><p>该网络的思想是分别进行上采样与下采样，将各尺寸进行特征融合然后分别对其进行预测.因此主要分为自下而上的下采样过程、自上而下的上采样过程以及两者的横<br />向连接。如下图所示</p><p><img src="/images/FPN.jpg" alt="FPN神经网络" /></p><h3 style="color:red">U-net网络</h3>&emsp;&emsp;首先，全卷积神经网络与卷积神经网络不同在于前者将后者最后的全连接层换为了卷积层，从而可以输入任意尺寸的图片，输出也是任意图片，因此该网络是端到端的网络，端到端的网络理解为特征提取的输出不在作为输入，而是通过该模型进行学习提取特征，即输入就是原始数据。<p>  U-net神经网络和FPN神经网络类似，也是使用上采样与下采样结合的方式，其亮眼操作为：1.镜像操作，目的是保证输出尺寸与输入尺寸一致，一般使用padding，同时为了不产生噪音一般使用零填充。</p><p style="color:red">拓展研究：</p><h4>padding操作有何作用与影响</h4>padding传统使用是因为随着卷积操作图像尺寸变小,进而网络无法加深，通过padding操作保持图像尺寸，并能够使深层网络获得更多的信息,提高了感受野，但是padding操作在siamRPN网络中表明了其能够影响平移不变性,通过使用零填充会显示出强烈的位置信息，因此出现了平移等变性。<p style="color:red">等变性：简单说就是输出随着变化而变化。即Transform(F(x)) = F(Transform(x))<br>不变性：简单说就是输出随着变化却不发生变化。即F(x) = F(Transform(x))///</p><p>自己的想法：<br />为什么鲁棒性会差？<br />人识别人时一般是从什么地方识别，我认为一是人的身高体重等形状特征，然后是人的脸与穿着，所以是不是可以进行图像分割进行识别匹配，但是图像分割又是基于图像检测。</p><p>频闪效应：<br />其产生原因是因为人的视网膜所呈的像不会立马消失，同时当物体快速移动时会出现移动后的像与移动前的像重叠，此现象成为频闪效应。</p><p>图像高频信息与低频信息</p><p>高频信息：图像的数值变化剧烈的地方，一般是图像的边缘或噪声，同时图像的细节处也就是属于灰度值急剧变化的区域，正是因为灰度值的急剧变化，才会出现细节。</p><p>低频信息：图像像素值变化缓慢的地方，此信息包含的图像的大部分信息</p><pre class="line-numbers language-none"><code class="language-none">对于一副图像来说，除去高频就是低频了，也就是边缘以内的内容为低频，而边缘内的内容就是图像的大部分信息，即图像的大致概貌和轮廓，是图像的近似信息.<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p style="color:red">采样什么时候出现了混叠？<br>采样频率<br>时域采样<br>频域采样<br>局部连接<br>共享权值<br></p>1.人工智能2.随机行走3.动过]]></content>
       
       
       <categories>
@@ -1033,25 +1680,6 @@
             <tag> 测试用 </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2022/10/12/hello-world/"/>
-      <url>/2022/10/12/hello-world/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="quick-start"><a class="markdownIt-Anchor" href="#quick-start"></a> Quick Start</h2><h3 id="create-a-new-post"><a class="markdownIt-Anchor" href="#create-a-new-post"></a> Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="run-server"><a class="markdownIt-Anchor" href="#run-server"></a> Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="generate-static-files"><a class="markdownIt-Anchor" href="#generate-static-files"></a> Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="deploy-to-remote-sites"><a class="markdownIt-Anchor" href="#deploy-to-remote-sites"></a> Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 测试 </category>
-          
-      </categories>
-      
       
     </entry>
     
