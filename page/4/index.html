@@ -44,7 +44,7 @@
     <h2 class="author">hongying</h2>
     <h3 class="description">娜厨</h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>334</strong><br>文章</div></a>
+      <a href="/archives"><div><strong>350</strong><br>文章</div></a>
       <a href="/categories"><div><strong>21</strong><br>分类</div></a>
       <a href="/tags"><div><strong>42</strong><br>标签</div></a>
     </div>
@@ -72,12 +72,12 @@
 
         <section id="main">
   
-    <article id="post-24-7-11" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-java/java1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2024/07/11/24-7-11/" class="article-date">
-  <time class="post-time" datetime="2024-07-11T01:32:50.000Z" itemprop="datePublished">
+    <a href="/2024/07/29/java/java1/" class="article-date">
+  <time class="post-time" datetime="2024-07-29T07:25:12.000Z" itemprop="datePublished">
     <span class="post-month">7月</span><br/>
-    <span class="post-day">11</span>
+    <span class="post-day">29</span>
   </time>
 </a>
    
@@ -92,7 +92,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2024/07/11/24-7-11/">《墨上柳梢》</a>
+      <a class="article-title" href="/2024/07/29/java/java1/">java 反射</a>
     </h1>
   
 
@@ -107,22 +107,265 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <center>《墨上柳梢》</center>
+        <p>  反射看了这么多，可以简单认为是用于动态变化类的内容，避免写死，通过配置文件，来进行修改，可以这么说，如果使用new那么如果更新需要重写代码，但是如果用反射，则可以用配置文件就可以更新，无须修改代码与重新运行编译。</p>
+
+        
+          <p class="article-more-link">
+            <a href="/2024/07/29/java/java1/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hongyinggame.github.io/2024/07/29/java/java1/" data-id="cmjrxor7300e2xguz1yebdc7y" class="article-share-link">分享</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+    <article id="post-mysql/shiwu1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/07/24/mysql/shiwu1/" class="article-date">
+  <time class="post-time" datetime="2024-07-24T07:59:15.000Z" itemprop="datePublished">
+    <span class="post-month">7月</span><br/>
+    <span class="post-day">24</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+
+
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/07/24/mysql/shiwu1/">事务</a>
+    </h1>
+  
+
+        <div>
+          
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>  事务是数据库管理系统执行过程中的一个逻辑单位，由有限个数据库操作序列组成。<br>
+  事务四个特性：</p>
+<pre class="line-numbers language-none"><code class="language-none">1.原子性(Atomicity):事务作为一个整体被执行，包含其中的全部数据操作，要么全部执行，要么全部不执行，即回滚到执行前状态。
+2.一致性(Consistency):事务应确保数据库状态从一个一致状态转变为另一个一致状态。一致状态是数据库中的数据应与数据库的定义一致，换句话说就是满足完整性约束。
+3.隔离性(Isolation):多个事务并发执行时，一个事务的执行不影响其他事务执行，换句话说，每个事务只有自己执行的效果，没含带其他事务，具有独立性，最后，不同事务先后提交并执行后，最终呈现出来的效果是串行的。
+3.持久性(Durability):已被提交的事务对数据库的修改应该是永久改变的。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>  隔离性最简单的实现方式就是各个事务都串行执行了，如果前面的事务还没有执行完毕，后面的事务就都等待。但是这样的实现方式很明显并发效率不高，并不适合在实际环境中使用。为了解决上述问题，实现不同程度的并发控制，SQL的标准制定者提出了不同的隔离级别：未提交读、提交读、可重复读、序列化读。</p>
+<pre class="line-numbers language-none"><code class="language-none">1. 未提交读(READ UNCOMMITTED)
+    最低级的的隔离级别，可以读取未提交事务的数据。
+2. 提交读(READ COMMITTED)
+    一个事务只能看见已经提交的事务所做的改变，大多数数据库系统的默认隔离级别（但不是MYSQL默认的）。
+3. 可重复读（REPEATABLE READ）
+    事务A在读到一条数据之后，此时事务B对该数据进行了修改并提交，那么事务A再读该数据，读到的还是原来的内容，可以说上了一个修改锁。
+4. 可串行化(SERIALIZABLE)
+    最高级别隔离，强制事务串行执行，时间消耗大，导致超市现象和锁竞争，一般不用该级别，而是采用乐观锁与悲观锁。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>  较低的隔离级别能够提高效率，但是却会导致很多问题，常见的4个问题如下：</p>
+<pre class="line-numbers language-none"><code class="language-none">1.脏读
+    脏读发生于未提交读级别，事务A读取事务B的修改的数据，但是事务B提交前回滚，即撤回操作，此时事务A读取的数据为无用数据，出现了脏读，脏读就是读取脏的数据(垃圾数据)。
+2. 不可重复读问题(对于列说)
+    不可重复读问题是说事务两次读取的数据不一致，发生于并发事务中，事务A第一次读取数据，随后，事务B修改数据的某一列，此时提交后，数据修改，此时事务A又再次读取数据，此时读取数据的某一列不一致，从而产生不可重复读问题。
+3. 幻读问题(对于行说)
+    幻读问题是说事务第一次读的数据与第二次读的数据数量不一致，从而产生幻觉的问题，事务A第一次读取数据，此时事务B增加或删减了一行数据后，此时事务A再次读取数据时产生了两者不一致的幻觉。
+4. 丢失更新问题
+    丢失更新问题是说事务A的更新被事务B的修改覆盖，从而丢失了更新，丢失问题分为两种，第一种为回滚丢失更新，在事务A执行更新时，事务B执行更新并提交，但是事务A最后回滚撤销，进而回滚到事务开始状态，此时事务B的更新也会被覆盖，第二种为提交覆盖数据更新，事务A的提交修改了期间事务B的更新的数据，从而导致了事务B更新消失，因为丢失更新1比较严重，所以数据库本身不允许这一类丢失更新的发生。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>  对于不同隔离等级会出现的问题汇总如下：</p>
+<table>
+<thead>
+<tr>
+<th>隔离级别</th>
+<th>脏读</th>
+<th>不可重复读</th>
+<th>幻读</th>
+<th>丢失更新1</th>
+<th>丢失更新2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>未提交读</td>
+<td>发生</td>
+<td>发生</td>
+<td>发生</td>
+<td>不发生</td>
+<td>发生</td>
+</tr>
+<tr>
+<td>提交读</td>
+<td>不发生</td>
+<td>发生</td>
+<td>发生</td>
+<td>不发生</td>
+<td>发生</td>
+</tr>
+<tr>
+<td>可重复读</td>
+<td>不发生</td>
+<td>不发生</td>
+<td>发生</td>
+<td>不发生</td>
+<td>不发生</td>
+</tr>
+<tr>
+<td>可串行化</td>
+<td>不发生</td>
+<td>不发生</td>
+<td>不发生</td>
+<td>不发生</td>
+<td>不发生</td>
+</tr>
+</tbody>
+</table>
+<p>  前面说了乐观锁与悲观锁，但是这里要强调乐观锁与悲观锁是思想，不是具体实现，那些具体锁可以根据思想划分为乐观锁或悲观锁。乐观锁又叫乐观并发控制(OCC)，悲观锁又叫悲观并发控制(PCC)。<br>
+  乐观锁是认为外界对数据的操作一般是不会发生冲突的，因此在操作过程不会进行加锁，而是当提交的时候才会进行检测加锁，数据库的乐观锁，并不是利用数据库本身的锁去实现的，可能是利用某种实现逻辑去实现做到乐观锁的思想。<br>
+  悲观锁是认为外界对数据的操作默认是会发生冲突的，所以在数据操作的整个过程都会处于加锁状态，保证同一时间只有一个线程可以访问到数据，通常利用数据库本身提供的锁机制去实现。<br>
+  乐观锁使用逻辑进行上锁，一般基于CAS思想进行设计，CAS思想是通过对比旧期望值a(在操作前进行读取，并进行赋值)与需要进行最终修改时读取值b进行比较，如果一致，则表明在此期间没有人进行修改，可以进行操作，而如果不一致，说明在此期间已经有人进行了修改，不执行更新，基于此思想数据库有两种方式：</p>
+        
+          <p class="article-more-link">
+            <a href="/2024/07/24/mysql/shiwu1/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hongyinggame.github.io/2024/07/24/mysql/shiwu1/" data-id="cmjrxor7700ejxguz50mhgugr" class="article-share-link">分享</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+    <article id="post-shici/gushi5" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/07/23/shici/gushi5/" class="article-date">
+  <time class="post-time" datetime="2024-07-23T11:34:13.000Z" itemprop="datePublished">
+    <span class="post-month">7月</span><br/>
+    <span class="post-day">23</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+
+
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/07/23/shici/gushi5/">无题</a>
+    </h1>
+  
+
+        <div>
+          
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>  天上星，光如故，地上人，难长明；天无情，天长存，人有情，难长留。<br>
+  天星四象华光旧，地人万代久难明。天道冷情长青存，人世喜乐不长留。灰云尽染靛青布，半生雨露半若晴；浮生微醒乐逍遥，万气归源吟我心。</p>
+
+        
+          <p class="article-more-link">
+            <a href="/2024/07/23/shici/gushi5/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hongyinggame.github.io/2024/07/23/shici/gushi5/" data-id="cmjrxor7a00etxguza5jshu8g" class="article-share-link">分享</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+    <article id="post-shici/gushi4" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/07/23/shici/gushi4/" class="article-date">
+  <time class="post-time" datetime="2024-07-23T11:19:33.000Z" itemprop="datePublished">
+    <span class="post-month">7月</span><br/>
+    <span class="post-day">23</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+
+
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/07/23/shici/gushi4/">《傍雨》</a>
+    </h1>
+  
+
+        <div>
+          
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <center>《傍雨》</center>
 <center>红熒</center>
-<center>飞墨泼白柳拂地，倩倩少年无言立。</center>
-<center>抬手行眼注心形，肆笔畅转志其意。</center>
-&emsp;&emsp;画者，形为结果，却非目的也，神为物之态，意为物之情，此二者为目的也。因而，目可形，而心神遇也。进言之，有形即形神，无形即形意。
-&emsp;&emsp;画者圣也, 盖以穷天地之不至 , 显日月之不照 。挥纤毫之笔 , 则万类由心 , 展方寸之能 , 而千里在掌。目有穷而心无穷，立于目，而展于心。
+<center>乌云漫青天，黑白道两边。</center>
+<center>左边半生雨，右寻犹婉晴/右寻婉若晴。</center>
 
         
           <p class="article-more-link">
-            <a href="/2024/07/11/24-7-11/#more">Read More</a>
+            <a href="/2024/07/23/shici/gushi4/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/07/11/24-7-11/" data-id="cmjrx5ts5004dnouz5tm6dnu0" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2024/07/23/shici/gushi4/" data-id="cmjrxor7a00esxguzfz2le19k" class="article-share-link">分享</a>
       
       
     </footer>
@@ -134,12 +377,12 @@
 
 
   
-    <article id="post-hexo2" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-markdown/daima1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2024/07/09/hexo2/" class="article-date">
-  <time class="post-time" datetime="2024-07-09T08:42:28.000Z" itemprop="datePublished">
+    <a href="/2024/07/23/markdown/daima1/" class="article-date">
+  <time class="post-time" datetime="2024-07-23T09:02:57.000Z" itemprop="datePublished">
     <span class="post-month">7月</span><br/>
-    <span class="post-day">09</span>
+    <span class="post-day">23</span>
   </time>
 </a>
    
@@ -154,7 +397,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2024/07/09/hexo2/">Hexo代码块问题</a>
+      <a class="article-title" href="/2024/07/23/markdown/daima1/">代码块</a>
     </h1>
   
 
@@ -169,22 +412,22 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>  这次问题是配置代码块高亮问题：1.可以使用prism插件；2.可以使用hexo现在自带的prismjs，具体如何配置搜索便有。<br>
-  我要提醒我自己的是markdown可以使用```来进行代码标识，但是记住一定要间隔一行，否则容易不识别，这个是一个大问题，也是我一直不成功的原因，现在终于知道了。</p>
+        <p>  我在写markdown时，发现代码块有三种表示方法：</p>
+<pre class="line-numbers language-none"><code class="language-none">1.用于段落中有几句代码，不需要建立块，直接用&#96;&#96;进行标识。
+2.常用标识：使用三个&#96;&#96;&#96;开头，最后使用&#96;&#96;&#96;结束，可以指定哪种语言。
+3.在代码之前另起一行，输入四个空格作为代码段标识。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
         
           <p class="article-more-link">
-            <a href="/2024/07/09/hexo2/#more">Read More</a>
+            <a href="/2024/07/23/markdown/daima1/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/07/09/hexo2/" data-id="cmjrwmd2o001jeouz9eiyftv3" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2024/07/23/markdown/daima1/" data-id="cmjrxor7500ebxguza4mm5s82" class="article-share-link">分享</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
-
     </footer>
   </div>
   
@@ -194,12 +437,12 @@
 
 
   
-    <article id="post-qitaml" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-mysql/shanchu1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2024/07/09/qitaml/" class="article-date">
-  <time class="post-time" datetime="2024-07-09T08:33:10.000Z" itemprop="datePublished">
+    <a href="/2024/07/23/mysql/shanchu1/" class="article-date">
+  <time class="post-time" datetime="2024-07-23T08:23:51.000Z" itemprop="datePublished">
     <span class="post-month">7月</span><br/>
-    <span class="post-day">09</span>
+    <span class="post-day">23</span>
   </time>
 </a>
    
@@ -214,7 +457,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2024/07/09/qitaml/">其他命令-生活中意识到的操作</a>
+      <a class="article-title" href="/2024/07/23/mysql/shanchu1/">删除表</a>
     </h1>
   
 
@@ -229,25 +472,31 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="语言切换命令"><a class="markdownIt-Anchor" href="#语言切换命令"></a> 语言切换命令</h2>
-<p>  在进行vim编辑时，我发现同时用ctrl+shift不能很流畅切换，有时没有反应，然后就发现，其实不需要同时按，我们可以通过利用先后顺序达到不同效果；</p>
-<pre class="line-numbers language-none"><code class="language-none">ctrl+shift：按住ctrl不动，然后按shift， 这个就是会弹出语言选择框，shift用于切换选择。
+        <p>  删除表有三种方式：</p>
+<pre class="line-numbers language-none"><code class="language-none">1.删除表
+    DROP TABLE 表名;
+2.删除表数据，而不是删除表结构，不能使用where指定具体内容。
+    TRUNCATE TABLE 表名;
+3.删除表数据，可与where搭配使用，删除指定内容。
+    DELETE FROM 表名 WHERE 或者DELETE FROM 表名。
 
-shift+ctrl：按住shift不动，然后按ctrl，这个就是我们常见的直接切换，不会弹出窗口。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+不同点：
+    1.DROP 与 TRUNCATE 为数据库定义语言DDL，执行后自动提交，DELETE为数据库操作语言。
+    2.truncate和delete 只删除数据不删除表结构，truncate 删除后将重建索引（新插入数据后id从0开始记起），而 delete不会删除索引 （新插入的数据将在删除数据的索引后继续增加），drop语句将删除表的结构包括依赖的约束，触发器，索引等；
+    3.drop和truncate删除时不记录MySQL日志，不能回滚，delete删除会记录MySQL日志，可以回滚；
+    4.返回值：delete 操作后返回删除的记录数，而 truncate 返回的是0或者-1（成功则返回0，失败返回-1）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
         
           <p class="article-more-link">
-            <a href="/2024/07/09/qitaml/#more">Read More</a>
+            <a href="/2024/07/23/mysql/shanchu1/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/07/09/qitaml/" data-id="cmjrwmd35002zeouz0db9fp0l" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2024/07/23/mysql/shanchu1/" data-id="cmjrxor7600egxguzhmvndfze" class="article-share-link">分享</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%85%B6%E4%BB%96%E5%91%BD%E4%BB%A4/" rel="tag">其他命令</a></li></ul>
-
     </footer>
   </div>
   
@@ -257,12 +506,12 @@ shift+ctrl：按住shift不动，然后按ctrl，这个就是我们常见的直�
 
 
   
-    <article id="post-SQL2ml" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-mysql/sqlzhuru" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2024/07/09/SQL2ml/" class="article-date">
-  <time class="post-time" datetime="2024-07-09T08:30:15.000Z" itemprop="datePublished">
+    <a href="/2024/07/23/mysql/sqlzhuru/" class="article-date">
+  <time class="post-time" datetime="2024-07-23T01:51:46.000Z" itemprop="datePublished">
     <span class="post-month">7月</span><br/>
-    <span class="post-day">09</span>
+    <span class="post-day">23</span>
   </time>
 </a>
    
@@ -277,16 +526,12 @@ shift+ctrl：按住shift不动，然后按ctrl，这个就是我们常见的直�
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2024/07/09/SQL2ml/">Mysql配置相关命令</a>
+      <a class="article-title" href="/2024/07/23/mysql/sqlzhuru/">sql注入</a>
     </h1>
   
 
         <div>
           
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/SQL/">SQL</a>,<a class="article-category-link" href="/categories/SQL/%E6%98%93%E5%BF%98%E5%91%BD%E4%BB%A4/">易忘命令</a>
-  </div>
-
           
               
 
@@ -296,21 +541,51 @@ shift+ctrl：按住shift不动，然后按ctrl，这个就是我们常见的直�
     
     <div class="article-entry" itemprop="articleBody">
       
-        <pre class="line-numbers language-none"><code class="language-none">mysqld --console 用于查看mysql服务日志，是mysqld 不是mysql。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+        <p>  sql注入是常见的攻击形式，通过注入sql语句，导致程序的安全以及数据库安全。<br>
+  sql注入一般见效于拼接sql语句中，通过破坏输入规则，插入期望的sql语句，以此达到所要达到的目的。<br>
+  两个例子：</p>
+<pre class="line-numbers language-none"><code class="language-none">1.查找sql注入，一般用于登录界面。
+拼接sql语句：
+    String sql &#x3D; &quot;SELECT * FROM student where username &#x3D;&#39;&quot;+username+&quot;&#39; AND password &#x3D; &#39;&quot;+password+&quot;&#39;;&quot; 
+&#x2F;&#x2F;AND 运行优先级高于 OR
+注入sql语句：
+    username &#x3D; &quot;123&quot;;
+    password &#x3D; &quot;&#39;or &#39;1&#39;&#x3D;&#39;1&quot;;
+SQL最终语句: 
+    SELECT * FROM student where username &#x3D;&#39;123&#39; AND password &#x3D; &#39;&#39; or &#39;1&#39;&#x3D;&#39;1&#39;;
+因而可以将所有数据查出，造成登录成功。
+2.在查询操作中插入删除操作。
+拼接sql语句：
+    String sql &#x3D; &quot;SELECT * FROM student where username &#x3D;&#39;&quot;+username+&quot;&#39; AND password &#x3D; &#39;&quot;+password+&quot;&#39;;&quot; 
+
+注入sql语句：
+    username &#x3D; &quot;123&quot;;
+    password &#x3D; &quot;&#39;; DELETE FROM student where &#39;1&#39;&#x3D;&#39;1&quot;
+SQL最终语句：
+    SELECT * FROM student where username &#x3D;&#39;123&#39; AND password &#x3D;&#39;&#39;; DELETE FROM student where &#39;1&#39;&#x3D;&#39;1&#39;;
+注：该操作是批处理操作，但是java 中mysql执行方法execute不支持此操作。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>  因此为了避免sql注入，我们需要使用参数化sql语句，即预编译好的sql语句，除此之外做好用户输入数据的验证与过滤操作，以及最小化用户权限。<font color="Red">即使是参数化sql语句，我们也要避免拼接sql语句，否则依旧会有被sql注入的可能。</font><br>
+  这里主要是学习参数化sql语句，其他的会在后面项目中学习。<br>
+  参数化sql语句就是使用占位符？代替部分参数，通过prepareStatement(String sql)，创建一个preparedStatement，随后使用不带参数的execute/executeUpdate/executeQuery命令执行操作，不过在这之前通过preparedStatement对象的setInt与setString方法对？占位参数赋值，其中第一个参数为int型，表示第几个占位符，后面则为要赋的值。下面展示一个例子：</p>
+<pre class="line-numbers language-none"><code class="language-none">Connection conn &#x3D; DriverManager.getConnection(url,username,password);
+String sql &#x3D; &quot;INSERT INTO student(name,id_card) VALUES(?,?);&quot;;
+PreparedStatement pstm &#x3D; conn.prepareStatemnet(sql);
+pstm.setString(1,&quot;1234&quot;);
+pstm.setString(2,&quot;1234&quot;);
+pstm.executeUpdate();
+ResultSetMetaData rsmd &#x3D; rs.getMetaData();int columnCount &#x3D; rsmd.getColumnCount();这个可以获取字段数目，当我们忘记原本的数据库字段数时使用。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
         
           <p class="article-more-link">
-            <a href="/2024/07/09/SQL2ml/#more">Read More</a>
+            <a href="/2024/07/23/mysql/sqlzhuru/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/07/09/SQL2ml/" data-id="cmjrwmd27000beouzckdv8lb8" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2024/07/23/mysql/sqlzhuru/" data-id="cmjrxor7600ehxguz39em2vby" class="article-share-link">分享</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mysql/" rel="tag">Mysql</a></li></ul>
-
     </footer>
   </div>
   
@@ -320,12 +595,12 @@ shift+ctrl：按住shift不动，然后按ctrl，这个就是我们常见的直�
 
 
   
-    <article id="post-SQL1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-mysql/charu1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2024/07/08/SQL1/" class="article-date">
-  <time class="post-time" datetime="2024-07-08T07:37:38.000Z" itemprop="datePublished">
+    <a href="/2024/07/23/mysql/charu1/" class="article-date">
+  <time class="post-time" datetime="2024-07-23T01:34:35.000Z" itemprop="datePublished">
     <span class="post-month">7月</span><br/>
-    <span class="post-day">08</span>
+    <span class="post-day">23</span>
   </time>
 </a>
    
@@ -340,16 +615,12 @@ shift+ctrl：按住shift不动，然后按ctrl，这个就是我们常见的直�
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2024/07/08/SQL1/">SQL1</a>
+      <a class="article-title" href="/2024/07/23/mysql/charu1/">插入数据</a>
     </h1>
   
 
         <div>
           
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/SQL/">SQL</a>,<a class="article-category-link" href="/categories/SQL/%E6%98%93%E5%BF%98%E5%91%BD%E4%BB%A4/">易忘命令</a>
-  </div>
-
           
               
 
@@ -359,24 +630,22 @@ shift+ctrl：按住shift不动，然后按ctrl，这个就是我们常见的直�
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>  SQL使用;作为结束标志，SQL不区分大小写，但是一般关键字大写是为了更容易阅读，SQL查询结果没特殊说明，不进行排序，SQL对空格不进行处理，所以可以写在一行，也可写在多行。</p>
-<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT DISTINCT 列名 FROM 表名; DISTINCT 用于查询不同字段，消除重复字段。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">SELECT TOP 5 列名 FROM 表名; TOP 用于指定前几行记录;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">MYSQL使用如下 SELECT 列名 FROM 表名 LIMIT 5 OFFSET 5; LIMIT关键词用于指定输出几行，OFFSET 用于指定开始行号，可简化为LIMIT 5,5; 但是第一个是OFFSET值，第二个为LIMIT值<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+        <p>  插入单行数据命令：</p>
+<pre class="line-numbers language-none"><code class="language-none">INSERT INTO 表名(字段名1,字段名2...) VALUES(值1,值2...);<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>  插入多行数据命令：</p>
+<pre class="line-numbers language-none"><code class="language-none">INSERT INTO 表名(字段名1,字段名2...) VALUES(a1,a2...),(b1,b2...),...;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
         
           <p class="article-more-link">
-            <a href="/2024/07/08/SQL1/#more">Read More</a>
+            <a href="/2024/07/23/mysql/charu1/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/07/08/SQL1/" data-id="cmjrwmd28000ceouz230c7da4" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2024/07/23/mysql/charu1/" data-id="cmjrxor7600eexguz2a8ucgkg" class="article-share-link">分享</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mysql/" rel="tag">Mysql</a></li></ul>
-
     </footer>
   </div>
   
@@ -386,12 +655,12 @@ shift+ctrl：按住shift不动，然后按ctrl，这个就是我们常见的直�
 
 
   
-    <article id="post-shici/zaji1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-shici/shigan1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2024/07/08/shici/zaji1/" class="article-date">
-  <time class="post-time" datetime="2024-07-08T01:27:15.000Z" itemprop="datePublished">
+    <a href="/2024/07/22/shici/shigan1/" class="article-date">
+  <time class="post-time" datetime="2024-07-22T08:48:50.000Z" itemprop="datePublished">
     <span class="post-month">7月</span><br/>
-    <span class="post-day">08</span>
+    <span class="post-day">22</span>
   </time>
 </a>
    
@@ -406,7 +675,7 @@ shift+ctrl：按住shift不动，然后按ctrl，这个就是我们常见的直�
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2024/07/08/shici/zaji1/">《晨雨》</a>
+      <a class="article-title" href="/2024/07/22/shici/shigan1/">诗决</a>
     </h1>
   
 
@@ -421,20 +690,17 @@ shift+ctrl：按住shift不动，然后按ctrl，这个就是我们常见的直�
     
     <div class="article-entry" itemprop="articleBody">
       
-        <center>《晨行急雨》</center>
-<center>红荧</center>
-<center>狂雨闹家归，连鼓爆珠声。</center>
-<center>洼水上尘鞋，乱手拖裤草。</center>
+        <p>  写诗，一分靠文学素养，二分需细心观察，三分是否真心实意，剩余四分则是丰富想象力。所以一个好的诗词作者，需要拥有强大的想象力，目有极而心无极，观狭隘之一隅，表无限之宇宙。</p>
 
         
           <p class="article-more-link">
-            <a href="/2024/07/08/shici/zaji1/#more">Read More</a>
+            <a href="/2024/07/22/shici/shigan1/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/07/08/shici/zaji1/" data-id="cmjrwmd43006veouzamuhcgax" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2024/07/22/shici/shigan1/" data-id="cmjrxor7c00ezxguzcj2c1d7j" class="article-share-link">分享</a>
       
       
     </footer>
@@ -446,12 +712,12 @@ shift+ctrl：按住shift不动，然后按ctrl，这个就是我们常见的直�
 
 
   
-    <article id="post-shici/zaji2" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-shici/gushi3" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2024/07/08/shici/zaji2/" class="article-date">
-  <time class="post-time" datetime="2024-07-08T01:27:15.000Z" itemprop="datePublished">
+    <a href="/2024/07/22/shici/gushi3/" class="article-date">
+  <time class="post-time" datetime="2024-07-22T08:10:15.000Z" itemprop="datePublished">
     <span class="post-month">7月</span><br/>
-    <span class="post-day">08</span>
+    <span class="post-day">22</span>
   </time>
 </a>
    
@@ -466,7 +732,7 @@ shift+ctrl：按住shift不动，然后按ctrl，这个就是我们常见的直�
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2024/07/08/shici/zaji2/">动态</a>
+      <a class="article-title" href="/2024/07/22/shici/gushi3/">《晚雨》</a>
     </h1>
   
 
@@ -481,200 +747,22 @@ shift+ctrl：按住shift不动，然后按ctrl，这个就是我们常见的直�
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>  红心弦，金丝线，鹊作桥，星相见;披金缕，戴金梭，携汝游，观四宿；意相如，情相似，愿你我，共此时；待明朝，盼今日，勾指约，君莫忘。</p>
+        <center>《晚雨》</center>
+<center>红熒</center>
+<center>劲风吹草折，云雾覆霞天。</center>
+<center>光闪催龙声，豆雨直窗落。</center>
+<center>云过天渐晴，净窗悬珠帘。</center>
+<center>霁雨星云落，明迹淡蛇痕。</center>
 
         
           <p class="article-more-link">
-            <a href="/2024/07/08/shici/zaji2/#more">Read More</a>
+            <a href="/2024/07/22/shici/gushi3/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/07/08/shici/zaji2/" data-id="cmjrwmd44006xeouz7erqdm4r" class="article-share-link">分享</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
-    <article id="post-shici/zaji3" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2024/07/08/shici/zaji3/" class="article-date">
-  <time class="post-time" datetime="2024-07-08T01:27:15.000Z" itemprop="datePublished">
-    <span class="post-month">7月</span><br/>
-    <span class="post-day">08</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-
-
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/07/08/shici/zaji3/">动态</a>
-    </h1>
-  
-
-        <div>
-          
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>  如果我们都屈服了，都选择逃避，确实偏安一隅，但是对于我们国家民族来说，这和毁灭有什么区别吗？获得了生存，但丧失了主权，丧失了自己的根。<br>
-  为什么世界有英雄存在，不就是因为他们做了我们所没有做的，其实很多时候我们都是选择逃避，只有少数人选择面对，逃避解决不了根本问题，该面对的，应该勇敢面对，纵使最后可能是失败，甚至死亡，英雄大部分不都是烈士吗？</p>
-
-        
-          <p class="article-more-link">
-            <a href="/2024/07/08/shici/zaji3/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/07/08/shici/zaji3/" data-id="cmjrwmd4f008beouz75tgecg3" class="article-share-link">分享</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
-    <article id="post-24-7-8" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2024/07/08/24-7-8/" class="article-date">
-  <time class="post-time" datetime="2024-07-08T01:27:15.000Z" itemprop="datePublished">
-    <span class="post-month">7月</span><br/>
-    <span class="post-day">08</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-
-
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/07/08/24-7-8/">《伞少女》</a>
-    </h1>
-  
-
-        <div>
-          
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>  《伞少女》这部电影，我的感觉是音乐与画面不错，真的是展示汉文化，但是剧情会欠缺，然后我之前看了《百妖谱》，就感觉煽情有点难以接受了，这是次要的，主要是感觉剧情有点赶，铺垫不是特别好，导致情不到位啊，而且其实有些强行煽情的感觉，其实，我感觉有时无言往往胜于有言，有时需要一些无言的动作，而非全都融于言语，这样会好很多，最后情节会好很多了，前面真的有点铺垫不是好，总之，还不错，挺喜欢黑玉剑的。<br>
-  独立自主，要能够以自己的意志去表达，去执行，成为一个真正的人。<br>
-  人与物同时存在好坏善恶，关键在于我们能否合理运用，能否看见其本质，能否看到两面性，同时，每个人与物都有其存在的意义与价值，无论过程怎样，结果怎样，生存于世就一定有其意义，各种意义上的。<br>
-  物存在本无好坏，或者说可为坏也可为善，重点不在于物，而在于使用者，在于人，所以那些说物是恶的，物为万恶之始，物降世或现世，就会带来祸运的，都是错的，大错特错，物本没错，错在于使用者，是否能够利用好物，可以造福也可以招祸，比如剑，一般认为是杀戮，所以不想让他现世，但是有没有想过，很多时候一些坚硬物体是需要剑或刀来工作的，保护不仅仅是防御，还有进攻，伞能保人的安全，但无法根除祸害，说到底还是没有保护好人，因为它只能保护眼前之人，但是剑可以铲除祸害，从而保证后世不会有这个祸害，因此，从这个意义上来说，剑不是只有杀戮，还有守护，最主要在于使用者，而非器物。<br>
-  不经人之苦，莫劝别人善。如果我们不理解别人，不能真正体会别人，那么我们就不应该将自己的意志强加于别人，因为有时这只会让别人更痛苦，所以说教还是肃杀，是应该合理抉择，不能强词说教，也不能滥杀。<br>
-  人一旦为了物灵献出生命，物灵也就能够变成人的样子。这句话不能理解错误，这句话不是说人为物灵牺牲，物灵就可以变成人了，而是应该明白，人的牺牲需要让物灵觉醒自我意识，需要物灵能够遵从自己的愿望，形成自我意志，自由或许就是能够以自我意志来活着，能够依据自我愿望生存。<br>
-  善良不是表演，不是过度展示，善是朴实无华，是无须雕琢，暖人心而非悦人眼，无言之善才是真正的发自内心之善。<br>
-  无心之作，但被人过度解读之后，便是有心之作。很多时候，人的无心之举，对别人没有任何意义，但是往往大道隐含与平常之事、平常之物中，往往我们看到很多无心之事，也会蕴含一些本质，关键在于人的眼睛，能否看透表象隐含的本质。<br>
-  电影无论什么类型只要是人制作的，其都有含义，都有所要表达的东西，因为人是有感情的。<br>
-  他守天下，我守他，器以自己的意志强加于人，但他却坚决自刎。</p>
-
-        
-          <p class="article-more-link">
-            <a href="/2024/07/08/24-7-8/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/07/08/24-7-8/" data-id="cmjrx5tsd004hnouz0ty1cloi" class="article-share-link">分享</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
-    <article id="post-24-7-5-1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2024/07/05/24-7-5-1/" class="article-date">
-  <time class="post-time" datetime="2024-07-05T11:07:04.000Z" itemprop="datePublished">
-    <span class="post-month">7月</span><br/>
-    <span class="post-day">05</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-
-
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/07/05/24-7-5-1/">动态-24年7月5日</a>
-    </h1>
-  
-
-        <div>
-          
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>  今天心情比较我沉重，感觉人生没有意义，所以想着去放松一下心情，然后发现，可能人或者确实没有意义，最后都是死，活着一生到底为什么呢，不清楚，但是我认为，虽然人生确实活着没有意义，但是世界那么多彩，那么多样，所以，我活着不是为了人生意义，我活着是为了能够看到更多、更丰富的事情，能够看看我们这些存在于世的人所创造出的事物，无论好坏，还是善恶，那么多的事情我都没有看到，太亏了，我要去看看，这就是我的人生意义。<br>
-  最后，我要努力去活直到生命终止，然后，尽可能去看看世界，去看看我们这些人所创造的事物，去感受我们所创造的世界。<br>
-  科学可以救人，可以杀人，可以欺骗，也可以诚实，那些不同科学的人其实就是科学的奴隶，科学想怎么弄他们，就怎么弄他们，所以真的很可悲，最后科技竟然是玩弄于人，而不是服务于人，因为科学是掌握在人手中，言语权也是，所以也就有善有恶，所以我们要掌握核心科技，不能成为那些懂科技人的奴隶，被他们玩弄于股掌之中。</p>
-
-        
-          <p class="article-more-link">
-            <a href="/2024/07/05/24-7-5-1/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/07/05/24-7-5-1/" data-id="cmjrx5tsa004fnouzhc5ggbk9" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2024/07/22/shici/gushi3/" data-id="cmjrxor7900epxguz9l47epjo" class="article-share-link">分享</a>
       
       
     </footer>
@@ -689,7 +777,7 @@ shift+ctrl：按住shift不动，然后按ctrl，这个就是我们常见的直�
 
 
   <nav id="page-nav">
-    <a class="extend prev" rel="prev" href="/page/3/">&lt; pre</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/34/">34</a><a class="extend next" rel="next" href="/page/5/">next &gt;</a>
+    <a class="extend prev" rel="prev" href="/page/3/">&lt; pre</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/35/">35</a><a class="extend next" rel="next" href="/page/5/">next &gt;</a>
   </nav>
 </section>
         
@@ -730,7 +818,7 @@ shift+ctrl：按住shift不动，然后按ctrl，这个就是我们常见的直�
     <h2 class="author">hongying</h2>
     <h3 class="description">娜厨</h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>334</strong><br>文章</div></a>
+      <a href="/archives"><div><strong>350</strong><br>文章</div></a>
       <a href="/categories"><div><strong>21</strong><br>分类</div></a>
       <a href="/tags"><div><strong>42</strong><br>标签</div></a>
     </div>

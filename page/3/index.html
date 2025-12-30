@@ -44,7 +44,7 @@
     <h2 class="author">hongying</h2>
     <h3 class="description">娜厨</h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>334</strong><br>文章</div></a>
+      <a href="/archives"><div><strong>350</strong><br>文章</div></a>
       <a href="/categories"><div><strong>21</strong><br>分类</div></a>
       <a href="/tags"><div><strong>42</strong><br>标签</div></a>
     </div>
@@ -72,12 +72,12 @@
 
         <section id="main">
   
-    <article id="post-mysql/sqlzhuru" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-shici/hanshui" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2024/07/23/mysql/sqlzhuru/" class="article-date">
-  <time class="post-time" datetime="2024-07-23T01:51:46.000Z" itemprop="datePublished">
-    <span class="post-month">7月</span><br/>
-    <span class="post-day">23</span>
+    <a href="/2024/11/05/shici/hanshui/" class="article-date">
+  <time class="post-time" datetime="2024-11-05T05:33:30.000Z" itemprop="datePublished">
+    <span class="post-month">11月</span><br/>
+    <span class="post-day">05</span>
   </time>
 </a>
    
@@ -92,7 +92,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2024/07/23/mysql/sqlzhuru/">sql注入</a>
+      <a class="article-title" href="/2024/11/05/shici/hanshui/">《汉水》</a>
     </h1>
   
 
@@ -107,230 +107,26 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>  sql注入是常见的攻击形式，通过注入sql语句，导致程序的安全以及数据库安全。<br>
-  sql注入一般见效于拼接sql语句中，通过破坏输入规则，插入期望的sql语句，以此达到所要达到的目的。<br>
-  两个例子：</p>
-<pre class="line-numbers language-none"><code class="language-none">1.查找sql注入，一般用于登录界面。
-拼接sql语句：
-    String sql &#x3D; &quot;SELECT * FROM student where username &#x3D;&#39;&quot;+username+&quot;&#39; AND password &#x3D; &#39;&quot;+password+&quot;&#39;;&quot; 
-&#x2F;&#x2F;AND 运行优先级高于 OR
-注入sql语句：
-    username &#x3D; &quot;123&quot;;
-    password &#x3D; &quot;&#39;or &#39;1&#39;&#x3D;&#39;1&quot;;
-SQL最终语句: 
-    SELECT * FROM student where username &#x3D;&#39;123&#39; AND password &#x3D; &#39;&#39; or &#39;1&#39;&#x3D;&#39;1&#39;;
-因而可以将所有数据查出，造成登录成功。
-2.在查询操作中插入删除操作。
-拼接sql语句：
-    String sql &#x3D; &quot;SELECT * FROM student where username &#x3D;&#39;&quot;+username+&quot;&#39; AND password &#x3D; &#39;&quot;+password+&quot;&#39;;&quot; 
-
-注入sql语句：
-    username &#x3D; &quot;123&quot;;
-    password &#x3D; &quot;&#39;; DELETE FROM student where &#39;1&#39;&#x3D;&#39;1&quot;
-SQL最终语句：
-    SELECT * FROM student where username &#x3D;&#39;123&#39; AND password &#x3D;&#39;&#39;; DELETE FROM student where &#39;1&#39;&#x3D;&#39;1&#39;;
-注：该操作是批处理操作，但是java 中mysql执行方法execute不支持此操作。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>  因此为了避免sql注入，我们需要使用参数化sql语句，即预编译好的sql语句，除此之外做好用户输入数据的验证与过滤操作，以及最小化用户权限。<font color="Red">即使是参数化sql语句，我们也要避免拼接sql语句，否则依旧会有被sql注入的可能。</font><br>
-  这里主要是学习参数化sql语句，其他的会在后面项目中学习。<br>
-  参数化sql语句就是使用占位符？代替部分参数，通过prepareStatement(String sql)，创建一个preparedStatement，随后使用不带参数的execute/executeUpdate/executeQuery命令执行操作，不过在这之前通过preparedStatement对象的setInt与setString方法对？占位参数赋值，其中第一个参数为int型，表示第几个占位符，后面则为要赋的值。下面展示一个例子：</p>
-<pre class="line-numbers language-none"><code class="language-none">Connection conn &#x3D; DriverManager.getConnection(url,username,password);
-String sql &#x3D; &quot;INSERT INTO student(name,id_card) VALUES(?,?);&quot;;
-PreparedStatement pstm &#x3D; conn.prepareStatemnet(sql);
-pstm.setString(1,&quot;1234&quot;);
-pstm.setString(2,&quot;1234&quot;);
-pstm.executeUpdate();
-ResultSetMetaData rsmd &#x3D; rs.getMetaData();int columnCount &#x3D; rsmd.getColumnCount();这个可以获取字段数目，当我们忘记原本的数据库字段数时使用。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-        
-          <p class="article-more-link">
-            <a href="/2024/07/23/mysql/sqlzhuru/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/07/23/mysql/sqlzhuru/" data-id="cmjrwmd3r005qeouz4lna2s99" class="article-share-link">分享</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
-    <article id="post-mysql/charu1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2024/07/23/mysql/charu1/" class="article-date">
-  <time class="post-time" datetime="2024-07-23T01:34:35.000Z" itemprop="datePublished">
-    <span class="post-month">7月</span><br/>
-    <span class="post-day">23</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-
-
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/07/23/mysql/charu1/">插入数据</a>
-    </h1>
-  
-
-        <div>
-          
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>  插入单行数据命令：</p>
-<pre class="line-numbers language-none"><code class="language-none">INSERT INTO 表名(字段名1,字段名2...) VALUES(值1,值2...);<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>  插入多行数据命令：</p>
-<pre class="line-numbers language-none"><code class="language-none">INSERT INTO 表名(字段名1,字段名2...) VALUES(a1,a2...),(b1,b2...),...;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-        
-          <p class="article-more-link">
-            <a href="/2024/07/23/mysql/charu1/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/07/23/mysql/charu1/" data-id="cmjrwmd3n005deouze4zwb06a" class="article-share-link">分享</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
-    <article id="post-shici/shigan1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2024/07/22/shici/shigan1/" class="article-date">
-  <time class="post-time" datetime="2024-07-22T08:48:50.000Z" itemprop="datePublished">
-    <span class="post-month">7月</span><br/>
-    <span class="post-day">22</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-
-
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/07/22/shici/shigan1/">诗决</a>
-    </h1>
-  
-
-        <div>
-          
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>  写诗，一分靠文学素养，二分需细心观察，三分是否真心实意，剩余四分则是丰富想象力。所以一个好的诗词作者，需要拥有强大的想象力，目有极而心无极，观狭隘之一隅，表无限之宇宙。</p>
-
-        
-          <p class="article-more-link">
-            <a href="/2024/07/22/shici/shigan1/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/07/22/shici/shigan1/" data-id="cmjrwmd41006oeouzbbqpfhg8" class="article-share-link">分享</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
-    <article id="post-shici/gushi3" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2024/07/22/shici/gushi3/" class="article-date">
-  <time class="post-time" datetime="2024-07-22T08:10:15.000Z" itemprop="datePublished">
-    <span class="post-month">7月</span><br/>
-    <span class="post-day">22</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-
-
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/07/22/shici/gushi3/">《晚雨》</a>
-    </h1>
-  
-
-        <div>
-          
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <center>《晚雨》</center>
+        <center>《汉水》</center>
 <center>红熒</center>
-<center>劲风吹草折，云雾覆霞天。</center>
-<center>光闪催龙声，豆雨直窗落。</center>
-<center>云过天渐晴，净窗悬珠帘。</center>
-<center>霁雨星云落，明迹淡蛇痕。</center>
+<center>万古长夜奔流逝，涛涛浪水竞自行。</center>
+<center>男儿径须闹将去，莫使龙颜覆水流。</center>
+<center>季祖成事犹暮年，少华何惧蹉跎行。</center>
+<center>湖海形汇万水源，银尘簇拥星汉明。</center>
 
         
           <p class="article-more-link">
-            <a href="/2024/07/22/shici/gushi3/#more">Read More</a>
+            <a href="/2024/11/05/shici/hanshui/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/07/22/shici/gushi3/" data-id="cmjrwmd3x006beouz7chz9c7u" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2024/11/05/shici/hanshui/" data-id="cmjrxor7c00exxguz41fafler" class="article-share-link">分享</a>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AF%97%E8%AF%8D/" rel="tag">诗词</a></li></ul>
+
     </footer>
   </div>
   
@@ -340,12 +136,12 @@ ResultSetMetaData rsmd &#x3D; rs.getMetaData();int columnCount &#x3D; rsmd.getCo
 
 
   
-    <article id="post-shici/gushi2" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-shici/xurigui" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2024/07/22/shici/gushi2/" class="article-date">
-  <time class="post-time" datetime="2024-07-22T06:45:53.000Z" itemprop="datePublished">
-    <span class="post-month">7月</span><br/>
-    <span class="post-day">22</span>
+    <a href="/2024/10/15/shici/xurigui/" class="article-date">
+  <time class="post-time" datetime="2024-10-15T05:11:58.000Z" itemprop="datePublished">
+    <span class="post-month">10月</span><br/>
+    <span class="post-day">15</span>
   </time>
 </a>
    
@@ -360,7 +156,7 @@ ResultSetMetaData rsmd &#x3D; rs.getMetaData();int columnCount &#x3D; rsmd.getCo
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2024/07/22/shici/gushi2/">《落墨浮心》</a>
+      <a class="article-title" href="/2024/10/15/shici/xurigui/">《待曦归》</a>
     </h1>
   
 
@@ -375,22 +171,24 @@ ResultSetMetaData rsmd &#x3D; rs.getMetaData();int columnCount &#x3D; rsmd.getCo
     
     <div class="article-entry" itemprop="articleBody">
       
-        <center>《落笔浮心》</center>
+        <center>《待曦归》</center>
 <center>红熒</center>
-<center>凌笔刺墨染，遍看春长在。</center>
-<center>词画冷无情，只堪浮心意/浮表心中意。</center>
+<center>划笔行嘶泪如雨，身似草芥荒野生。</center>
+<center>举望弯月春秋故，待日晨曦再相拥。</center>
 
         
           <p class="article-more-link">
-            <a href="/2024/07/22/shici/gushi2/#more">Read More</a>
+            <a href="/2024/10/15/shici/xurigui/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/07/22/shici/gushi2/" data-id="cmjrwmd3u0061eouz0xi60l4x" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2024/10/15/shici/xurigui/" data-id="cmjrxor7d00f2xguzg3rx160s" class="article-share-link">分享</a>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AF%97%E8%AF%8D/" rel="tag">诗词</a></li></ul>
+
     </footer>
   </div>
   
@@ -400,12 +198,12 @@ ResultSetMetaData rsmd &#x3D; rs.getMetaData();int columnCount &#x3D; rsmd.getCo
 
 
   
-    <article id="post-shici/erge1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-shici/zipao" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2024/07/19/shici/erge1/" class="article-date">
-  <time class="post-time" datetime="2024-07-19T08:37:06.000Z" itemprop="datePublished">
-    <span class="post-month">7月</span><br/>
-    <span class="post-day">19</span>
+    <a href="/2024/10/10/shici/zipao/" class="article-date">
+  <time class="post-time" datetime="2024-10-10T06:18:31.000Z" itemprop="datePublished">
+    <span class="post-month">10月</span><br/>
+    <span class="post-day">10</span>
   </time>
 </a>
    
@@ -420,7 +218,7 @@ ResultSetMetaData rsmd &#x3D; rs.getMetaData();int columnCount &#x3D; rsmd.getCo
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2024/07/19/shici/erge1/">《月儿圆》</a>
+      <a class="article-title" href="/2024/10/10/shici/zipao/">《露世》</a>
     </h1>
   
 
@@ -435,25 +233,27 @@ ResultSetMetaData rsmd &#x3D; rs.getMetaData();int columnCount &#x3D; rsmd.getCo
     
     <div class="article-entry" itemprop="articleBody">
       
-        <center>《月儿圆》</center>
+        <center>《露世》</center>
 <center>红熒</center>
-&emsp;&emsp;月儿圆，月儿圆，古往人，今何在；今何在，在何方，涛涛江水无处寻;无处寻，寻何处，寻那满天繁花尘。
-&emsp;&emsp;星无踪，踪无影，人生何时是归期，期何许，许何求，春秋覆水何如旧。少家离，老大回，日月换天情如故。
-&emsp;&emsp;在何时，在何地，家如故，亲如旧，多珍惜，多珍重，霜华染尽温心存，温心存，存于心，愿你洗却满身尘。
-&emsp;&emsp;纵身粉，纵骨碎，吟初音，鸣心乐，看霞升，看云去，乐逍遥，做浮梦。
-&emsp;&emsp;悠悠华夏浮生梦，醉眼轻看霞云升，身粉骨碎吟初音，千百锤凿鸣心乐。
+<center>雏羽非自卫，固封永不成。</center>
+<center>虽己安此世，与世从此隔。</center>
+<center>自古获梦鳞，需予它物行。</center>
+<center>然习立世艺，抛我踊跃空。</center>
+<p>  你如果不想让自己伤害，可以将自己封闭，但是这样你就永远不会成长，更不会有更大的提高，你的自我保护只会让你与这个世界永远割裂，然后逐渐被别人淘汰而已，自古就有获得一个东西需要用另一个东西交换的道理，那么对于你想学习的东西，你必须能够或者勇敢将自己抛出去，让自己展露在社会与压力中，去主动面对，你才能主动去学习，去创造，你才能真正地去锻炼，才能超越自己。</p>
 
         
           <p class="article-more-link">
-            <a href="/2024/07/19/shici/erge1/#more">Read More</a>
+            <a href="/2024/10/10/shici/zipao/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/07/19/shici/erge1/" data-id="cmjrwmd3t005yeouz3tnfb9tg" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2024/10/10/shici/zipao/" data-id="cmjrxor7g00f8xguzhqm5hnzp" class="article-share-link">分享</a>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AF%97%E8%AF%8D/" rel="tag">诗词</a></li></ul>
+
     </footer>
   </div>
   
@@ -463,12 +263,12 @@ ResultSetMetaData rsmd &#x3D; rs.getMetaData();int columnCount &#x3D; rsmd.getCo
 
 
   
-    <article id="post-shici/gushi1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-java/springmvc2" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2024/07/19/shici/gushi1/" class="article-date">
-  <time class="post-time" datetime="2024-07-19T06:37:54.000Z" itemprop="datePublished">
-    <span class="post-month">7月</span><br/>
-    <span class="post-day">19</span>
+    <a href="/2024/09/30/java/springmvc2/" class="article-date">
+  <time class="post-time" datetime="2024-09-30T08:37:43.000Z" itemprop="datePublished">
+    <span class="post-month">9月</span><br/>
+    <span class="post-day">30</span>
   </time>
 </a>
    
@@ -483,7 +283,7 @@ ResultSetMetaData rsmd &#x3D; rs.getMetaData();int columnCount &#x3D; rsmd.getCo
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2024/07/19/shici/gushi1/">《碧浴行》</a>
+      <a class="article-title" href="/2024/09/30/java/springmvc2/">Spring mvc配置消息转换器</a>
     </h1>
   
 
@@ -498,25 +298,336 @@ ResultSetMetaData rsmd &#x3D; rs.getMetaData();int columnCount &#x3D; rsmd.getCo
     
     <div class="article-entry" itemprop="articleBody">
       
-        <center>《碧浴行》</center>
+        <h2 id="配置消息转换器"><a class="markdownIt-Anchor" href="#配置消息转换器"></a> 配置消息转换器</h2>
+<h4 id="配置fastjson转换器"><a class="markdownIt-Anchor" href="#配置fastjson转换器"></a> 配置FastJson转换器</h4>
+<ul>
+<li>
+<p>选择一个配置文件类实现WebMvcConfigurer</p>
+</li>
+<li>
+<p>重写configureMessageConverters方法注册添加消息转换器，需要配置UTF-8格式。</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"> <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">configureMessageConverters</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">HttpMessageConverter</span><span class="token punctuation">&lt;</span><span class="token operator">?</span><span class="token punctuation">></span><span class="token punctuation">></span></span> converters<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token class-name">FastJsonHttpMessageConverter</span> converter <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FastJsonHttpMessageConverter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//        FastJsonConfig fastJsonConfig = new FastJsonConfig();</span>
+        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">MediaType</span><span class="token punctuation">></span></span> fastMediaTypes <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        fastMediaTypes<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token class-name">MediaType</span><span class="token punctuation">.</span><span class="token constant">APPLICATION_JSON_UTF8</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        converter<span class="token punctuation">.</span><span class="token function">setSupportedMediaTypes</span><span class="token punctuation">(</span>fastMediaTypes<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        converters<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>converter<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token annotation punctuation">@Autowired</span>
+    <span class="token keyword">public</span> <span class="token class-name">SpringMvcConfig</span><span class="token punctuation">(</span><span class="token class-name">UserController</span> u<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+
+    <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<h4 id="钩子方法"><a class="markdownIt-Anchor" href="#钩子方法"></a> 钩子方法</h4>
+<p>父类定义一个模版方法，即方法中没有内容，但是有参数，子类重写方法，此时使用多态赋值父类，父类调用钩子方法，通过方法参数就能钓到子类运行后的值，本质就是地址里的值改变了，地址其实没有变，钩子里有个小参数诱饵但是经过执行后，钓到了大的鱼，即将其附上了其他值。对于spirng中就是容器实例化的自动注入，实现多态，然后钩子调用。</p>
+<ul>
+<li>父类，但是方法上加了@Bean 此时如果IOC容器中有子类实例，则会多态自动注入到this中， 通过System.out.println(this);以及通过一个Controller类自动注入实现类，然后输出地址，你会发现其实是一个地址，也就是此时this其实就是其容器里注册后子类实例，然后spirng启动后会扫描执行该方法，此时容器是没有该类实例，只有实现类实例。</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span>  <span class="token keyword">class</span> <span class="token class-name">Student</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Bean</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">beanTest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span>ss <span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">hook</span><span class="token punctuation">(</span>ss<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//ss相对于鱼饵</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//此时ss变成了大鱼，因为里面有东西了。</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"勾中了"</span><span class="token operator">+</span>ss<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token punctuation">&#125;</span>
+
+	<span class="token comment">//钩子方法</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">hook</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> s<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token comment">//有参构造</span>
+    <span class="token keyword">public</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token keyword">int</span> age<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+
+
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setName</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>
+<p>子类，类上加了Componet注解，告诉容器要创建实例，然后重写了钩子方法，同时s加上了1。</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Component</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyTest</span> <span class="token keyword">extends</span> <span class="token class-name">Student</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">MyTest</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token string">"123"</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span><span class="token string">"ssss"</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span><span class="token number">30</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">hook</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> s<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        s<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"重写了"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>
+<p>输出结果</p>
+<p><img src="https://cdn.jsdelivr.net/gh/hongjinlv/img_repo/hongying/202409301549550.png" alt="image-20240930154947457"></p>
+<p>而此时的自动注入的输出为：（具体代码不放了，应该都会）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/hongjinlv/img_repo/hongying/202409301550229.png" alt="image-20240930155027186"></p>
+<p>可以发现实现了钩子功能，钓上了1。这就是钩子方法，其实原理就是多态然后方法内值改了，不过记住前提地址不能变，否则达不到效果，因为spring的注解+IOC容器原理，所以我们会理解不了。</p>
+</li>
+</ul>
+<h4 id="enablewebmvc注解"><a class="markdownIt-Anchor" href="#enablewebmvc注解"></a> @EnableWebMvc注解</h4>
+        
+          <p class="article-more-link">
+            <a href="/2024/09/30/java/springmvc2/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hongyinggame.github.io/2024/09/30/java/springmvc2/" data-id="cmjrxor7300e3xguz6eqp90j2" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/" rel="tag">java</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+    <article id="post-dongtai/zhujie2" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/09/28/dongtai/zhujie2/" class="article-date">
+  <time class="post-time" datetime="2024-09-28T08:11:54.000Z" itemprop="datePublished">
+    <span class="post-month">9月</span><br/>
+    <span class="post-day">28</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+
+
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/09/28/dongtai/zhujie2/">注解二</a>
+    </h1>
+  
+
+        <div>
+          
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="注解的解析"><a class="markdownIt-Anchor" href="#注解的解析"></a> 注解的解析</h2>
+<h4 id="注解的解析-2"><a class="markdownIt-Anchor" href="#注解的解析-2"></a> 注解的解析</h4>
+<ul>
+<li>需要解析那个对象的注解就加载那个对象，例如：解析类则获取Class对象（反射）；</li>
+<li>常用方法：
+<ul>
+<li>isAnnotationPresent(Class&lt;?&gt; class);是否存在该注解；</li>
+<li>getDeclaredAnnotation(Class&lt;?&gt; class); 获取注解对象（需要强转）；</li>
+<li>getDeclaredAnnotations();获取所有注解构成的数组；</li>
+<li>注解对象.属性（方法）获取属性值。</li>
+</ul>
+</li>
+</ul>
+
+        
+          <p class="article-more-link">
+            <a href="/2024/09/28/dongtai/zhujie2/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hongyinggame.github.io/2024/09/28/dongtai/zhujie2/" data-id="cmjrxor7200dxxguzcb4t30cw" class="article-share-link">分享</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+    <article id="post-dongtai/24_9_28" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/09/28/dongtai/24_9_28/" class="article-date">
+  <time class="post-time" datetime="2024-09-28T02:38:46.000Z" itemprop="datePublished">
+    <span class="post-month">9月</span><br/>
+    <span class="post-day">28</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+
+
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/09/28/dongtai/24_9_28/">注解</a>
+    </h1>
+  
+
+        <div>
+          
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="注解"><a class="markdownIt-Anchor" href="#注解"></a> 注解</h2>
+<p>注解为特殊标记，用于告诉程序如何执行</p>
+<h4 id="自定义注解"><a class="markdownIt-Anchor" href="#自定义注解"></a> 自定义注解</h4>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token annotation punctuation">@interface</span> a<span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">name</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">default</span> 默认值<span class="token punctuation">;</span><span class="token comment">//将方法作为属性。</span>
+    <span class="token class-name">String</span> <span class="token function">value</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//特殊属性,即默认属性，即如果就只有一个value属性,则使用注解时无需指定value，默认赋值给value,注：此时的只有一个value属性，不仅代表注解只有一个value，如果注解有多个属性，但是多个属性都有默认值的话，则value属性也是可以不用写（value有默认值也是可以）。</span>
+        
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="元注解"><a class="markdownIt-Anchor" href="#元注解"></a> 元注解</h4>
+<p>注解注解的注解😏,第一个注解为动词，后面两个为名词。</p>
+<ul>
+<li>@Retention() 声明注解作用时机，即保留周期
+<ul>
+<li>RetentionPolicy枚举类
+<ul>
+<li>SOURCE 只作用源码阶段，字节码文件中不存在。</li>
+<li>CLASS（默认值）存在于源码与class文件中，但是运行时消失。</li>
+<li>RUNTIME 一直到运行时都存在。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>@Target() 声明注解作用位置
+<ul>
+<li>ElementType 枚举类
+<ul>
+<li>TYPE 类，接口</li>
+<li>FIELD, 成员变量</li>
+<li>METHOD, 成员方法</li>
+<li>PARAMETER, 方法参数</li>
+<li>CONSTRUCTOR, 构造器</li>
+<li>LOCAL_VARIABLE ，局部变量</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        
+          <p class="article-more-link">
+            <a href="/2024/09/28/dongtai/24_9_28/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hongyinggame.github.io/2024/09/28/dongtai/24_9_28/" data-id="cmjrxor7100dwxguz95ao78sg" class="article-share-link">分享</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+    <article id="post-shici/gushi8" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/08/30/shici/gushi8/" class="article-date">
+  <time class="post-time" datetime="2024-08-30T05:01:53.000Z" itemprop="datePublished">
+    <span class="post-month">8月</span><br/>
+    <span class="post-day">30</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+
+
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/08/30/shici/gushi8/">《霞云行》</a>
+    </h1>
+  
+
+        <div>
+          
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <center>《霞云行》</center>
 <center>红熒</center>
-<center>碧浴银珠敷玉体，云雾仙境落池天。</center>
-<center>飞花直下水弦鸣，尘舟拂水身轻燕。</center>
-<center>冰汽润鼻泣如泪，水露凝心雪霜烟。</center>
-<center>洗却尘染春昔梦，悦看羞体散千金。</center>
-&emsp;&emsp;心懔懔以怀霜，志眇眇而临云。——晋· 陆机《文赋》
+<center>日西从云隐，羞掩半目行。</center>
+<center>荷云落凡梯，浮游晚月归。</center>
 
         
           <p class="article-more-link">
-            <a href="/2024/07/19/shici/gushi1/#more">Read More</a>
+            <a href="/2024/08/30/shici/gushi8/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/07/19/shici/gushi1/" data-id="cmjrwmd3w0066eouze5km1hjx" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2024/08/30/shici/gushi8/" data-id="cmjrxor7b00ewxguz97j71gni" class="article-share-link">分享</a>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AF%97%E8%AF%8D/" rel="tag">诗词</a></li></ul>
+
     </footer>
   </div>
   
@@ -526,12 +637,12 @@ ResultSetMetaData rsmd &#x3D; rs.getMetaData();int columnCount &#x3D; rsmd.getCo
 
 
   
-    <article id="post-mysql/table1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-shici/gushi7" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2024/07/18/mysql/table1/" class="article-date">
-  <time class="post-time" datetime="2024-07-18T08:22:08.000Z" itemprop="datePublished">
-    <span class="post-month">7月</span><br/>
-    <span class="post-day">18</span>
+    <a href="/2024/08/05/shici/gushi7/" class="article-date">
+  <time class="post-time" datetime="2024-08-05T11:20:26.000Z" itemprop="datePublished">
+    <span class="post-month">8月</span><br/>
+    <span class="post-day">05</span>
   </time>
 </a>
    
@@ -546,7 +657,7 @@ ResultSetMetaData rsmd &#x3D; rs.getMetaData();int columnCount &#x3D; rsmd.getCo
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2024/07/18/mysql/table1/">类型</a>
+      <a class="article-title" href="/2024/08/05/shici/gushi7/">《金思》</a>
     </h1>
   
 
@@ -561,57 +672,20 @@ ResultSetMetaData rsmd &#x3D; rs.getMetaData();int columnCount &#x3D; rsmd.getCo
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>  Varchar与char区别：</p>
-<pre class="line-numbers language-none"><code class="language-none">Varchar 是可变长，需要字节存储长度，不大于255，需要1字节，特殊的如果表格使用ROW_FORMAT&#x3D;FIXED，则变为固定长度。一般不能直接设定最大值，虽然在mysql中看是变长，但是对于内存来说是直接开辟全部长度，以避免放不下情况，会浪费资源，同时Varchar在更新时，也会出现页内存储不够的情况，MylSAM会将行拆成不同的片段存储，InnoDB则需要分裂页来使行可以放进页内，允许最大长度为65535个字节，同时列共享（相加）。
-char 是固定长度，不够部分用空格补充，允许最大长度为255个字符，<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>  AUTO_INCREMENT 自增，所修饰字段具备如下特性：</p>
-<pre class="line-numbers language-none"><code class="language-none">1、字段不能为null，即设定NOT NULL;
-2、字段必须有唯一索引，即不允许有重复值，UNIQUE标识为唯一索引，不允许重复，但是可以为空，主键索引，通过设置主键自动创建，其不允许重复同时不允许为空，所以一般该字段设定为主键或者是唯一不为空字段;
-3、字段类型必须为整型;
-4、字段达到最大值时，失效；<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>  主键创建可以在字段声明时利用PRIMARY KEY设定，也可以在字段最后加入PRIMARY KEY(‘字段1’，‘字段2’)，我认为应该使用后者，当然如果只设定一个字段为主键可以使用前者，但是后者舍得主键与字段分开，便于阅读，同时便于确定主键。<font color="Red">主键只能指定一个，但是可以包括多个字段。</font></p>
-<pre class="line-numbers language-none"><code class="language-none">1、CREATE TABLE table_1(
-    &#39;id&#39; int NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    &#39;name&#39; varchar(10) NOT NULL
-)ENGINE&#x3D;InnoDB AUTO_INCREMENT&#x3D;7 DEAFAULT CHARSET&#x3D;utf8;
-2、CREATE TABLE table_2(
-    &#39;id&#39; int NOT NULL ATUO_INCREMENT,
-    &#39;name&#39; varchar(10) NOT NULL,
-    PRIMARY KEY(&#39;id&#39;)
-)ENGINE&#x3D;InnoDB AUTO_INCREMENT&#x3D;7 DEAFALT CHARSET&#x3D;utf8;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>  唯一键UNIQUE KEY，设定与PRIMARY KEY差不多，一个是声明字段时加UNIQUE，另一个在最后使用UNIQUE KEY ‘标识名称’ (‘字段名1’,‘字段名2’…)，也可以在修改表命令中使用ALTER TABLE &lt;数据表名&gt; ADD CONSTRAINT &lt;唯一约束名&gt; UNIQUE&lt;列名&gt;，也可ALTER TABLE ‘表名’ ADD unique(‘字段名’)，或者create unique index ‘名称’ on ‘表名’ (‘字段名’)，删除表使用ALTER TABLE &lt;数据表名&gt; DROP INDEX &lt;唯一约束名&gt;；</p>
-<pre class="line-numbers language-none"><code class="language-none">1、创建UNIQUE KEY
-a. CREATE TABLE table_1(
-    &#39;id&#39; int NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    &#39;name&#39; varchar(10) NOT NULL,
-    &#39;id_card&#39; char(13) NOT NULL UNIQUE,
-)ENGINE&#x3D;InnoDB AUTO_INCREMENT&#x3D;7 DEAFAULT CHARSET&#x3D;utf8;
-b. CREATE TABLE table_1(
-    &#39;id&#39; int NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    &#39;name&#39; varchar(10) NOT NULL,
-    &#39;id_card&#39; char(13) NOT NULL,
-    UNIQUE KEY &#39;id_unique&#39; (&#39;id_card&#39;)
-)ENGINE&#x3D;InnoDB AUTO_INCREMENT&#x3D;7 DEAFAULT CHARSET&#x3D;utf8;
-c. CREATE TABLE table_1(
-    &#39;id&#39; int NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    &#39;name&#39; varchar(10) NOT NULL,
-    &#39;id_card&#39; char(13) NOT NULL
-)ENGINE&#x3D;InnoDB AUTO_INCREMENT&#x3D;7 DEAFAULT CHARSET&#x3D;utf8;
-   ALTER TABLE table_1 ADD CONSTRAINT &#39;indexID&#39; UNIQUE &#39;id_card&#39;;
-   或者 CREATE UNIQUE INDEX &#39;indexID&#39; on &#39;table_1&#39; (&#39;id_card&#39;);
-3、删除唯一索引
-ALTER TABLE table_1 DROP INDEX &#39;indexID&#39;;
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+        <center>《金思》</center>
+<center>红熒</center>
+<center>秋叶牵思半金缕，玉露泛朱杏落黄。</center>
+<center>残风引线穿针云，寒天绵波梭舟藏。</center>
 
         
           <p class="article-more-link">
-            <a href="/2024/07/18/mysql/table1/#more">Read More</a>
+            <a href="/2024/08/05/shici/gushi7/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/07/18/mysql/table1/" data-id="cmjrwmd3q005meouz3m45htq2" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2024/08/05/shici/gushi7/" data-id="cmjrxor7b00evxguz2fhhf8vp" class="article-share-link">分享</a>
       
       
     </footer>
@@ -623,12 +697,12 @@ ALTER TABLE table_1 DROP INDEX &#39;indexID&#39;;
 
 
   
-    <article id="post-hexojilu/hexojilu1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-shici/gushi6" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2024/07/13/hexojilu/hexojilu1/" class="article-date">
-  <time class="post-time" datetime="2024-07-13T02:14:10.000Z" itemprop="datePublished">
+    <a href="/2024/07/30/shici/gushi6/" class="article-date">
+  <time class="post-time" datetime="2024-07-30T07:11:16.000Z" itemprop="datePublished">
     <span class="post-month">7月</span><br/>
-    <span class="post-day">13</span>
+    <span class="post-day">30</span>
   </time>
 </a>
    
@@ -643,7 +717,7 @@ ALTER TABLE table_1 DROP INDEX &#39;indexID&#39;;
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2024/07/13/hexojilu/hexojilu1/">Hexo在post文件夹中子文件夹中创建文档</a>
+      <a class="article-title" href="/2024/07/30/shici/gushi6/">丝线情</a>
     </h1>
   
 
@@ -658,37 +732,20 @@ ALTER TABLE table_1 DROP INDEX &#39;indexID&#39;;
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>  随着hexo创建博客增多，我发现如果都是hexo new 文件时，所有文件都会出现在_post文件夹中，然后就无法很好地整理与查找文件了，因此需要通过子文件夹来进行分类，所以需要在创建时就将其分文件夹创建。</p>
-<pre class="line-numbers language-none"><code class="language-none">hexo new [post] -p 子文件夹&#x2F;文件名 &quot;文件题目&quot;
-[]是说创建什么模式，一般有post、draft、page模式，当使用post是会在&#x2F;source&#x2F;_post文件夹下创建，而draft则是在source&#x2F;_draft文件夹下创建，page则是在source下创建。
-附：
-Usage: hexo new [layout] &lt;title&gt;
-
-Description:
-Create a new post.
-
-Arguments:
-  layout  Post layout. Use post, page, draft or whatever you want.
-  title   Post title. Wrap it with quotations to escape.
-
-Options:
-  -p, --path     Post path. Customize the path of the post.
-  -r, --replace  Replace the current post if existed.
-  -s, --slug     Post slug. Customize the URL of the post.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+        <p>  红丝剪不断，金线系万千。烬心凝血弦，情深化柔绵。<br>
+  连星理不乱，丝线四象穿。星云汇金缕，引线刺心弦。</p>
 
         
           <p class="article-more-link">
-            <a href="/2024/07/13/hexojilu/hexojilu1/#more">Read More</a>
+            <a href="/2024/07/30/shici/gushi6/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/07/13/hexojilu/hexojilu1/" data-id="cmjrwmd3j004peouz4q1cdszx" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2024/07/30/shici/gushi6/" data-id="cmjrxor7b00euxguza6rt233z" class="article-share-link">分享</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo%E8%AE%B0%E5%BD%95/" rel="tag">Hexo记录</a></li></ul>
-
     </footer>
   </div>
   
@@ -698,12 +755,12 @@ Options:
 
 
   
-    <article id="post-jiaoben/jiaoben1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-java/try1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2024/07/12/jiaoben/jiaoben1/" class="article-date">
-  <time class="post-time" datetime="2024-07-12T09:27:21.000Z" itemprop="datePublished">
+    <a href="/2024/07/29/java/try1/" class="article-date">
+  <time class="post-time" datetime="2024-07-29T08:39:02.000Z" itemprop="datePublished">
     <span class="post-month">7月</span><br/>
-    <span class="post-day">12</span>
+    <span class="post-day">29</span>
   </time>
 </a>
    
@@ -718,16 +775,12 @@ Options:
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2024/07/12/jiaoben/jiaoben1/">脚本延时变量</a>
+      <a class="article-title" href="/2024/07/29/java/try1/">post</a>
     </h1>
   
 
         <div>
           
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%84%9A%E6%9C%AC/">脚本</a>
-  </div>
-
           
               
 
@@ -737,32 +790,26 @@ Options:
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>  在进行编写脚本时，发现了延时变量与非延时变量，记录一下。一般if语句被认为是一行命令，而if中往往有几行命令，此时命令可以被认为是并行的，但是如果使用了延时扩展，就如同被认为不同命令，相继执行。</p>
-<pre class="line-numbers language-none"><code class="language-none">setlocal enabledelayedexpansion ::开启延时扩展
-set a &#x3D; 2
-if %a% &#x3D;;&#x3D;2 (::括号前要有空格
+        <p>  学习java mysql的关闭资源方法中，学习到try catch with resource 方法，这个方法需要要求所释放资源类实现了AutoCloseable接口，代码介绍如下：</p>
+<pre class="line-numbers language-none"><code class="language-none">try(将需要关闭的资源语句写在这里)&#123;
 
-    set a&#x3D;3
-    echo !a!::当使用!!才会变成延时变量
-    echo %a%
-    ::此时!a!输出3，而%a%输出2。
-
-)
-pause<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    ......
+&#125;catch(错误)&#123;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>  这个方法被常用取代try-catch finally，除了写作简洁外，还有一个就是它避免了错误覆盖，通过addSuppressed()方法将抑制的错误信息存储下来，后面通过getSuppressed()输出。<br>
+参考博客地址：<a target="_blank" rel="noopener" href="https://javabetter.cn/exception/try-with-resources.html">深入理解 Java 中的 try with resources</a></p>
 
         
           <p class="article-more-link">
-            <a href="/2024/07/12/jiaoben/jiaoben1/#more">Read More</a>
+            <a href="/2024/07/29/java/try1/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/07/12/jiaoben/jiaoben1/" data-id="cmjrwmd3k004teouzggnm7wvo" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2024/07/29/java/try1/" data-id="cmjrxor7400e7xguz6cjq20w5" class="article-share-link">分享</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%84%9A%E6%9C%AC/" rel="tag">脚本</a></li></ul>
-
     </footer>
   </div>
   
@@ -775,7 +822,7 @@ pause<span aria-hidden="true" class="line-numbers-rows"><span></span><span></spa
 
 
   <nav id="page-nav">
-    <a class="extend prev" rel="prev" href="/page/2/">&lt; pre</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/34/">34</a><a class="extend next" rel="next" href="/page/4/">next &gt;</a>
+    <a class="extend prev" rel="prev" href="/page/2/">&lt; pre</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/35/">35</a><a class="extend next" rel="next" href="/page/4/">next &gt;</a>
   </nav>
 </section>
         
@@ -816,7 +863,7 @@ pause<span aria-hidden="true" class="line-numbers-rows"><span></span><span></spa
     <h2 class="author">hongying</h2>
     <h3 class="description">娜厨</h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>334</strong><br>文章</div></a>
+      <a href="/archives"><div><strong>350</strong><br>文章</div></a>
       <a href="/categories"><div><strong>21</strong><br>分类</div></a>
       <a href="/tags"><div><strong>42</strong><br>标签</div></a>
     </div>
