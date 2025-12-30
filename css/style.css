@@ -1333,81 +1333,87 @@ a.article-title:hover {
 .article-entry h6 {
   font-weight: bold;
 }
-.article-entry h1,
-.article-entry h2,
-.article-entry h3,
-.article-entry h4,
-.article-entry h5,
-.article-entry h6 {
+color: #222 {
+center
+  display: block;
+  text-align: center;
+  margin: 3em auto;
+}
+color: #222 h1,
+color: #222 h2,
+color: #222 h3,
+color: #222 h4,
+color: #222 h5,
+color: #222 h6 {
   line-height: 1.1em;
   margin: 1.1em 0;
 }
-.article-entry a {
+color: #222 a {
   color: #258fb8;
   text-decoration: none;
 }
-.article-entry a:hover {
+color: #222 a:hover {
   text-decoration: underline;
 }
-.article-entry ul,
-.article-entry ol,
-.article-entry dl {
+color: #222 ul,
+color: #222 ol,
+color: #222 dl {
   margin-top: 1.6em;
   margin-bottom: 1.6em;
 }
-.article-entry img,
-.article-entry video {
+color: #222 img,
+color: #222 video {
   max-width: 100%;
   height: auto;
   display: block;
   margin: auto;
 }
-.article-entry iframe {
+color: #222 iframe {
   border: none;
 }
-.article-entry table {
+color: #222 table {
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
 }
-.article-entry th {
+color: #222 th {
   font-weight: bold;
   border-bottom: 3px solid #ddd;
   padding-bottom: 0.5em;
 }
-.article-entry td {
+color: #222 td {
   border-bottom: 1px solid #ddd;
   padding: 10px 0;
 }
-.article-entry blockquote {
+color: #222 blockquote {
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1.4em;
   margin: 1.6em 20px;
   text-align: left;
 }
-.article-entry blockquote footer {
+color: #222 blockquote footer {
   font-size: 14px;
   margin: 1.6em 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.article-entry blockquote footer cite:before {
+color: #222 blockquote footer cite:before {
   content: "—";
   padding: 0 0.5em;
 }
-.article-entry .pullquote {
+color: #222 .pullquote {
   text-align: left;
   width: 45%;
   margin: 0;
 }
-.article-entry .pullquote.left {
+color: #222 .pullquote.left {
   margin-left: 0.5em;
   margin-right: 1em;
 }
-.article-entry .pullquote.right {
+color: #222 .pullquote.right {
   margin-right: 0.5em;
   margin-left: 1em;
 }
-.article-entry .caption {
+color: #222 .caption {
   color: #999;
   display: block;
   font-size: 0.9em;
@@ -1415,15 +1421,15 @@ a.article-title:hover {
   position: relative;
   text-align: center;
 }
-.article-entry .video-container {
+color: #222 .video-container {
   position: relative;
   padding-top: 56.25%;
   height: 0;
   overflow: hidden;
 }
-.article-entry .video-container iframe,
-.article-entry .video-container object,
-.article-entry .video-container embed {
+color: #222 .video-container iframe,
+color: #222 .video-container object,
+color: #222 .video-container embed {
   position: absolute;
   top: 0;
   left: 0;
