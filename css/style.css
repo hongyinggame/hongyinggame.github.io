@@ -1374,11 +1374,6 @@ border-spacing: 0 th {
   border-bottom: 3px solid #ddd;
   padding-bottom: 0.5em;
 }
-border-spacing: 0 center {
-  display: block;
-  text-align: center;
-  margin: 3em auto;
-}
 border-spacing: 0 td {
   border-bottom: 1px solid #ddd;
   padding: 10px 0;
@@ -1741,6 +1736,21 @@ border-spacing: 0 .video-container embed {
   display: block;
   max-width: 100%;
   margin: 0 auto;
+}
+.article-entry center,
+.article-content center,
+.blog-post center {
+  line-height: 0.7 !important /* 使用!important确保优先级 */;
+  margin: 1.2em 0;
+  display: block;
+/* 清除浮动影响 */
+}
+.article-entry center:after,
+.article-content center:after,
+.blog-post center:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 #comments {
   background: #fff;
