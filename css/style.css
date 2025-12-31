@@ -2259,6 +2259,8 @@ pre .javascript .function {
 }
 .categories-box .category-list a {
   color: #000;
+  line-height: 1.4 !important;
+  padding-left: 0.2em !important;
 }
 .categories-box .category-list a:visited {
   color: #000;
