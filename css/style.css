@@ -1751,11 +1751,6 @@ border-spacing: 0 .video-container embed {
   word-break: break-word !important;
   overflow-wrap: break-word !important;
 }
-:after {
-  content: "";
-  display: table !important;
-  clear: both;
-}
 #comments {
   background: #fff;
   -webkit-box-shadow: 1px 2px 3px #ddd;
