@@ -1312,6 +1312,8 @@ a.article-title:hover {
   color: #555;
   padding: 0 20px;
   line-height: 1.6em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 .article-entry:before,
 .article-entry:after {
@@ -1742,15 +1744,18 @@ border-spacing: 0 .video-container embed {
 .article-content center,
 .blog-post center {
   line-height: 0.7 !important /* 使用!important确保优先级 */;
-  margin: 1.2em 0;
-  display: block;
-/* 清除浮动影响 */
+  display: block !important;
+  margin-top: 1em !important;
+  margin-bottom: 1em !important;
+/* 确保文本正常换行 */
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-word;
+  width: 1em !important;
 }
-.article-entry center:after,
-.article-content center:after,
-.blog-post center:after {
+:after {
   content: "";
-  display: table;
+  display: table !important;
   clear: both;
 }
 #comments {
