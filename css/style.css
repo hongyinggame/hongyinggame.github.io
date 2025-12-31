@@ -1743,15 +1743,15 @@ border-spacing: 0 .video-container embed {
 .article-entry center,
 .article-content center,
 .blog-post center {
-  line-height: 0.7 !important /* 使用!important确保优先级 */;
+  line-height: 2 !important /* 使用!important确保优先级 */;
   display: block !important;
   margin-top: 1em !important;
   margin-bottom: 1em !important;
-/* 确保文本正常换行 */
-  white-space: normal;
-  word-wrap: break-word;
-  word-break: break-word;
-  width: 1em !important;
+/* 4. 处理换行 */
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
 }
 :after {
   content: "";
