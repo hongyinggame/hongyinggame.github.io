@@ -44,7 +44,7 @@
     <h2 class="author">hongying</h2>
     <h3 class="description">娜厨</h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>350</strong><br>文章</div></a>
+      <a href="/archives"><div><strong>351</strong><br>文章</div></a>
       <a href="/categories"><div><strong>21</strong><br>分类</div></a>
       <a href="/tags"><div><strong>42</strong><br>标签</div></a>
     </div>
@@ -71,6 +71,70 @@
 </div>
 
         <section id="main">
+  
+    <article id="post-java/try1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/07/29/java/try1/" class="article-date">
+  <time class="post-time" datetime="2024-07-29T08:39:02.000Z" itemprop="datePublished">
+    <span class="post-month">7月</span><br/>
+    <span class="post-day">29</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+
+
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/07/29/java/try1/">post</a>
+    </h1>
+  
+
+        <div>
+          
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>  学习java mysql的关闭资源方法中，学习到try catch with resource 方法，这个方法需要要求所释放资源类实现了AutoCloseable接口，代码介绍如下：</p>
+<pre class="line-numbers language-none"><code class="language-none">try(将需要关闭的资源语句写在这里)&#123;
+
+    ......
+&#125;catch(错误)&#123;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>  这个方法被常用取代try-catch finally，除了写作简洁外，还有一个就是它避免了错误覆盖，通过addSuppressed()方法将抑制的错误信息存储下来，后面通过getSuppressed()输出。<br>
+参考博客地址：<a target="_blank" rel="noopener" href="https://javabetter.cn/exception/try-with-resources.html">深入理解 Java 中的 try with resources</a></p>
+
+        
+          <p class="article-more-link">
+            <a href="/2024/07/29/java/try1/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hongyinggame.github.io/2024/07/29/java/try1/" data-id="cmjtmfnmj00e7aouz2c5z18pd" class="article-share-link">分享</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
   
     <article id="post-java/java1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -712,72 +776,10 @@ ResultSetMetaData rsmd &#x3D; rs.getMetaData();int columnCount &#x3D; rsmd.getCo
 
 
   
-    <article id="post-shici/gushi3" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2024/07/22/shici/gushi3/" class="article-date">
-  <time class="post-time" datetime="2024-07-22T08:10:15.000Z" itemprop="datePublished">
-    <span class="post-month">7月</span><br/>
-    <span class="post-day">22</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-
-
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/07/22/shici/gushi3/">《晚雨》</a>
-    </h1>
-  
-
-        <div>
-          
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <center>《晚雨》</center>
-<center>红熒</center>
-<center>劲风吹草折，云雾覆霞天。</center>
-<center>光闪催龙声，豆雨直窗落。</center>
-<center>云过天渐晴，净窗悬珠帘。</center>
-<center>霁雨星云落，明迹淡蛇痕。</center>
-
-        
-          <p class="article-more-link">
-            <a href="/2024/07/22/shici/gushi3/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/07/22/shici/gushi3/" data-id="cmjtmfnmp00evaouzb78jct2f" class="article-share-link">分享</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
 
 
   <nav id="page-nav">
-    <a class="extend prev" rel="prev" href="/page/3/">&lt; pre</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/35/">35</a><a class="extend next" rel="next" href="/page/5/">next &gt;</a>
+    <a class="extend prev" rel="prev" href="/page/3/">&lt; pre</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/36/">36</a><a class="extend next" rel="next" href="/page/5/">next &gt;</a>
   </nav>
 </section>
         
@@ -818,7 +820,7 @@ ResultSetMetaData rsmd &#x3D; rs.getMetaData();int columnCount &#x3D; rsmd.getCo
     <h2 class="author">hongying</h2>
     <h3 class="description">娜厨</h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>350</strong><br>文章</div></a>
+      <a href="/archives"><div><strong>351</strong><br>文章</div></a>
       <a href="/categories"><div><strong>21</strong><br>分类</div></a>
       <a href="/tags"><div><strong>42</strong><br>标签</div></a>
     </div>
@@ -852,7 +854,7 @@ ResultSetMetaData rsmd &#x3D; rs.getMetaData();int columnCount &#x3D; rsmd.getCo
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy;2024 - 2025 hongying<br>
+      &copy;2025 - 2026 hongying<br>
       由<a href="http://hexo.io/" target="_blank">Hexo</a>强力驱动 | 
       主题-<a target="_blank" rel="noopener" href="https://github.com/ShanaMaid/hexo-theme-shana">Shana</a>
       
