@@ -44,9 +44,9 @@
     <h2 class="author">hongying</h2>
     <h3 class="description">娜厨</h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>351</strong><br>文章</div></a>
+      <a href="/archives"><div><strong>353</strong><br>文章</div></a>
       <a href="/categories"><div><strong>21</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>42</strong><br>标签</div></a>
+      <a href="/tags"><div><strong>43</strong><br>标签</div></a>
     </div>
     <ul class="blog-link">
      
@@ -71,6 +71,126 @@
 </div>
 
         <section id="main">
+  
+    <article id="post-24-6-28" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/06/28/24-6-28/" class="article-date">
+  <time class="post-time" datetime="2024-06-28T09:22:21.000Z" itemprop="datePublished">
+    <span class="post-month">6月</span><br/>
+    <span class="post-day">28</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+
+
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/06/28/24-6-28/">动态</a>
+    </h1>
+  
+
+        <div>
+          
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>  计算机教会我四件事：1.共享、开放，我要学会去共享，开放分享知识与技术，这样就可以联合所有人的知识与努力去创造更好的、更完美的事物，这其中蕴含的原理是人民群众与团结奋斗是创造一切的根本动力；2.自由度与包容性，要给予更多的自由创造与创新的空间，不能写死，不能没有包容性，要给予开发者或使用者更大的空间去自主独立创造，这样才能适合不同情景，这里的根本原理是独立自主，人是独立的个体，每个人都有其独立的、自我的想法意识，所以我们要展示包容性；3.终身学习，计算机是一直不断发展的，我们要终身学习，紧跟时代发展，其中原理就是自然选择，适者生存；4.以人为本、和谐统一，计算机就是服务于人民，那么其应该是以人为本，同时，一个程序不能满足所有人的需求，因而肯定是百花齐放，那么我们应该百家争鸣、和谐统一，而非自立高墙、固步自封，我们应该学习别人长处，避免别人的短处，然后互相成就、互相成长，达到动态平衡发展。</p>
+
+        
+          <p class="article-more-link">
+            <a href="/2024/06/28/24-6-28/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hongyinggame.github.io/2024/06/28/24-6-28/" data-id="cmjtmfnjh003laouz41m7g5wb" class="article-share-link">分享</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+    <article id="post-twogithub" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/06/28/twogithub/" class="article-date">
+  <time class="post-time" datetime="2024-06-28T08:33:12.000Z" itemprop="datePublished">
+    <span class="post-month">6月</span><br/>
+    <span class="post-day">28</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+
+
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/06/28/twogithub/">配置双博客（配置访问两个github）</a>
+    </h1>
+  
+
+        <div>
+          
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>  因为我有了两个博客，而一个博客如果使用github.io域名，那么一个博客只能对应一个github号，所以我创建了两个github号，所以需要配置一个电脑使用两个github。<br>
+  首先，配置两个github号我们需要明白根本操作其实是配置两个密钥，目前我们无法使用两个github，根本原因是我们只生成了一个密钥，且电脑只识别id_rsa密钥。<br>
+  理解上述原因后，我们就很好的明白如何解决问题了，首先生成不同的两个密钥，只需命名不同即可，然后添加对应的github账号中，随后将其添加SSH agent中，使电脑识别两个密钥，然后就是在.ssh里建立一个config文件（无后缀，可以先创建txt文件，然后删除后缀即可），为其设置不同的host别名，说白了就是用于隐藏域名的指代词，不同别名代表不同的配置，其中，最主要的是配置两个不同别名使用的密钥，随后，我们需要将全局配置删除，然后，我们就可以通过ssh -T git@自己配置的第一个Host别名，来测试是否成功，如果成功，那么我们就成功关联两个github了，每次就可以git@别名来区分操作。<br>
+  上面做完后，接下来就是hexo关联github了，这个简单，就是配置hexo的config文件，将deploy中的repository属性配置对应的别名就行了，最后就是因为全局配置没有了，所以我们需要将每个的hexo中的.deploy_git中.git中的config配置[user]选项，告诉hexo我是谁，其中含有email属性与name属性，写对应github的就行。<br>
+  经过以上操作我们就完成了一个电脑使用两个博客了。这里具体操作没有展示，因为网上都有介绍，这里主要说一下原理与操作流程，主要是便于我以后忘记时，快速明白其中原理，并明白到底要怎么做。</p>
+
+        
+          <p class="article-more-link">
+            <a href="/2024/06/28/twogithub/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hongyinggame.github.io/2024/06/28/twogithub/" data-id="cmjtmfnm800czaouz3mbt1g8r" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
   
     <article id="post-java-UI-font-1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -547,122 +667,6 @@
 
 
   
-    <article id="post-24-6-21" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2024/06/21/24-6-21/" class="article-date">
-  <time class="post-time" datetime="2024-06-21T01:47:56.000Z" itemprop="datePublished">
-    <span class="post-month">6月</span><br/>
-    <span class="post-day">21</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-
-
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/06/21/24-6-21/">动态</a>
-    </h1>
-  
-
-        <div>
-          
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>  判断一个人的功力是否深厚，其实，通过在最简单的事情上的表现就能窥见一二了。比如论文修改，我认识到了那些工作这么多年的人的深厚功力，虽然没有真正见识过，但是我从给我改的论文就看出来很强。<br>
-  于繁华乱世中心思静，于琳琅满目中心念纯。</p>
-
-        
-          <p class="article-more-link">
-            <a href="/2024/06/21/24-6-21/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/06/21/24-6-21/" data-id="cmjtmfnjd003caouz38r3beas" class="article-share-link">分享</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
-    <article id="post-24-6-20" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2024/06/20/24-6-20/" class="article-date">
-  <time class="post-time" datetime="2024-06-20T06:30:49.000Z" itemprop="datePublished">
-    <span class="post-month">6月</span><br/>
-    <span class="post-day">20</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-
-
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/06/20/24-6-20/">动态</a>
-    </h1>
-  
-
-        <div>
-          
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>  三千行路若云轻，七万日月水华荣。<br>
-  一日三分从头适，四分年月情不同。</p>
-
-        
-          <p class="article-more-link">
-            <a href="/2024/06/20/24-6-20/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/06/20/24-6-20/" data-id="cmjtmfnjc0039aouzax6e3n94" class="article-share-link">分享</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -707,9 +711,9 @@
     <h2 class="author">hongying</h2>
     <h3 class="description">娜厨</h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>351</strong><br>文章</div></a>
+      <a href="/archives"><div><strong>353</strong><br>文章</div></a>
       <a href="/categories"><div><strong>21</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>42</strong><br>标签</div></a>
+      <a href="/tags"><div><strong>43</strong><br>标签</div></a>
     </div>
 
 
