@@ -44,9 +44,9 @@
     <h2 class="author">hongying</h2>
     <h3 class="description">娜厨</h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>360</strong><br>文章</div></a>
-      <a href="/categories"><div><strong>21</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>46</strong><br>标签</div></a>
+      <a href="/archives"><div><strong>403</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>23</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>51</strong><br>标签</div></a>
     </div>
     <ul class="blog-link">
      
@@ -72,11 +72,430 @@
 
         <section id="main">
   
-    <article id="post-24-5-22-1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-24-6-28" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2024/05/22/24-5-22-1/" class="article-date">
-  <time class="post-time" datetime="2024-05-22T08:27:22.000Z" itemprop="datePublished">
-    <span class="post-month">5月</span><br/>
+    <a href="/2024/06/28/24-6-28/" class="article-date">
+  <time class="post-time" datetime="2024-06-28T09:22:21.000Z" itemprop="datePublished">
+    <span class="post-month">6月</span><br/>
+    <span class="post-day">28</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+
+
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/06/28/24-6-28/">动态</a>
+    </h1>
+  
+
+        <div>
+          
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>  计算机教会我四件事：1.共享、开放，我要学会去共享，开放分享知识与技术，这样就可以联合所有人的知识与努力去创造更好的、更完美的事物，这其中蕴含的原理是人民群众与团结奋斗是创造一切的根本动力；2.自由度与包容性，要给予更多的自由创造与创新的空间，不能写死，不能没有包容性，要给予开发者或使用者更大的空间去自主独立创造，这样才能适合不同情景，这里的根本原理是独立自主，人是独立的个体，每个人都有其独立的、自我的想法意识，所以我们要展示包容性；3.终身学习，计算机是一直不断发展的，我们要终身学习，紧跟时代发展，其中原理就是自然选择，适者生存；4.以人为本、和谐统一，计算机就是服务于人民，那么其应该是以人为本，同时，一个程序不能满足所有人的需求，因而肯定是百花齐放，那么我们应该百家争鸣、和谐统一，而非自立高墙、固步自封，我们应该学习别人长处，避免别人的短处，然后互相成就、互相成长，达到动态平衡发展。</p>
+
+        
+          <p class="article-more-link">
+            <a href="/2024/06/28/24-6-28/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hongyinggame.github.io/2024/06/28/24-6-28/" data-id="cmjtmfnjh003laouz41m7g5wb" class="article-share-link">分享</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+    <article id="post-twogithub" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/06/28/twogithub/" class="article-date">
+  <time class="post-time" datetime="2024-06-28T08:33:12.000Z" itemprop="datePublished">
+    <span class="post-month">6月</span><br/>
+    <span class="post-day">28</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+
+
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/06/28/twogithub/">配置双博客（配置访问两个github）</a>
+    </h1>
+  
+
+        <div>
+          
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>  因为我有了两个博客，而一个博客如果使用github.io域名，那么一个博客只能对应一个github号，所以我创建了两个github号，所以需要配置一个电脑使用两个github。<br>
+  首先，配置两个github号我们需要明白根本操作其实是配置两个密钥，目前我们无法使用两个github，根本原因是我们只生成了一个密钥，且电脑只识别id_rsa密钥。<br>
+  理解上述原因后，我们就很好的明白如何解决问题了，首先生成不同的两个密钥，只需命名不同即可，然后添加对应的github账号中，随后将其添加SSH agent中，使电脑识别两个密钥，然后就是在.ssh里建立一个config文件（无后缀，可以先创建txt文件，然后删除后缀即可），为其设置不同的host别名，说白了就是用于隐藏域名的指代词，不同别名代表不同的配置，其中，最主要的是配置两个不同别名使用的密钥，随后，我们需要将全局配置删除，然后，我们就可以通过ssh -T git@自己配置的第一个Host别名，来测试是否成功，如果成功，那么我们就成功关联两个github了，每次就可以git@别名来区分操作。<br>
+  上面做完后，接下来就是hexo关联github了，这个简单，就是配置hexo的config文件，将deploy中的repository属性配置对应的别名就行了，最后就是因为全局配置没有了，所以我们需要将每个的hexo中的.deploy_git中.git中的config配置[user]选项，告诉hexo我是谁，其中含有email属性与name属性，写对应github的就行。<br>
+  经过以上操作我们就完成了一个电脑使用两个博客了。这里具体操作没有展示，因为网上都有介绍，这里主要说一下原理与操作流程，主要是便于我以后忘记时，快速明白其中原理，并明白到底要怎么做。</p>
+
+        
+          <p class="article-more-link">
+            <a href="/2024/06/28/twogithub/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hongyinggame.github.io/2024/06/28/twogithub/" data-id="cmjtmfnm800czaouz3mbt1g8r" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+    <article id="post-java-UI-font-1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/06/27/java-UI-font-1/" class="article-date">
+  <time class="post-time" datetime="2024-06-27T02:22:26.000Z" itemprop="datePublished">
+    <span class="post-month">6月</span><br/>
+    <span class="post-day">27</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+
+
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/06/27/java-UI-font-1/">java_UI_font_1</a>
+    </h1>
+  
+
+        <div>
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/java/">java</a>,<a class="article-category-link" href="/categories/java/UI/">UI</a>
+  </div>
+
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>  在进行JAVA贪吃蛇时，发现UI窗口中文字体乱码情况，起初以为是JAVA编码原因，经过查找资料得知，罪魁祸首是Windows系统本身是GBK，而非utf-8,只有Beta版可以设置，具体可以通过系统设置的时间与语言模块查看，具体原因为：我们java是UTF-8编码，但是窗口是基于windows的，windows解析展示时乱码导致，所以我们添加一个jvm参数，具体内容为-Dfile.encoding=gbk。<br>
+<img src="/images/java/UI/fig1.png" alt="配置位置"></p>
+
+        
+          <p class="article-more-link">
+            <a href="/2024/06/27/java-UI-font-1/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hongyinggame.github.io/2024/06/27/java-UI-font-1/" data-id="cmjtmfnku0086aouz48vi7p1r" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UI/" rel="tag">UI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/" rel="tag">java</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+    <article id="post-24-6-26" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/06/26/24-6-26/" class="article-date">
+  <time class="post-time" datetime="2024-06-26T03:19:18.000Z" itemprop="datePublished">
+    <span class="post-month">6月</span><br/>
+    <span class="post-day">26</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+
+
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/06/26/24-6-26/">动态</a>
+    </h1>
+  
+
+        <div>
+          
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>  搭建了一个电脑访问两个git。</p>
+
+        
+          <p class="article-more-link">
+            <a href="/2024/06/26/24-6-26/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hongyinggame.github.io/2024/06/26/24-6-26/" data-id="cmjtmfnjf003haouzbqnh78e1" class="article-share-link">分享</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+    <article id="post-24-6-24" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/06/24/24-6-24/" class="article-date">
+  <time class="post-time" datetime="2024-06-24T02:19:34.000Z" itemprop="datePublished">
+    <span class="post-month">6月</span><br/>
+    <span class="post-day">24</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+
+
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/06/24/24-6-24/">动态</a>
+    </h1>
+  
+
+        <div>
+          
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>  从潜意识思考、每时每刻思考到独立自主思考，再到双意识思考，从观察思考到逻辑思考再到深度与广度思考，最后到强记忆思考。<br>
+  作为侦探，需要思考与执行力，然后是做计划、规划的能力，最后是观察记忆能力。</p>
+
+        
+          <p class="article-more-link">
+            <a href="/2024/06/24/24-6-24/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hongyinggame.github.io/2024/06/24/24-6-24/" data-id="cmjtmfnjf003gaouzd15u0fv1" class="article-share-link">分享</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+    <article id="post-24-6-23-1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/06/23/24-6-23-1/" class="article-date">
+  <time class="post-time" datetime="2024-06-23T09:20:33.000Z" itemprop="datePublished">
+    <span class="post-month">6月</span><br/>
+    <span class="post-day">23</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+
+
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/06/23/24-6-23-1/">动态</a>
+    </h1>
+  
+
+        <div>
+          
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>  世间最大的恶不是说你做了多大的恶，而是说你在该做善的时候选择了逃避，相反，世间最大的善不是说你做的多大的善，而是说在你最不该作恶时守住底线。高调永远不是最大的，守住底线才是最大的。<br>
+  成熟是你能够有能力面对社会，面对未来，是能够遇事处变不惊，能够承受痛苦与快乐并存，能够独立自主解决面临的问题与调整自己的能力，同时，有时这不是为了自己，而是为了别人。<br>
+  思想是先有思考，然后才会想法的，如果你不去思考，不给自己一些思考的时间与空间，那么我们如何能够从一个事物中学到新东西与知识呢，因为这些都是别人通过思考获得的，我们难道不应该去思考才能真正理解这些吗。</p>
+
+        
+          <p class="article-more-link">
+            <a href="/2024/06/23/24-6-23-1/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hongyinggame.github.io/2024/06/23/24-6-23-1/" data-id="cmjtmfnje003eaouze611e4b6" class="article-share-link">分享</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+    <article id="post-24-6-23" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/06/23/24-6-23/" class="article-date">
+  <time class="post-time" datetime="2024-06-23T07:12:05.000Z" itemprop="datePublished">
+    <span class="post-month">6月</span><br/>
+    <span class="post-day">23</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+
+
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/06/23/24-6-23/">动态</a>
+    </h1>
+  
+
+        <div>
+          
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>  人在焦虑时会不自觉地产生某些反应以纾解压力，这就叫防卫机制。<br>
+  不要自不量力，把精力都消耗在无谓的期望与伤心上。<br>
+  毕其功于一役。<br>
+  像锅贴，先外后里熟，我们有时也应该这样，先做简单的、容易的、表面的，培养和建立兴趣，然后在去深入到本质与内核，从而进入最核心的区域去创造、发明。<br>
+  我对《蛋白质女孩》的评价值，有趣的令人着迷，读之便爱不释手，表面无营养，实则充满“蛋白质”，使你能够成长。</p>
+
+        
+          <p class="article-more-link">
+            <a href="/2024/06/23/24-6-23/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hongyinggame.github.io/2024/06/23/24-6-23/" data-id="cmjtmfnje003faouz21ri5ycm" class="article-share-link">分享</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+    <article id="post-24-6-22" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/06/22/24-6-22/" class="article-date">
+  <time class="post-time" datetime="2024-06-22T11:16:58.000Z" itemprop="datePublished">
+    <span class="post-month">6月</span><br/>
     <span class="post-day">22</span>
   </time>
 </a>
@@ -92,7 +511,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2024/05/22/24-5-22-1/">《凡真》</a>
+      <a class="article-title" href="/2024/06/22/24-6-22/">动态</a>
     </h1>
   
 
@@ -107,24 +526,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <center>《无题》</center>
-<center>红熒</center>
-<center>常念繁华年，谁知平凡心。</center>
-<center>潮起涨复落，浪涌打又停。</center>
-<center>《无题》</center>
-<center>红熒</center>
-<center>风雨行舟难进退，波浪涌落进退难。</center>
-<center>繁华瞬尽复往态，一点纯粹归凡真。</center>
+        <p>  在没有冷静之前，不要被冲动驱动我们做出任何决定，做决定前最好保证自己头脑是冷静的，这样做的决定才具有说服力，同时，我们也能够长久遵守。<br>
+  我所做的一切是为了往更强大进发，在我没有去世之前，眼中应该追逐更好的自己，高兴于沿途的成长，但不能沉浸于此，从而忘乎所以。</p>
 
         
           <p class="article-more-link">
-            <a href="/2024/05/22/24-5-22-1/#more">Read More</a>
+            <a href="/2024/06/22/24-6-22/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/05/22/24-5-22-1/" data-id="cmjtmfniz002aaouzhpbv89rn" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2024/06/22/24-6-22/" data-id="cmjtmfnje003daouz0sdjd3v0" class="article-share-link">分享</a>
       
       
     </footer>
@@ -136,70 +549,11 @@
 
 
   
-    <article id="post-24-5-22" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-24-6-21-2" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2024/05/22/24-5-22/" class="article-date">
-  <time class="post-time" datetime="2024-05-22T06:40:39.000Z" itemprop="datePublished">
-    <span class="post-month">5月</span><br/>
-    <span class="post-day">22</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-
-
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/05/22/24-5-22/">动态</a>
-    </h1>
-  
-
-        <div>
-          
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>  对于创作好坏，我自己评价标准，同时这里面也有我对自己的创作要求：1.是否用心，是否真心，是否将感情倾注于此，如果我通过这个读出了感情，理解了其中的真情实感，确实是真心去做的，那么我就会认为这个就是一个好作品，不管别人如何评价，每个人的能力都是有差别的，有的人做的好，有的人做的坏，但是这是人的评价，在我眼里如果是全力去做了，这个作品就是最好的，不断进步，不断完善才是常态。2.如果说和我产生了共鸣，也就是这个作品能够给我很大的情感共鸣，或者说开始时没有共鸣，但是赋予了某个意义后就有共鸣了，那么我会基于好的评价。<br>
-  人有时候需要纯粹一些，人生是一个过程，是我们自己去行走的过程，而过程最后是死亡，最后都会转成空，人生意义其实就是没有意义，我们就是享受这个过程，做我们自己认为对的，自己想要的对的事情，然后对所做的事情纯粹而不有一点杂念，最后就是全力去做好，去生活，直到生命结束的那一刻，坦然面对。<br>
-  人生平常、平凡才是常态，而那些繁华、那些大事，只是一时的。</p>
-
-        
-          <p class="article-more-link">
-            <a href="/2024/05/22/24-5-22/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/05/22/24-5-22/" data-id="cmjtmfnj0002baouz75o568ii" class="article-share-link">分享</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
-    <article id="post-baojie8wen" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2024/05/21/baojie8wen/" class="article-date">
-  <time class="post-time" datetime="2024-05-21T06:45:19.000Z" itemprop="datePublished">
-    <span class="post-month">5月</span><br/>
+    <a href="/2024/06/21/24-6-21-2/" class="article-date">
+  <time class="post-time" datetime="2024-06-21T13:36:00.000Z" itemprop="datePublished">
+    <span class="post-month">6月</span><br/>
     <span class="post-day">21</span>
   </time>
 </a>
@@ -215,7 +569,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2024/05/21/baojie8wen/">宝洁八大问-自己思考</a>
+      <a class="article-title" href="/2024/06/21/24-6-21-2/">动态</a>
     </h1>
   
 
@@ -230,30 +584,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>  宝洁八大问是经典问题，我在之前不清楚，但是我同学面试给我发了一个岗位，是个销售岗位，然后我去搜了是干啥的，然后就看到了八大问，而这八大问我非常喜欢，这能够体现一个人的自我管理与团队管理能力，这对考察自我能力，培养自我能力非常重要。总的来说了解这些东西，对未来自我培养与锻炼有一定的知道意义。<br>
-  我从中总结一个人应该具备的能力有：1.目标与行动力；2.分析问题、独立判断、抓主次关键、解决问题的能力；3.有清醒的决策与合理计划能力；4.有团队协作能力与做事主动能力，也应该有团队领导力；5.有创新能力与学习应用能力；6.清晰思维与严谨逻辑，同时，清晰表达能够说服别人的能力。</p>
-<h4 id="请你举一个具体的例子说明你给自己确定了一个很高的目标然后达到这个目标"><a class="markdownIt-Anchor" href="#请你举一个具体的例子说明你给自己确定了一个很高的目标然后达到这个目标"></a> 请你举一个具体的例子，说明你给自己确定了一个很高的目标，然后达到这个目标。</h4>
-<p>  这里就需要我们对目标有清醒认识，很多人说这是考察目标+行动力，确实是，确实就是目标+行动力，而我所要看的不是说例子，而是思考其中本质关系与我对目标行动力的思考。<br>
-  目标分为表面目标与深层目标，例如我在大学里学数学，考高分是表面目标，很多人为了考高分而学习，但是这不是深层目标，我们应该深入思考为什么有分数这件事，从而挖掘深层目标，不难看出分数只是一个衡量标准， 是用于衡量是否学会与理解的标准，因此深层目标是学会学懂数学，所以我在大学期间定的深层目标就是学会学懂数学。<br>
-  表面目标，在这里是数学分数，是用于衡量深层目标，即学懂数学，在准备阶段，我们不能只在意表面目标，也就是会所不能过于看重分数，当然此时的不看重是不去过于看重分数的得失，不去让分数去扰乱自己的内心，而是让自己专注于存在的问题，专注于眼前，全力去准备学习，去把数学基本都学懂，此时的表层目标应该被用于发现问题，解决问题，而不是因为这去自我伤心与痛苦的，我们要关注其中反应的问题，然后去解决，因为表层目标是反应深层目标的最直接手段。在这里，我要注重提醒一下，我之前在其中犯了一个重要错误，也就是完全忽视表层目标，这就导致我缺少了行动力，同时无法全面地看到自己存在的问题。<br>
-  同时，分数是衡量标准，一方面用于判断自己是否学懂，通过分数来认识到自己的不足，发现深层问题，另一方面，用于提供自己的行动欲望，分数因其表面，从而极意被我们索取，因而我们也就是很容易去获得充实感，进而获得想要得到更多的欲望，于是就会有很强大的欲望。因此，我们应该树立一个衡量标准，也就是一个成绩期望，这是很重要的，但是成绩期望应该细分为两个，一个是基础期望，这个期望就是用于确定你是否符合标准，也就是是否将所学内容基本掌握，也就是达到正常标准，另一个是进步空间，也就是我们所说的很高的目标了，这个就是用于判断我们是否完全掌握，或者说衡量我们能力差距，换句话说，在没有达到基本目标前，我们所要做的是自我对比，找到自己本身的问题所在也就是表层问题，而达到基本目标之后就是追求进步空间了，此时是自我与别人对比，对比其实我不太喜欢，所以我会说是寻找差距与深层问题。以上就是表层目标的设定，但是我还要强调一件事，这是我也出现过的错误，那就是定过于高的目标，这会让我们陷入自我安慰与欣慰的陷阱，在设定过程中，自我陶醉，非常兴奋与开心，殊不知只是自我安慰而已，当开始做时，就会出现因为极大的困难，然后燃烧的火焰被无情践踏，因为获得太少而非常痛苦，然后就丧失兴趣，然后就没有了后续，这是我们注意的，我们定的目标要在可控范围内的，不是一味的高的，应该是在合理的高度的，这就需要我们有自我清醒的认知。<br>
-  总之，目标分为深层目标与表层目标，我们应该发现深层目标，而不能只追求表层目标，因为深层目标才是最终目的，然后就是依据深层目标，来设定表面目标，因为表层目标是衡量深层目标用的，表层目标分为基本目标与进步空间，我们应该合理设定两个目标，基本目标是正常标准，也是自我考验，进步空间则是我们需要提升自我，发现问题，更进一步的目标。对于表层目标我们不能看重又需要看重，不需要看重是因为我们应该透过表层看到深层问题，而不是局限于表层，进行无意义的伤心，而不去思考自我问题，看重是因为这能够反应问题，是我们发现问题最直接的手段，对于深层目标，我们应该时刻谨记，这样我们才不会被自我与外界蒙蔽，从而避免忘记本质的思维与初心，但是不能只看重深层目标，因为这个无法使我们提升自我行动力，反而表层目标才是我们行动力最好的养料。<br>
-  以下待写中…</p>
-<h4 id="请举例说明你在一项团队活动中如何团结他人并且起到领导者的作用并带领团队最终获得所希望的结果"><a class="markdownIt-Anchor" href="#请举例说明你在一项团队活动中如何团结他人并且起到领导者的作用并带领团队最终获得所希望的结果"></a> 请举例说明你在一项团队活动中如何团结他人，并且起到领导者的作用，并带领团队最终获得所希望的结果。</h4>
-<h4 id="请你描述一种情形在这种情形中你必须去寻找相关的信息发现关键的问题事项并且自己决定依照一些步骤来获得期望的结果"><a class="markdownIt-Anchor" href="#请你描述一种情形在这种情形中你必须去寻找相关的信息发现关键的问题事项并且自己决定依照一些步骤来获得期望的结果"></a> 请你描述一种情形，在这种情形中你必须去寻找相关的信息，发现关键的问题事项，并且自己决定依照一些步骤来获得期望的结果。</h4>
-<h4 id="请你举一个例子说明你是怎样通过事实来说服他人的"><a class="markdownIt-Anchor" href="#请你举一个例子说明你是怎样通过事实来说服他人的"></a> 请你举一个例子说明你是怎样通过事实来说服他人的。</h4>
-<h4 id="请你举一个例子说明在完成一项重要任务时你是怎样和他人进行有效合作的"><a class="markdownIt-Anchor" href="#请你举一个例子说明在完成一项重要任务时你是怎样和他人进行有效合作的"></a> 请你举一个例子，说明在完成一项重要任务时，你是怎样和他人进行有效合作的。</h4>
-<h4 id="请你举一个例子说明你的一个有创意的建议曾经对一项计划的成功起到了重要的作用"><a class="markdownIt-Anchor" href="#请你举一个例子说明你的一个有创意的建议曾经对一项计划的成功起到了重要的作用"></a> 请你举一个例子，说明你的一个有创意的建议曾经对一项计划的成功起到了重要的作用。</h4>
-<h4 id="请你举一个具体的例子说明你是怎么评估形势将注意力集中在最重要的事情上面从而获得你所期望的结果"><a class="markdownIt-Anchor" href="#请你举一个具体的例子说明你是怎么评估形势将注意力集中在最重要的事情上面从而获得你所期望的结果"></a> 请你举一个具体的例子，说明你是怎么评估形势，将注意力集中在最重要的事情上面，从而获得你所期望的结果。</h4>
+        <p>  一个人如果顺风顺水，然后水到渠成获得成功，我不会太羡慕与崇拜，而如果一个人经历了困境后崛起，并且最终成功，那么我会很尊敬他们，因为他们做到了在困境中成长，他们没有被困难打倒，反而奋起而成功，这个品质与精神我很尊敬。</p>
+
         
           <p class="article-more-link">
-            <a href="/2024/05/21/baojie8wen/#more">Read More</a>
+            <a href="/2024/06/21/24-6-21-2/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/05/21/baojie8wen/" data-id="cmjtmfnjr004gaouz72mnhj09" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2024/06/21/24-6-21-2/" data-id="cmjtmfnjd003baouz350g8h7j" class="article-share-link">分享</a>
       
       
     </footer>
@@ -265,11 +606,11 @@
 
 
   
-    <article id="post-jiatingjiaoshi1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-24-6-21-1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2024/05/21/jiatingjiaoshi1/" class="article-date">
-  <time class="post-time" datetime="2024-05-21T01:53:38.000Z" itemprop="datePublished">
-    <span class="post-month">5月</span><br/>
+    <a href="/2024/06/21/24-6-21-1/" class="article-date">
+  <time class="post-time" datetime="2024-06-21T06:27:48.000Z" itemprop="datePublished">
+    <span class="post-month">6月</span><br/>
     <span class="post-day">21</span>
   </time>
 </a>
@@ -285,7 +626,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2024/05/21/jiatingjiaoshi1/">家庭教师（一）</a>
+      <a class="article-title" href="/2024/06/21/24-6-21-1/">动态</a>
     </h1>
   
 
@@ -300,376 +641,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>  通过看《家庭教师》的前几集，我最大的感受就是为了说明家庭、友情、羁绊的重要性，这是一个团体与组织最重要的东西，这些才是维系之根本，因为在困难面前，利益永远是最先背叛的，而羁绊则是最难被分割的东西。</p>
+        <p>  什么是知识分子？作为知识分子，我们应该做什么？我认为温教授说的很对，不是所有人都是知识分子，或者说知识分子过去含义并不是说有知识就是知识分子，我们现在应该说是科学工作者，而知识分子相比于科学工作者，多了一个能够基于人类良知对社会或者国家进行合理的批判分析，做有利于国家与社会的事情，这样的人才能叫为知识分子。<br>
+  贪婪？资本主义或者人其实本性是贪婪的，贪婪可以推动人类不断发展，以此满足人类欲望，但是，贪婪不应该形成一个习惯，随着社会的发展，贪婪已然应该转变，任何事情应该有度，应该有约束，不应该在无限扩张，因为资源是有限的，人的欲望是无限的，我们应该适当&quot;贪婪&quot;，或者说由贪婪变成渴望，渴望生活更好，但是也要基于现实出来，理性发展，持续发展，适度扩张，最后逐渐实现最后的渴望，而不是竭泽而渔，短时间就想要获得满足。其实，我也发现我们极意贪婪，想要现在获得，缺少一定的耐心与定力，所以我要培养忍耐力，如果一个事物我们力所不能及，那么我们不要过度透支自己来强制获取，这会带来极大的隐患与危险，我们应该将渴望化为动力，适度而又理性去奋斗，去朝着这个目标努力， 最后达到这个目标，当然这个是需要具体情况具体分析的，有些是迫不得已需要竭泽而渔的，尤其涉及自由与自主。<br>
+  渴望是人行动的原动力，所以培养人的兴趣非常重要。<br>
+  无论谁，做事情永远都是有目的的，而且很多都是为了利益出发，所以很多我们看到的表面原因，其实并不是真正的根本原因，根本原因需要我们自己去分析思考，去发现，这就需要我们能够有更深、更广的思考能力，同时还有有一定的资源作为支撑。<br>
+  现在已经不是一个胜利走向另一个胜利，而是解决一个困难还有一个困难需要解决，过度追求虚伪的表象只会引来越来越多的问题，人类就是这样自我走向毁灭的，一点没有大局意识，我们现在应该实事求是，应该开始追求本质的内涵，做实事即使是微不足道也比做坑人的、做害人的虚伪事更有意义。恶性循环往往很难结束，罪魁祸首就是开头的人，而后面的人只能被迫接受与延续，熟不知越滚越大，然后走向万劫深渊，无法挽回，永远记得任何事物，不要因为开头代价小，就认为无所谓，就认为我们可以浅尝，熟不知你的浅尝刚开始确实是没有什么影响，但是其不是轻易就能够结束的，这是一直影响，一直积累，最后逐渐越滚越大的，毒品就是这样的，刚开始吸食可能伤害不大，但是我们一旦开头，就很难结束，就会一直影响，最后摧毁自己的身体。</p>
 
         
           <p class="article-more-link">
-            <a href="/2024/05/21/jiatingjiaoshi1/#more">Read More</a>
+            <a href="/2024/06/21/24-6-21-1/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/05/21/jiatingjiaoshi1/" data-id="cmjtmfnkv008aaouz9qlg6dpe" class="article-share-link">分享</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
-    <article id="post-24-5-21" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2024/05/21/24-5-21/" class="article-date">
-  <time class="post-time" datetime="2024-05-21T01:17:14.000Z" itemprop="datePublished">
-    <span class="post-month">5月</span><br/>
-    <span class="post-day">21</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-
-
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/05/21/24-5-21/">动态</a>
-    </h1>
-  
-
-        <div>
-          
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>  暮云一斜阳，半阴半部晴。<br>
-  朝雨傍风归，听吟落日辉。</p>
-
-        
-          <p class="article-more-link">
-            <a href="/2024/05/21/24-5-21/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/05/21/24-5-21/" data-id="cmjtmfniz0029aouzbtcwe8dk" class="article-share-link">分享</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
-    <article id="post-24-5-20" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2024/05/20/24-5-20/" class="article-date">
-  <time class="post-time" datetime="2024-05-20T01:35:13.000Z" itemprop="datePublished">
-    <span class="post-month">5月</span><br/>
-    <span class="post-day">20</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-
-
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/05/20/24-5-20/">动态</a>
-    </h1>
-  
-
-        <div>
-          
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>  缺失。</p>
-
-        
-          <p class="article-more-link">
-            <a href="/2024/05/20/24-5-20/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/05/20/24-5-20/" data-id="cmjtmfniz0028aouzejsd5r7g" class="article-share-link">分享</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
-    <article id="post-24-5-18-2" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2024/05/18/24-5-18-2/" class="article-date">
-  <time class="post-time" datetime="2024-05-18T11:59:16.000Z" itemprop="datePublished">
-    <span class="post-month">5月</span><br/>
-    <span class="post-day">18</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-
-
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/05/18/24-5-18-2/">简化-复杂与简化-抽象的关系思考</a>
-    </h1>
-  
-
-        <div>
-          
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="简化-复杂"><a class="markdownIt-Anchor" href="#简化-复杂"></a> 简化-复杂</h4>
-<p>  简单与复杂的关系在于，低层次的简单需要通过将其复杂化，然后进行系统性思考、联系性思考与本质思考来达到更上一层的简单。</p>
-<h4 id="简化-抽像"><a class="markdownIt-Anchor" href="#简化-抽像"></a> 简化-抽像</h4>
-<p>  抽象化需要预先的简化，剥离浮沉，也就是对于我们要得到的原理本质没有作用甚至会阻碍我们的东西，之后才是抽象化，也就是说抽象化是为了获得真理与本质，而只是抽象化，不去简化，可能因为杂物的扰乱与遮掩使得我们无法发现其中的本质。</p>
-
-        
-          <p class="article-more-link">
-            <a href="/2024/05/18/24-5-18-2/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/05/18/24-5-18-2/" data-id="cmjtmfniy0026aouzh36g92cz" class="article-share-link">分享</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
-    <article id="post-24-5-18-1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2024/05/18/24-5-18-1/" class="article-date">
-  <time class="post-time" datetime="2024-05-18T11:37:51.000Z" itemprop="datePublished">
-    <span class="post-month">5月</span><br/>
-    <span class="post-day">18</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-
-
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/05/18/24-5-18-1/">能力要求(初版)</a>
-    </h1>
-  
-
-        <div>
-          
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>  人需要做到学习知识的同时具备创造与定义新知识的能力。<br>
-  人需要独立思维以及敢于批判的思维，其中，批判包括对别人的批判以及对自我的批判。<br>
-  人应该具有严谨的逻辑思维与推理能力。<br>
-  人应该具有深入思考与全面思考的能力。<br>
-  人应该具备敢于创新与独立解决问题的能力。<br>
-  人要有自我思考与辨识世界的能力，包括具有标准语衡量意识，具有判断达到什么程度意味着你已经学会某种事物。<br>
-  人要具有清晰的思维、谈吐、写作能力，敢于在群众中淡然清晰地表达自我，同时，也要具备与人合作的能力，一方面是统筹能力，一方面是协作能力。</p>
-
-        
-          <p class="article-more-link">
-            <a href="/2024/05/18/24-5-18-1/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/05/18/24-5-18-1/" data-id="cmjtmfniy0025aouz3ir36rdx" class="article-share-link">分享</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
-    <article id="post-24-5-18" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2024/05/18/24-5-18/" class="article-date">
-  <time class="post-time" datetime="2024-05-18T02:47:49.000Z" itemprop="datePublished">
-    <span class="post-month">5月</span><br/>
-    <span class="post-day">18</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-
-
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/05/18/24-5-18/">《战行归》</a>
-    </h1>
-  
-
-        <div>
-          
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <center>《战行归》</center>
-<center>红熒</center>
-<center>银马踏河行，壮士饮血身。</center>
-<center>残骨浮于地，万古不留名。</center>
-<center>飞沙扑天去，烽烟寂无声。</center>
-<center>行将三千甲，难留一人归。</center>
-        
-          <p class="article-more-link">
-            <a href="/2024/05/18/24-5-18/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/05/18/24-5-18/" data-id="cmjtmfniz0027aouzfsxh1ay7" class="article-share-link">分享</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
-    <article id="post-yinyangguan" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2024/05/17/yinyangguan/" class="article-date">
-  <time class="post-time" datetime="2024-05-17T12:06:13.000Z" itemprop="datePublished">
-    <span class="post-month">5月</span><br/>
-    <span class="post-day">17</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-
-
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/05/17/yinyangguan/">《阴阳论》</a>
-    </h1>
-  
-
-        <div>
-          
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <center>《阴阳论》</center>
-<center>红熒</center>
-<center>阴水阳生阳刚强，阳火阴生阴柔劲。</center>
-<center>极阳利阴阴水形，极阴利阳火阳生。</center>
-
-        
-          <p class="article-more-link">
-            <a href="/2024/05/17/yinyangguan/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://hongyinggame.github.io/2024/05/17/yinyangguan/" data-id="cmjtmfnmf00draouz3qb7g7uu" class="article-share-link">分享</a>
+      <a data-url="https://hongyinggame.github.io/2024/06/21/24-6-21-1/" data-id="cmjtmfnjd003aaouz5lre1x9e" class="article-share-link">分享</a>
       
       
     </footer>
@@ -684,7 +670,7 @@
 
 
   <nav id="page-nav">
-    <a class="extend prev" rel="prev" href="/page/12/">&lt; pre</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><a class="page-number" href="/page/15/">15</a><span class="space">&hellip;</span><a class="page-number" href="/page/36/">36</a><a class="extend next" rel="next" href="/page/14/">next &gt;</a>
+    <a class="extend prev" rel="prev" href="/page/12/">&lt; pre</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><a class="page-number" href="/page/15/">15</a><span class="space">&hellip;</span><a class="page-number" href="/page/41/">41</a><a class="extend next" rel="next" href="/page/14/">next &gt;</a>
   </nav>
 </section>
         
@@ -725,9 +711,9 @@
     <h2 class="author">hongying</h2>
     <h3 class="description">娜厨</h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>360</strong><br>文章</div></a>
-      <a href="/categories"><div><strong>21</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>46</strong><br>标签</div></a>
+      <a href="/archives"><div><strong>403</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>23</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>51</strong><br>标签</div></a>
     </div>
 
 
