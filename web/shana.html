@@ -5,15 +5,15 @@
   
   <title>HongyingBlog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="love_xl   body{   overflow: hidden;   margin: 0; } h1{   position: fixed;   top: 50%;   left: 0;   width: 100%;   text-align: center;   transform:translateY(-50%);   font-family: &#39;Love Ya Like A S">
+  <meta name="description" content="祝福 - 灼眼的夏娜  * {   margin: 0;   padding: 0;   box-sizing: border-box; }  body {   min-height: 100vh;   background: #0a0303;   overflow: hidden;   font-family: &#39;Noto Serif SC&#39;, &#39;STSong&#39;, &#39;SimSun&#39;,">
 <meta property="og:type" content="website">
 <meta property="og:title" content="HongyingBlog">
 <meta property="og:url" content="https://hongyinggame.github.io/web/shana.html">
 <meta property="og:site_name" content="HongyingBlog">
-<meta property="og:description" content="love_xl   body{   overflow: hidden;   margin: 0; } h1{   position: fixed;   top: 50%;   left: 0;   width: 100%;   text-align: center;   transform:translateY(-50%);   font-family: &#39;Love Ya Like A S">
+<meta property="og:description" content="祝福 - 灼眼的夏娜  * {   margin: 0;   padding: 0;   box-sizing: border-box; }  body {   min-height: 100vh;   background: #0a0303;   overflow: hidden;   font-family: &#39;Noto Serif SC&#39;, &#39;STSong&#39;, &#39;SimSun&#39;,">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-11-25T01:09:17.741Z">
-<meta property="article:modified_time" content="2025-11-25T01:09:17.740Z">
+<meta property="article:published_time" content="2026-05-12T11:46:14.486Z">
+<meta property="article:modified_time" content="2026-05-12T11:46:00.650Z">
 <meta property="article:author" content="hongying">
 <meta name="twitter:card" content="summary">
   
@@ -75,9 +75,9 @@
         <section id="main"><article id="page-" class="wow slideInRight article article-type-page" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/web/shana.html" class="article-date">
-  <time class="post-time" datetime="2025-11-25T01:09:17.741Z" itemprop="datePublished">
-    <span class="post-month">11月</span><br/>
-    <span class="post-day">25</span>
+  <time class="post-time" datetime="2026-05-12T11:46:14.486Z" itemprop="datePublished">
+    <span class="post-month">5月</span><br/>
+    <span class="post-day">12</span>
   </time>
 </a>
    
@@ -90,157 +90,375 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <!doctype html>
-<html>
+        <!DOCTYPE html>
+<html lang="zh-CN">
 <head>
 <meta charset="utf-8">
-<title>love_xl</title>
-<link href="favicon.ico" rel="shortcut icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>祝福 - 灼眼的夏娜</title>
 <style>
-body{
-  overflow: hidden;
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-h1{
+
+body {
+  min-height: 100vh;
+  background: #0a0303;
+  overflow: hidden;
+  font-family: 'Noto Serif SC', 'STSong', 'SimSun', 'KaiTi', serif;
+  cursor: crosshair;
+}
+
+canvas {
   position: fixed;
-  top: 50%;
+  top: 0;
   left: 0;
   width: 100%;
-  text-align: center;
-  transform:translateY(-50%);
-  font-family: 'Love Ya Like A Sister', cursive;
-  font-size: 40px;
-  color: #c70012;
-  padding: 0 20px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
 }
-h1 span{
-    font-size:40px;
+
+.main-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px 30px;
+  pointer-events: none;
+}
+
+.crest {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 40px;
+  position: relative;
+  animation: crestFloat 3s ease-in-out infinite;
+}
+
+.crest-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.crest-inner::before,
+.crest-inner::after {
+  content: '';
+  position: absolute;
+  background: #d43020;
+  box-shadow: 0 0 15px rgba(220, 50, 30, 0.8), 0 0 30px rgba(255, 80, 40, 0.4);
+}
+
+.crest-inner::before {
+  width: 2px;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 1px;
+}
+
+.crest-inner::after {
+  width: 100%;
+  height: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 1px;
+}
+
+.crest-ring {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  border: 2px solid rgba(200, 40, 20, 0.6);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(200, 40, 20, 0.4), inset 0 0 20px rgba(200, 40, 20, 0.2);
+  animation: ringPulse 2s ease-in-out infinite;
+}
+
+.crest-diamond {
+  position: absolute;
+  top: 22%;
+  left: 22%;
+  width: 56%;
+  height: 56%;
+  background: rgba(200, 40, 20, 0.3);
+  transform: rotate(45deg);
+  border: 1px solid rgba(220, 60, 30, 0.6);
+  box-shadow: 0 0 15px rgba(200, 40, 20, 0.3);
+  animation: diamondGlow 2.5s ease-in-out infinite;
+}
+
+@keyframes crestFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes ringPulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(200, 40, 20, 0.4), inset 0 0 20px rgba(200, 40, 20, 0.2); }
+  50% { box-shadow: 0 0 35px rgba(240, 60, 30, 0.7), inset 0 0 35px rgba(240, 60, 30, 0.4); }
+}
+
+@keyframes diamondGlow {
+  0%, 100% { box-shadow: 0 0 15px rgba(200, 40, 20, 0.3); }
+  50% { box-shadow: 0 0 30px rgba(240, 60, 30, 0.6); }
+}
+
+.text-container {
+  text-align: center;
+  max-width: 800px;
+}
+
+.shana-text {
+  display: inline-block;
+  font-size: clamp(20px, 4vw, 36px);
+  color: #e8d0c0;
+  letter-spacing: 0.08em;
+  line-height: 2;
+  text-shadow:
+    0 0 10px rgba(240, 100, 50, 0.6),
+    0 0 30px rgba(230, 60, 20, 0.4),
+    0 0 60px rgba(200, 30, 10, 0.3),
+    0 2px 4px rgba(0, 0, 0, 0.6);
+  animation: textFlicker 4s ease-in-out infinite;
+  position: relative;
+}
+
+@keyframes textFlicker {
+  0%, 100% {
+    text-shadow:
+      0 0 10px rgba(240, 100, 50, 0.6),
+      0 0 30px rgba(230, 60, 20, 0.4),
+      0 0 60px rgba(200, 30, 10, 0.3);
+  }
+  3% {
+    text-shadow:
+      0 0 12px rgba(250, 130, 60, 0.8),
+      0 0 35px rgba(240, 80, 30, 0.6),
+      0 0 70px rgba(220, 50, 20, 0.5);
+  }
+  3.5% {
+    text-shadow:
+      0 0 10px rgba(240, 100, 50, 0.6),
+      0 0 30px rgba(230, 60, 20, 0.4),
+      0 0 60px rgba(200, 30, 10, 0.3);
+  }
+  50% {
+    text-shadow:
+      0 0 15px rgba(240, 110, 55, 0.7),
+      0 0 40px rgba(240, 70, 25, 0.5),
+      0 0 70px rgba(210, 40, 15, 0.4);
+  }
+}
+
+.shana-text .highlight {
+  color: #ff6030;
+  text-shadow:
+    0 0 15px rgba(255, 80, 30, 0.9),
+    0 0 40px rgba(255, 50, 15, 0.6),
+    0 0 80px rgba(220, 30, 5, 0.4);
+  animation: flameGlow 1.5s ease-in-out infinite;
+}
+
+@keyframes flameGlow {
+  0%, 100% {
+    color: #ff6030;
+    text-shadow:
+      0 0 15px rgba(255, 80, 30, 0.9),
+      0 0 40px rgba(255, 50, 15, 0.6);
+  }
+  50% {
+    color: #ff9050;
+    text-shadow:
+      0 0 25px rgba(255, 120, 40, 1),
+      0 0 60px rgba(255, 70, 20, 0.8),
+      0 0 100px rgba(240, 40, 10, 0.5);
+  }
+}
+
+.name-tag {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 8px 24px;
+  border: 1px solid rgba(200, 60, 30, 0.4);
+  color: rgba(220, 140, 110, 0.7);
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  animation: fadeIn 3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* bottom flame line */
+.flame-line {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  z-index: 20;
+  background: linear-gradient(to right,
+    transparent 0%,
+    rgba(200, 30, 10, 0.1) 10%,
+    rgba(230, 50, 20, 0.4) 30%,
+    rgba(255, 70, 25, 0.7) 50%,
+    rgba(230, 50, 20, 0.4) 70%,
+    rgba(200, 30, 10, 0.1) 90%,
+    transparent 100%
+  );
+  box-shadow: 0 -2px 15px rgba(200, 40, 20, 0.3);
+  animation: lineGlow 3s ease-in-out infinite;
+}
+
+@keyframes lineGlow {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+@media (max-width: 600px) {
+  .crest {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 30px;
+  }
 }
 </style>
-
 </head>
 <body>
-<h1 id="h1"></h1>
-<canvas></canvas> 
+
+<canvas id="fireCanvas"></canvas>
+
+<div class="main-content">
+  <div class="crest">
+    <div class="crest-inner"></div>
+    <div class="crest-ring"></div>
+    <div class="crest-diamond"></div>
+  </div>
+
+  <div class="text-container">
+    <p class="shana-text"><span class="highlight">夏娜</span>，愿您的<span class="highlight">火焰</span>永远<span class="highlight">明亮闪耀</span>，没有一丝<span class="highlight">阴霾</span>。</p>
+  </div>
+
+  <div class="name-tag">— 炎髪灼眼の討ち手 —</div>
+</div>
+
+<div class="flame-line"></div>
 
 <script>
-var canvas = document.querySelector("canvas"),
-  ctx = canvas.getContext("2d");
+(function() {
+  var canvas = document.getElementById('fireCanvas');
+  var ctx = canvas.getContext('2d');
+  var w, h;
 
-var ww,wh;
-
-function onResize(){
-  ww = canvas.width = window.innerWidth;
-  wh = canvas.height = window.innerHeight;
-}
-
-ctx.strokeStyle = "red";
-ctx.shadowBlur = 10;
-ctx.shadowColor = "hsla(0, 100%, 60%,0.5)";
-
-var precision = 100;
-var hearts = [];
-var mouseMoved = false;
-function onMove(e){
-  mouseMoved = true;
-  if(e.type === "touchmove"){
-    hearts.push(new Heart(e.touches[0].clientX, e.touches[0].clientY));
-    hearts.push(new Heart(e.touches[0].clientX, e.touches[0].clientY));
+  function resize() {
+    w = canvas.width = window.innerWidth;
+    h = canvas.height = window.innerHeight;
   }
-  else{
-    hearts.push(new Heart(e.clientX, e.clientY));
-    hearts.push(new Heart(e.clientX, e.clientY));
-  }
-}
+  resize();
+  window.addEventListener('resize', resize);
 
-var Heart = function(x,y){
-  this.x = x || Math.random()*ww;
-  this.y = y || Math.random()*wh;
-  this.size = Math.random()*2 + 1;
-  this.shadowBlur = Math.random() * 10;
-  this.speedX = (Math.random()+0.2-0.6) * 8;
-  this.speedY = (Math.random()+0.2-0.6) * 8;
-  this.speedSize = Math.random()*0.05 + 0.01;
-  this.opacity = 1;
-  this.vertices = [];
-  for (var i = 0; i < precision; i++) {
-    var step = (i / precision - 0.5) * (Math.PI * 2);
-    var vector = {
-      x : (15 * Math.pow(Math.sin(step), 3)),
-      y : -(13 * Math.cos(step) - 5 * Math.cos(2 * step) - 2 * Math.cos(3 * step) - Math.cos(4 * step)) 
+  var embers = [];
+  var maxEmbers = 120;
+
+  function Ember() {
+    this.reset(true);
+  }
+
+  Ember.prototype.reset = function(init) {
+    this.x = Math.random() * w;
+    this.y = init ? Math.random() * h : h + 10;
+    this.r = Math.random() * 2.5 + 0.8;
+    this.speed = Math.random() * 1.5 + 0.5;
+    this.wobble = Math.random() * 0.8 - 0.4;
+    this.opacity = Math.random() * 0.7 + 0.3;
+    this.life = 1;
+    this.decay = Math.random() * 0.004 + 0.002;
+    this.hue = Math.random() * 20 + 10;
+  };
+
+  Ember.prototype.update = function() {
+    this.y -= this.speed;
+    this.x += this.wobble + Math.sin(this.y * 0.02) * 0.5;
+    this.life -= this.decay;
+    if (this.life <= 0 || this.y < -20) {
+      this.reset(false);
     }
-    this.vertices.push(vector);
+  };
+
+  Ember.prototype.draw = function(ctx) {
+    var alpha = this.opacity * this.life;
+    var grad = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.r * 3);
+    grad.addColorStop(0, 'hsla(' + this.hue + ', 100%, 55%, ' + alpha + ')');
+    grad.addColorStop(0.3, 'hsla(' + (this.hue - 5) + ', 100%, 45%, ' + (alpha * 0.7) + ')');
+    grad.addColorStop(1, 'hsla(' + this.hue + ', 100%, 30%, 0)');
+
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.r * 3, 0, Math.PI * 2);
+    ctx.fillStyle = grad;
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+    ctx.fillStyle = 'hsla(' + this.hue + ', 100%, 55%, ' + alpha + ')';
+    ctx.fill();
+  };
+
+  for (var i = 0; i < maxEmbers; i++) {
+    embers.push(new Ember());
   }
-}
 
-Heart.prototype.draw = function(){
-  this.size -= this.speedSize;
-  this.x += this.speedX;
-  this.y += this.speedY;
-  ctx.save();
-  ctx.translate(-1000,this.y);
-  ctx.scale(this.size, this.size);
-  ctx.beginPath();
-  for (var i = 0; i < precision; i++) {
-    var vector = this.vertices[i];
-    ctx.lineTo(vector.x, vector.y);
-  }
-  ctx.globalAlpha = this.size;
-  ctx.shadowBlur = Math.round((3 - this.size) * 10);
-  ctx.shadowColor = "hsla(0, 100%, 60%,0.5)";
-  ctx.shadowOffsetX = this.x + 1000;
-  ctx.globalCompositeOperation = "screen"
-  ctx.closePath();
-  ctx.fill()
-  ctx.restore();
-};
-
-
-function render(a){
-  requestAnimationFrame(render);
-
-  hearts.push(new Heart())
-  ctx.clearRect(0,0,ww,wh);
-  for (var i = 0; i < hearts.length; i++) {
-    hearts[i].draw();
-    if(hearts[i].size <= 0){
-      hearts.splice(i,1);
-      i--;
+  var mouseX = -100, mouseY = -100;
+  window.addEventListener('mousemove', function(e) {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+  window.addEventListener('touchmove', function(e) {
+    if (e.touches.length) {
+      mouseX = e.touches[0].clientX;
+      mouseY = e.touches[0].clientY;
     }
-  }
-}
+  });
 
+  function animate() {
+    ctx.clearRect(0, 0, w, h);
 
-onResize();
-window.addEventListener("mousemove", onMove);
-window.addEventListener("touchmove", onMove);
-window.addEventListener("resize", onResize);
-requestAnimationFrame(render);
-
-window.onload=function starttime(){
-        time(h1,'2015/12/1');                           // 在一起的时间
-        ptimer = setTimeout(starttime,1000);            // 添加计时器
-}
-
-    function time(obj,futimg){
-        var nowtime = new Date().getTime();             // 现在时间转换为时间戳
-        var futruetime =  new Date(futimg).getTime();   // 未来时间转换为时间戳
-        var msec = nowtime-futruetime;                  // 毫秒 未来时间-现在时间
-        var time = (msec/1000);                         // 毫秒/1000
-        var day = parseInt(time/86400);                 // 天  24*60*60*1000 
-        var hour = parseInt(time/3600)-24*day;          // 小时 60*60 总小时数-过去的小时数=现在的小时数 
-        var minute = parseInt(time%3600/60);            // 分 -(day*24) 以60秒为一整份 取余 剩下秒数 秒数/60 就是分钟数
-        var second = parseInt(time%60);                 // 以60秒为一整份 取余 剩下秒数
-//              console.log(hour+":"+minute+":"+second)
-//              alert(hour)
-        obj.innerHTML="夏娜愿您的火焰永远明亮闪耀，没有一丝阴霾。 "
-
-        return true;
+    for (var i = 0; i < embers.length; i++) {
+      embers[i].update();
+      embers[i].draw(ctx);
     }
+
+    // mouse sparks
+    if (mouseX > 0 && mouseY > 0) {
+      for (var j = 0; j < 2; j++) {
+        ctx.beginPath();
+        var sx = mouseX + (Math.random() - 0.5) * 30;
+        var sy = mouseY + (Math.random() - 0.5) * 30;
+        ctx.arc(sx, sy, Math.random() * 2 + 0.5, 0, Math.PI * 2);
+        ctx.fillStyle = 'hsla(15, 100%, 55%, ' + (Math.random() * 0.6 + 0.2) + ')';
+        ctx.fill();
+      }
+    }
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+})();
 </script>
 
 </body>
 </html>
+
       
     </div>
     <footer class="article-footer">
